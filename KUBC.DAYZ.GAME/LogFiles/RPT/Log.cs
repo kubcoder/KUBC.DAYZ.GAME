@@ -1,0 +1,144 @@
+﻿namespace KUBC.DAYZ.GAME.LogFiles.RPT
+{
+    /// <summary>
+    /// Лог RPT игры
+    /// </summary>
+    public class Log : File
+    {
+        /// <summary>
+        /// Патерн поиска файла лога
+        /// </summary>
+        public const string FileSearch = "*.RPT";
+        /// <summary>
+        /// Шаблон поиска строчки с указанием текущего времени
+        /// </summary>
+        private const string KEYFINDSTARTTIME = "Current time:";
+
+        /// <summary>
+        /// Открываем файл лога RPT
+        /// </summary>
+        /// <param name="openFile">файл который нужно открыть</param>
+        /// <param name="maxFileSize">Допустимый размер файла</param>
+        public Log(FileInfo openFile, long maxFileSize = 104857600) :
+            base(openFile, maxFileSize)
+        {
+
+        }
+        /// <summary>
+        /// Список игроков которые подключились
+        /// </summary>
+        public List<ConectEvent> PlayersConect = new();
+        /// <summary>
+        /// Данные среднего ФПС сервера
+        /// </summary>
+        public List<AverageFPS> FPSHistory = new();
+        /// <summary>
+        /// Данные использования памяти сервером
+        /// </summary>
+        public List<UsedMemory> MemHistory = new();
+        /// <summary>
+        /// Очищаем список игроков
+        /// </summary>
+        protected override void OnPreRead()
+        {
+            PlayersConect.Clear();
+            FPSHistory.Clear();
+            MemHistory.Clear();
+        }
+        /// <summary>
+        /// Парсим строчки
+        /// </summary>
+        /// <param name="Line"></param>
+        protected override void ParseLine(string Line)
+        {
+            if (LogStarted == null)
+            {
+                FindStartTime(Line);
+            }
+            else
+            {
+                var cE = ConectEvent.FromLogLine(Line);
+                if (cE != null)
+                {
+                    cE.ConnectTime = CorrectTime(cE.ConnectTime);
+                    PlayersConect.Add(cE);
+                }
+                else
+                {
+                    var aFPS = AverageFPS.FromLogLine(Line);
+                    if (aFPS != null)
+                    {
+                        aFPS.MeasuredTime = CorrectTime(aFPS.MeasuredTime);
+                        FPSHistory.Add(aFPS);
+                    }
+                    else
+                    {
+                        var aMem = UsedMemory.FromLogLine(Line);
+                        if (aMem != null)
+                        {
+                            aMem.MeasuredTime = CorrectTime(aMem.MeasuredTime);
+                            MemHistory.Add(aMem);
+                        }
+                        else
+                        {
+                            base.ParseLine(Line);
+                        }
+                    }
+                }
+            }
+        }
+        /// <summary>
+        /// Корректируем дату и время.
+        /// В частности если в лог пишется только время то добавляем дату
+        /// начала записи лога.
+        /// </summary>
+        /// <param name="sTime">Дата и время из события</param>
+        /// <returns>Правильное дата и время</returns>
+        private DateTime CorrectTime(DateTime sTime)
+        {
+            if (sTime.Year == 1)
+            {
+                if (LogStarted != null)
+                {
+                    if (sTime.TimeOfDay < LogStarted.Value.TimeOfDay)
+                    {
+                        sTime = LogStarted.Value.Date.Add(sTime.TimeOfDay);
+                        return sTime.AddDays(1);
+                    }
+                    else
+                    {
+                        return LogStarted.Value.Date.Add(sTime.TimeOfDay);
+                    }
+                }
+                else
+                {
+                    return DateTime.Today.Date.Add(sTime.TimeOfDay);
+                }
+            }
+            else
+            {
+                return sTime;
+            }
+            
+        }
+
+        /// <summary>
+        /// Дата и время начала лога
+        /// </summary>
+        public DateTime? LogStarted;
+
+        private void FindStartTime(string Line)
+        {
+
+            if (Line.Contains(KEYFINDSTARTTIME))
+            {
+                var textTime = Line.Substring(KEYFINDSTARTTIME.Length + 1).Trim();
+                if (DateTime.TryParse(textTime, out var sTime))
+                {
+                    LogStarted = sTime;
+                }
+            }
+        }
+    
+    }
+}

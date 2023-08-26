@@ -16,6 +16,10 @@
 		<GenerateDocumentationFile>True</GenerateDocumentationFile>
 		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
 		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<PackageReadmeFile>Readme.md</PackageReadmeFile>
+		<PackageIcon>DayzIcon128.png</PackageIcon>
+		<PackageTags>DAYZ SA; .NET</PackageTags>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
 		<DebugType>full</DebugType>
@@ -28,5 +32,15 @@
 	    <Pack>True</Pack>
 	    <PackagePath>\</PackagePath>
 	  </None>
+	</ItemGroup>
+	<ItemGroup>
+		<None Include="..\DayzIcon128.png">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\Readme.md">
+		  <Pack>True</Pack>
+		  <PackagePath>\</PackagePath>
+		</None>
 	</ItemGroup>
 </Project>
