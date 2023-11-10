@@ -33,5 +33,15 @@ namespace KUBC.DAYZ.GAME.MSTEST
             Console.WriteLine($"Событий когда игрок потерял сознание {tLog.PlayerUnconscious.Count} записей");
             Console.WriteLine($"Самоубийства игроков {tLog.Suicides.Count} записей");
         }
+        /// <summary>
+        /// Тестируем загрузку старого XML
+        /// </summary>
+        [TestMethod]
+        public void TestOldLogRead()
+        {
+            string xml = "<PlayerList LogTime=\"2023-10-13T15:10:25\"><Players><PlayerPosition><NickName>Asmadeus</NickName><DAYZID>OUJOmr0yvQxDtYL1OkEH1oBG3LZMyqHtq0dhTReveGQ=</DAYZID><Position><float>3697.4</float><float>8238.1</float><float>304.2</float></Position></PlayerPosition></Players></PlayerList>";
+            var pList = GAME.LogFiles.ADM.PlayerList.FromXML(xml);
+
+        }
     }
 }

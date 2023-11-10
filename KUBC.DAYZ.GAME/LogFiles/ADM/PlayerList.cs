@@ -16,7 +16,7 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
         /// <summary>
         /// Список игроков
         /// </summary>
-        public List<PlayerPosition> Players { get; set; } = new();
+        public List<PlayerPosition> Players { get; set; } = [];
 
         /// <summary>
         ///  Строчка является началом лога игроков

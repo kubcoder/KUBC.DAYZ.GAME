@@ -23,7 +23,7 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
         /// <summary>
         /// Место где игрок помер
         /// </summary>
-        public Vector Position { get; set; } = new();
+        public Vector Position { get; set; } = [];
 
         /// <summary>
         /// Проебразуем объект в строку с разметкой XML
