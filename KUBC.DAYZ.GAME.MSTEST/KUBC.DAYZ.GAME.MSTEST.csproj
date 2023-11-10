@@ -32,6 +32,9 @@
     <None Update="TestFiles\MissionFiles\cfgeffectarea.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="TestFiles\MissionFiles\cfggameplay.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

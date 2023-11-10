@@ -12,10 +12,11 @@ namespace KUBC.DAYZ.GAME.MissionFiles.CfgGamePlay
         /// Версия файлика
         /// </summary>
         /// <remarks>
-        /// шо значит, хуй знает, предположительно копирует версию сервера... т.е. для 1.20 значение 120
+        /// Версия файла конфигурации, в смысле по содержимому.
+        /// Судя по всем последнее обновление формата файла было в версии 1.22
         /// </remarks>
         [JsonPropertyName("version")]
-        public int Version { get; set; } = 120;
+        public int Version { get; set; } = 122;
         /// <summary>
         /// Основные настройки геймплея
         /// </summary>

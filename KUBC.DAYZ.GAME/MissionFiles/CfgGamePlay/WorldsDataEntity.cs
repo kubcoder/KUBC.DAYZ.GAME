@@ -25,12 +25,12 @@ namespace KUBC.DAYZ.GAME.MissionFiles.CfgGamePlay
         /// Минимальные температуры окружающей среды (ровно 12 значений)
         /// </summary>
         [JsonPropertyName("environmentMinTemps")]
-        public List<int> EnvironmentMinTemps { get; set; } = new() { -3, -2, 0, 4, 9, 14, 18, 17, 12, 7, 4, 0 };
+        public List<float> EnvironmentMinTemps { get; set; } = new() { -3, -2, 0, 4, 9, 14, 18, 17, 12, 7, 4, 0 };
         /// <summary>
         /// Максимальные температуры окружающей среды (ровно 12 значений)
         /// </summary>
         [JsonPropertyName("environmentMaxTemps")]
-        public List<int> EnvironmentMaxTemps { get; set; } = new() { 3, 5, 7, 14, 19, 24, 26, 25, 21, 16, 10, 5 };
+        public List<float> EnvironmentMaxTemps { get; set; } = new() { 3, 5, 7, 14, 19, 24, 26, 25, 21, 16, 10, 5 };
         /// <summary>
         /// Values for item weight modification based on wetness level of the item. Values from left to right: [DRY, DAMP, WET, SOAKED, DRENCHED]
         /// Значения для изменения веса предмета в зависимости от уровня влажности предмета. Значения слева направо: [СУХОЙ, ВЛАЖНЫЙ, ВЛАЖНЫЙ, ПРОМОКОЙ, ПРОМОКОЙ]

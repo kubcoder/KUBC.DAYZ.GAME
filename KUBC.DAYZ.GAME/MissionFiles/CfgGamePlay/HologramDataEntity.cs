@@ -76,6 +76,13 @@ namespace KUBC.DAYZ.GAME.MissionFiles.CfgGamePlay
         /// </summary>
         [JsonPropertyName("disableIsInTerrainCheck")]
         public bool DisableIsInTerrainCheck { get; set; } = false;
+        /// <summary>
+        /// Prevents construction of these items types (including inherited ones) in the underground areas
+        /// Какие предметы не будут размещаться в подземелье. 
+        /// Это такой запрет на строительство баз в бункерах.
+        /// </summary>
+        [JsonPropertyName("disallowedTypesInUnderground")]
+        public List<string> DisallowedTypesInUnderground = ["FenceKit", "TerritoryFlagKit", "WatchtowerKit"];
 
     }
 }
