@@ -21,5 +21,9 @@
         /// Настройки зоны заражения
         /// </summary>
         public AreaData Data { get; set; } = new();
+        /// <summary>
+        /// Данные игрока
+        /// </summary>
+        public PlayerData PlayerData { get;set; } = new();
     }
 }

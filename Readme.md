@@ -17,3 +17,5 @@
 10:16:24 | Player "Yappietouch" (id=zirYiNHKZT2d5K7rusVdbSWNzF6AUa2PQFSg9EuYkGE= pos=<1619.3, 5010.7, 172.1>)
 10:16:24 | #####
 ```
+### Исправлена работа с cfgeffectarea.json
+В класс зоны заражения не была добавлена секция **PlayerData**
