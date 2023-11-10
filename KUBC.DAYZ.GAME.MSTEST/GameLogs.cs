@@ -32,8 +32,6 @@ namespace KUBC.DAYZ.GAME.MSTEST
             Console.WriteLine($"Сообщений администрации сервера от игроков {tLog.PlayersReport.Count} записей");
             Console.WriteLine($"Событий когда игрок потерял сознание {tLog.PlayerUnconscious.Count} записей");
             Console.WriteLine($"Самоубийства игроков {tLog.Suicides.Count} записей");
-
-
         }
     }
 }

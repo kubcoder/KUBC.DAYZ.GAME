@@ -58,7 +58,7 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
         }
 
         /// <summary>
-        /// Проебразуем объект в строку с разметкой XML
+        /// Преобразуем объект в строку с разметкой XML
         /// </summary>
         /// <returns>Представление краша в виде XML</returns>
         public string GetXML()

@@ -96,6 +96,8 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
                     while ((rSym > 0) && (rSym != ' '))
                     {
                         rSym = Reader.Read();
+                        if (rSym == ')')
+                            return res;
                         if ((rSym > 0) && (rSym != ' '))
                             res.DayzID += (char)rSym;
                     }
@@ -128,6 +130,8 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
                     while ((rSym > 0) && (rSym != ' '))
                     {
                         rSym = Reader.Read();
+                        if (rSym == ')')
+                            return res;
                         if ((rSym > 0) && (rSym != ' '))
                             res.DayzID += (char)rSym;
                     }
