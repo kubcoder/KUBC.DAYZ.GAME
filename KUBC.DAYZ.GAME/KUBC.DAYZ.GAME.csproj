@@ -11,7 +11,7 @@
 		<Description>Инструменты для работы с серверными файлами DAYZ SA</Description>
 		<Copyright>KUBC.DAYZ.GAME Copyright (C) 2022 KUBCODER</Copyright>
 		<RepositoryUrl>https://github.com/kubcoder/KUBC.DAYZ.GAME</RepositoryUrl>
-		<PackageReleaseNotes>Предварительная версия для .net 8.0</PackageReleaseNotes>
+		<PackageReleaseNotes>Исправлены некоторые логи. Обновлен файл конфигурации gemeplay</PackageReleaseNotes>
 		<NeutralLanguage>ru</NeutralLanguage>
 		<GenerateDocumentationFile>True</GenerateDocumentationFile>
 		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
