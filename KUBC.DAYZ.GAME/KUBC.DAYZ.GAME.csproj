@@ -20,6 +20,7 @@
 		<PackageReadmeFile>Readme.md</PackageReadmeFile>
 		<PackageIcon>DayzIcon128.png</PackageIcon>
 		<PackageTags>DAYZ SA; .NET</PackageTags>
+		<PackageProjectUrl>https://kubcoder.ru/dayzgame/about</PackageProjectUrl>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
 		<DebugType>full</DebugType>
