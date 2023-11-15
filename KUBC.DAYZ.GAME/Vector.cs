@@ -300,15 +300,15 @@ namespace KUBC.DAYZ.GAME
             var pos = new Vector();
             if (t.Length == 3)
             {
-                if (float.TryParse(t[0], System.Globalization.CultureInfo.InvariantCulture, out float X))
+                if (double.TryParse(t[0], System.Globalization.CultureInfo.InvariantCulture, out double X))
                 {
                     pos.X = X;
                 }
-                if (float.TryParse(t[1], System.Globalization.CultureInfo.InvariantCulture, out float Y))
+                if (double.TryParse(t[1], System.Globalization.CultureInfo.InvariantCulture, out double Y))
                 {
                     pos.Y = Y;
                 }
-                if (float.TryParse(t[2], System.Globalization.CultureInfo.InvariantCulture, out float Z))
+                if (double.TryParse(t[2], System.Globalization.CultureInfo.InvariantCulture, out double Z))
                 {
                     pos.Z = Z;
                 }

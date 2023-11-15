@@ -26,7 +26,7 @@ namespace KUBC.DAYZ.GAME.MissionFiles.CfgGamePlay
         /// Определяет, какой тип индикатора используется. Набор изображений и вычислений положения. 0 == «всплеск», 1 == «шип», 2 == «стрелка»
         /// </summary>
         [JsonPropertyName("hitDirectionStyle")]
-        public int HitDirectionStyle { get; set; } = 1;
+        public int HitDirectionStyle { get; set; } = 0;
 
         /// <summary>
         /// Цвет индикатора

@@ -37,5 +37,20 @@ namespace KUBC.DAYZ.GAME.MissionFiles.CfgGamePlay
         [JsonPropertyName(pn_DisableRespawnDialog)]
         public bool DisableRespawnDialog { get; set; } = false;
 
+        /// <summary>
+        /// Имя свойства отключающего диалог респавна игрока в отключке
+        /// </summary>
+        public const string pn_DisableRespawnInUnconsciousness = "disableRespawnInUnconsciousness";
+        /// <summary>
+        /// Отключить диалог респавна игрока в бессознательном состоянии
+        /// </summary>
+        /// <remarks>
+        /// Судя по всему если тут написать true, то когда игрок теряет сознание
+        /// не появится надпись "возрождение". Т.е. пока не сдох окончательно
+        /// респавн не запустится
+        /// </remarks>
+        [JsonPropertyName(pn_DisableRespawnInUnconsciousness)]
+        public bool DisableRespawnInUnconsciousness { get; set; } = false;
+
     }
 }

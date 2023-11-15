@@ -23,7 +23,7 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
         /// <summary>
         /// Место где игрок помер
         /// </summary>
-        public Vector Position { get; set; } = new();
+        public Vector Position { get; set; } = [];
 
         /// <summary>
         /// Проебразуем объект в строку с разметкой XML
@@ -96,6 +96,8 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
                     while ((rSym > 0) && (rSym != ' '))
                     {
                         rSym = Reader.Read();
+                        if (rSym == ')')
+                            return res;
                         if ((rSym > 0) && (rSym != ' '))
                             res.DayzID += (char)rSym;
                     }
@@ -128,6 +130,8 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
                     while ((rSym > 0) && (rSym != ' '))
                     {
                         rSym = Reader.Read();
+                        if (rSym == ')')
+                            return res;
                         if ((rSym > 0) && (rSym != ' '))
                             res.DayzID += (char)rSym;
                     }

@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34018.315
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KUBC.DAYZ.GAME", "KUBC.DAYZ.GAME\KUBC.DAYZ.GAME.csproj", "{7A9B5E5D-F652-496B-96B6-FBEC147F3985}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KUBC.DAYZ.GAME", "KUBC.DAYZ.GAME\KUBC.DAYZ.GAME.csproj", "{7A9B5E5D-F652-496B-96B6-FBEC147F3985}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KUBC.DAYZ.GAME.MSTEST", "KUBC.DAYZ.GAME.MSTEST\KUBC.DAYZ.GAME.MSTEST.csproj", "{62D587F8-1160-424C-97A5-68EB24B0DBFB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{7A9B5E5D-F652-496B-96B6-FBEC147F3985}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A9B5E5D-F652-496B-96B6-FBEC147F3985}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A9B5E5D-F652-496B-96B6-FBEC147F3985}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62D587F8-1160-424C-97A5-68EB24B0DBFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62D587F8-1160-424C-97A5-68EB24B0DBFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62D587F8-1160-424C-97A5-68EB24B0DBFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62D587F8-1160-424C-97A5-68EB24B0DBFB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

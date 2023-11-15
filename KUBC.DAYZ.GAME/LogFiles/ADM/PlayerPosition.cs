@@ -16,7 +16,11 @@
         /// <summary>
         /// Положение игрока в мире
         /// </summary>
-        public Vector Position { get; set; } = new();
+        public Vector Position { get; set; } = [];
+        /// <summary>
+        /// Признак что игрок мертвый
+        /// </summary>
+        public bool IsDead { get; set; } = false;
         /// <summary>
         /// Получить данные положения игрока из строчки лога
         /// </summary>
@@ -38,7 +42,16 @@
                         res.NickName += (char)rSym;
                         rSym = Reader.Read();
                     }
-                    while ((rSym > 0) && (rSym != '=')) { rSym = Reader.Read(); }
+                    var tText = string.Empty;
+                    while ((rSym > 0) && (rSym != '='))
+                    { 
+                        rSym = Reader.Read();
+                        tText+= (char)rSym;
+                    }
+                    if (tText.Contains("DEAD"))
+                    {
+                        res.IsDead = true;
+                    }
                     while ((rSym > 0) && (rSym != ' '))
                     {
                         rSym = Reader.Read();
