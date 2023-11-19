@@ -13,23 +13,14 @@
         /// </summary>
         private readonly FileInfo OpenFile;
         /// <summary>
-        /// Максимальный размер файла который может быть прочитан. 
-        /// </summary>
-        /// <remarks>
-        /// Значение по умолчанию 100МБ = 104857600 байт.
-        /// </remarks>
-        private readonly long MaxFileSize;
-        /// <summary>
-        /// Текущая строчка лога.
-        /// </summary>
-        /// <remarks>
-        /// Тут храним на какой строчке лога остановились при предыдущем чтении. Что бы следующий раз читать с новой строчки
-        /// </remarks>
-        private long CurrentLine;
-        /// <summary>
         /// Список ошибок возникающих при парсинге
         /// </summary>
         public List<ParseError> Errors = new();
+        /// <summary>
+        /// Поток для чтения файла
+        /// </summary>
+        private StreamReader? fileReader;
+
         /// <summary>
         /// Текущий размер файла лога
         /// </summary>
@@ -48,24 +39,7 @@
                 return null;
             }
         }
-        /// <summary>
-        /// На сколько большой файл. При значениях выше 1.0 прекращается чтение файла.
-        /// </summary>
-        /// <remarks>
-        /// Значение расчитывается в процентах (долях единицы) путем деления текущего размера файла на допустимый размер <see cref="MaxFileSize"/>
-        /// </remarks>
-        public double LogFilePrecent
-        {
-            get
-            {
-                var fs = LogFileSize;
-                if (fs.HasValue)
-                {
-                    return fs.Value / MaxFileSize;
-                }
-                return 0.0;
-            }
-        }
+        
 
         /// <summary>
         /// Проверяем корректность открытого файла.
@@ -77,27 +51,15 @@
         {
             return OpenFile.FullName == NewFile.FullName;
         }
-        /// <summary>
-        /// Признак того что файл 
-        /// </summary>
-        public bool IsFirstRead
-        {
-            get
-            {
-                return CurrentLine == 0;
-            }
-        }
+        
 
         /// <summary>
         /// Создаем экземпляр чтения файла
         /// </summary>
         /// <param name="openFile">Имя открываемого файла</param>
-        /// <param name="maxFileSize">Максимальный размер файлика. Если файл будет больше то чтение не будет выполнено</param>
-        public File(FileInfo openFile, long maxFileSize = 104857600)
+        public File(FileInfo openFile)
         {
             OpenFile = openFile;
-            MaxFileSize = maxFileSize;
-            CurrentLine = 0;
         }
         /// <summary>
         /// Признак что файл существует
@@ -116,12 +78,7 @@
         {
             get
             {
-                if (OpenFile.Exists)
-                {
-                    if (OpenFile.Length < MaxFileSize)
-                        return true;
-                }
-                return false;
+                return OpenFile.Exists;
             }
         }
 
@@ -134,40 +91,62 @@
         /// </remarks>
         public int Read()
         {
-            if (IsCanRead)
+            int ReadLines = 0;
+            if (fileReader == null) 
             {
-                OnPreRead();
-                Errors.Clear();
-                int cLine = 0;
-                int ReadLines = 0;
-                string? Line;
-                using var stream = new StreamReader(OpenFile.Open(FileMode.Open, FileAccess.Read, FileShare.ReadWrite));
-                if (stream != null)
+                if (IsCanRead)
                 {
-                    while ((Line = stream.ReadLine()) != null)
+                    fileReader = new StreamReader(OpenFile.Open(FileMode.Open, FileAccess.Read, FileShare.ReadWrite));
+                    if (fileReader!=null)
                     {
-                        cLine++;
-                        if (cLine > CurrentLine)
-                        {
-                            ReadLines++;
-                            try
-                            {
-                                if (!string.IsNullOrEmpty(Line))
-                                    ParseLine(Line);
-                            }
-                            catch (Exception ex)
-                            {
-                                Errors.Add(new ParseError() { Exception = ex, SourceLine = Line });
-                            }
-                        }
+                        OnFileOpen();
+                        
                     }
-                    stream.Close();
-                    CurrentLine = cLine;
-
-                    return ReadLines;
                 }
             }
-            return 0;
+            if (fileReader!=null)
+            {
+                Errors.Clear();
+                OnPreRead();
+                if (fileReader != null)
+                {
+                    string? Line;
+                    while ((Line = fileReader.ReadLine()) != null)
+                    {
+                        ReadLines++;
+                        try
+                        {
+                            if (!string.IsNullOrEmpty(Line))
+                                ParseLine(Line);
+                        }
+                        catch (Exception ex)
+                        {
+                            Errors.Add(new ParseError() { Exception = ex, SourceLine = Line });
+                        }
+                    }
+                    OnPostRead();
+                }
+            }
+            return ReadLines;
+        }
+        /// <summary>
+        /// Закрываем чтение файла. Т.е. грохаем поток чтения
+        /// </summary>
+        public void CloseFile()
+        {
+            if (fileReader!= null)
+                fileReader.Close();
+        }
+
+        /// <summary>
+        /// Метод вызывается после успешного открытия файла. Один раз когда указатель еще в нулях.
+        /// </summary>
+        /// <remarks>
+        /// В целевых файлах по идее необходимо выполнить подготовку к чтению данных лога
+        /// </remarks>
+        protected virtual void OnFileOpen()
+        {
+
         }
 
         /// <summary>
