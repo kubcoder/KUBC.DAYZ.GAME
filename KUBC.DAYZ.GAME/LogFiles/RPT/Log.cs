@@ -18,9 +18,8 @@
         /// Открываем файл лога RPT
         /// </summary>
         /// <param name="openFile">файл который нужно открыть</param>
-        /// <param name="maxFileSize">Допустимый размер файла</param>
-        public Log(FileInfo openFile, long maxFileSize = 104857600) :
-            base(openFile, maxFileSize)
+        public Log(FileInfo openFile) :
+            base(openFile)
         {
 
         }

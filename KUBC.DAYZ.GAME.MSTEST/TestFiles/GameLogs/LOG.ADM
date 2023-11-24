@@ -1,0 +1,1227 @@
+
+
+******************************************************************************
+AdminLog started on 2023-11-17 at 15:17:27
+15:19:56 | Player "pumpkin" is connected (id=IwIRKD1pQW4WkZZYg0rVoNd73Otl7Bt0TJkXsvXG15U=)
+15:20:01 | Player "pumpkin"(id=IwIRKD1pQW4WkZZYg0rVoNd73Otl7Bt0TJkXsvXG15U=) has been disconnected
+15:26:08 | Player "pumpkin" is connected (id=IwIRKD1pQW4WkZZYg0rVoNd73Otl7Bt0TJkXsvXG15U=)
+15:28:12 | ##### PlayerList log: 1 players
+15:28:12 | Player "pumpkin" (id=IwIRKD1pQW4WkZZYg0rVoNd73Otl7Bt0TJkXsvXG15U= pos=<7022.9, 2660.7, 6.0>)
+15:28:12 | #####
+15:33:11 | ##### PlayerList log: 1 players
+15:33:11 | Player "pumpkin" (id=IwIRKD1pQW4WkZZYg0rVoNd73Otl7Bt0TJkXsvXG15U= pos=<7085.6, 2700.2, 6.0>)
+15:33:11 | #####
+15:38:06 | Player "punginpetr" is connected (id=WnfMLGudpaimhOyI3sMsczcFvCn1T2UV39tfRJn_qEw=)
+15:38:10 | ##### PlayerList log: 1 players
+15:38:10 | Player "pumpkin" (id=IwIRKD1pQW4WkZZYg0rVoNd73Otl7Bt0TJkXsvXG15U= pos=<8390.5, 2965.8, 15.8>)
+15:38:10 | #####
+15:41:29 | Player "punginpetr" (id=WnfMLGudpaimhOyI3sMsczcFvCn1T2UV39tfRJn_qEw= pos=<7744.4, 5149.5, 214.7>) placed Набор для флагштока
+15:43:09 | ##### PlayerList log: 2 players
+15:43:09 | Player "pumpkin" (id=IwIRKD1pQW4WkZZYg0rVoNd73Otl7Bt0TJkXsvXG15U= pos=<10497.5, 2636.8, 7.1>)
+15:43:09 | Player "punginpetr" (id=WnfMLGudpaimhOyI3sMsczcFvCn1T2UV39tfRJn_qEw= pos=<7750.0, 5148.1, 215.0>)
+15:43:09 | #####
+15:43:41 | Player "punginpetr" (id=WnfMLGudpaimhOyI3sMsczcFvCn1T2UV39tfRJn_qEw= pos=<7746.6, 5147.4, 214.7>)Built base on Флагшток with Кувалда
+15:45:42 | Player "punginpetr" (id=WnfMLGudpaimhOyI3sMsczcFvCn1T2UV39tfRJn_qEw= pos=<7806.1, 5116.5, 215.1>)[HP: 95.58] hit by Зараженный into Torso(1) for 4.42 damage (MeleeInfected)
+15:48:08 | ##### PlayerList log: 2 players
+15:48:08 | Player "pumpkin" (id=IwIRKD1pQW4WkZZYg0rVoNd73Otl7Bt0TJkXsvXG15U= pos=<10115.6, 5511.0, 246.0>)
+15:48:08 | Player "punginpetr" (id=WnfMLGudpaimhOyI3sMsczcFvCn1T2UV39tfRJn_qEw= pos=<7758.7, 5143.5, 215.0>)
+15:48:08 | #####
+15:53:07 | ##### PlayerList log: 2 players
+15:53:07 | Player "pumpkin" (id=IwIRKD1pQW4WkZZYg0rVoNd73Otl7Bt0TJkXsvXG15U= pos=<9657.2, 6430.3, 229.6>)
+15:53:07 | Player "punginpetr" (id=WnfMLGudpaimhOyI3sMsczcFvCn1T2UV39tfRJn_qEw= pos=<7740.7, 5138.4, 215.2>)
+15:53:07 | #####
+15:58:06 | ##### PlayerList log: 2 players
+15:58:06 | Player "pumpkin" (id=IwIRKD1pQW4WkZZYg0rVoNd73Otl7Bt0TJkXsvXG15U= pos=<9907.5, 6701.9, 178.3>)
+15:58:06 | Player "punginpetr" (id=WnfMLGudpaimhOyI3sMsczcFvCn1T2UV39tfRJn_qEw= pos=<7582.4, 5165.9, 214.0>)
+15:58:06 | #####
+15:59:03 | Player "punginpetr" (id=WnfMLGudpaimhOyI3sMsczcFvCn1T2UV39tfRJn_qEw= pos=<7556.2, 5205.4, 214.4>)[HP: 95.58] hit by Зараженный into Torso(1) for 4.42 damage (MeleeInfected)
+16:03:04 | ##### PlayerList log: 2 players
+16:03:04 | Player "pumpkin" (id=IwIRKD1pQW4WkZZYg0rVoNd73Otl7Bt0TJkXsvXG15U= pos=<9907.4, 6701.9, 178.3>)
+16:03:04 | Player "punginpetr" (id=WnfMLGudpaimhOyI3sMsczcFvCn1T2UV39tfRJn_qEw= pos=<7490.6, 5104.3, 213.9>)
+16:03:04 | #####
+16:04:00 | Player "punginpetr" (id=WnfMLGudpaimhOyI3sMsczcFvCn1T2UV39tfRJn_qEw= pos=<7469.4, 5131.8, 214.0>)[HP: 94.22] hit by Зараженный into Torso(1) for 5.78 damage (MeleeInfectedLong)
+16:08:03 | ##### PlayerList log: 2 players
+16:08:03 | Player "pumpkin" (id=IwIRKD1pQW4WkZZYg0rVoNd73Otl7Bt0TJkXsvXG15U= pos=<9907.6, 6701.9, 178.3>)
+16:08:03 | Player "punginpetr" (id=WnfMLGudpaimhOyI3sMsczcFvCn1T2UV39tfRJn_qEw= pos=<7536.2, 5139, 214.1>)
+16:08:03 | #####
+16:10:59 | Player "pumpkin"(id=IwIRKD1pQW4WkZZYg0rVoNd73Otl7Bt0TJkXsvXG15U=) has been disconnected
+16:13:02 | ##### PlayerList log: 1 players
+16:13:02 | Player "punginpetr" (id=WnfMLGudpaimhOyI3sMsczcFvCn1T2UV39tfRJn_qEw= pos=<6774.3, 5753.2, 335.3>)
+16:13:02 | #####
+16:16:23 | Player "punginpetr" (id=WnfMLGudpaimhOyI3sMsczcFvCn1T2UV39tfRJn_qEw= pos=<6540.8, 6044.2, 321.3>)[HP: 98.1937] hit by Зараженный into RightLeg(3) for 7.225 damage (MeleeInfectedLong)
+16:16:26 | Player "punginpetr" (id=WnfMLGudpaimhOyI3sMsczcFvCn1T2UV39tfRJn_qEw= pos=<6540.4, 6044.0, 321.2>)[HP: 96.4733] hit by Зараженный into LeftLeg(8) for 7.225 damage (MeleeInfectedLong)
+16:18:01 | ##### PlayerList log: 1 players
+16:18:01 | Player "punginpetr" (id=WnfMLGudpaimhOyI3sMsczcFvCn1T2UV39tfRJn_qEw= pos=<6464.4, 6148.0, 324.2>)
+16:18:01 | #####
+16:23:00 | ##### PlayerList log: 1 players
+16:23:00 | Player "punginpetr" (id=WnfMLGudpaimhOyI3sMsczcFvCn1T2UV39tfRJn_qEw= pos=<6429.0, 6203.6, 322.0>)
+16:23:00 | #####
+16:27:59 | ##### PlayerList log: 1 players
+16:27:59 | Player "punginpetr" (id=WnfMLGudpaimhOyI3sMsczcFvCn1T2UV39tfRJn_qEw= pos=<6171.3, 6269.4, 308.7>)
+16:27:59 | #####
+16:28:51 | Player "Doom" is connected (id=x_Tf6q6t_nMdnxNQ1j037mEJl2zm0_SLfwfXKoZ_F5k=)
+16:32:58 | ##### PlayerList log: 2 players
+16:32:58 | Player "punginpetr" (id=WnfMLGudpaimhOyI3sMsczcFvCn1T2UV39tfRJn_qEw= pos=<6616.0, 6259.8, 347.4>)
+16:32:58 | Player "Doom" (id=x_Tf6q6t_nMdnxNQ1j037mEJl2zm0_SLfwfXKoZ_F5k= pos=<14095.6, 13308.7, 6.9>)
+16:32:58 | #####
+16:33:10 | Player "Doom"(id=x_Tf6q6t_nMdnxNQ1j037mEJl2zm0_SLfwfXKoZ_F5k=) has been disconnected
+16:37:56 | ##### PlayerList log: 1 players
+16:37:56 | Player "punginpetr" (id=WnfMLGudpaimhOyI3sMsczcFvCn1T2UV39tfRJn_qEw= pos=<6575.2, 6263.1, 341.4>)
+16:37:56 | #####
+16:42:35 | Player "Survivor" is connected (id=r9-zJa0fZDUE39zcUyoNO73c_pz9RI2ab--TiCLfCSA=)
+16:42:55 | ##### PlayerList log: 1 players
+16:42:55 | Player "punginpetr" (id=WnfMLGudpaimhOyI3sMsczcFvCn1T2UV39tfRJn_qEw= pos=<6576.1, 6263.4, 341.4>)
+16:42:55 | #####
+16:47:54 | ##### PlayerList log: 2 players
+16:47:54 | Player "punginpetr" (id=WnfMLGudpaimhOyI3sMsczcFvCn1T2UV39tfRJn_qEw= pos=<6417.7, 7229.4, 306.3>)
+16:47:54 | Player "Survivor" (id=r9-zJa0fZDUE39zcUyoNO73c_pz9RI2ab--TiCLfCSA= pos=<1155.8, 7218.1, 185.4>)
+16:47:54 | #####
+16:52:53 | ##### PlayerList log: 2 players
+16:52:53 | Player "punginpetr" (id=WnfMLGudpaimhOyI3sMsczcFvCn1T2UV39tfRJn_qEw= pos=<6373.6, 7546.4, 288.0>)
+16:52:53 | Player "Survivor" (id=r9-zJa0fZDUE39zcUyoNO73c_pz9RI2ab--TiCLfCSA= pos=<1315.1, 7537.3, 219.6>)
+16:52:53 | #####
+16:57:52 | ##### PlayerList log: 2 players
+16:57:52 | Player "punginpetr" (id=WnfMLGudpaimhOyI3sMsczcFvCn1T2UV39tfRJn_qEw= pos=<6262.7, 7612.8, 298.2>)
+16:57:52 | Player "Survivor" (id=r9-zJa0fZDUE39zcUyoNO73c_pz9RI2ab--TiCLfCSA= pos=<1019.9, 8158.6, 203.0>)
+16:57:52 | #####
+17:01:34 | Player "punginpetr" (id=WnfMLGudpaimhOyI3sMsczcFvCn1T2UV39tfRJn_qEw= pos=<5947.9, 7754.7, 305.4>)[HP: 98.6188] hit by Зараженный into LeftLeg(8) for 5.525 damage (MeleeInfected)
+17:02:51 | ##### PlayerList log: 2 players
+17:02:51 | Player "punginpetr" (id=WnfMLGudpaimhOyI3sMsczcFvCn1T2UV39tfRJn_qEw= pos=<5912.5, 7846.9, 305.7>)
+17:02:51 | Player "Survivor" (id=r9-zJa0fZDUE39zcUyoNO73c_pz9RI2ab--TiCLfCSA= pos=<927.8, 8949.2, 246.9>)
+17:02:51 | #####
+17:07:50 | ##### PlayerList log: 2 players
+17:07:50 | Player "punginpetr" (id=WnfMLGudpaimhOyI3sMsczcFvCn1T2UV39tfRJn_qEw= pos=<5993.9, 7792.5, 301.5>)
+17:07:50 | Player "Survivor" (id=r9-zJa0fZDUE39zcUyoNO73c_pz9RI2ab--TiCLfCSA= pos=<1367.3, 9273.5, 300.8>)
+17:07:50 | #####
+17:12:48 | ##### PlayerList log: 2 players
+17:12:48 | Player "punginpetr" (id=WnfMLGudpaimhOyI3sMsczcFvCn1T2UV39tfRJn_qEw= pos=<6498.7, 6919.2, 336.7>)
+17:12:48 | Player "Survivor" (id=r9-zJa0fZDUE39zcUyoNO73c_pz9RI2ab--TiCLfCSA= pos=<1523.7, 9124.9, 300.4>)
+17:12:48 | #####
+17:13:52 | Player "Survivor"(id=r9-zJa0fZDUE39zcUyoNO73c_pz9RI2ab--TiCLfCSA=) has been disconnected
+17:17:47 | ##### PlayerList log: 1 players
+17:17:47 | Player "punginpetr" (id=WnfMLGudpaimhOyI3sMsczcFvCn1T2UV39tfRJn_qEw= pos=<7749.9, 5148.2, 215.0>)
+17:17:47 | #####
+17:19:03 | Player "cepgo" is connected (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs=)
+17:19:09 | Player "punginpetr" (id=WnfMLGudpaimhOyI3sMsczcFvCn1T2UV39tfRJn_qEw= pos=<7761.5, 5148.5, 215.0>) placed Бочка
+17:20:22 | Player "cepgo"(id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs=) has been disconnected
+17:22:06 | Player "cepgo" is connected (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs=)
+17:22:46 | ##### PlayerList log: 2 players
+17:22:46 | Player "punginpetr" (id=WnfMLGudpaimhOyI3sMsczcFvCn1T2UV39tfRJn_qEw= pos=<7747.3, 5142.0, 215.9>)
+17:22:46 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<13744.4, 14121.4, 27.9>)
+17:22:46 | #####
+17:26:38 | Player "punginpetr" (id=WnfMLGudpaimhOyI3sMsczcFvCn1T2UV39tfRJn_qEw= pos=<7764.1, 5143.6, 215.0>) packed Автомобильная палатка with Hands 
+17:27:45 | ##### PlayerList log: 2 players
+17:27:45 | Player "punginpetr" (id=WnfMLGudpaimhOyI3sMsczcFvCn1T2UV39tfRJn_qEw= pos=<7761.8, 5141.7, 215.4>)
+17:27:45 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<13757.3, 14125.9, 27.4>)
+17:27:45 | #####
+17:28:06 | Player "Survivor" is connected (id=E5BttLY6yJHLlvjLpgGivCTmTRLpP4feo_yAoHzSkw0=)
+17:28:38 | Player "Survivor"(id=E5BttLY6yJHLlvjLpgGivCTmTRLpP4feo_yAoHzSkw0=) has been disconnected
+17:32:44 | ##### PlayerList log: 2 players
+17:32:44 | Player "punginpetr" (id=WnfMLGudpaimhOyI3sMsczcFvCn1T2UV39tfRJn_qEw= pos=<7727.8, 5153.4, 215.7>)
+17:32:44 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<13763.4, 14102.2, 27.3>)
+17:32:44 | #####
+17:33:09 | Player "punginpetr"(id=WnfMLGudpaimhOyI3sMsczcFvCn1T2UV39tfRJn_qEw=) has been disconnected
+17:37:43 | ##### PlayerList log: 1 players
+17:37:43 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<13646.4, 14478, 99.6>)
+17:37:43 | #####
+17:38:40 | Player "punginpetr" is connected (id=WnfMLGudpaimhOyI3sMsczcFvCn1T2UV39tfRJn_qEw=)
+17:42:42 | ##### PlayerList log: 2 players
+17:42:42 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<13784.9, 14199.6, 55.9>)
+17:42:42 | Player "punginpetr" (id=WnfMLGudpaimhOyI3sMsczcFvCn1T2UV39tfRJn_qEw= pos=<7419.0, 5389.5, 248.3>)
+17:42:42 | #####
+17:43:40 | Player "KIRYAESHKA" is connected (id=rC10G8v_XtecP_lavlTpkJRjRM3Gz1M9MAjTeMy66_c=)
+17:47:40 | ##### PlayerList log: 3 players
+17:47:40 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<14350.1, 14273.5, 123.7>)
+17:47:40 | Player "punginpetr" (id=WnfMLGudpaimhOyI3sMsczcFvCn1T2UV39tfRJn_qEw= pos=<6539.9, 6025.4, 315.1>)
+17:47:40 | Player "KIRYAESHKA" (id=rC10G8v_XtecP_lavlTpkJRjRM3Gz1M9MAjTeMy66_c= pos=<7950.3, 14619.6, 338.5>)
+17:47:40 | #####
+17:49:34 | Player "KIRYAESHKA" (id=rC10G8v_XtecP_lavlTpkJRjRM3Gz1M9MAjTeMy66_c= pos=<7967.4, 14644.4, 339.0>)[HP: 94.22] hit by Зараженный into Torso(1) for 5.78 damage (MeleeSoldierInfected)
+17:49:40 | Player "KIRYAESHKA" (id=rC10G8v_XtecP_lavlTpkJRjRM3Gz1M9MAjTeMy66_c= pos=<7967.8, 14647.1, 339.0>)[HP: 93.6776] hit by Зараженный into LeftArm(18) for 7.225 damage (MeleeSoldierInfected)
+17:49:41 | Player "KIRYAESHKA" (id=rC10G8v_XtecP_lavlTpkJRjRM3Gz1M9MAjTeMy66_c= pos=<7967.7, 14647.1, 339.0>)[HP: 92.8326] hit by Зараженный into RightArm(17) for 9.35 damage (MeleeSoldierInfectedLong)
+17:49:44 | Player "KIRYAESHKA" (id=rC10G8v_XtecP_lavlTpkJRjRM3Gz1M9MAjTeMy66_c= pos=<7968.0, 14647.2, 339.0>)[HP: 91.9876] hit by Зараженный into RightArm(17) for 9.35 damage (MeleeSoldierInfectedLong)
+17:51:02 | Player "KIRYAESHKA" (id=rC10G8v_XtecP_lavlTpkJRjRM3Gz1M9MAjTeMy66_c= pos=<7935.0, 14629.5, 338.5>)[HP: 94.2594] hit by Зараженный into LeftArm(18) for 0 damage (Dummy_Light)
+17:51:06 | Player "KIRYAESHKA" (id=rC10G8v_XtecP_lavlTpkJRjRM3Gz1M9MAjTeMy66_c= pos=<7932.9, 14631.2, 338.5>)[HP: 92.4343] hit by Зараженный into LeftLeg(8) for 7.65 damage (MeleeSoldierInfected)
+17:51:09 | Player "KIRYAESHKA" (id=rC10G8v_XtecP_lavlTpkJRjRM3Gz1M9MAjTeMy66_c= pos=<7933.0, 14631.3, 338.5>)[HP: 90.0469] hit by Зараженный into LeftLeg(8) for 9.9 damage (MeleeSoldierInfectedLong)
+17:52:39 | ##### PlayerList log: 3 players
+17:52:39 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<13752.7, 14114.8, 27.3>)
+17:52:39 | Player "punginpetr" (id=WnfMLGudpaimhOyI3sMsczcFvCn1T2UV39tfRJn_qEw= pos=<7734.8, 5147.5, 214.3>)
+17:52:39 | Player "KIRYAESHKA" (id=rC10G8v_XtecP_lavlTpkJRjRM3Gz1M9MAjTeMy66_c= pos=<7913.5, 14678.3, 341.9>)
+17:52:39 | #####
+17:56:50 | Player "punginpetr"(id=WnfMLGudpaimhOyI3sMsczcFvCn1T2UV39tfRJn_qEw=) has been disconnected
+17:57:38 | ##### PlayerList log: 2 players
+17:57:38 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<13765.1, 14106.5, 27.5>)
+17:57:38 | Player "KIRYAESHKA" (id=rC10G8v_XtecP_lavlTpkJRjRM3Gz1M9MAjTeMy66_c= pos=<8026.5, 14644.1, 344.4>)
+17:57:38 | #####
+18:00:14 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<13755.6, 14126.8, 27.3>) placed Костер
+18:02:37 | ##### PlayerList log: 2 players
+18:02:37 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<13757.7, 14125.8, 27.4>)
+18:02:37 | Player "KIRYAESHKA" (id=rC10G8v_XtecP_lavlTpkJRjRM3Gz1M9MAjTeMy66_c= pos=<7480.8, 14505.7, 321.8>)
+18:02:37 | #####
+18:05:22 | Player "cepgo"(id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs=) has been disconnected
+18:07:17 | Player "Survivor" is connected (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo=)
+18:07:35 | Player "Zorro"(id=Unknown) has been disconnected
+18:07:36 | ##### PlayerList log: 1 players
+18:07:36 | Player "KIRYAESHKA" (id=rC10G8v_XtecP_lavlTpkJRjRM3Gz1M9MAjTeMy66_c= pos=<6204.0, 13439.2, 241.7>)
+18:07:36 | #####
+18:07:49 | Player "Zorro" is connected (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s=)
+18:08:58 | Player "Zorro"(id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s=) has been disconnected
+18:10:19 | Player "cepgo" is connected (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs=)
+18:11:43 | Player "pumpkin" is connected (id=IwIRKD1pQW4WkZZYg0rVoNd73Otl7Bt0TJkXsvXG15U=)
+18:12:35 | ##### PlayerList log: 4 players
+18:12:35 | Player "KIRYAESHKA" (id=rC10G8v_XtecP_lavlTpkJRjRM3Gz1M9MAjTeMy66_c= pos=<4335.7, 13105.3, 178.4>)
+18:12:35 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<12977.5, 7759.3, 17.1>)
+18:12:35 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<13747.4, 14111, 28.7>)
+18:12:35 | Player "pumpkin" (id=IwIRKD1pQW4WkZZYg0rVoNd73Otl7Bt0TJkXsvXG15U= pos=<9907.0, 6708.2, 178.3>)
+18:12:35 | #####
+18:14:26 | Player "pumpkin"(id=IwIRKD1pQW4WkZZYg0rVoNd73Otl7Bt0TJkXsvXG15U=) has been disconnected
+18:17:34 | ##### PlayerList log: 3 players
+18:17:34 | Player "KIRYAESHKA" (id=rC10G8v_XtecP_lavlTpkJRjRM3Gz1M9MAjTeMy66_c= pos=<3293.2, 13089, 201.4>)
+18:17:34 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<13053.2, 7714.5, 5.6>)
+18:17:34 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<13746.9, 14111.8, 28.7>)
+18:17:34 | #####
+18:20:25 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<13048.7, 8187.4, 4.6>)[HP: 99.415] hit by Зараженный into LeftArm(18) for 5.85 damage (MeleeInfected)
+18:20:26 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<13048.7, 8188.0, 4.6>)[HP: 97.5025] hit by Зараженный into RightLeg(3) for 7.65 damage (MeleeInfectedLong)
+18:21:18 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<13048.7, 8168.4, 4.5>)[HP: 98.4898] hit by Зараженный into LeftArm(18) for 5.85 damage (MeleeInfected)
+18:21:19 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<13050.7, 8169.0, 4.5>)[HP: 96.5773] hit by Зараженный into LeftLeg(8) for 7.65 damage (MeleeInfectedLong)
+18:21:22 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<13055.9, 8170.7, 4.3>)[HP: 96.0798] hit by Зараженный into LeftArm(18) for 5.85 damage (MeleeInfected)
+18:21:27 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<13045.3, 8167.1, 4.7>)[HP: 95.6698] hit by Зараженный into RightArm(17) for 5.85 damage (MeleeInfected)
+18:21:30 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<13044.7, 8166.4, 4.7>)[HP: 88.1073] hit by Зараженный into Torso(1) for 7.65 damage (MeleeInfectedLong)
+18:21:32 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<13040.9, 8162.5, 4.8>)[HP: 86.6448] hit by Зараженный into LeftLeg(8) for 5.85 damage (MeleeInfected)
+18:21:33 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<13039.7, 8161.2, 5.0>)[HP: 86.1473] hit by Зараженный into RightArm(17) for 5.85 damage (MeleeInfected)
+18:21:35 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<13041.1, 8161.6, 4.8>)[HP: 85.3823] hit by Зараженный into RightArm(17) for 7.65 damage (MeleeInfectedLong)
+18:21:44 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<13098.3, 8170.1, 1.8>)[HP: 84.2593] hit by Зараженный into LeftLeg(8) for 5.85 damage (MeleeInfected)
+18:22:01 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<13043.2, 8163.3, 4.7>)[HP: 84.0746] hit by Зараженный into RightArm(17) for 5.85 damage (MeleeInfected)
+18:22:02 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<13041.7, 8160.3, 4.7>)[HP: 83.3096] hit by Зараженный into LeftArm(18) for 7.65 damage (MeleeInfectedLong)
+18:22:17 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<13047.5, 8172.5, 4.6>)[HP: 77.9048] hit by Зараженный into Torso(1) for 5.85 damage (MeleeInfected)
+18:22:19 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<13046.1, 8176.3, 4.6>)[HP: 77.1398] hit by Зараженный into RightArm(17) for 7.65 damage (MeleeInfectedLong)
+18:22:23 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<13043.9, 8178.0, 4.7>)[HP: 75.7477] hit by Зараженный into LeftLeg(8) for 5.85 damage (MeleeInfected)
+18:22:32 | ##### PlayerList log: 3 players
+18:22:32 | Player "KIRYAESHKA" (id=rC10G8v_XtecP_lavlTpkJRjRM3Gz1M9MAjTeMy66_c= pos=<514.2, 9461.9, 296.9>)
+18:22:32 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<13045.1, 8164.7, 4.6>)
+18:22:32 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<13747, 14111.7, 28.7>)
+18:22:32 | #####
+18:22:34 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<13044, 8163.4, 4.6>)[HP: 70.1689] hit by Зараженный into Torso(1) for 5.85 damage (MeleeInfected)
+18:22:36 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<13042.5, 8161.0, 4.6>)[HP: 69.649] hit by Зараженный into LeftArm(18) for 5.85 damage (MeleeInfected)
+18:22:37 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<13041.3, 8160.8, 4.7>)[HP: 68.884] hit by Зараженный into RightArm(17) for 7.65 damage (MeleeInfectedLong)
+18:22:38 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<13040.8, 8161.8, 4.8>)[HP: 67.4215] hit by Зараженный into LeftLeg(8) for 5.85 damage (MeleeInfected)
+18:22:42 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<13052.2, 8171.0, 4.4>)[HP: 66.086] hit by Зараженный into LeftLeg(8) for 5.85 damage (MeleeInfected)
+18:22:44 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<13055.9, 8173.8, 4.3>)[HP: 64.6235] hit by Зараженный into LeftLeg(8) for 5.85 damage (MeleeInfected)
+18:22:45 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<13058.2, 8175.2, 4.2>)[HP: 63.223] hit by Зараженный into RightLeg(3) for 5.85 damage (MeleeInfected)
+18:22:48 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<13062.1, 8178.1, 3.7>)[HP: 62.6988] hit by Зараженный into LeftArm(18) for 5.85 damage (MeleeInfected)
+18:22:49 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<13063.8, 8179.3, 3.5>)[HP: 56.8488] hit by Зараженный into Torso(1) for 5.85 damage (MeleeInfected)
+18:22:49 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<13063.8, 8179.3, 3.5>)[HP: 56.2638] hit by Зараженный into LeftArm(18) for 5.85 damage (MeleeInfected)
+18:22:49 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<13064.2, 8178.4, 3.4>) is unconscious
+18:22:50 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<13064.4, 8179.3, 3.4>)[HP: 55.6788] hit by Зараженный into RightArm(17) for 5.85 damage (MeleeInfected)
+18:22:51 | Player "kokz23" is connected (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o=)
+18:22:56 | Player "Survivor" (DEAD) (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<13064.3, 8179.4, 3.4>) died. Stats> Water: 1753.5 Energy: 444.708 Bleed sources: 2
+18:24:30 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<12997.6, 8173.7, 7.0>)[HP: 94.475] hit by Зараженный into Torso(1) for 5.525 damage (MeleeInfected)
+18:25:47 | Player "Zorro"(id=Unknown) has been disconnected
+18:25:58 | Player "Zorro" is connected (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s=)
+18:27:31 | ##### PlayerList log: 5 players
+18:27:31 | Player "KIRYAESHKA" (id=rC10G8v_XtecP_lavlTpkJRjRM3Gz1M9MAjTeMy66_c= pos=<365.5, 9394.3, 295.0>)
+18:27:31 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<13000.9, 8176.2, 8.3>)
+18:27:31 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<13760.4, 14102.9, 27.3>)
+18:27:31 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<13746.6, 14106.6, 26.9>)
+18:27:31 | Player "Zorro" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<2962.5, 11868.5, 243.6>)
+18:27:31 | #####
+18:30:09 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<13750.3, 14126.1, 28.0>) placed Кабельная катушка
+18:32:30 | ##### PlayerList log: 5 players
+18:32:30 | Player "KIRYAESHKA" (id=rC10G8v_XtecP_lavlTpkJRjRM3Gz1M9MAjTeMy66_c= pos=<1845.7, 11480.6, 259.8>)
+18:32:30 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<13001.2, 8174.3, 8.2>)
+18:32:30 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<13744.4, 14124.1, 28.0>)
+18:32:30 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<13745.9, 14127.8, 28.0>)
+18:32:30 | Player "Zorro" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<2963.3, 11871.8, 244.9>)
+18:32:30 | #####
+18:37:29 | ##### PlayerList log: 5 players
+18:37:29 | Player "KIRYAESHKA" (id=rC10G8v_XtecP_lavlTpkJRjRM3Gz1M9MAjTeMy66_c= pos=<183.9, 12511.5, 386.5>)
+18:37:29 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<12991.8, 8174.3, 8.0>)
+18:37:29 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<13750.2, 14123.4, 28.0>)
+18:37:29 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<13745.7, 14127.6, 28.0>)
+18:37:29 | Player "Zorro" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<2962.8, 11871.7, 243.9>)
+18:37:29 | #####
+18:39:34 | Player "Phant0mass" is connected (id=uSV45ufkIZU94plq01IOxishV-TqLOICDh8u1HJmio4=)
+18:42:28 | ##### PlayerList log: 6 players
+18:42:28 | Player "KIRYAESHKA" (id=rC10G8v_XtecP_lavlTpkJRjRM3Gz1M9MAjTeMy66_c= pos=<476.4, 12374.1, 363.0>)
+18:42:28 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<13064.7, 8178.3, 3.3>)
+18:42:28 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<13744.4, 14125.1, 28.0>)
+18:42:28 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<13745.7, 14127.6, 28.0>)
+18:42:28 | Player "Zorro" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<3776.8, 12989.5, 191.0>)
+18:42:28 | Player "Phant0mass" (id=uSV45ufkIZU94plq01IOxishV-TqLOICDh8u1HJmio4= pos=<1992.1, 7388.6, 258.1>)
+18:42:28 | #####
+18:46:25 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<13007.1, 8220.2, 5.9>)[HP: 100] hit by Зараженный into Torso(1) for 0 damage (Dummy_Light)
+18:46:26 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<13007.6, 8222.3, 5.9>)[HP: 99.4475] hit by Зараженный into RightArm(17) for 5.525 damage (MeleeInfected)
+18:46:27 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<13007.6, 8222.2, 5.9>)[HP: 98.725] hit by Зараженный into LeftArm(18) for 7.225 damage (MeleeInfectedLong)
+18:47:27 | ##### PlayerList log: 6 players
+18:47:27 | Player "KIRYAESHKA" (id=rC10G8v_XtecP_lavlTpkJRjRM3Gz1M9MAjTeMy66_c= pos=<3077.8, 12642.3, 208.9>)
+18:47:27 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<12998.6, 8222.7, 6.7>)
+18:47:27 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<13784.4, 14094.2, 27.5>)
+18:47:27 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<13785.7, 14096.5, 27.6>)
+18:47:27 | Player "Zorro" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<3441.4, 12324.6, 239.3>)
+18:47:27 | Player "Phant0mass" (id=uSV45ufkIZU94plq01IOxishV-TqLOICDh8u1HJmio4= pos=<1992.7, 7388.7, 258.1>)
+18:47:27 | #####
+18:47:43 | Player "GayZ" is connected (id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE=)
+18:48:07 | Player "Zorro" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<3441.7, 12324.8, 239.6>) placed Автомобильная палатка
+18:49:43 | Player "Zorro" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<3443.5, 12322.8, 239.4>) placed Набор для разметки места для забора
+18:50:17 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<12937.4, 8283, 11.7>)[HP: 98.5375] hit by Зараженный into LeftLeg(8) for 5.85 damage (MeleeInfected)
+18:50:18 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<12937.5, 8283.0, 11.7>)[HP: 97.075] hit by Зараженный into RightLeg(3) for 5.85 damage (MeleeInfected)
+18:50:25 | Player "Zorro" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<3442.9, 12324.1, 239.4>) folded Забор
+18:50:48 | Player "Zorro" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<3443.5, 12323, 239.4>) placed Набор для разметки места для забора
+18:51:43 | Player "Zorro" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<3442.7, 12324.2, 239.4>)Built base on Забор with Кирка
+18:52:26 | ##### PlayerList log: 7 players
+18:52:26 | Player "KIRYAESHKA" (id=rC10G8v_XtecP_lavlTpkJRjRM3Gz1M9MAjTeMy66_c= pos=<3438.6, 13022.8, 193.2>)
+18:52:26 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<12875, 8316.5, 10.1>)
+18:52:26 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<13645.5, 13832, 22.1>)
+18:52:26 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<13647.2, 13833.4, 22.4>)
+18:52:26 | Player "Zorro" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<3445.4, 12321.5, 239.7>)
+18:52:26 | Player "Phant0mass" (id=uSV45ufkIZU94plq01IOxishV-TqLOICDh8u1HJmio4= pos=<1977.3, 7371.8, 259.6>)
+18:52:26 | Player "GayZ" (id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE= pos=<1962.0, 7381.2, 257.7>)
+18:52:26 | #####
+18:53:05 | Player "nemagreska100"(id=Unknown) has been disconnected
+18:53:45 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<13626.5, 13747.5, 5.7>)[HP: 94.22] hit by Зараженный into Torso(1) for 5.78 damage (MeleeSoldierInfected)
+18:53:48 | Chat("GayZ"(id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE=)): для чего шкура волка нужна
+18:53:49 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<13627.1, 13746.3, 5.7>)[HP: 93.5875] hit by Зараженный into LeftArm(18) for 7.225 damage (MeleeSoldierInfected)
+18:54:27 | Chat("KIRYAESHKA"(id=rC10G8v_XtecP_lavlTpkJRjRM3Gz1M9MAjTeMy66_c=)): кожу делать
+18:57:25 | ##### PlayerList log: 7 players
+18:57:25 | Player "KIRYAESHKA" (id=rC10G8v_XtecP_lavlTpkJRjRM3Gz1M9MAjTeMy66_c= pos=<3177.0, 13734.7, 228.6>)
+18:57:25 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<12797.3, 8417.2, 16.6>)
+18:57:25 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<13941.2, 13525, 3.4>)
+18:57:25 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<13933.1, 13511.4, 3.3>)
+18:57:25 | Player "Zorro" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<3445.5, 12321.3, 239.4>)
+18:57:25 | Player "Phant0mass" (id=uSV45ufkIZU94plq01IOxishV-TqLOICDh8u1HJmio4= pos=<1982.4, 7370.7, 259.6>)
+18:57:25 | Player "GayZ" (id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE= pos=<1987.6, 7338.8, 254.1>)
+18:57:25 | #####
+18:58:47 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<13992.4, 13413.1, 3.3>)[HP: 99.4475] hit by Зараженный into LeftArm(18) for 5.525 damage (MeleeInfected)
+18:58:48 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<13994.7, 13413.9, 3.3>)[HP: 98.0663] hit by Зараженный into LeftLeg(8) for 5.525 damage (MeleeInfected)
+19:00:50 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<13988.2, 13364.6, 3.3>)[HP: 98.1937] hit by Зараженный into RightLeg(3) for 7.225 damage (MeleeInfectedLong)
+19:02:24 | ##### PlayerList log: 7 players
+19:02:24 | Player "KIRYAESHKA" (id=rC10G8v_XtecP_lavlTpkJRjRM3Gz1M9MAjTeMy66_c= pos=<3936.5, 14910.1, 373.3>)
+19:02:24 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<12611.7, 8746.8, 13.3>)
+19:02:24 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<13957.5, 13293.9, 16.9>)
+19:02:24 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<13949.4, 13286.5, 18.4>)
+19:02:24 | Player "Zorro" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<3445.5, 12321.3, 239.4>)
+19:02:24 | Player "Phant0mass" (id=uSV45ufkIZU94plq01IOxishV-TqLOICDh8u1HJmio4= pos=<1984.2, 7379.9, 258.0>)
+19:02:24 | Player "GayZ" (id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE= pos=<2002.9, 7390.2, 257.5>)
+19:02:24 | #####
+19:02:41 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<13949.3, 13248.2, 18.8>)[HP: 99.4475] hit by Зараженный into LeftArm(18) for 5.525 damage (MeleeInfected)
+19:02:42 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<13949.7, 13247.9, 18.8>)[HP: 98.985] hit by Зараженный into RightArm(17) for 5.525 damage (MeleeInfected)
+19:02:43 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<13949.7, 13247.7, 18.8>)[HP: 98.4325] hit by Зараженный into RightArm(17) for 5.525 damage (MeleeInfected)
+19:02:44 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<13949.8, 13248, 18.8>)[HP: 97.71] hit by Зараженный into RightArm(17) for 7.225 damage (MeleeInfectedLong)
+19:02:44 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<13949.7, 13248.1, 18.8>)[HP: 97.1575] hit by Зараженный into RightArm(17) for 5.525 damage (MeleeInfected)
+19:02:45 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<13950, 13249.7, 18.8>)[HP: 95.8663] hit by Зараженный into RightLeg(3) for 5.525 damage (MeleeInfected)
+19:02:47 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<13947.8, 13257.6, 18.6>)[HP: 95.3138] hit by Зараженный into RightArm(17) for 5.525 damage (MeleeInfected)
+19:03:21 | Player "GayZ" (id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE= pos=<1982.3, 7385.9, 258.1>) placed Набор для разметки укрытия
+19:03:57 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<12627.2, 8750.1, 9.3>)[HP: 100] hit by Зараженный into LeftLeg(8) for 0 damage (Dummy_Light)
+19:04:01 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<12623.2, 8744.2, 9.3>)[HP: 100] hit by Зараженный into LeftLeg(8) for 0 damage (Dummy_Light)
+19:04:04 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<12622.1, 8743.3, 9.4>)[HP: 92.775] hit by Зараженный into Torso(1) for 7.225 damage (MeleeInfectedLong)
+19:04:50 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<14031.8, 13176.8, 12.3>)[HP: 94.5851] hit by Зараженный into Torso(1) for 4.42 damage (MeleeInfected)
+19:06:17 | Chat("GayZ"(id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE=)): как сломать площадку укрытияя
+19:06:24 | Player "Phant0mass" (id=uSV45ufkIZU94plq01IOxishV-TqLOICDh8u1HJmio4= pos=<1982.6, 7380.2, 258.0>)[HP: 80.7354] hit by Fence with BarbedWireHit
+19:06:39 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<13998.5, 13117.2, 12.9>)[HP: 97.3638] hit by Зараженный into LeftArm(18) for 5.525 damage (MeleeInfected)
+19:07:06 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<14028.1, 13096.8, 12.4>)[HP: 93.7541] hit by Зараженный into Torso(1) for 4.42 damage (MeleeInfected)
+19:07:08 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<14027.9, 13096.3, 12.4>)[HP: 93.2016] hit by Зараженный into LeftArm(18) for 5.525 damage (MeleeInfected)
+19:07:10 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<14027.8, 13096.3, 12.4>)[HP: 88.8716] hit by Зараженный into Torso(1) for 4.42 damage (MeleeInfected)
+19:07:23 | ##### PlayerList log: 7 players
+19:07:23 | Player "KIRYAESHKA" (id=rC10G8v_XtecP_lavlTpkJRjRM3Gz1M9MAjTeMy66_c= pos=<4969.9, 15134.7, 474.5>)
+19:07:23 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<12309.5, 8579.3, 45.4>)
+19:07:23 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<14027.1, 13098.3, 12.5>)
+19:07:23 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<14024, 13096.3, 12.5>)
+19:07:23 | Player "Zorro" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<3523.3, 12502.2, 220.1>)
+19:07:23 | Player "Phant0mass" (id=uSV45ufkIZU94plq01IOxishV-TqLOICDh8u1HJmio4= pos=<1982.5, 7370.6, 259.6>)
+19:07:23 | Player "GayZ" (id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE= pos=<1986.9, 7386.2, 258.1>)
+19:07:23 | #####
+19:07:47 | Player "Phant0mass" (id=uSV45ufkIZU94plq01IOxishV-TqLOICDh8u1HJmio4= pos=<1986.8, 7387.6, 258.1>) folded Площадка для укрытия
+19:08:16 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<14010.4, 13081.7, 12.8>)[HP: 90.2998] hit by Зараженный into RightArm(17) for 5.525 damage (MeleeInfected)
+19:10:14 | Player "Zorro" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<3442.6, 12323.8, 239.4>)Built wall_base_down on Забор with Топорик
+19:10:27 | Player "Zorro" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<3442.6, 12323.8, 239.4>)Built wall_base_up on Забор with Топорик
+19:10:56 | Player "Zorro" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<3442.0, 12323.7, 239.4>)Built wall_wood_down on Забор with Топорик
+19:11:07 | Player "Zorro" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<3442.0, 12323.7, 239.4>)Built wall_wood_up on Забор with Топорик
+19:11:32 | Player "Zorro" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<3442.4, 12323.2, 239.4>)Built wall_gate on Ворота with Плоскогубцы
+19:12:22 | ##### PlayerList log: 7 players
+19:12:22 | Player "KIRYAESHKA" (id=rC10G8v_XtecP_lavlTpkJRjRM3Gz1M9MAjTeMy66_c= pos=<7474.3, 13809.4, 231.1>)
+19:12:22 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<12289.8, 9044.8, 34.5>)
+19:12:22 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<14136.2, 13050.4, 3.0>)
+19:12:22 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<14134.5, 13045.2, 3.0>)
+19:12:22 | Player "Zorro" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<3437.9, 12325.9, 239.1>)
+19:12:22 | Player "Phant0mass" (id=uSV45ufkIZU94plq01IOxishV-TqLOICDh8u1HJmio4= pos=<2028.6, 7313.1, 257.0>)
+19:12:22 | Player "GayZ" (id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE= pos=<1986.3, 7361.5, 255.3>)
+19:12:22 | #####
+19:13:17 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<14168, 12980.2, 4.2>)[HP: 98.2929] hit by Зараженный into LeftArm(18) for 7.225 damage (MeleeInfectedLong)
+19:14:46 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<12134.8, 9024.8, 54.2>)[HP: 98.5375] hit by Зараженный into LeftLeg(8) for 5.85 damage (MeleeInfected)
+19:14:47 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<12135.1, 9023.8, 54.2>)[HP: 97.985] hit by Зараженный into RightArm(17) for 5.525 damage (MeleeInfected)
+19:14:48 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<12135.5, 9024.0, 54.2>)[HP: 97.3525] hit by Зараженный into LeftArm(18) for 7.225 damage (MeleeInfectedLong)
+19:15:18 | Player "GayZ" (id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE= pos=<1993.0, 7386.6, 258.1>) placed Деревянный ящик
+19:15:35 | Player "Phant0mass" (id=uSV45ufkIZU94plq01IOxishV-TqLOICDh8u1HJmio4= pos=<1991.1, 7233.1, 240.8>)[HP: 73.2359] hit by Зараженный into RightArm(17) for 7.225 damage (MeleeInfectedLong)
+19:15:50 | Player "GayZ" (id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE= pos=<1992.4, 7386.2, 258.1>) placed Деревянный ящик
+19:16:40 | Player "Phant0mass" (id=uSV45ufkIZU94plq01IOxishV-TqLOICDh8u1HJmio4= pos=<1964.8, 7242.6, 240.5>)[HP: 73.6727] hit by Зараженный into LeftLeg(8) for 6.175 damage (MeleeInfected)
+19:16:43 | Player "Phant0mass" (id=uSV45ufkIZU94plq01IOxishV-TqLOICDh8u1HJmio4= pos=<1965.6, 7244.6, 240.6>)[HP: 73.2103] hit by Зараженный into RightArm(17) for 5.525 damage (MeleeInfected)
+19:16:44 | Player "Phant0mass" (id=uSV45ufkIZU94plq01IOxishV-TqLOICDh8u1HJmio4= pos=<1965.6, 7244.7, 240.6>)[HP: 67.4303] hit by Зараженный into Torso(1) for 5.78 damage (MeleeInfectedLong)
+19:17:17 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<12143.2, 9108.9, 52.0>)[HP: 98.5375] hit by Зараженный into RightLeg(3) for 5.85 damage (MeleeInfected)
+19:17:19 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<12143, 9107.4, 52.1>)[HP: 98.058] hit by Зараженный into LeftArm(18) for 5.525 damage (MeleeInfected)
+19:17:21 | ##### PlayerList log: 7 players
+19:17:21 | Player "KIRYAESHKA" (id=rC10G8v_XtecP_lavlTpkJRjRM3Gz1M9MAjTeMy66_c= pos=<7091.0, 12720.7, 130.5>)
+19:17:21 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<12140.4, 9106.5, 52.2>)
+19:17:21 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<14117, 12446, 4.9>)
+19:17:21 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<14121.7, 12456.2, 4.9>)
+19:17:21 | Player "Zorro" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<2693.4, 12353.1, 220.9>)
+19:17:21 | Player "Phant0mass" (id=uSV45ufkIZU94plq01IOxishV-TqLOICDh8u1HJmio4= pos=<1969.5, 7240.6, 240.7>)
+19:17:21 | Player "GayZ" (id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE= pos=<1992.6, 7385.3, 258.1>)
+19:17:21 | #####
+19:17:57 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<12121.3, 9124.5, 52.5>)[HP: 91.7068] hit by Зараженный into Torso(1) for 7.225 damage (MeleeInfectedLong)
+19:17:58 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<12121.2, 9124.3, 52.5>)[HP: 90.9843] hit by Зараженный into RightArm(17) for 7.225 damage (MeleeInfectedLong)
+19:18:00 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<12121.2, 9124.4, 52.5>)[HP: 83.8229] hit by Зараженный into Torso(1) for 7.225 damage (MeleeInfectedLong)
+19:20:22 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<12118.2, 9095.9, 52.9>)[HP: 86.8456] hit by Зараженный into RightLeg(3) for 0 damage (Dummy_Light)
+19:20:24 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<12119.7, 9094.7, 52.9>)[HP: 84.998] hit by Зараженный into LeftLeg(8) for 7.65 damage (MeleeInfectedLong)
+19:21:03 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<12080.5, 9138.0, 54.0>)[HP: 85.2925] hit by Зараженный into LeftArm(18) for 5.525 damage (MeleeInfected)
+19:21:06 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<12080, 9136.5, 54.0>)[HP: 84.74] hit by Зараженный into RightArm(17) for 5.525 damage (MeleeInfected)
+19:21:08 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<12079.7, 9137.9, 54.0>)[HP: 84.2528] hit by Зараженный into LeftArm(18) for 5.525 damage (MeleeInfected)
+19:22:20 | ##### PlayerList log: 7 players
+19:22:20 | Player "KIRYAESHKA" (id=rC10G8v_XtecP_lavlTpkJRjRM3Gz1M9MAjTeMy66_c= pos=<5881.7, 12668, 157.9>)
+19:22:20 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<12067.9, 9165.0, 56.1>)
+19:22:20 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<13612, 11553.7, 13.6>)
+19:22:20 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<13601.8, 11507.3, 15.0>)
+19:22:20 | Player "Zorro" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<3108.7, 13163.7, 208.0>)
+19:22:20 | Player "Phant0mass" (id=uSV45ufkIZU94plq01IOxishV-TqLOICDh8u1HJmio4= pos=<2057.7, 7321.6, 257.9>)
+19:22:20 | Player "GayZ" (id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE= pos=<1992.5, 7385.6, 258.1>)
+19:22:20 | #####
+19:22:23 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<13595.5, 11501.8, 14.3>)[HP: 98.6188] hit by Зараженный into LeftLeg(8) for 5.525 damage (MeleeInfected)
+19:23:23 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<13571, 11482.1, 13.6>)[HP: 98.1937] hit by Зараженный into LeftLeg(8) for 7.225 damage (MeleeInfectedLong)
+19:24:42 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<13540.7, 11467.7, 14.2>)[HP: 99.4475] hit by Зараженный into RightArm(17) for 5.525 damage (MeleeInfected)
+19:24:44 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<13541.8, 11467.9, 14.2>)[HP: 93.7567] hit by Зараженный into Torso(1) for 5.78 damage (MeleeInfectedLong)
+19:25:03 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<13554.5, 11459.5, 15.0>)[HP: 89.8723] hit by Зараженный into Torso(1) for 4.42 damage (MeleeInfected)
+19:25:52 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<13532.5, 11443.7, 13.4>)[HP: 86.975] hit by Зараженный into Torso(1) for 4.42 damage (MeleeInfected)
+19:25:55 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<13531.4, 11442.6, 13.4>)[HP: 82.6448] hit by Зараженный into Torso(1) for 4.42 damage (MeleeInfected)
+19:26:11 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<13515.5, 11425.6, 13.4>)[HP: 83.0943] hit by Зараженный into Torso(1) for 0 damage (Dummy_Light)
+19:27:06 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<13538.9, 11418.1, 13.9>) placed Средняя палатка
+19:27:19 | ##### PlayerList log: 7 players
+19:27:19 | Player "KIRYAESHKA" (id=rC10G8v_XtecP_lavlTpkJRjRM3Gz1M9MAjTeMy66_c= pos=<5942.3, 10285.6, 268.5>)
+19:27:19 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<12063.4, 9116.6, 54.4>)
+19:27:19 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<13529.8, 11410.9, 15.1>)
+19:27:19 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<13529.1, 11409.3, 15.1>)
+19:27:19 | Player "Zorro" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<3177.2, 12745.9, 204.6>)
+19:27:19 | Player "Phant0mass" (id=uSV45ufkIZU94plq01IOxishV-TqLOICDh8u1HJmio4= pos=<1631.7, 7374.5, 301.1>)
+19:27:19 | Player "GayZ" (id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE= pos=<1612.7, 7365.5, 297.6>)
+19:27:19 | #####
+19:28:10 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<13541.7, 11420.4, 13.7>) packed Средняя палатка with Hands 
+19:30:30 | Player "KIRYAESHKA"(id=rC10G8v_XtecP_lavlTpkJRjRM3Gz1M9MAjTeMy66_c=) has been disconnected
+19:30:32 | Chat("GayZ"(id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE=)): как снимать колеса с авто
+19:31:34 | Player "snutik" is connected (id=Lnb_j2h9D7rznkixOOc3H59XRXlFQM5uu-F_ge9_cms=)
+19:32:18 | ##### PlayerList log: 6 players
+19:32:18 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<12059.7, 9070.7, 54.1>)
+19:32:18 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<13566.9, 11460.8, 14.0>)
+19:32:18 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<13568.3, 11466.9, 14.0>)
+19:32:18 | Player "Zorro" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<2972.7, 12535.2, 210.6>)
+19:32:18 | Player "Phant0mass" (id=uSV45ufkIZU94plq01IOxishV-TqLOICDh8u1HJmio4= pos=<1130.9, 7241.1, 188.1>)
+19:32:18 | Player "GayZ" (id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE= pos=<1189.2, 7278.3, 185.1>)
+19:32:18 | #####
+19:33:52 | Chat("snutik"(id=Lnb_j2h9D7rznkixOOc3H59XRXlFQM5uu-F_ge9_cms=)): Есть кто?
+19:33:55 | Chat("GayZ"(id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE=)): +
+19:34:24 | Chat("cepgo"(id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs=)): +
+19:34:24 | Chat("kokz23"(id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o=)): +
+19:34:36 | Chat("snutik"(id=Lnb_j2h9D7rznkixOOc3H59XRXlFQM5uu-F_ge9_cms=)): Ничего себе много людй
+19:37:17 | ##### PlayerList log: 7 players
+19:37:17 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<12059.7, 9061.2, 61.7>)
+19:37:17 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<12933.6, 10086.2, 6.5>)
+19:37:17 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<12934, 10086.7, 6.5>)
+19:37:17 | Player "Zorro" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<2956.1, 11852, 246.6>)
+19:37:17 | Player "Phant0mass" (id=uSV45ufkIZU94plq01IOxishV-TqLOICDh8u1HJmio4= pos=<830.2, 7679.5, 180.2>)
+19:37:17 | Player "GayZ" (id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE= pos=<867.2, 7683.3, 181.1>)
+19:37:17 | Player "snutik" (id=Lnb_j2h9D7rznkixOOc3H59XRXlFQM5uu-F_ge9_cms= pos=<5019.5, 9696.8, 339.0>)
+19:37:17 | #####
+19:37:51 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<12064.7, 9063.0, 54.1>)[HP: 99.2775] hit by Зараженный into LeftArm(18) for 7.225 damage (MeleeInfectedLong)
+19:38:24 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<12740.4, 10057.3, 7.1>)[HP: 99.4475] hit by Зараженный into RightArm(17) for 5.525 damage (MeleeInfected)
+19:38:25 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<12740.6, 10057.3, 7.1>)[HP: 98.985] hit by Зараженный into LeftArm(18) for 5.525 damage (MeleeInfected)
+19:38:30 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<12730.9, 10046.5, 5.6>)[HP: 94.22] hit by Зараженный into Torso(1) for 5.78 damage (MeleeInfectedLong)
+19:38:30 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<12730.9, 10046.4, 5.6>)[HP: 93.6675] hit by Зараженный into RightArm(17) for 5.525 damage (MeleeInfected)
+19:38:31 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<12730.7, 10046.3, 5.6>)[HP: 87.8875] hit by Зараженный into Torso(1) for 5.78 damage (MeleeInfectedLong)
+19:38:33 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<12731, 10046.1, 5.6>)[HP: 82.1975] hit by Зараженный into Torso(1) for 5.78 damage (MeleeInfectedLong)
+19:38:33 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<12730.9, 10045.9, 5.5>)[HP: 81.475] hit by Зараженный into LeftArm(18) for 7.225 damage (MeleeInfectedLong)
+19:38:35 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<12730.7, 10046.1, 5.5>)[HP: 81.0126] hit by Зараженный into RightArm(17) for 5.525 damage (MeleeInfected)
+19:38:55 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<12740.9, 10045.7, 5.6>)[HP: 80.1715] hit by Зараженный into LeftLeg(8) for 5.525 damage (MeleeInfected)
+19:39:30 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<12084.3, 9007.1, 54.0>)[HP: 99.4475] hit by Зараженный into LeftArm(18) for 5.525 damage (MeleeInfected)
+19:39:31 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<12084.1, 9007.0, 54.0>)[HP: 92.2924] hit by Зараженный into Torso(1) for 7.225 damage (MeleeInfectedLong)
+19:40:38 | Player "snutik" (id=Lnb_j2h9D7rznkixOOc3H59XRXlFQM5uu-F_ge9_cms= pos=<5060.6, 9812.5, 339.0>)[HP: 96.7] hit by Зараженный into Torso(1) for 3.3 damage (MeleeSoldierInfectedLong)
+19:40:40 | Player "snutik" (id=Lnb_j2h9D7rznkixOOc3H59XRXlFQM5uu-F_ge9_cms= pos=<5060.7, 9812.4, 339.0>)[HP: 93.4] hit by Зараженный into Torso(1) for 3.3 damage (MeleeSoldierInfectedLong)
+19:41:29 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<11963.8, 8978.2, 55.2>)[HP: 89.5139] hit by Зараженный into Torso(1) for 5.525 damage (MeleeInfected)
+19:41:44 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<11943.8, 8959.5, 54.8>)[HP: 82.644] hit by Зараженный into Torso(1) for 7.225 damage (MeleeInfectedLong)
+19:41:49 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<11947.5, 8962.4, 54.8>)[HP: 82.7863] hit by Зараженный into LeftLeg(8) for 0 damage (Dummy_Light)
+19:41:50 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<11949.8, 8962.5, 55.1>)[HP: 82.0638] hit by Зараженный into LeftArm(18) for 7.225 damage (MeleeInfectedLong)
+19:41:51 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<11949.8, 8962.3, 55.1>)[HP: 80.6012] hit by Зараженный into RightLeg(3) for 5.85 damage (MeleeInfected)
+19:41:52 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<11949.6, 8962.0, 55.1>)[HP: 80.1199] hit by Зараженный into LeftArm(18) for 5.525 damage (MeleeInfected)
+19:41:53 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<11949.8, 8961.8, 55.1>)[HP: 78.2074] hit by Зараженный into RightLeg(3) for 7.65 damage (MeleeInfectedLong)
+19:41:55 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<11949, 8962.0, 55.0>)[HP: 77.4849] hit by Зараженный into RightArm(17) for 7.225 damage (MeleeInfectedLong)
+19:41:58 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<11950.7, 8964.6, 55.4>)[HP: 77.6262] hit by Зараженный into RightLeg(3) for 0 damage (Dummy_Light)
+19:42:01 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<11951.6, 8966.9, 55.5>)[HP: 76.9037] hit by Зараженный into LeftArm(18) for 7.225 damage (MeleeInfectedLong)
+19:42:16 | ##### PlayerList log: 7 players
+19:42:16 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<11951.6, 8965.3, 55.6>)
+19:42:16 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<12783.5, 10060.5, 6.6>)
+19:42:16 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<12785.6, 10060.8, 6.6>)
+19:42:16 | Player "Zorro" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<2508.7, 11977.7, 237.5>)
+19:42:16 | Player "Phant0mass" (id=uSV45ufkIZU94plq01IOxishV-TqLOICDh8u1HJmio4= pos=<896.2, 8343.2, 188.1>)
+19:42:16 | Player "GayZ" (id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE= pos=<892.0, 8346.6, 188.2>)
+19:42:16 | Player "snutik" (id=Lnb_j2h9D7rznkixOOc3H59XRXlFQM5uu-F_ge9_cms= pos=<5047.3, 9804.9, 339.2>)
+19:42:16 | #####
+19:44:09 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<11917.5, 8966.4, 55.3>)[HP: 72.3404] hit by Зараженный into Torso(1) for 7.225 damage (MeleeInfectedLong)
+19:47:15 | ##### PlayerList log: 7 players
+19:47:15 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<11898.6, 8997.7, 54.0>)
+19:47:15 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<12757.1, 10084.1, 5.8>)
+19:47:15 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<12807.9, 10068.3, 5.9>)
+19:47:15 | Player "Zorro" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<1528.6, 12030.3, 276.8>)
+19:47:15 | Player "Phant0mass" (id=uSV45ufkIZU94plq01IOxishV-TqLOICDh8u1HJmio4= pos=<94.5, 8846.9, 310.2>)
+19:47:15 | Player "GayZ" (id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE= pos=<98.9, 8866.4, 311.0>)
+19:47:15 | Player "snutik" (id=Lnb_j2h9D7rznkixOOc3H59XRXlFQM5uu-F_ge9_cms= pos=<4920.9, 10031.9, 339.1>)
+19:47:15 | #####
+19:48:31 | Player "snutik" (id=Lnb_j2h9D7rznkixOOc3H59XRXlFQM5uu-F_ge9_cms= pos=<5021.1, 9965.5, 339.0>)[HP: 100] hit by Зараженный into LeftLeg(8) for 0 damage (Dummy_Light)
+19:48:35 | Player "snutik" (id=Lnb_j2h9D7rznkixOOc3H59XRXlFQM5uu-F_ge9_cms= pos=<5021.4, 9965.4, 339.0>)[HP: 98.1937] hit by Зараженный into RightLeg(3) for 7.225 damage (MeleeSoldierInfected)
+19:48:38 | Player "snutik" (id=Lnb_j2h9D7rznkixOOc3H59XRXlFQM5uu-F_ge9_cms= pos=<5023.9, 9961.2, 339.0>)[HP: 98.2838] hit by Зараженный into LeftArm(18) for 0 damage (Dummy_Light)
+19:48:41 | Player "snutik" (id=Lnb_j2h9D7rznkixOOc3H59XRXlFQM5uu-F_ge9_cms= pos=<5026.8, 9959.3, 339.1>)[HP: 98.3738] hit by Зараженный into LeftArm(18) for 0 damage (Dummy_Light)
+19:48:42 | Player "snutik" (id=Lnb_j2h9D7rznkixOOc3H59XRXlFQM5uu-F_ge9_cms= pos=<5026.8, 9959.3, 339.1>)[HP: 98.3738] hit by Зараженный into Torso(1) for 0 damage (Dummy_Light)
+19:48:43 | Player "snutik" (id=Lnb_j2h9D7rznkixOOc3H59XRXlFQM5uu-F_ge9_cms= pos=<5026.8, 9959.3, 339.1>)[HP: 96.0363] hit by Зараженный into RightLeg(3) for 9.35 damage (MeleeSoldierInfectedLong)
+19:49:03 | Player "B O R O D A" is connected (id=ObFfRjou9Ceks8shj2uvOmMsoRyC5dCRQJp5Zd4TR5Q=)
+19:49:56 | Player "Phant0mass" (id=uSV45ufkIZU94plq01IOxishV-TqLOICDh8u1HJmio4= pos=<304.1, 9311.1, 295.1>)[HP: 99.2775] hit by Зараженный into RightArm(17) for 7.225 damage (MeleeSoldierInfected)
+19:51:48 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<12232.1, 9865.5, 15.4>)[HP: 98.6188] hit by Зараженный into RightLeg(3) for 5.525 damage (MeleeInfected)
+19:51:51 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<12247.6, 9869.1, 14.9>)[HP: 98.1563] hit by Зараженный into LeftArm(18) for 5.525 damage (MeleeInfected)
+19:51:52 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<12249.6, 9869.2, 14.7>)[HP: 97.6038] hit by Зараженный into LeftArm(18) for 5.525 damage (MeleeInfected)
+19:52:14 | ##### PlayerList log: 8 players
+19:52:14 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<11833.9, 9041.8, 62.0>)
+19:52:14 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<12282.7, 9872.5, 13.8>)
+19:52:14 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<12274.9, 9868.1, 13.8>)
+19:52:14 | Player "Zorro" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<3436.4, 12328.2, 239.9>)
+19:52:14 | Player "Phant0mass" (id=uSV45ufkIZU94plq01IOxishV-TqLOICDh8u1HJmio4= pos=<358.8, 9385.7, 294.9>)
+19:52:14 | Player "GayZ" (id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE= pos=<358.4, 9383.4, 294.9>)
+19:52:14 | Player "snutik" (id=Lnb_j2h9D7rznkixOOc3H59XRXlFQM5uu-F_ge9_cms= pos=<4920.4, 10144, 339.0>)
+19:52:14 | Player "B O R O D A" (id=ObFfRjou9Ceks8shj2uvOmMsoRyC5dCRQJp5Zd4TR5Q= pos=<13742.6, 14128.2, 28.0>)
+19:52:14 | #####
+19:52:30 | Chat("B O R O D A"(id=ObFfRjou9Ceks8shj2uvOmMsoRyC5dCRQJp5Zd4TR5Q=)): КУ
+19:52:35 | Player "snutik" (id=Lnb_j2h9D7rznkixOOc3H59XRXlFQM5uu-F_ge9_cms= pos=<4870.7, 10220.8, 339.1>)[HP: 98.1937] hit by Зараженный into LeftLeg(8) for 7.225 damage (MeleeSoldierInfected)
+19:52:40 | Chat("snutik"(id=Lnb_j2h9D7rznkixOOc3H59XRXlFQM5uu-F_ge9_cms=)): Привет
+19:53:30 | Player "Zorro" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<3444.4, 12323.5, 239.4>) placed Навес
+19:54:03 | Player "snutik" (id=Lnb_j2h9D7rznkixOOc3H59XRXlFQM5uu-F_ge9_cms= pos=<4870.6, 10200.3, 345.8>)[HP: 99.065] hit by Зараженный into RightArm(17) for 9.35 damage (MeleeSoldierInfectedLong)
+19:54:24 | Player "Zorro" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<3445.8, 12323.7, 239.8>) placed Средняя палатка
+19:55:57 | Player "Zorro" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<3442.7, 12323.7, 239.4>)Dismantled Нижняя деревянная стена from Ворота with Топорик
+19:56:21 | Player "Zorro" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<3442.8, 12323.6, 239.4>)Built wall_metal_down on Ворота with Топорик
+19:57:13 | ##### PlayerList log: 8 players
+19:57:13 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<11836.6, 9034.5, 62.6>)
+19:57:13 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<11624.3, 9843.3, 39.8>)
+19:57:13 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<11624.4, 9843.9, 39.8>)
+19:57:13 | Player "Zorro" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<3444.4, 12322.3, 239.4>)
+19:57:13 | Player "Phant0mass" (id=uSV45ufkIZU94plq01IOxishV-TqLOICDh8u1HJmio4= pos=<524.4, 9469.4, 297.7>)
+19:57:13 | Player "GayZ" (id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE= pos=<522.2, 9462.1, 296.8>)
+19:57:13 | Player "snutik" (id=Lnb_j2h9D7rznkixOOc3H59XRXlFQM5uu-F_ge9_cms= pos=<4783.3, 10192.6, 339.0>)
+19:57:13 | Player "B O R O D A" (id=ObFfRjou9Ceks8shj2uvOmMsoRyC5dCRQJp5Zd4TR5Q= pos=<13742.6, 14128.7, 28.0>)
+19:57:13 | #####
+19:57:16 | Player "GayZ"(id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE=) has been disconnected
+19:57:19 | Player "Phant0mass"(id=uSV45ufkIZU94plq01IOxishV-TqLOICDh8u1HJmio4=) has been disconnected
+19:58:12 | Chat("kokz23"(id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o=)): борода ку
+19:58:43 | Chat("kokz23"(id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o=)): ЧЕ ДЕЛАТЬ БУДЕМ
+19:59:08 | Player "Zorro" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<3446.9, 12320.4, 239.4>) placed Кабельная катушка
+19:59:59 | Player "snutik"(id=Lnb_j2h9D7rznkixOOc3H59XRXlFQM5uu-F_ge9_cms=) has been disconnected
+20:00:10 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<10619.2, 9888.4, 95.0>)[HP: 98.6188] hit by Зараженный into RightLeg(3) for 5.525 damage (MeleeInfected)
+20:00:14 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<10618.8, 9884.0, 95.4>)[HP: 93.2727] hit by Зараженный into Torso(1) for 5.525 damage (MeleeInfected)
+20:00:26 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<10607.1, 9908.7, 94.8>)[HP: 100] hit by Зараженный into RightLeg(3) for 0 damage (Dummy_Light)
+20:00:27 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<10606.8, 9908.8, 94.8>)[HP: 99.4475] hit by Зараженный into RightArm(17) for 5.525 damage (MeleeInfected)
+20:00:36 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<10605.6, 9909.0, 94.9>)[HP: 95.2943] hit by Зараженный into Torso(1) for 4.42 damage (MeleeInfected)
+20:00:41 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<10603.4, 9909.7, 95.1>)[HP: 89.6011] hit by Зараженный into Torso(1) for 5.78 damage (MeleeInfectedLong)
+20:02:12 | ##### PlayerList log: 5 players
+20:02:12 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<11836.6, 9034.5, 62.6>)
+20:02:12 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<10609.4, 9911.0, 94.6>)
+20:02:12 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<10607.6, 9911.9, 94.7>)
+20:02:12 | Player "Zorro" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<3445.2, 12322, 239.4>)
+20:02:12 | Player "B O R O D A" (id=ObFfRjou9Ceks8shj2uvOmMsoRyC5dCRQJp5Zd4TR5Q= pos=<13746.9, 14122.9, 28.0>)
+20:02:12 | #####
+20:03:24 | Chat("cepgo"(id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs=)): БОРОДА МЫ НА ОХОТЕ
+20:07:11 | ##### PlayerList log: 5 players
+20:07:11 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<11836.6, 9034.5, 62.6>)
+20:07:11 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<10761, 10895.9, 157.0>)
+20:07:11 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<10761.7, 10895.7, 157.0>)
+20:07:11 | Player "Zorro" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<2647.2, 12097.7, 231.0>)
+20:07:11 | Player "B O R O D A" (id=ObFfRjou9Ceks8shj2uvOmMsoRyC5dCRQJp5Zd4TR5Q= pos=<13925.1, 13640.7, 7.6>)
+20:07:11 | #####
+20:11:22 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<11119.9, 12205.7, 201.4>)[HP: 99.2775] hit by Зараженный into LeftArm(18) for 7.225 damage (MeleeInfectedLong)
+20:11:57 | Player "B O R O D A" (id=ObFfRjou9Ceks8shj2uvOmMsoRyC5dCRQJp5Zd4TR5Q= pos=<13608.5, 11468, 16.2>) placed Средняя палатка
+20:12:08 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<11129.9, 12204.3, 199.7>)[HP: 98.6188] hit by Зараженный into LeftLeg(8) for 5.525 damage (MeleeInfected)
+20:12:10 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<11131.5, 12204.1, 199.4>)[HP: 98.0663] hit by Зараженный into RightArm(17) for 5.525 damage (MeleeInfected)
+20:12:10 | ##### PlayerList log: 5 players
+20:12:10 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<11836.6, 9034.5, 62.6>)
+20:12:10 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<11131.5, 12203.5, 199.5>)
+20:12:10 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<11128, 12206, 200.2>)
+20:12:10 | Player "Zorro" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<1274.1, 11415.9, 296.1>)
+20:12:10 | Player "B O R O D A" (id=ObFfRjou9Ceks8shj2uvOmMsoRyC5dCRQJp5Zd4TR5Q= pos=<13610.5, 11468.8, 16.0>)
+20:12:10 | #####
+20:12:13 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<11131, 12204.7, 199.5>)[HP: 96.2819] hit by Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<11129.8, 12205.3, 199.7>) into LeftArm(18) for 18.7 damage (MeleeSharpLight_4) with Штык для M4-A1
+20:12:23 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<11124.7, 12205.6, 200.9>)[HP: 95.58] hit by Зараженный into Torso(1) for 4.42 damage (MeleeInfected)
+20:12:24 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<11125, 12205.8, 200.9>)[HP: 93.7738] hit by Зараженный into LeftLeg(8) for 7.225 damage (MeleeInfectedLong)
+20:12:26 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<11125.2, 12205.3, 202.0>)[HP: 88.0804] hit by Зараженный into Torso(1) for 5.78 damage (MeleeInfectedLong)
+20:14:28 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<11124.9, 12204.8, 202.0>)[HP: 90.2764] hit by Зараженный into RightLeg(3) for 5.525 damage (MeleeInfected)
+20:14:30 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<11125.2, 12204.7, 201.9>)[HP: 89.5539] hit by Зараженный into RightArm(17) for 7.225 damage (MeleeInfectedLong)
+20:14:33 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<11124.5, 12205.3, 200.9>)[HP: 87.9233] hit by Зараженный into LeftLeg(8) for 7.225 damage (MeleeInfectedLong)
+20:14:35 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<11124.3, 12205.4, 201.0>)[HP: 82.1433] hit by Зараженный into Torso(1) for 5.78 damage (MeleeInfectedLong)
+20:14:48 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<11122.2, 12206.7, 201.4>)[HP: 81.9359] hit by Зараженный into LeftArm(18) for 5.525 damage (MeleeInfected)
+20:17:09 | ##### PlayerList log: 5 players
+20:17:09 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<11836.6, 9034.5, 62.6>)
+20:17:09 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<11141, 12210.5, 197.9>)
+20:17:09 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<11186.9, 12216.9, 200.4>)
+20:17:09 | Player "Zorro" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<2638.9, 9586.9, 259.1>)
+20:17:09 | Player "B O R O D A" (id=ObFfRjou9Ceks8shj2uvOmMsoRyC5dCRQJp5Zd4TR5Q= pos=<13570.4, 11128.5, 6.1>)
+20:17:09 | #####
+20:22:08 | ##### PlayerList log: 5 players
+20:22:08 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<11823.6, 9083.7, 61.1>)
+20:22:08 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<11166.3, 12182.4, 197.6>)
+20:22:08 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<11156.1, 12198.2, 197.4>)
+20:22:08 | Player "Zorro" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<2662.4, 9566.5, 259.0>)
+20:22:08 | Player "B O R O D A" (id=ObFfRjou9Ceks8shj2uvOmMsoRyC5dCRQJp5Zd4TR5Q= pos=<13484.7, 11157.4, 11.3>)
+20:22:08 | #####
+20:23:41 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<11726.9, 9186.4, 69.7>)[HP: 94.475] hit by Зараженный into Torso(1) for 5.525 damage (MeleeInfected)
+20:23:42 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<11726.9, 9186.4, 69.7>)[HP: 92.6454] hit by Зараженный into RightLeg(3) for 7.65 damage (MeleeInfectedLong)
+20:23:44 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<11727.1, 9186.5, 69.7>)[HP: 85.4204] hit by Зараженный into Torso(1) for 7.225 damage (MeleeInfectedLong)
+20:23:46 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<11725.9, 9186.9, 69.7>)[HP: 77.0033] hit by Зараженный into Torso(1) for 8.5 damage (MeleeInfectedLong)
+20:23:52 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<11701.5, 9208.7, 70.0>)[HP: 77.1692] hit by Зараженный into LeftArm(18) for 0 damage (Dummy_Light)
+20:23:56 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<11696.9, 9216.4, 70.1>)[HP: 75.7897] hit by Зараженный into RightLeg(3) for 5.85 damage (MeleeInfected)
+20:23:59 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<11692.9, 9222.8, 70.3>)[HP: 75.2228] hit by Зараженный into LeftArm(18) for 6.5 damage (MeleeInfected)
+20:27:07 | ##### PlayerList log: 5 players
+20:27:07 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<11080.5, 9317, 124.4>)
+20:27:07 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<11487.2, 11346.4, 341.4>)
+20:27:07 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<11477.7, 11333.6, 342.5>)
+20:27:07 | Player "Zorro" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<1933.8, 8215.6, 323.6>)
+20:27:07 | Player "B O R O D A" (id=ObFfRjou9Ceks8shj2uvOmMsoRyC5dCRQJp5Zd4TR5Q= pos=<13484.7, 11157.4, 11.3>)
+20:27:07 | #####
+20:28:11 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<10939.7, 9110.5, 150.5>)[HP: 81.1159] hit by Зараженный into LeftArm(18) for 6.5 damage (MeleeInfected)
+20:28:12 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<10940.7, 9109.4, 151.4>)[HP: 80.3447] hit by Зараженный into LeftArm(18) for 8.5 damage (MeleeInfectedLong)
+20:28:20 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<10942.6, 9116.7, 149.9>)[HP: 79.04] hit by Зараженный into RightLeg(3) for 5.85 damage (MeleeInfected)
+20:32:06 | ##### PlayerList log: 5 players
+20:32:06 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<10649, 9130.3, 164.6>)
+20:32:06 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<10716.5, 11664.4, 253.9>)
+20:32:06 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<10712.9, 11669.9, 255.4>)
+20:32:06 | Player "Zorro" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<1906.9, 7618.9, 275.8>)
+20:32:06 | Player "B O R O D A" (id=ObFfRjou9Ceks8shj2uvOmMsoRyC5dCRQJp5Zd4TR5Q= pos=<13070.9, 10339.5, 6.0>)
+20:32:06 | #####
+20:33:12 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<10498.2, 9133.1, 177.3>)[HP: 86.1383] hit by Зараженный into RightArm(17) for 7.65 damage (MeleeSoldierInfected)
+20:33:18 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<10515.5, 9131.7, 175.4>)[HP: 86.2199] hit by Зараженный into RightLeg(3) for 0 damage (Dummy_Light)
+20:33:19 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<10517.1, 9131.2, 175.2>)[HP: 85.3115] hit by Зараженный into RightArm(17) for 9.9 damage (MeleeSoldierInfectedLong)
+20:33:19 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<10517.1, 9131.3, 175.2>)[HP: 77.6615] hit by Зараженный into Torso(1) for 7.65 damage (MeleeSoldierInfected)
+20:33:20 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<10517.3, 9131.1, 175.2>)[HP: 76.6715] hit by Зараженный into LeftArm(18) for 9.9 damage (MeleeSoldierInfectedLong)
+20:33:20 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<10517.3, 9131.1, 175.2>)[HP: 74.759] hit by Зараженный into LeftLeg(8) for 7.65 damage (MeleeSoldierInfected)
+20:33:23 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<10517.2, 9131.1, 175.2>)[HP: 64.9406] hit by Зараженный into Torso(1) for 9.9 damage (MeleeSoldierInfectedLong)
+20:33:29 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<10550.6, 9133.4, 171.9>)[HP: 64.339] hit by Зараженный into LeftArm(18) for 7.65 damage (MeleeSoldierInfected)
+20:33:30 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<10552.2, 9133.7, 171.7>)[HP: 62.5082] hit by Зараженный into LeftLeg(8) for 7.65 damage (MeleeSoldierInfected)
+20:33:33 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<10556.1, 9133.0, 171.3>)[HP: 54.8582] hit by Зараженный into Torso(1) for 7.65 damage (MeleeSoldierInfected)
+20:33:34 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<10558.7, 9133, 171.1>)[HP: 54.1749] hit by Зараженный into LeftArm(18) for 7.65 damage (MeleeSoldierInfected)
+20:33:34 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<10559.7, 9133.0, 171.0>) is unconscious
+20:33:35 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<10560.6, 9133.3, 170.9>)[HP: 52.2624] hit by Зараженный into RightLeg(3) for 7.65 damage (MeleeSoldierInfected)
+20:34:14 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<10560.6, 9133.3, 170.9>) regained consciousness
+20:34:31 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<10575.8, 9136.3, 169.8>)[HP: 51.7235] hit by Зараженный into RightLeg(3) for 7.65 damage (MeleeSoldierInfected)
+20:37:05 | ##### PlayerList log: 5 players
+20:37:05 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<10533.9, 9135.1, 173.7>)
+20:37:05 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<10294.7, 11944, 343.5>)
+20:37:05 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<10295.9, 11943.8, 343.1>)
+20:37:05 | Player "Zorro" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<1403.7, 6206.7, 178.2>)
+20:37:05 | Player "B O R O D A" (id=ObFfRjou9Ceks8shj2uvOmMsoRyC5dCRQJp5Zd4TR5Q= pos=<12987.2, 10287.3, 6.7>)
+20:37:05 | #####
+20:40:31 | Player "Zorro" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<1401.6, 6211.5, 176.7>) placed Костер
+20:40:49 | Player "Survivor (2)" is connected (id=RkXmFGK319uh48ZxiKUFPnvTDjvjY-yONpFrA32qJfQ=)
+20:41:19 | Player "GayZ" is connected (id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE=)
+20:41:24 | Player "Survivor (2)"(id=RkXmFGK319uh48ZxiKUFPnvTDjvjY-yONpFrA32qJfQ=) has been disconnected
+20:41:24 | Player "Zorro" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<1402.2, 6210.8, 176.8>) placed Костер
+20:41:25 | Player "Phant0mass"(id=Unknown) has been disconnected
+20:41:33 | Player "Phant0mass" is connected (id=uSV45ufkIZU94plq01IOxishV-TqLOICDh8u1HJmio4=)
+20:41:39 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<10264.7, 12021.5, 366.7>)[HP: 95.58] hit by Зараженный into Torso(1) for 4.42 damage (MeleeInfected)
+20:41:41 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<10265.1, 12022.1, 366.8>)[HP: 94.9475] hit by Зараженный into LeftArm(18) for 7.225 damage (MeleeInfectedLong)
+20:42:04 | ##### PlayerList log: 7 players
+20:42:04 | Player "Survivor" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<10330.7, 9117.9, 190.7>)
+20:42:04 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<10257.7, 12024.8, 366.6>)
+20:42:04 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<10244.3, 12023.4, 367.1>)
+20:42:04 | Player "Zorro" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<1404.1, 6207.8, 178.3>)
+20:42:04 | Player "B O R O D A" (id=ObFfRjou9Ceks8shj2uvOmMsoRyC5dCRQJp5Zd4TR5Q= pos=<12936.7, 10180.2, 7.1>)
+20:42:04 | Player "GayZ" (id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE= pos=<523.5, 9460.9, 296.9>)
+20:42:04 | Player "Phant0mass" (id=uSV45ufkIZU94plq01IOxishV-TqLOICDh8u1HJmio4= pos=<524.4, 9469.4, 297.7>)
+20:42:04 | #####
+20:43:37 | Player "Survivor"(id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo=) has been disconnected
+20:47:04 | ##### PlayerList log: 6 players
+20:47:04 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<9766.1, 12433.8, 230.5>)
+20:47:04 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<9753.0, 12451.5, 227.3>)
+20:47:04 | Player "Zorro" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<2729.4, 5393.7, 207.4>)
+20:47:04 | Player "B O R O D A" (id=ObFfRjou9Ceks8shj2uvOmMsoRyC5dCRQJp5Zd4TR5Q= pos=<12873.4, 10031.4, 6.7>)
+20:47:04 | Player "GayZ" (id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE= pos=<871.4, 8658.9, 242.5>)
+20:47:04 | Player "Phant0mass" (id=uSV45ufkIZU94plq01IOxishV-TqLOICDh8u1HJmio4= pos=<878.5, 8666.1, 245.2>)
+20:47:04 | #####
+20:49:25 | Player "JAMBO" is connected (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE=)
+20:50:11 | Chat("JAMBO"(id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE=)): Всем привет
+20:50:18 | Chat("B O R O D A"(id=ObFfRjou9Ceks8shj2uvOmMsoRyC5dCRQJp5Zd4TR5Q=)): ПРИВЕТ
+20:50:30 | Chat("kokz23"(id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o=)): ПРИВЕТ
+20:52:03 | ##### PlayerList log: 7 players
+20:52:03 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<9828.4, 12503.1, 228.4>)
+20:52:03 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<9826.0, 12498.6, 228.3>)
+20:52:03 | Player "Zorro" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<2737.6, 5179.8, 200.9>)
+20:52:03 | Player "B O R O D A" (id=ObFfRjou9Ceks8shj2uvOmMsoRyC5dCRQJp5Zd4TR5Q= pos=<12835.6, 10019, 6.2>)
+20:52:03 | Player "GayZ" (id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE= pos=<906.3, 8909.3, 244.7>)
+20:52:03 | Player "Phant0mass" (id=uSV45ufkIZU94plq01IOxishV-TqLOICDh8u1HJmio4= pos=<905.4, 8890.8, 245.0>)
+20:52:03 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<1146.4, 12321.5, 379.5>)
+20:52:03 | #####
+20:54:14 | Player "Shum"(id=Unknown) has been disconnected
+20:55:54 | Chat("Phant0mass"(id=uSV45ufkIZU94plq01IOxishV-TqLOICDh8u1HJmio4=)): всем ку
+20:56:17 | Chat("B O R O D A"(id=ObFfRjou9Ceks8shj2uvOmMsoRyC5dCRQJp5Zd4TR5Q=)): КУ
+20:56:32 | Chat("kokz23"(id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o=)): ку
+20:56:40 | Player "JAMBO"(id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE=) has been disconnected
+20:57:02 | ##### PlayerList log: 6 players
+20:57:02 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<9836.8, 12670.6, 209.7>)
+20:57:02 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<9946.3, 12771.4, 209.3>)
+20:57:02 | Player "Zorro" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<2527.8, 6255.5, 295.6>)
+20:57:02 | Player "B O R O D A" (id=ObFfRjou9Ceks8shj2uvOmMsoRyC5dCRQJp5Zd4TR5Q= pos=<13191.7, 10569.7, 6.9>)
+20:57:02 | Player "GayZ" (id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE= pos=<1211.2, 8815.4, 278.7>)
+20:57:02 | Player "Phant0mass" (id=uSV45ufkIZU94plq01IOxishV-TqLOICDh8u1HJmio4= pos=<1210.8, 8812.9, 278.7>)
+20:57:02 | #####
+20:57:19 | Player "Survivor"(id=Unknown) has been disconnected
+21:00:24 | Player "Survivor" is connected (id=ewe0-V2hPYd5unczHZLaHKp9dnu6_DQf8QjkHxLj_vI=)
+21:01:51 | Player "GayZ" (id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE= pos=<1202.9, 8789.9, 278.3>) placed Противопехотная мина
+21:02:02 | ##### PlayerList log: 7 players
+21:02:02 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<9679.5, 13171.3, 157.8>)
+21:02:02 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<9678.1, 13168.1, 157.8>)
+21:02:02 | Player "Zorro" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<3449.2, 9067.6, 305.1>)
+21:02:02 | Player "B O R O D A" (id=ObFfRjou9Ceks8shj2uvOmMsoRyC5dCRQJp5Zd4TR5Q= pos=<13448.2, 12139.3, 65.0>)
+21:02:02 | Player "GayZ" (id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE= pos=<1226.8, 8770.4, 278.5>)
+21:02:02 | Player "Phant0mass" (id=uSV45ufkIZU94plq01IOxishV-TqLOICDh8u1HJmio4= pos=<1210.1, 8759.1, 278.6>)
+21:02:02 | Player "Survivor" (id=ewe0-V2hPYd5unczHZLaHKp9dnu6_DQf8QjkHxLj_vI= pos=<10480.6, 1994.5, 6.4>)
+21:02:02 | #####
+21:03:49 | Player "JAMBO"(id=Unknown) has been disconnected
+21:04:37 | Player "Survivor" (id=ewe0-V2hPYd5unczHZLaHKp9dnu6_DQf8QjkHxLj_vI= pos=<10388, 1670.5, 6.1>)[HP: 98.5375] hit by Зараженный into RightLeg(3) for 5.85 damage (MeleeInfected)
+21:04:38 | Player "Survivor" (id=ewe0-V2hPYd5unczHZLaHKp9dnu6_DQf8QjkHxLj_vI= pos=<10388, 1670.5, 6.1>)[HP: 90.5525] hit by Зараженный into Torso(1) for 8.075 damage (MeleeInfectedLong)
+21:04:40 | Player "Survivor" (id=ewe0-V2hPYd5unczHZLaHKp9dnu6_DQf8QjkHxLj_vI= pos=<10388, 1670.5, 6.1>)[HP: 88.64] hit by Зараженный into RightLeg(3) for 7.65 damage (MeleeInfectedLong)
+21:04:42 | Player "Survivor" (id=ewe0-V2hPYd5unczHZLaHKp9dnu6_DQf8QjkHxLj_vI= pos=<10387.1, 1670.0, 6.1>)[HP: 87.2675] hit by Зараженный into LeftLeg(8) for 5.85 damage (MeleeInfected)
+21:04:43 | Player "Survivor" (id=ewe0-V2hPYd5unczHZLaHKp9dnu6_DQf8QjkHxLj_vI= pos=<10385.8, 1669.6, 6.1>)[HP: 79.2825] hit by Зараженный into Torso(1) for 8.075 damage (MeleeInfectedLong)
+21:04:45 | Player "Survivor" (id=ewe0-V2hPYd5unczHZLaHKp9dnu6_DQf8QjkHxLj_vI= pos=<10385.5, 1669.5, 6.1>)[HP: 78.475] hit by Зараженный into RightArm(17) for 8.075 damage (MeleeInfectedLong)
+21:04:49 | Player "Survivor" (id=ewe0-V2hPYd5unczHZLaHKp9dnu6_DQf8QjkHxLj_vI= pos=<10385.6, 1669.5, 6.1>)[HP: 72.4801] hit by Зараженный into Torso(1) for 6.175 damage (MeleeInfected)
+21:05:34 | Player "GayZ" (id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE= pos=<1559.2, 8911.8, 303.5>)[HP: 98.6188] hit by Зараженный into LeftLeg(8) for 5.525 damage (MeleeInfected)
+21:05:59 | Player "GayZ" (id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE= pos=<1564.9, 8937.8, 301.9>)[HP: 97.9576] hit by Зараженный into LeftLeg(8) for 5.525 damage (MeleeInfected)
+21:07:01 | ##### PlayerList log: 7 players
+21:07:01 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<9179.6, 13529.8, 81.3>)
+21:07:01 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<9181.1, 13524.7, 81.5>)
+21:07:01 | Player "Zorro" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<2973.6, 12031.1, 237.9>)
+21:07:01 | Player "B O R O D A" (id=ObFfRjou9Ceks8shj2uvOmMsoRyC5dCRQJp5Zd4TR5Q= pos=<14104.3, 13090.4, 5.5>)
+21:07:01 | Player "GayZ" (id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE= pos=<1565.3, 8954.9, 301.6>)
+21:07:01 | Player "Phant0mass" (id=uSV45ufkIZU94plq01IOxishV-TqLOICDh8u1HJmio4= pos=<1563.8, 9008.9, 302.2>)
+21:07:01 | Player "Survivor" (id=ewe0-V2hPYd5unczHZLaHKp9dnu6_DQf8QjkHxLj_vI= pos=<10220.4, 1617.9, 12.5>)
+21:07:01 | #####
+21:07:24 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<9215.4, 13579.5, 79.2>)[HP: 99.2775] hit by Зараженный into RightArm(17) for 7.225 damage (MeleeInfectedLong)
+21:08:00 | Player "Survivor" (id=ewe0-V2hPYd5unczHZLaHKp9dnu6_DQf8QjkHxLj_vI= pos=<10224.2, 1617.6, 6.0>)[HP: 1.5526] hit by FallDamageHealth
+21:08:02 | Player "Survivor" (id=ewe0-V2hPYd5unczHZLaHKp9dnu6_DQf8QjkHxLj_vI= pos=<10223.6, 1617.8, 6.0>) is unconscious
+21:08:21 | Player "GayZ" (id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE= pos=<1656.2, 8951.1, 306.1>) placed Бочка
+21:08:53 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<9235.9, 13611.1, 79.3>)[HP: 99.4475] hit by Зараженный into LeftArm(18) for 5.525 damage (MeleeInfected)
+21:08:53 | Player "Survivor" (id=ewe0-V2hPYd5unczHZLaHKp9dnu6_DQf8QjkHxLj_vI= pos=<10223.6, 1618.6, 6.0>) regained consciousness
+21:08:55 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<9235.4, 13612.2, 79.3>)[HP: 97.7313] hit by Зараженный into RightLeg(3) for 7.225 damage (MeleeInfectedLong)
+21:09:33 | Player "Survivor" (id=ewe0-V2hPYd5unczHZLaHKp9dnu6_DQf8QjkHxLj_vI= pos=<10220.4, 1615.1, 6.0>) is unconscious
+21:09:37 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<9260.9, 13578.2, 79.3>)[HP: 98.2691] hit by Зараженный into RightArm(17) for 7.225 damage (MeleeInfectedLong)
+21:10:04 | Player "Survivor" (id=ewe0-V2hPYd5unczHZLaHKp9dnu6_DQf8QjkHxLj_vI= pos=<10221, 1615.1, 6.0>) regained consciousness
+21:10:28 | Player "Survivor" (id=ewe0-V2hPYd5unczHZLaHKp9dnu6_DQf8QjkHxLj_vI= pos=<10218.9, 1615.9, 8.6>) is unconscious
+21:10:58 | Player "Survivor" (id=ewe0-V2hPYd5unczHZLaHKp9dnu6_DQf8QjkHxLj_vI= pos=<10218.9, 1615.7, 6.0>) regained consciousness
+21:10:59 | Player "Zorro"(id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s=) has been disconnected
+21:11:16 | Player "Survivor" (id=ewe0-V2hPYd5unczHZLaHKp9dnu6_DQf8QjkHxLj_vI= pos=<10218.9, 1615.9, 8.8>) is unconscious
+21:11:26 | Player "Survivor" (DEAD) (id=ewe0-V2hPYd5unczHZLaHKp9dnu6_DQf8QjkHxLj_vI= pos=<10218.9, 1615.7, 6.1>) died. Stats> Water: 479.12 Energy: 471.859 Bleed sources: 0
+21:11:35 | Player "Survivor"(id=ewe0-V2hPYd5unczHZLaHKp9dnu6_DQf8QjkHxLj_vI=) has been disconnected
+21:11:50 | Player "JAMBO" is connected (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE=)
+21:12:00 | ##### PlayerList log: 5 players
+21:12:00 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<9333.6, 13690.3, 80.6>)
+21:12:00 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<9341.8, 13690, 80.7>)
+21:12:00 | Player "B O R O D A" (id=ObFfRjou9Ceks8shj2uvOmMsoRyC5dCRQJp5Zd4TR5Q= pos=<13765, 14107.9, 27.5>)
+21:12:00 | Player "GayZ" (id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE= pos=<1441.6, 9214.8, 291.3>)
+21:12:00 | Player "Phant0mass" (id=uSV45ufkIZU94plq01IOxishV-TqLOICDh8u1HJmio4= pos=<1464.0, 9198.7, 303.0>)
+21:12:00 | #####
+21:16:06 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<9512.9, 13679.3, 84.6>)[HP: 99.4475] hit by Зараженный into RightArm(17) for 5.525 damage (MeleeInfected)
+21:16:09 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<9512.4, 13678.6, 84.5>)[HP: 93.7575] hit by Зараженный into Torso(1) for 5.78 damage (MeleeInfectedLong)
+21:16:25 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<9508.0, 13671.3, 84.1>)[HP: 94.475] hit by Зараженный into Torso(1) for 5.525 damage (MeleeInfected)
+21:16:27 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<9508.3, 13670.4, 84.1>)[HP: 94.0125] hit by Зараженный into RightArm(17) for 5.525 damage (MeleeInfected)
+21:16:37 | Player "B O R O D A"(id=ObFfRjou9Ceks8shj2uvOmMsoRyC5dCRQJp5Zd4TR5Q=) has been disconnected
+21:17:00 | ##### PlayerList log: 5 players
+21:17:00 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<9510.8, 13661.4, 84.1>)
+21:17:00 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<9515.6, 13644.4, 84.0>)
+21:17:00 | Player "GayZ" (id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE= pos=<1341.5, 9326.5, 311.1>)
+21:17:00 | Player "Phant0mass" (id=uSV45ufkIZU94plq01IOxishV-TqLOICDh8u1HJmio4= pos=<1341.7, 9328.9, 311.1>)
+21:17:00 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<2846.2, 12375, 217.4>)
+21:17:00 | #####
+21:18:03 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<9574.8, 13664.2, 83.5>)[HP: 96.1705] hit by Зараженный into RightArm(17) for 7.225 damage (MeleeInfectedLong)
+21:18:04 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<9575.2, 13664.1, 83.5>)[HP: 94.4542] hit by Зараженный into RightLeg(3) for 7.225 damage (MeleeInfectedLong)
+21:18:06 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<9575.2, 13664.1, 83.5>)[HP: 87.2292] hit by Зараженный into Torso(1) for 7.225 damage (MeleeInfectedLong)
+21:18:08 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<9575.3, 13664.1, 83.5>)[HP: 86.5969] hit by Зараженный into RightArm(17) for 7.225 damage (MeleeInfectedLong)
+21:19:10 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<9581.3, 13701.7, 83.6>) placed Навес
+21:19:43 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<9597.7, 13665.7, 83.3>)[HP: 98.6188] hit by Зараженный into LeftLeg(8) for 5.525 damage (MeleeInfected)
+21:19:44 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<9596.0, 13665, 83.3>)[HP: 97.2375] hit by Зараженный into RightLeg(3) for 5.525 damage (MeleeInfected)
+21:19:46 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<9595.9, 13665.1, 83.3>)[HP: 96.6051] hit by Зараженный into LeftArm(18) for 7.225 damage (MeleeInfectedLong)
+21:21:27 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<9686.9, 13771.6, 75.0>)[HP: 91.8154] hit by Зараженный into RightArm(17) for 7.225 damage (MeleeInfectedLong)
+21:21:29 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<9687.0, 13771.6, 75.0>)[HP: 90.0992] hit by Зараженный into RightLeg(3) for 7.225 damage (MeleeInfectedLong)
+21:21:59 | ##### PlayerList log: 5 players
+21:21:59 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<9680.3, 13761.2, 75.1>)
+21:21:59 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<9685.3, 13762.8, 75.1>)
+21:21:59 | Player "GayZ" (id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE= pos=<1493.6, 8722.2, 314.6>)
+21:21:59 | Player "Phant0mass" (id=uSV45ufkIZU94plq01IOxishV-TqLOICDh8u1HJmio4= pos=<1465.4, 8703.7, 315.1>)
+21:21:59 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4428.8, 10238.3, 339.6>)
+21:21:59 | #####
+21:23:08 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<9753.6, 13797.4, 71.9>)[HP: 99.4475] hit by Зараженный into LeftArm(18) for 5.525 damage (MeleeInfected)
+21:25:13 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<9771.2, 13902.8, 80.3>)[HP: 94.9536] hit by Зараженный into RightLeg(3) for 7.225 damage (MeleeInfectedLong)
+21:26:58 | ##### PlayerList log: 5 players
+21:26:58 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<9838.0, 13936.9, 80.3>)
+21:26:58 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<9714.4, 13807.6, 74.6>)
+21:26:58 | Player "GayZ" (id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE= pos=<991.8, 8272.9, 206.5>)
+21:26:58 | Player "Phant0mass" (id=uSV45ufkIZU94plq01IOxishV-TqLOICDh8u1HJmio4= pos=<990.4, 8273.3, 206.6>)
+21:26:58 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4656.5, 10355.2, 338.9>)
+21:26:58 | #####
+21:28:27 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<9824.0, 13928.7, 79.3>)[HP: 94.22] hit by Зараженный into Torso(1) for 5.78 damage (MeleeInfectedLong)
+21:28:28 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<9823.9, 13929, 79.3>)[HP: 93.5792] hit by Зараженный into LeftArm(18) for 7.225 damage (MeleeInfectedLong)
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.0, 10988.9, 338.7>)[HP: 98.1048] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.0, 10988.9, 338.7>)[HP: 96.2264] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.0, 10988.9, 338.7>)[HP: 94.3479] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.0, 10988.9, 338.7>)[HP: 92.4789] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.0, 10988.9, 338.7>)[HP: 90.6099] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.0, 10988.9, 338.7>)[HP: 88.7505] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.0, 10988.9, 338.7>)[HP: 86.8911] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.0, 10988.9, 338.7>)[HP: 85.055] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.0, 10988.9, 338.7>)[HP: 83.219] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.0, 10988.9, 338.7>)[HP: 81.4269] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.0, 10988.9, 338.7>)[HP: 79.6349] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.0, 10988.9, 338.7>)[HP: 77.8843] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.0, 10988.9, 338.7>)[HP: 76.1337] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.0, 10988.9, 338.7>)[HP: 74.4263] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.0, 10988.9, 338.7>)[HP: 72.719] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.0, 10988.9, 338.7>)[HP: 71.0555] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.0, 10988.9, 338.7>)[HP: 69.3919] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.0, 10988.9, 338.7>)[HP: 67.7723] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.0, 10988.9, 338.7>)[HP: 66.1527] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.0, 10988.9, 338.7>)[HP: 64.5768] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.0, 10988.9, 338.7>)[HP: 63.001] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.0, 10988.9, 338.7>)[HP: 61.4689] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.0, 10988.9, 338.7>)[HP: 59.9369] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.0, 10988.9, 338.7>)[HP: 58.4488] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.0, 10988.9, 338.7>)[HP: 56.9607] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.0, 10988.9, 338.7>)[HP: 55.5153] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.0, 10988.9, 338.7>)[HP: 54.0699] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.0, 10988.9, 338.7>)[HP: 52.669] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.0, 10988.9, 338.7>)[HP: 51.2681] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.0, 10988.9, 338.7>)[HP: 49.9118] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.0, 10988.9, 338.7>)[HP: 48.5554] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.0, 10988.9, 338.7>)[HP: 47.2437] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.0, 10988.9, 338.7>)[HP: 45.9764] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.0, 10988.9, 338.7>)[HP: 44.7531] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.0, 10988.9, 338.7>)[HP: 43.5737] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.0, 10988.9, 338.7>)[HP: 42.428] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.0, 10988.9, 338.7>)[HP: 41.3177] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.0, 10988.9, 338.7>)[HP: 40.2073] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.1, 10988.9, 338.7>)[HP: 39.1411] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.1, 10988.9, 338.7>)[HP: 38.0749] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.1, 10988.9, 338.7>)[HP: 37.0087] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.1, 10988.9, 338.7>)[HP: 35.9866] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.1, 10988.9, 338.7>)[HP: 34.9645] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.1, 10988.9, 338.7>)[HP: 33.9424] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.1, 10988.9, 338.7>)[HP: 32.9643] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.1, 10988.9, 338.7>)[HP: 31.9863] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.1, 10988.9, 338.7>)[HP: 31.0082] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.1, 10988.9, 338.7>)[HP: 30.0741] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.1, 10988.9, 338.7>)[HP: 29.1399] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.1, 10988.9, 338.7>)[HP: 28.2495] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.1, 10988.9, 338.7>)[HP: 27.3591] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.1, 10988.9, 338.7>)[HP: 26.5124] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.1, 10988.9, 338.7>)[HP: 25.6657] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.2, 10989, 338.7>)[HP: 24.8627] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.2, 10989, 338.7>)[HP: 24.0598] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.2, 10989, 338.7>)[HP: 23.3005] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.2, 10989, 338.7>)[HP: 22.5412] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.2, 10989, 338.7>)[HP: 21.8256] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.2, 10989, 338.7>)[HP: 21.1099] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.2, 10989, 338.7>)[HP: 20.4365] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.2, 10989, 338.7>)[HP: 19.7632] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.2, 10989, 338.7>)[HP: 19.1335] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.2, 10989, 338.7>)[HP: 18.5037] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.2, 10989, 338.7>)[HP: 17.9178] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.2, 10989, 338.7>)[HP: 17.3318] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.2, 10989, 338.7>)[HP: 16.7801] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.2, 10989, 338.7>)[HP: 16.2285] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.2, 10989, 338.7>)[HP: 15.7208] hit by Hatchback_02 with TransportHit
+21:31:44 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4174.2, 10989, 338.7>)[HP: 15.2132] hit by Hatchback_02 with TransportHit
+21:31:58 | ##### PlayerList log: 5 players
+21:31:58 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<9867.6, 13873.3, 70.2>)
+21:31:58 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<9870.5, 13856.1, 69.1>)
+21:31:58 | Player "GayZ" (id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE= pos=<1315.9, 7260.3, 206.1>)
+21:31:58 | Player "Phant0mass" (id=uSV45ufkIZU94plq01IOxishV-TqLOICDh8u1HJmio4= pos=<1320.6, 7264.7, 208.0>)
+21:31:58 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4171.6, 10993.9, 338.4>)
+21:31:58 | #####
+21:32:36 | Player "SKIF" is connected (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE=)
+21:35:39 | Player "SKIF" (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE= pos=<1160.9, 4561.6, 139.1>)[HP: 100] hit by Зараженный into RightArm(17) for 0 damage (Dummy_Light)
+21:35:42 | Player "SKIF" (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE= pos=<1163.9, 4560.2, 139.1>)[HP: 95.32] hit by Зараженный into Torso(1) for 4.68 damage (MeleeInfected)
+21:35:43 | Player "SKIF" (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE= pos=<1166.8, 4560.0, 139.1>)[HP: 94.645] hit by Зараженный into LeftArm(18) for 7.65 damage (MeleeInfectedLong)
+21:35:45 | Player "SKIF" (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE= pos=<1166.8, 4559.6, 139.1>)[HP: 88.525] hit by Зараженный into Torso(1) for 6.12 damage (MeleeInfectedLong)
+21:36:57 | ##### PlayerList log: 6 players
+21:36:57 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<9435.2, 14500.4, 225.5>)
+21:36:57 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<9433.9, 14499.1, 225.7>)
+21:36:57 | Player "GayZ" (id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE= pos=<2066.5, 6380.1, 308.0>)
+21:36:57 | Player "Phant0mass" (id=uSV45ufkIZU94plq01IOxishV-TqLOICDh8u1HJmio4= pos=<2069.9, 6393.9, 308.8>)
+21:36:57 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<3901.5, 11041.3, 331.0>)
+21:36:57 | Player "SKIF" (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE= pos=<1135.4, 4590.1, 139.9>)
+21:36:57 | #####
+21:38:11 | Player "GayZ" (id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE= pos=<2235.4, 6238.4, 312.1>)[HP: 99.3825] hit by Зараженный into LeftArm(18) for 6.175 damage (MeleeInfected)
+21:38:19 | Player "GayZ" (id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE= pos=<2236.0, 6242.2, 312.1>)[HP: 98.945] hit by Зараженный into LeftArm(18) for 6.175 damage (MeleeInfected)
+21:40:31 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<9469.5, 14531, 230.5>)[HP: 98.6188] hit by Зараженный into LeftLeg(8) for 5.525 damage (MeleeInfected)
+21:41:56 | ##### PlayerList log: 6 players
+21:41:56 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<9433, 14549.9, 232.0>)
+21:41:56 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<9433.3, 14549.3, 232.0>)
+21:41:56 | Player "GayZ" (id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE= pos=<2548.9, 5688.9, 230.4>)
+21:41:56 | Player "Phant0mass" (id=uSV45ufkIZU94plq01IOxishV-TqLOICDh8u1HJmio4= pos=<2544.7, 5697.9, 233.3>)
+21:41:56 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<4334.0, 13056.9, 176.8>)
+21:41:56 | Player "SKIF" (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE= pos=<1125.4, 4593.7, 142.7>)
+21:41:56 | #####
+21:46:56 | ##### PlayerList log: 6 players
+21:46:56 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<9433.6, 14550.7, 232.0>)
+21:46:56 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<9435.2, 14552.2, 232.0>)
+21:46:56 | Player "GayZ" (id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE= pos=<2847.7, 5245.8, 204.8>)
+21:46:56 | Player "Phant0mass" (id=uSV45ufkIZU94plq01IOxishV-TqLOICDh8u1HJmio4= pos=<2857.6, 5241.3, 205.3>)
+21:46:56 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<3330.2, 12797.2, 198.5>)
+21:46:56 | Player "SKIF" (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE= pos=<1145.8, 4581.8, 139.1>)
+21:46:56 | #####
+21:47:09 | Player "GayZ" (id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE= pos=<2872.7, 5249, 205.9>)[HP: 99.3825] hit by Зараженный into LeftArm(18) for 6.175 damage (MeleeInfected)
+21:47:39 | Player "GayZ" (id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE= pos=<2843.2, 5266.9, 204.6>)[HP: 95.06] hit by Зараженный into Torso(1) for 4.94 damage (MeleeInfected)
+21:47:42 | Player "GayZ" (id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE= pos=<2844.5, 5262.5, 204.8>)[HP: 94.5319] hit by Зараженный into RightArm(17) for 6.175 damage (MeleeInfected)
+21:47:44 | Player "GayZ" (id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE= pos=<2845.4, 5262.7, 204.8>)[HP: 93.7244] hit by Зараженный into LeftArm(18) for 8.075 damage (MeleeInfectedLong)
+21:48:19 | Player "SKIF"(id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE=) has been disconnected
+21:50:32 | Player "Ivan" is connected (id=qDDKtNDMjIrH4eweMcy-X1MPg8zD6TodKelR4O6FW70=)
+21:51:55 | ##### PlayerList log: 6 players
+21:51:55 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<9433.4, 14549.3, 232.0>)
+21:51:55 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<9447.0, 14570.3, 232.8>)
+21:51:55 | Player "GayZ" (id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE= pos=<2888.5, 5277.4, 207.0>)
+21:51:55 | Player "Phant0mass" (id=uSV45ufkIZU94plq01IOxishV-TqLOICDh8u1HJmio4= pos=<2887.3, 5278.2, 207.0>)
+21:51:55 | Player "JAMBO" (id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE= pos=<1146.9, 12317.1, 379.5>)
+21:51:55 | Player "Ivan" (id=qDDKtNDMjIrH4eweMcy-X1MPg8zD6TodKelR4O6FW70= pos=<13742.3, 14128.7, 28.0>)
+21:51:55 | #####
+21:52:31 | Player "JAMBO"(id=RmmUayXydhGz8xepLSd5o2WMcpJQMjkTI-iRpwRJ1sE=) has been disconnected
+21:56:55 | ##### PlayerList log: 5 players
+21:56:55 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<9433.4, 14548.7, 232.0>)
+21:56:55 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<9433, 14550.1, 232.0>)
+21:56:55 | Player "GayZ" (id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE= pos=<2888.6, 5277.1, 207.0>)
+21:56:55 | Player "Phant0mass" (id=uSV45ufkIZU94plq01IOxishV-TqLOICDh8u1HJmio4= pos=<2887.5, 5277.5, 207.0>)
+21:56:55 | Player "Ivan" (id=qDDKtNDMjIrH4eweMcy-X1MPg8zD6TodKelR4O6FW70= pos=<13788.8, 14092.7, 28.1>)
+21:56:55 | #####
+21:59:40 | Player "GayZ"(id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE=) has been disconnected
+21:59:40 | Player "Phant0mass"(id=uSV45ufkIZU94plq01IOxishV-TqLOICDh8u1HJmio4=) has been disconnected
+22:01:54 | ##### PlayerList log: 3 players
+22:01:54 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<9433.6, 14547.6, 232.0>)
+22:01:54 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<9433.3, 14549.6, 232.0>)
+22:01:54 | Player "Ivan" (id=qDDKtNDMjIrH4eweMcy-X1MPg8zD6TodKelR4O6FW70= pos=<13775.8, 14103.2, 27.6>)
+22:01:54 | #####
+22:06:53 | ##### PlayerList log: 3 players
+22:06:53 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<9442.6, 14556.5, 232.2>)
+22:06:53 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<9347.7, 14623.2, 237.8>)
+22:06:53 | Player "Ivan" (id=qDDKtNDMjIrH4eweMcy-X1MPg8zD6TodKelR4O6FW70= pos=<13745.8, 14126.7, 28.0>)
+22:06:53 | #####
+22:11:52 | ##### PlayerList log: 3 players
+22:11:52 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<9433.0, 14550.9, 232.0>)
+22:11:52 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<9433.2, 14548.4, 232.0>)
+22:11:52 | Player "Ivan" (id=qDDKtNDMjIrH4eweMcy-X1MPg8zD6TodKelR4O6FW70= pos=<13745.4, 14128.3, 28.0>)
+22:11:52 | #####
+22:16:51 | ##### PlayerList log: 3 players
+22:16:51 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<9446.2, 14549, 231.9>)
+22:16:51 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<9458.5, 14550.9, 232.1>)
+22:16:51 | Player "Ivan" (id=qDDKtNDMjIrH4eweMcy-X1MPg8zD6TodKelR4O6FW70= pos=<13745.8, 14125.6, 28.0>)
+22:16:51 | #####
+22:21:50 | ##### PlayerList log: 3 players
+22:21:50 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<9141.5, 14841, 291.4>)
+22:21:50 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<9143.4, 14840.2, 291.4>)
+22:21:50 | Player "Ivan" (id=qDDKtNDMjIrH4eweMcy-X1MPg8zD6TodKelR4O6FW70= pos=<13748.4, 14112.4, 27.2>)
+22:21:50 | #####
+22:24:05 | Player "Survivor" is connected (id=ewe0-V2hPYd5unczHZLaHKp9dnu6_DQf8QjkHxLj_vI=)
+22:26:49 | ##### PlayerList log: 4 players
+22:26:49 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<8546.0, 14845.3, 349.3>)
+22:26:49 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<8552.8, 14848, 346.5>)
+22:26:49 | Player "Ivan" (id=qDDKtNDMjIrH4eweMcy-X1MPg8zD6TodKelR4O6FW70= pos=<13758.9, 14123.6, 27.4>)
+22:26:49 | Player "Survivor" (id=ewe0-V2hPYd5unczHZLaHKp9dnu6_DQf8QjkHxLj_vI= pos=<7831.4, 3248.8, 10.1>)
+22:26:49 | #####
+22:31:49 | ##### PlayerList log: 4 players
+22:31:49 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<8029.6, 14646.5, 340.3>)
+22:31:49 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<8026.6, 14645.2, 340.3>)
+22:31:49 | Player "Ivan" (id=qDDKtNDMjIrH4eweMcy-X1MPg8zD6TodKelR4O6FW70= pos=<13635.7, 13777.9, 6.3>)
+22:31:49 | Player "Survivor" (id=ewe0-V2hPYd5unczHZLaHKp9dnu6_DQf8QjkHxLj_vI= pos=<7835.9, 3132.3, 5.9>)
+22:31:49 | #####
+22:32:43 | Player "Survivor" (id=ewe0-V2hPYd5unczHZLaHKp9dnu6_DQf8QjkHxLj_vI= pos=<7866.1, 3137.1, 4.6>) placed Бочка
+22:34:11 | Player "Survivor" (id=ewe0-V2hPYd5unczHZLaHKp9dnu6_DQf8QjkHxLj_vI= pos=<7943.3, 3127.6, 6.9>)[HP: 92.35] hit by Зараженный into Torso(1) for 7.65 damage (MeleeInfectedLong)
+22:34:14 | Player "Survivor" (id=ewe0-V2hPYd5unczHZLaHKp9dnu6_DQf8QjkHxLj_vI= pos=<7943.3, 3127.6, 6.9>)[HP: 84.79] hit by Зараженный into Torso(1) for 7.65 damage (MeleeInfectedLong)
+22:34:16 | Player "Survivor" (id=ewe0-V2hPYd5unczHZLaHKp9dnu6_DQf8QjkHxLj_vI= pos=<7943.3, 3127.9, 6.7>)[HP: 84.205] hit by Зараженный into RightArm(17) for 5.85 damage (MeleeInfected)
+22:34:17 | Player "Survivor" (id=ewe0-V2hPYd5unczHZLaHKp9dnu6_DQf8QjkHxLj_vI= pos=<7943.3, 3127.7, 6.8>)[HP: 78.445] hit by Зараженный into Torso(1) for 5.85 damage (MeleeInfected)
+22:34:18 | Player "Survivor" (id=ewe0-V2hPYd5unczHZLaHKp9dnu6_DQf8QjkHxLj_vI= pos=<7943.2, 3127.5, 6.9>)[HP: 70.795] hit by Зараженный into Torso(1) for 7.65 damage (MeleeInfectedLong)
+22:34:20 | Player "Survivor" (id=ewe0-V2hPYd5unczHZLaHKp9dnu6_DQf8QjkHxLj_vI= pos=<7943.3, 3127.6, 6.8>)[HP: 70.0688] hit by Зараженный into LeftArm(18) for 7.65 damage (MeleeInfectedLong)
+22:34:22 | Player "Survivor" (id=ewe0-V2hPYd5unczHZLaHKp9dnu6_DQf8QjkHxLj_vI= pos=<7943.2, 3127.5, 6.9>)[HP: 64.1186] hit by Зараженный into Torso(1) for 5.85 damage (MeleeInfected)
+22:34:23 | Player "Survivor" (id=ewe0-V2hPYd5unczHZLaHKp9dnu6_DQf8QjkHxLj_vI= pos=<7943.3, 3127.8, 6.7>)[HP: 56.5064] hit by Зараженный into Torso(1) for 7.65 damage (MeleeInfectedLong)
+22:34:23 | Player "Survivor" (id=ewe0-V2hPYd5unczHZLaHKp9dnu6_DQf8QjkHxLj_vI= pos=<7943.0, 3127.8, 6.7>) is unconscious
+22:34:24 | Player "Survivor" (id=ewe0-V2hPYd5unczHZLaHKp9dnu6_DQf8QjkHxLj_vI= pos=<7942.5, 3127.3, 7.0>)[HP: 50.6063] hit by Зараженный into Torso(1) for 5.85 damage (MeleeInfected)
+22:34:25 | Player "Survivor" (id=ewe0-V2hPYd5unczHZLaHKp9dnu6_DQf8QjkHxLj_vI= pos=<7942.1, 3126.8, 7.2>)[HP: 44.7917] hit by Зараженный into Torso(1) for 5.85 damage (MeleeInfected)
+22:34:45 | Player "2012" is connected (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE=)
+22:34:48 | Player "Survivor"(id=ewe0-V2hPYd5unczHZLaHKp9dnu6_DQf8QjkHxLj_vI=) has been disconnected
+22:35:01 | Player Survivor (DEAD) (id=ewe0-V2hPYd5unczHZLaHKp9dnu6_DQf8QjkHxLj_vI= pos=<7942.1, 3126.2, 7.3>) died. Stats> Water: 456.556 Energy: 290.221 Bleed sources: 3
+22:35:06 | Player "Ivan" (id=qDDKtNDMjIrH4eweMcy-X1MPg8zD6TodKelR4O6FW70= pos=<13635.5, 13766.8, 6.9>)[HP: 93.54] hit by Зараженный into Torso(1) for 6.46 damage (MeleeSoldierInfected)
+22:35:48 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<7941.1, 14648.6, 338.8>)[HP: 99.2775] hit by Зараженный into LeftArm(18) for 7.225 damage (MeleeSoldierInfected)
+22:36:48 | ##### PlayerList log: 4 players
+22:36:48 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<7926.6, 14639.1, 338.4>)
+22:36:48 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<7945.4, 14635.8, 338.5>)
+22:36:48 | Player "Ivan" (id=qDDKtNDMjIrH4eweMcy-X1MPg8zD6TodKelR4O6FW70= pos=<13636.8, 13774.5, 5.6>)
+22:36:48 | Player "2012" (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE= pos=<1536.1, 4747.1, 165.1>)
+22:36:48 | #####
+22:36:55 | Player "Survivor"(id=Unknown) has been disconnected
+22:41:11 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<7799.4, 14774.8, 355.8>)[HP: 94.22] hit by Зараженный into Torso(1) for 5.78 damage (MeleeSoldierInfected)
+22:41:12 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<7799.5, 14774.7, 355.8>)[HP: 88.44] hit by Зараженный into Torso(1) for 5.78 damage (MeleeSoldierInfected)
+22:41:13 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<7798.9, 14774.9, 355.8>)[HP: 86.7238] hit by Зараженный into LeftLeg(8) for 7.225 damage (MeleeSoldierInfected)
+22:41:28 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<7802.5, 14770.9, 355.8>)[HP: 86.4513] hit by Зараженный into LeftArm(18) for 7.225 damage (MeleeSoldierInfected)
+22:41:30 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<7808.0, 14767.5, 355.8>)[HP: 99.2775] hit by Зараженный into LeftArm(18) for 7.225 damage (MeleeSoldierInfected)
+22:41:36 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<7808.5, 14767.6, 355.8>)[HP: 97.12] hit by Зараженный into LeftLeg(8) for 9.35 damage (MeleeSoldierInfectedLong)
+22:41:48 | ##### PlayerList log: 4 players
+22:41:48 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<7795.3, 14763.1, 355.9>)
+22:41:48 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<7813.4, 14766, 355.8>)
+22:41:48 | Player "Ivan" (id=qDDKtNDMjIrH4eweMcy-X1MPg8zD6TodKelR4O6FW70= pos=<13635.7, 13776.8, 5.6>)
+22:41:48 | Player "2012" (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE= pos=<2106.4, 4947.8, 181.3>)
+22:41:48 | #####
+22:42:43 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<7791.8, 14761, 355.9>)[HP: 91.8756] hit by Зараженный into Torso(1) for 7.225 damage (MeleeSoldierInfected)
+22:42:50 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<7817.7, 14773.6, 356.0>)[HP: 91.4231] hit by Зараженный into LeftArm(18) for 7.225 damage (MeleeSoldierInfected)
+22:42:55 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<7804.8, 14773.7, 355.8>)[HP: 90.7906] hit by Зараженный into RightArm(17) for 7.225 damage (MeleeSoldierInfected)
+22:42:59 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<7803.1, 14774.7, 355.8>)[HP: 86.5835] hit by Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<7795, 14777.7, 356.0>) into LeftArm(22) for 25.6811 damage (Bullet_556x45) with M16-A2 from 8.68958 meters 
+22:43:04 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<7802.3, 14776.8, 355.8>)[HP: 85.8275] hit by Зараженный into LeftArm(18) for 9.35 damage (MeleeSoldierInfectedLong)
+22:43:13 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<7802.4, 14776.8, 355.8>)[HP: 80.308] hit by Зараженный into Torso(1) for 5.78 damage (MeleeInfectedLong)
+22:46:47 | ##### PlayerList log: 4 players
+22:46:47 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<7783.7, 14787.1, 355.7>)
+22:46:47 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<7793.4, 14761.1, 355.9>)
+22:46:47 | Player "Ivan" (id=qDDKtNDMjIrH4eweMcy-X1MPg8zD6TodKelR4O6FW70= pos=<13318.4, 13886.5, 6.2>)
+22:46:47 | Player "2012" (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE= pos=<2264.3, 5249.9, 185.3>)
+22:46:47 | #####
+22:50:49 | Player "2012" (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE= pos=<2525.9, 5260.4, 190.4>)[HP: 99.4475] hit by Зараженный into LeftArm(18) for 5.525 damage (MeleeInfected)
+22:51:46 | ##### PlayerList log: 4 players
+22:51:46 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<7792.8, 14760.2, 355.9>)
+22:51:46 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<7791.3, 14758.8, 355.9>)
+22:51:46 | Player "Ivan" (id=qDDKtNDMjIrH4eweMcy-X1MPg8zD6TodKelR4O6FW70= pos=<12094.9, 14426, 27.4>)
+22:51:46 | Player "2012" (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE= pos=<2556.1, 5282.8, 190.2>)
+22:51:46 | #####
+22:54:41 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<7825.0, 14808.7, 356.0>) placed Мина «Клеймор»
+22:56:45 | ##### PlayerList log: 4 players
+22:56:45 | Player "cepgo" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<7722.8, 14891.4, 364.7>)
+22:56:45 | Player "kokz23" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<7720.7, 14890.4, 364.5>)
+22:56:45 | Player "Ivan" (id=qDDKtNDMjIrH4eweMcy-X1MPg8zD6TodKelR4O6FW70= pos=<11981, 14299.6, 27.6>)
+22:56:45 | Player "2012" (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE= pos=<2454.6, 5169.4, 191.4>)
+22:56:45 | #####
+22:59:07 | Player "cepgo"(id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs=) has been disconnected
+22:59:08 | Player "kokz23"(id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o=) has been disconnected
+23:01:45 | ##### PlayerList log: 2 players
+23:01:45 | Player "Ivan" (id=qDDKtNDMjIrH4eweMcy-X1MPg8zD6TodKelR4O6FW70= pos=<12047.8, 14292.9, 28.4>)
+23:01:45 | Player "2012" (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE= pos=<2476.0, 5140.7, 193.7>)
+23:01:45 | #####
+23:04:04 | Chat("2012"(id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE=)): привет кто тут есть )
+23:06:44 | ##### PlayerList log: 2 players
+23:06:44 | Player "Ivan" (id=qDDKtNDMjIrH4eweMcy-X1MPg8zD6TodKelR4O6FW70= pos=<11980.2, 14222.8, 18.4>)
+23:06:44 | Player "2012" (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE= pos=<2522, 5102.2, 193.7>)
+23:06:44 | #####
+23:10:07 | Player "2012"(id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE=) has been disconnected
+23:11:43 | ##### PlayerList log: 1 players
+23:11:43 | Player "Ivan" (id=qDDKtNDMjIrH4eweMcy-X1MPg8zD6TodKelR4O6FW70= pos=<12079.4, 14298.2, 29.0>)
+23:11:43 | #####
+23:16:42 | ##### PlayerList log: 1 players
+23:16:42 | Player "Ivan" (id=qDDKtNDMjIrH4eweMcy-X1MPg8zD6TodKelR4O6FW70= pos=<12006.6, 14227.5, 23.5>)
+23:16:42 | #####
+23:18:07 | Player "SKIF" is connected (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE=)
+23:21:42 | ##### PlayerList log: 2 players
+23:21:42 | Player "Ivan" (id=qDDKtNDMjIrH4eweMcy-X1MPg8zD6TodKelR4O6FW70= pos=<11999.5, 14223.4, 22.9>)
+23:21:42 | Player "SKIF" (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE= pos=<1074.2, 4658.3, 140.0>)
+23:21:42 | #####
+23:26:41 | ##### PlayerList log: 2 players
+23:26:41 | Player "Ivan" (id=qDDKtNDMjIrH4eweMcy-X1MPg8zD6TodKelR4O6FW70= pos=<13590.4, 13978.8, 13.7>)
+23:26:41 | Player "SKIF" (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE= pos=<1074.2, 4658.3, 140.0>)
+23:26:41 | #####
+23:28:13 | Player "SKIF" (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE= pos=<1073.4, 4657.8, 140.0>)[HP: 80] hit by Волк into Head(0) for 10 damage (MeleeWolf)
+23:29:08 | Player "SKIF" (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE= pos=<1069.4, 4652.7, 139.6>)[HP: 76.7773] hit by Зараженный into Torso(1) for 4.68 damage (MeleeInfected)
+23:29:09 | Player "SKIF" (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE= pos=<1069.3, 4651.9, 139.5>)[HP: 74.8648] hit by Зараженный into RightLeg(3) for 7.65 damage (MeleeInfectedLong)
+23:31:40 | ##### PlayerList log: 2 players
+23:31:40 | Player "Ivan" (id=qDDKtNDMjIrH4eweMcy-X1MPg8zD6TodKelR4O6FW70= pos=<13582.4, 14033.2, 13.8>)
+23:31:40 | Player "SKIF" (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE= pos=<1101.8, 4615.6, 138.9>)
+23:31:40 | #####
+23:36:39 | ##### PlayerList log: 2 players
+23:36:39 | Player "Ivan" (id=qDDKtNDMjIrH4eweMcy-X1MPg8zD6TodKelR4O6FW70= pos=<13754.6, 14105.7, 27.2>)
+23:36:39 | Player "SKIF" (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE= pos=<1062.2, 4673.6, 141.0>)
+23:36:39 | #####
+23:41:38 | ##### PlayerList log: 2 players
+23:41:38 | Player "Ivan" (id=qDDKtNDMjIrH4eweMcy-X1MPg8zD6TodKelR4O6FW70= pos=<13761.3, 14117.4, 27.4>)
+23:41:38 | Player "SKIF" (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE= pos=<1073.5, 4658.7, 140.1>)
+23:41:38 | #####
+23:46:37 | ##### PlayerList log: 2 players
+23:46:37 | Player "Ivan" (id=qDDKtNDMjIrH4eweMcy-X1MPg8zD6TodKelR4O6FW70= pos=<13582.4, 14033.3, 13.8>)
+23:46:37 | Player "SKIF" (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE= pos=<1491.5, 4759.6, 169.8>)
+23:46:37 | #####
+23:51:37 | ##### PlayerList log: 2 players
+23:51:37 | Player "Ivan" (id=qDDKtNDMjIrH4eweMcy-X1MPg8zD6TodKelR4O6FW70= pos=<13577.6, 14028.4, 15.4>)
+23:51:37 | Player "SKIF" (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE= pos=<1339.2, 5367.7, 171.1>)
+23:51:37 | #####
+23:52:06 | Player "2012" is connected (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE=)
+23:56:36 | ##### PlayerList log: 3 players
+23:56:36 | Player "Ivan" (id=qDDKtNDMjIrH4eweMcy-X1MPg8zD6TodKelR4O6FW70= pos=<13580.9, 14034.6, 13.9>)
+23:56:36 | Player "SKIF" (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE= pos=<1149.6, 6386.5, 146.7>)
+23:56:36 | Player "2012" (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE= pos=<2597.6, 5080.0, 195.8>)
+23:56:36 | #####
+23:59:35 | Chat("2012"(id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE=)): а это нормально, что на глушитель сбегаются
+23:59:42 | Chat("2012"(id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE=)): со всего горожа зомби??
+23:59:51 | Player "2012" (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE= pos=<2602.2, 5085.0, 196.0>)[HP: 99.2775] hit by Зараженный into LeftArm(18) for 7.225 damage (MeleeSoldierInfected)
+00:00:37 | Player "2012" (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE= pos=<2601.6, 5085.5, 196.1>)[HP: 94.22] hit by Зараженный into Torso(1) for 5.78 damage (MeleeSoldierInfected)
+00:00:37 | Player "2012" (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE= pos=<2601.7, 5085.3, 196.0>)[HP: 89.8] hit by Зараженный into Torso(1) for 4.42 damage (MeleeInfected)
+00:00:46 | Player "2012" (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE= pos=<2601.5, 5085.5, 196.1>)[HP: 89.3477] hit by Зараженный into RightArm(17) for 7.225 damage (MeleeSoldierInfected)
+00:00:48 | Player "2012" (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE= pos=<2601.5, 5085.6, 196.1>)[HP: 88.7152] hit by Зараженный into LeftArm(18) for 7.225 damage (MeleeSoldierInfected)
+00:01:00 | Player "2012" (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE= pos=<2601.5, 5085.8, 196.0>)[HP: 88.3528] hit by Зараженный into RightArm(17) for 7.225 damage (MeleeSoldierInfected)
+00:01:00 | Player "2012" (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE= pos=<2601.4, 5085.8, 196.0>)[HP: 86.5466] hit by Зараженный into RightLeg(3) for 7.225 damage (MeleeSoldierInfected)
+00:01:27 | Player "2012" (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE= pos=<2601.4, 5086.0, 195.0>)[HP: 86.6342] hit by Зараженный into RightArm(17) for 7.225 damage (MeleeInfectedLong)
+00:01:35 | ##### PlayerList log: 3 players
+00:01:35 | Player "Ivan" (id=qDDKtNDMjIrH4eweMcy-X1MPg8zD6TodKelR4O6FW70= pos=<13571.5, 14019, 14.4>)
+00:01:35 | Player "SKIF" (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE= pos=<1074.8, 6682.9, 152.7>)
+00:01:35 | Player "2012" (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE= pos=<2602.3, 5084.8, 196.0>)
+00:01:35 | #####
+00:01:41 | Player "SKIF" (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE= pos=<1077.2, 6669.0, 152.5>)[HP: 94.22] hit by Зараженный into Torso(1) for 5.78 damage (MeleeInfectedLong)
+00:01:45 | Player "2012" (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE= pos=<2601.5, 5085.4, 196.1>)[HP: 85.3681] hit by Зараженный into RightLeg(3) for 7.225 damage (MeleeSoldierInfected)
+00:02:39 | Player "SKIF" (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE= pos=<1074.6, 6646.7, 152.5>)[HP: 94.1611] hit by Зараженный into RightLeg(3) for 7.225 damage (MeleeInfectedLong)
+00:02:41 | Player "SKIF" (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE= pos=<1074.6, 6646.6, 152.5>)[HP: 92.3549] hit by Зараженный into LeftLeg(8) for 7.225 damage (MeleeInfectedLong)
+00:02:43 | Player "SKIF" (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE= pos=<1074.3, 6646.4, 152.5>)[HP: 91.7201] hit by Зараженный into RightArm(17) for 7.225 damage (MeleeInfectedLong)
+00:04:27 | Chat("2012"(id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE=)): почему никто не говорит?
+00:04:34 | Chat("2012"(id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE=)): хомячите?
+00:05:11 | Chat("SKIF"(id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE=)): ye nbgf njuj
+00:06:35 | ##### PlayerList log: 3 players
+00:06:35 | Player "Ivan" (id=qDDKtNDMjIrH4eweMcy-X1MPg8zD6TodKelR4O6FW70= pos=<13745.6, 14108.1, 26.9>)
+00:06:35 | Player "SKIF" (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE= pos=<1069.0, 6658.4, 153.3>)
+00:06:35 | Player "2012" (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE= pos=<2602.8, 5084, 196.0>)
+00:06:35 | #####
+00:06:46 | Player "2012"(id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE=) has been disconnected
+00:07:41 | Chat("SKIF"(id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE=)): привет
+00:08:30 | Player "Ivan"(id=qDDKtNDMjIrH4eweMcy-X1MPg8zD6TodKelR4O6FW70=) has been disconnected
+00:11:34 | ##### PlayerList log: 1 players
+00:11:34 | Player "SKIF" (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE= pos=<1158.1, 7229.3, 186.7>)
+00:11:34 | #####
+00:16:33 | ##### PlayerList log: 1 players
+00:16:33 | Player "SKIF" (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE= pos=<1253.2, 7444.6, 207.5>)
+00:16:33 | #####
+00:21:32 | ##### PlayerList log: 1 players
+00:21:32 | Player "SKIF" (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE= pos=<1487.6, 8568.9, 318.2>)
+00:21:32 | #####
+00:25:10 | Player "2012" is connected (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE=)
+00:25:13 | Player "SKIF" (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE= pos=<1562.2, 8944.5, 301.7>)[HP: 99.2775] hit by Зараженный into LeftArm(18) for 7.225 damage (MeleeInfectedLong)
+00:25:49 | Player "SKIF" (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE= pos=<1559.4, 8949.4, 301.6>)[HP: 98.6188] hit by Зараженный into RightLeg(3) for 5.525 damage (MeleeInfected)
+00:25:50 | Player "SKIF" (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE= pos=<1559.4, 8949.4, 301.6>)[HP: 97.9801] hit by Зараженный into RightArm(17) for 7.225 damage (MeleeInfectedLong)
+00:26:14 | Chat("2012"(id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE=)): игрок, ты где?
+00:26:31 | ##### PlayerList log: 2 players
+00:26:31 | Player "SKIF" (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE= pos=<1575.4, 8973.7, 302.4>)
+00:26:31 | Player "2012" (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE= pos=<2602.3, 5084.7, 196.0>)
+00:26:31 | #####
+00:26:32 | Chat("2012"(id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE=)): почему я выходил, а зомби в количестве дивизии
+00:26:36 | Chat("2012"(id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE=)): не пропали?
+00:26:50 | Player "2012" (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE= pos=<2583.6, 5117.5, 193.8>)[HP: 96.6224] hit by Зараженный into Torso(1) for 0 damage (Dummy_Light)
+00:26:52 | Player "2012" (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE= pos=<2582.1, 5119.0, 193.5>)[HP: 94.3749] hit by Зараженный into LeftLeg(8) for 9.35 damage (MeleeSoldierInfectedLong)
+00:27:06 | Chat("SKIF"(id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE=)): zpltcm
+00:27:15 | Chat("2012"(id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE=)): где?
+00:27:46 | Chat("2012"(id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE=)): а
+00:27:50 | Chat("2012"(id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE=)): здесь
+00:27:53 | Chat("2012"(id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE=)): круто
+00:28:15 | Chat("2012"(id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE=)): Петросян плачет ))))))
+00:28:32 | Chat("SKIF"(id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE=)): галкино
+00:28:52 | Chat("2012"(id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE=)): а, в Зелено пиздец какойто - там всегда так? болше
+00:28:56 | Chat("2012"(id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE=)): 20 штук
+00:29:54 | Chat("SKIF"(id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE=)): бывает по разному
+00:29:56 | Player "2012" (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE= pos=<2485.9, 5229.8, 190.5>)[HP: 97.2745] hit by Зараженный into LeftLeg(8) for 5.525 damage (MeleeInfected)
+00:29:57 | Player "pumpkin" is connected (id=IwIRKD1pQW4WkZZYg0rVoNd73Otl7Bt0TJkXsvXG15U=)
+00:30:16 | Player "2012" (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE= pos=<2526.3, 5258.2, 190.5>)[HP: 97.1826] hit by Зараженный into LeftArm(18) for 5.525 damage (MeleeInfected)
+00:30:21 | Player "2012" (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE= pos=<2528.1, 5260.1, 190.4>)[HP: 92.8285] hit by Зараженный into Torso(1) for 4.42 damage (MeleeInfected)
+00:30:27 | Chat("SKIF"(id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE=)): обойди стороной
+00:30:39 | Player "2012" (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE= pos=<2495.6, 5263.3, 190.4>)[HP: 91.8432] hit by Зараженный into LeftLeg(8) for 5.525 damage (MeleeInfected)
+00:30:40 | Player "2012" (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE= pos=<2496.2, 5262.7, 190.4>)[HP: 91.1868] hit by Зараженный into RightArm(17) for 7.225 damage (MeleeInfectedLong)
+00:30:42 | Player "2012" (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE= pos=<2496.2, 5262.7, 190.4>)[HP: 85.4068] hit by Зараженный into Torso(1) for 5.78 damage (MeleeInfectedLong)
+00:30:44 | Player "2012" (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE= pos=<2496.2, 5262.7, 190.4>)[HP: 83.6656] hit by Зараженный into LeftLeg(8) for 7.225 damage (MeleeInfectedLong)
+00:30:45 | Player "2012" (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE= pos=<2496.2, 5262.7, 190.4>)[HP: 82.9431] hit by Зараженный into LeftArm(18) for 7.225 damage (MeleeInfectedLong)
+00:30:47 | Player "2012" (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE= pos=<2496.2, 5262.7, 190.4>)[HP: 77.227] hit by Зараженный into Torso(1) for 5.78 damage (MeleeInfectedLong)
+00:30:48 | Player "2012" (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE= pos=<2496.2, 5262.7, 190.4>)[HP: 77.227] hit by Зараженный into RightArm(17) for 0 damage (Dummy_Light)
+00:30:56 | Player "2012" (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE= pos=<2495.7, 5263.0, 190.4>)[HP: 75.6064] hit by Зараженный into LeftLeg(8) for 7.225 damage (MeleeInfectedLong)
+00:31:12 | Chat("2012"(id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE=)): ну так тогда никогда туда не попасть
+00:31:17 | Player "pumpkin"(id=IwIRKD1pQW4WkZZYg0rVoNd73Otl7Bt0TJkXsvXG15U=) has been disconnected
+00:31:30 | ##### PlayerList log: 2 players
+00:31:30 | Player "SKIF" (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE= pos=<1563.8, 9009, 302.2>)
+00:31:30 | Player "2012" (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE= pos=<2496.0, 5263.1, 190.4>)
+00:31:30 | #####
+00:32:20 | Chat("2012"(id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE=)): погонять вместе не хочешь?
+00:32:23 | Chat("2012"(id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE=)): я на тачке
+00:32:27 | Chat("2012"(id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE=)): буду скоро
+00:32:31 | Chat("2012"(id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE=)): думаю )))))
+00:32:50 | Chat("SKIF"(id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE=)): если сильно надо режь по тихоньку
+00:33:47 | Chat("SKIF"(id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE=)): гуляю пешком на сз
+00:33:48 | Chat("2012"(id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE=)): ну скажи честно, что ты в Зелено
+00:34:09 | Chat("2012"(id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE=)): на кого тут зомби возбудились иначе
+00:34:21 | Chat("SKIF"(id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE=)): не я не в зелено
+00:35:05 | Chat("2012"(id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE=)): вот интересно - а за вранье можно убивать? ))))))
+00:35:12 | Chat("2012"(id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE=)): не, я не про тебя
+00:35:21 | Chat("2012"(id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE=)): я вообще - вот про ситуацию
+00:35:34 | Chat("SKIF"(id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE=)): да
+00:35:35 | Chat("2012"(id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE=)): тебе чел говорит, что он в другом месте, а
+00:35:40 | Chat("2012"(id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE=)): ты его видишь
+00:36:16 | Player "2012" (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE= pos=<2752.0, 5331.8, 206.5>)[HP: 79.5566] hit by Зараженный into RightLeg(3) for 6.8 damage (MeleePoliceInfected)
+00:36:26 | Player "2012" (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE= pos=<2771.9, 5321.6, 206.8>)[HP: 75.2982] hit by Зараженный into Torso(1) for 4.42 damage (MeleeInfected)
+00:36:28 | Player "2012" (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE= pos=<2780.4, 5321.2, 206.8>)[HP: 74.7457] hit by Зараженный into LeftArm(18) for 5.525 damage (MeleeInfected)
+00:36:29 | Player "2012" (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE= pos=<2781.2, 5321.4, 206.8>)[HP: 74.0771] hit by Зараженный into RightArm(17) for 7.225 damage (MeleeInfectedLong)
+00:36:29 | ##### PlayerList log: 2 players
+00:36:29 | Player "SKIF" (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE= pos=<1564.0, 9009.2, 302.2>)
+00:36:29 | Player "2012" (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE= pos=<2780.5, 5321.6, 206.8>)
+00:36:29 | #####
+00:36:30 | Chat("SKIF"(id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE=)): здесь убивать не запрещено
+00:36:31 | Player "2012" (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE= pos=<2778.7, 5320.8, 206.8>)[HP: 73.5246] hit by Зараженный into LeftArm(18) for 5.525 damage (MeleeInfected)
+00:36:33 | Player "2012" (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE= pos=<2779.1, 5321.8, 206.8>)[HP: 72.1973] hit by Зараженный into LeftLeg(8) for 5.525 damage (MeleeInfected)
+00:36:35 | Player "2012" (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE= pos=<2778.1, 5321.4, 206.8>)[HP: 66.4713] hit by Зараженный into Torso(1) for 5.78 damage (MeleeInfectedLong)
+00:36:50 | Chat("2012"(id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE=)): вообщето запрещеною. без причины
+00:36:58 | Chat("2012"(id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE=)): убивать без причины
+00:37:09 | Player "SKIF" (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE= pos=<1564.2, 9009.6, 302.2>)[HP: 99.4475] hit by Зараженный into LeftArm(18) for 5.525 damage (MeleeInfected)
+00:37:11 | Chat("SKIF"(id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE=)): но все полаг
+00:37:12 | Player "SKIF" (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE= pos=<1564.2, 9009.6, 302.2>)[HP: 98.9851] hit by Зараженный into LeftArm(18) for 5.525 damage (MeleeInfected)
+00:37:13 | Player "SKIF" (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE= pos=<1564.3, 9009.5, 302.2>)[HP: 96.8176] hit by Зараженный into Torso(1) for 2.1675 damage (MeleeInfectedLong)
+00:37:25 | Chat("2012"(id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE=)): полаг?
+00:38:08 | Chat("SKIF"(id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE=)): да без р
+00:38:46 | Chat("SKIF"(id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE=)): причины не убивать
+00:38:59 | Chat("2012"(id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE=)): так, вижу движ в зелено
+00:39:03 | Chat("2012"(id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE=)): есть кто?
+00:39:16 | Chat("2012"(id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE=)): если без ответа - стреляю без разговоров
+00:39:38 | Chat("SKIF"(id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE=)): я далеко
+00:39:46 | Chat("2012"(id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE=)): я другим пишу
+00:39:49 | Chat("2012"(id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE=)): на всякий
+00:40:10 | Chat("SKIF"(id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE=)): ок
+00:40:46 | Chat("2012"(id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE=)): хз сколько теперь 60 часов набирать
+00:40:52 | Chat("2012"(id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE=)): а куда лут девать непонятно )
+00:41:28 | ##### PlayerList log: 2 players
+00:41:28 | Player "SKIF" (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE= pos=<1563.9, 9007.0, 302.3>)
+00:41:28 | Player "2012" (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE= pos=<3238.4, 5050.7, 239.8>)
+00:41:28 | #####
+00:41:42 | Chat("SKIF"(id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE=)): усли что я не убийца нощу белую повязку
+00:42:06 | Chat("2012"(id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE=)): ок
+00:42:12 | Chat("SKIF"(id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE=)): так сделай схрон
+00:42:24 | Chat("2012"(id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE=)): как
+00:42:55 | Player "2012" (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE= pos=<3350.0, 4989.1, 241.4>)[HP: 72.9485] hit by Зараженный into LeftArm(18) for 5.525 damage (MeleeInfected)
+00:42:58 | Player "2012" (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE= pos=<3350.5, 4989.1, 242.4>)[HP: 72.4535] hit by Зараженный into RightArm(17) for 5.525 damage (MeleeInfected)
+00:43:17 | Chat("SKIF"(id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE=)): делай ящики и закапывай
+00:44:07 | Chat("SKIF"(id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE=)): прячь в бочки
+00:44:20 | Chat("SKIF"(id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE=)): и т д
+00:44:38 | Chat("2012"(id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE=)): ну это да
+00:46:28 | ##### PlayerList log: 2 players
+00:46:28 | Player "SKIF" (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE= pos=<1561.8, 8959.0, 301.6>)
+00:46:28 | Player "2012" (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE= pos=<3351.7, 4987.4, 243.2>)
+00:46:28 | #####
+00:51:27 | ##### PlayerList log: 2 players
+00:51:27 | Player "SKIF" (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE= pos=<1345.8, 9326.3, 311.1>)
+00:51:27 | Player "2012" (id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE= pos=<2911.9, 5008.6, 204.1>)
+00:51:27 | #####
+00:53:31 | Player "SKIF" (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE= pos=<1384.6, 9260.8, 314.4>)[HP: 69.8887] hit by FallDamageHealth
+00:54:44 | Player "2012"(id=wdTetynbaB1nany4wXOgL3qoZzGUp-Qlj5l6o5oNUyE=) has been disconnected
+00:56:26 | ##### PlayerList log: 1 players
+00:56:26 | Player "SKIF" (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE= pos=<1343.2, 9517.2, 232.0>)
+00:56:26 | #####
+01:01:25 | ##### PlayerList log: 1 players
+01:01:25 | Player "SKIF" (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE= pos=<1154.1, 9973.5, 344.4>)
+01:01:25 | #####
+01:03:38 | Player "SKIF" (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE= pos=<1314.0, 10084.9, 339.5>)[HP: 86.7118] hit by Зараженный into LeftLeg(8) for 5.525 damage (MeleeInfected)
+01:03:39 | Player "SKIF" (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE= pos=<1313.4, 10085.5, 339.5>)[HP: 84.9055] hit by Зараженный into RightLeg(3) for 7.225 damage (MeleeInfectedLong)
+01:06:25 | ##### PlayerList log: 1 players
+01:06:25 | Player "SKIF" (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE= pos=<1574.7, 10410.2, 260.7>)
+01:06:25 | #####
+01:06:40 | Player "SKIF" (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE= pos=<1569.6, 10417.9, 260.7>)[HP: 88.6551] hit by Зараженный into Torso(1) for 1.6575 damage (MeleeInfected)
+01:06:41 | Player "SKIF" (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE= pos=<1568.6, 10416.2, 260.7>)[HP: 86.5777] hit by Зараженный into Torso(1) for 2.1675 damage (MeleeInfectedLong)
+01:06:43 | Player "SKIF" (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE= pos=<1568.6, 10416, 260.7>)[HP: 85.1965] hit by Зараженный into LeftLeg(8) for 5.525 damage (MeleeInfected)
+01:11:22 | Player "2012"(id=Unknown) has been disconnected
+01:11:24 | ##### PlayerList log: 1 players
+01:11:24 | Player "SKIF" (id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE= pos=<2268.5, 11235.5, 267.0>)
+01:11:24 | #####
+01:12:47 | Player "SKIF"(id=iWRBuw-Q8VLckgarFtIxzOz0S-q7FstY9pokxnFfevE=) has been disconnected
+
+
+**********************************EOF****************************************

@@ -12,9 +12,23 @@ namespace KUBC.DAYZ.GAME.MSTEST
         [TestMethod]
         public void AdminLog()
         {
-            var fLog = new FileInfo("TestFiles\\GameLogs\\DayZServer_x64_2023_08_30_215815690.ADM");
+            var fLog = new FileInfo("TestFiles\\GameLogs\\LOG.ADM");
             var tLog = new LogFiles.ADM.Log(fLog);
             Console.WriteLine($"Из файла {fLog.Name} прочитано {tLog.Read()} строк");
+            if (tLog.Errors.Count> 0 )
+            {
+                Console.WriteLine($"При чтении лога было {tLog.Errors} ошибок");
+                foreach(var e in tLog.Errors ) 
+                {
+                    Console.WriteLine("==========================================================");
+                    Console.WriteLine($"Исходная строчка [{e.SourceLine}]");
+                    Console.WriteLine($"Ошибка:{e.Exception?.Message}");
+                }
+            }
+            else
+            {
+                Console.WriteLine("При чтении не было ошибочек");
+            }
             Console.WriteLine("Было найдено событий:");
             Console.WriteLine($"Событий смерти от потери крови {tLog.BledOuts.Count} записей");
             Console.WriteLine($"Событий строительства объектов {tLog.Builts.Count} записей");
@@ -32,6 +46,34 @@ namespace KUBC.DAYZ.GAME.MSTEST
             Console.WriteLine($"Сообщений администрации сервера от игроков {tLog.PlayersReport.Count} записей");
             Console.WriteLine($"Событий когда игрок потерял сознание {tLog.PlayerUnconscious.Count} записей");
             Console.WriteLine($"Самоубийства игроков {tLog.Suicides.Count} записей");
+            tLog.CloseFile();
+        }
+
+        [TestMethod]
+        public void RPTLog()
+        {
+            var fLog = new FileInfo("TestFiles\\GameLogs\\LOG.RPT");
+            var tLog = new LogFiles.RPT.Log(fLog);
+            Console.WriteLine($"Из файла {fLog.Name} прочитано {tLog.Read()} строк");
+            if (tLog.Errors.Count > 0)
+            {
+                Console.WriteLine($"При чтении лога было {tLog.Errors} ошибок");
+                foreach (var e in tLog.Errors)
+                {
+                    Console.WriteLine("==========================================================");
+                    Console.WriteLine($"Исходная строчка [{e.SourceLine}]");
+                    Console.WriteLine($"Ошибка:{e.Exception?.Message}");
+                }
+            }
+            else
+            {
+                Console.WriteLine("При чтении не было ошибочек");
+            }
+            Console.WriteLine("Было найдено событий:");
+            Console.WriteLine($"FPS сервера {tLog.FPSHistory.Count} записей");
+            Console.WriteLine($"Память сервера {tLog.MemHistory.Count} записей");
+            Console.WriteLine($"Список игроков которые подключились {tLog.PlayersConect.Count} записей");
+            tLog.CloseFile();
         }
         /// <summary>
         /// Тестируем загрузку старого XML
