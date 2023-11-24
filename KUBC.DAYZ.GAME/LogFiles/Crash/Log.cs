@@ -53,11 +53,8 @@
         /// </summary>
         private ParsePhase Phase = ParsePhase.CLIParams;
 
-        /// <summary>
-        /// Читаем строчку лога
-        /// </summary>
-        /// <param name="Line"></param>
-        protected override void ParseLine(string Line)
+        /// <inheritdoc/>
+        protected override void ParseLine(string Line, CancellationToken? cancellation = null)
         {
             if (Line == "------------------------------------")
             {

@@ -9,7 +9,7 @@ namespace KUBC.DAYZ.GAME.LogFiles.RPT
     /// Представление данных которое в логе записывается строчкой 
     /// <code>Player "Over" is connected (steamID=76561199141600564)</code>
     /// </remarks>
-    public class ConectEvent
+    public class ConectEvent(string Line, CancellationToken? cancellation = null) : LogEntity(Line, cancellation)
     {
         /// <summary>
         /// Steam идентификатор игрока
@@ -23,87 +23,65 @@ namespace KUBC.DAYZ.GAME.LogFiles.RPT
         /// Время когда игрок подключился
         /// </summary>
         public DateTime ConnectTime { get; set; } = DateTime.Now;
-        /// <summary>
-        /// Получить строчку подключения из лога
-        /// </summary>
-        /// <param name="Line"></param>
-        /// <returns></returns>
-        public static ConectEvent? FromLogLine(string Line)
+
+        /// <inheritdoc/>
+        protected override void Init(string Line, CancellationToken? cancellation = null)
         {
             if (Line.Contains("is connected"))
             {
                 if (Line.Contains("steamID"))
                 {
-                    char rSym;
-                    var res = new ConectEvent();
-                    var reader = new StringReader(Line);
-                    var TimeString = string.Empty;
-                    bool EndStep = false;
-                    while (!EndStep)
+                    if (!SkipChar(' ', cancellation))
                     {
-                        rSym = (char)reader.Read();
-                        if (rSym != ' ')
-                        {
-                            TimeString += rSym;
-                        }
-                        else
-                        {
-                            EndStep = true;
-                        }
-                    };
+                        return;
+                    }
+                    var TimeString = ReadToChar(' ', false, cancellation);
                     if (TimeSpan.TryParse(TimeString, out var pTime))
                     {
-                        res.ConnectTime = DateTime.MinValue.Add(pTime);
+                        ConnectTime = DateTime.MinValue.Add(pTime);
                     }
                     else
                     {
                         if (DateTime.TryParse(TimeString, out var pFTime))
                         {
-                            res.ConnectTime = pFTime;
+                            ConnectTime = pFTime;
                         }
                         else
                         {
-                            res.ConnectTime = DateTime.Now;
+                            ConnectTime = DateTime.Now;
                         }
                     }
-                    while ((char)reader.Read() != '"') { };
-                    EndStep = false;
-                    while (!EndStep)
-                    {
-                        rSym = (char)reader.Read();
-                        if (rSym != '"')
-                        {
-                            res.NickName += rSym;
-                        }
-                        else
-                        {
-                            EndStep = true;
-                        }
+                    if (!SkipToChar('"', cancellation))
+                    { 
+                        return;
                     }
-                    while ((char)reader.Read() != '=') { };
-                    var SteamIDString = string.Empty;
-                    EndStep = false;
-                    while (!EndStep)
+                    var rNickName = ReadToChar('"', false, cancellation);
+                    if (string.IsNullOrEmpty(rNickName))
                     {
-                        rSym = (char)reader.Read();
-                        if (rSym != ')')
-                        {
-                            SteamIDString += rSym;
-                        }
-                        else
-                        {
-                            EndStep = true;
-                        }
+                        return;
                     }
-                    if (long.TryParse(SteamIDString, out var pSteamID))
+                    else
                     {
-                        res.SteamID = pSteamID;
-                        return res;
+                        NickName = rNickName;
                     }
 
+                    if (!SkipToChar('=', cancellation))
+                    {
+                        return;
+                    }
+                    var steamID = ReadToChar(')', true, cancellation);
+                    if (steamID==null)
+                    {
+                        return;
+                    }
+                    if (long.TryParse(steamID, out var pSteamID))
+                    {
+                        SteamID = pSteamID;
+                        IsReadOk = true;
+                        Dispose();//Прихлопываем поток чтения строки
+                    }
                 }
             }
-            return null;
         }
 
         /// <summary>

@@ -20,11 +20,8 @@
 
         }
 
-        /// <summary>
-        /// Разбираем строчку лога
-        /// </summary>
-        /// <param name="Line"></param>
-        protected override void ParseLine(string Line)
+        /// <inheritdoc/>
+        protected override void ParseLine(string Line, CancellationToken? cancellationToken)
         {
             if (!LogStarted.HasValue)
             {
@@ -50,12 +47,12 @@
                     }
                     if (!ParseADMLine(LineTime, Line[11..]))
                     {
-                        base.ParseLine(Line);
+                        base.ParseLine(Line, cancellationToken);
                     }
                 }
                 else
                 {
-                    base.ParseLine(Line);
+                    base.ParseLine(Line, cancellationToken);
                 }
             }
         }

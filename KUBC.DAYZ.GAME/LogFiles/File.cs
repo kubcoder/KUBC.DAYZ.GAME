@@ -86,10 +86,15 @@
         /// <summary>
         /// Читаем файл
         /// </summary>
-        /// <remarks>
-        /// Сколько строчек лога было прочитано
-        /// </remarks>
-        public int Read()
+        /// <param name="SkipPreRead">
+        /// При чтении файла пропустить предварительные действия.
+        /// Используется для того что бы сохранить события в памяти когда при сохранении в БД
+        /// был сбой, и нужно попробывать чуть позже.
+        /// </param>
+        /// <param name="cancellationToken">Токен отмены. Нужен что бы принудительно
+        /// прервать выполнение чтения файла лога из вызывающй программы</param>
+        /// <returns>Сколько строчек лога было прочитано</returns>
+        public int Read(bool SkipPreRead = false, CancellationToken? cancellationToken = null)
         {
             int ReadLines = 0;
             if (fileReader == null) 
@@ -107,7 +112,10 @@
             if (fileReader!=null)
             {
                 Errors.Clear();
-                OnPreRead();
+                if (!SkipPreRead)
+                {
+                    OnPreRead();
+                }
                 if (fileReader != null)
                 {
                     string? Line;
@@ -117,11 +125,19 @@
                         try
                         {
                             if (!string.IsNullOrEmpty(Line))
-                                ParseLine(Line);
+                            {
+                                ParseLine(Line, cancellationToken);
+                            }
+                                
                         }
                         catch (Exception ex)
                         {
                             Errors.Add(new ParseError() { Exception = ex, SourceLine = Line });
+                        }
+                        if (cancellationToken!= null)
+                        {
+                            if (cancellationToken.Value.IsCancellationRequested)
+                                return ReadLines;
                         }
                     }
                     OnPostRead();
@@ -175,7 +191,8 @@
         /// Распознаем строку журнала
         /// </summary>
         /// <param name="Line">Строчка которую нужно распознать</param>
-        protected virtual void ParseLine(string Line)
+        /// <param name="cancellationToken">Токен отмены разбора строки</param>
+        protected virtual void ParseLine(string Line, CancellationToken? cancellationToken)
         {
             ReadLine?.Invoke(this, Line);
         }

@@ -44,11 +44,9 @@
             FPSHistory.Clear();
             MemHistory.Clear();
         }
-        /// <summary>
-        /// Парсим строчки
-        /// </summary>
-        /// <param name="Line"></param>
-        protected override void ParseLine(string Line)
+        /// <inheritdoc/>
+        
+        protected override void ParseLine(string Line, CancellationToken? cancellationToken = null)
         {
             if (LogStarted == null)
             {
@@ -56,8 +54,8 @@
             }
             else
             {
-                var cE = ConectEvent.FromLogLine(Line);
-                if (cE != null)
+                ConectEvent cE = new (Line, cancellationToken);
+                if (cE.IsReadOk)
                 {
                     cE.ConnectTime = CorrectTime(cE.ConnectTime);
                     PlayersConect.Add(cE);
@@ -80,7 +78,7 @@
                         }
                         else
                         {
-                            base.ParseLine(Line);
+                            base.ParseLine(Line, cancellationToken);
                         }
                     }
                 }
