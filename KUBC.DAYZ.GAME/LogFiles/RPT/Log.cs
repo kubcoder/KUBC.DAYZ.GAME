@@ -62,6 +62,7 @@
                 }
                 else
                 {
+                    cE.Dispose();
                     var aFPS = new AverageFPS();
                     if (aFPS.Init(Line, cancellationToken))
                     {
@@ -70,6 +71,7 @@
                     }
                     else
                     {
+                        aFPS.Dispose();
                         var aMem = new UsedMemory();
                         if (aMem.Init(Line, cancellationToken))
                         {
@@ -78,6 +80,7 @@
                         }
                         else
                         {
+                            aMem.Dispose();
                             base.ParseLine(Line, cancellationToken);
                         }
                     }

@@ -1,48 +1,28 @@
-﻿using System.Xml.Serialization;
+﻿using KUBC.DAYZ.GAME.LogFiles.RPT;
+using System.Xml.Serialization;
 
 namespace KUBC.DAYZ.GAME.LogFiles.ADM
 {
     /// <summary>
     /// Событие игрок истек кровью
     /// </summary>
-    public class BledOut
+    public class BledOut:LogEntity
     {
         /// <summary>
         /// Время когда игрок помер
         /// </summary>
-        public DateTime DieTime { get; set; } = DateTime.Now;
+        [XmlAttribute]
+        public DateTime Time { get; set; } = DateTime.Now;
         /// <summary>
-        /// С каким ником он подключился
+        /// Игрок который вытек
         /// </summary>
-        public string NickName { get; set; } = string.Empty;
-        /// <summary>
-        /// Идентификатор игрока в DAYZ
-        /// </summary>
-        public string DayzID { get; set; } = string.Empty;
-
+        public PlayerInfo Player { get; set; } = new();
+        
         /// <summary>
         /// Место где игрок помер
         /// </summary>
         public Vector Position { get; set; } = new();
-        /// <summary>
-        /// Преобразуем объект в строку с разметкой XML
-        /// </summary>
-        /// <returns>Представление в виде XML</returns>
-        public string GetXML()
-        {
-            var sb = new StringWriter();
-            System.Xml.XmlWriter wrt = System.Xml.XmlWriter.Create(sb, new System.Xml.XmlWriterSettings()
-            {
-                OmitXmlDeclaration = true,
-                Indent = true
-            });
-            var x = new XmlSerializer(typeof(BledOut));
-            var xns = new XmlSerializerNamespaces();
-            xns.Add(string.Empty, string.Empty);
-            x.Serialize(wrt, this, xns);
-            wrt.Close();
-            return sb.ToString();
-        }
+        
         /// <summary>
         /// Создать элемент данных из строки XML
         /// </summary>
@@ -50,70 +30,40 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
         /// <returns>Элемент данных или NULL если прочитать не удалось</returns>
         public static BledOut? FromXML(string xml)
         {
-            try
-            {
-                var x = new XmlSerializer(typeof(BledOut));
-                var reader = new StringReader(xml);
-                var rObj = x.Deserialize(reader);
-                reader.Close();
-                if (rObj != null)
-                {
-                    var d = (BledOut)rObj;
-                    return d;
-                }
-                return null;
-            }
-            catch
-            {
-                return null;
-            }
+            return ReadFromXML(xml, typeof(BledOut)) as BledOut;
         }
 
-        /// <summary>
-        /// Получаем описание суицида игрока из строчки лога
-        /// </summary>
-        /// <param name="Line">Строчка лога</param>
-        /// <param name="Time">Время когда строчка была записана</param>
-        /// <returns>Суицид игрока если удалось прочитать</returns>
-        public static BledOut? FromLog(string Line, DateTime Time)
+        /// <inheritdoc/>
+        public override bool Init(string Line, CancellationToken? cancellation = null)
         {
             if (Line.Contains("bled out"))
             {
-                var tData = Line[7..];
-                if (tData[0] == '"')
+                base.Init(Line, cancellation);
+                if (!SkipToChar('"'))
+                    return false;
+                var nikname = this.ReadToChar('"', true, cancellation);
+                if (nikname!=null) 
                 {
-                    var Reader = new StringReader(tData);
-                    Reader.Read();
-                    var rSym = Reader.Read();
-                    var res = new BledOut() { DieTime = Time };
-                    while ((rSym > 0) && (rSym != '"'))
+                    if (!SkipToChar('='))
+                        return false;
+                    var dayzID = this.ReadToChar(' ', true, cancellation);
+                    if (dayzID!=null)
                     {
-                        res.NickName += (char)rSym;
-                        rSym = Reader.Read();
+                        if (!SkipToChar('='))
+                            return false;
+                        var posString = this.ReadToChar(')', true, cancellation);
+                        if (posString!=null) 
+                        {
+                            Position = Vector.FromLogString(posString);
+                            Player.NickName = nikname;
+                            Player.ID = dayzID;
+                            Dispose();
+                            return true;
+                        }
                     }
-                    while ((rSym > 0) && (rSym != '=')) { rSym = Reader.Read(); }
-                    while ((rSym > 0) && (rSym != ' '))
-                    {
-                        rSym = Reader.Read();
-                        if ((rSym > 0) && (rSym != ' '))
-                            res.DayzID += (char)rSym;
-                    }
-                    while ((rSym > 0) && (rSym != '=')) { rSym = Reader.Read(); }
-                    var sPos = string.Empty;
-                    while ((rSym > 0) && (rSym != ')'))
-                    {
-
-                        rSym = Reader.Read();
-                        if ((rSym > 0) && (rSym != ')'))
-                            sPos += (char)rSym;
-
-                    }
-                    res.Position = Vector.FromLogString(sPos);
-                    Reader.Close();
-                    return res;
                 }
             }
-            return null;
+            return false;
         }
     }
 }

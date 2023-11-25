@@ -199,6 +199,7 @@
         /// <param name="Line">Текст журнала</param>
         private bool ParseADMLine(DateTime LineTime, string Line)
         {
+            /*
             if (currentPlayerList != null)
             {
                 if (!currentPlayerList.AddLine(Line))
@@ -300,7 +301,7 @@
             {
                 Dismantleds.Add(pDismate);
                 return true;
-            }
+            }*/
             return false;
         }
     }

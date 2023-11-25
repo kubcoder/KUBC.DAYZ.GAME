@@ -88,7 +88,15 @@ namespace KUBC.DAYZ.GAME.LogFiles
         {
             if (Reader!=null)
             {
-                LastSymbol = (char)Reader.Read();
+                var code = Reader.Read();
+                if (code != -1) 
+                {
+                    LastSymbol = (char)code;
+                }
+                else
+                {
+                    LastSymbol = null;
+                }
             }
         }
         /// <summary>

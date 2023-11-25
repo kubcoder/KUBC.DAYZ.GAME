@@ -28,10 +28,10 @@ namespace KUBC.DAYZ.GAME.LogFiles.RPT
         /// <inheritdoc/>
         public override bool Init(string Line, CancellationToken? cancellation = null)
         {
-            base.Init(Line, cancellation);
             if (Line.Contains("Average server FPS"))
             {
-                if(!SkipChar(' ', cancellation))
+                base.Init(Line, cancellation);
+                if (!SkipChar(' ', cancellation))
                 {
                     return false;
                 }

@@ -2,6 +2,13 @@
 
 ******************************************************************************
 AdminLog started on 2023-11-17 at 15:17:27
+20:01:45 | Player "kot23rus" (DEAD) (id=B1idL_7H1auUS5DPBOEDcTFQ3EBBrzFLa8r1GGmv7GA= pos=<12745.6, 9671.5, 6.0>) died. Stats> Water: 542.722 Energy: 542.722 Bleed sources: 3
+20:01:45 | Player "kot23rus" (DEAD) (id=B1idL_7H1auUS5DPBOEDcTFQ3EBBrzFLa8r1GGmv7GA= pos=<12745.6, 9671.5, 6.0>) bled out
+20:01:52 | ##### PlayerList log: 3 players
+20:01:52 | Player "kot23rus" (DEAD) (id=B1idL_7H1auUS5DPBOEDcTFQ3EBBrzFLa8r1GGmv7GA= pos=<12745.6, 9671.5, 6.0>)
+20:01:52 | Player "ToPTuK23" (id=ucfjS5P_HnNh-w_qe-vsfVr53cySLCMPL-Rabmkve0s= pos=<10159, 5532.9, 244.6>)
+20:01:52 | Player "pumpkin" (id=IwIRKD1pQW4WkZZYg0rVoNd73Otl7Bt0TJkXsvXG15U= pos=<3031.5, 12632.9, 209.3>)
+20:01:52 | #####
 15:19:56 | Player "pumpkin" is connected (id=IwIRKD1pQW4WkZZYg0rVoNd73Otl7Bt0TJkXsvXG15U=)
 15:20:01 | Player "pumpkin"(id=IwIRKD1pQW4WkZZYg0rVoNd73Otl7Bt0TJkXsvXG15U=) has been disconnected
 15:26:08 | Player "pumpkin" is connected (id=IwIRKD1pQW4WkZZYg0rVoNd73Otl7Bt0TJkXsvXG15U=)
