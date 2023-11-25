@@ -32,7 +32,8 @@ namespace KUBC.DAYZ.GAME.LogFiles
         
 
         /// <summary>
-        /// Инициализируем объект
+        /// Инициализируем объект. Т.е. выполняем чтение строки
+        /// Если этот объект однострочный, обычно этим все и заканчивается
         /// </summary>
         /// <param name="Line">Строчка лога из которой выполняем инициализацию</param>
         /// <param name="cancellation">Токен отмены действия</param>
@@ -40,6 +41,31 @@ namespace KUBC.DAYZ.GAME.LogFiles
         {
             Reader = new StringReader(Line);
             return false;
+        }
+        /// <summary>
+        /// Добавить строчку к событию
+        /// </summary>
+        /// <remarks>
+        /// Данный метод используется для много строчных объектов
+        /// </remarks>
+        /// <param name="Line">Добавляемая строчка лога</param>
+        /// <param name="cancellation">Токен отмены действия</param>
+        /// <returns>
+        /// Возвращается истина если дочитали событие до финиша, т.е. все
+        /// дальше будет уже другое событие.
+        /// Если вернулась ложь то событие еще ждет дочитывания
+        /// </returns>
+        public virtual bool AppendLine(string Line, CancellationToken? cancellation = null)
+        {
+            return true;
+        }
+        /// <summary>
+        /// Признак что закончено чтение событий, и новые строчки уже не нужны
+        /// </summary>
+        /// <returns>Истина если было завершено чтение события из лога</returns>
+        public virtual bool IsReadSucces()
+        {
+            return true;
         }
 
         /// <summary>

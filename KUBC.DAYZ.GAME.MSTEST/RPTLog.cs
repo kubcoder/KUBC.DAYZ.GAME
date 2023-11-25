@@ -55,5 +55,32 @@ namespace KUBC.DAYZ.GAME.MSTEST
             Assert.AreEqual(rE.MeasuredTime, e.MeasuredTime, "Не загрузилось время съема данных");
         }
 
+        [TestMethod]
+        public void ParseLog()
+        {
+            var fLog = new FileInfo("TestFiles\\GameLogs\\LOG.RPT");
+            var tLog = new LogFiles.RPT.Log(fLog);
+            Console.WriteLine($"Из файла {fLog.Name} прочитано {tLog.Read()} строк");
+            if (tLog.Errors.Count > 0)
+            {
+                Console.WriteLine($"При чтении лога было {tLog.Errors} ошибок");
+                foreach (var e in tLog.Errors)
+                {
+                    Console.WriteLine("==========================================================");
+                    Console.WriteLine($"Исходная строчка [{e.SourceLine}]");
+                    Console.WriteLine($"Ошибка:{e.Exception?.Message}");
+                }
+            }
+            else
+            {
+                Console.WriteLine("При чтении не было ошибочек");
+            }
+            Console.WriteLine("Было найдено событий:");
+            Console.WriteLine($"FPS сервера {tLog.FPSHistory.Count} записей");
+            Console.WriteLine($"Память сервера {tLog.MemHistory.Count} записей");
+            Console.WriteLine($"Список игроков которые подключились {tLog.PlayersConect.Count} записей");
+            tLog.CloseFile();
+        }
+
     }
 }

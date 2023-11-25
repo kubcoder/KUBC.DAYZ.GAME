@@ -6,9 +6,13 @@
     public enum ParsePhase
     {
         /// <summary>
+        /// Не инициализировано
+        /// </summary>
+        NotInit = 0,
+        /// <summary>
         /// Строчка заголовка ошибки
         /// </summary>
-        Header = 0,
+        Header,
         /// <summary>
         /// Строчки сообщений
         /// </summary>
@@ -20,6 +24,10 @@
         /// <summary>
         /// Параметры запуска сервера
         /// </summary>
-        CLIParams
+        CLIParams,
+        /// <summary>
+        /// Закончили чтение ошибочки
+        /// </summary>
+        EndRead,
     }
 }

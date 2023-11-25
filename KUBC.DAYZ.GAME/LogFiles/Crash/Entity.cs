@@ -1,11 +1,13 @@
-﻿using System.Xml.Serialization;
+﻿using KUBC.DAYZ.GAME.LogFiles.RPT;
+using KUBC.DAYZ.GAME.MissionFiles.CfgEconomyCore;
+using System.Xml.Serialization;
 
 namespace KUBC.DAYZ.GAME.LogFiles.Crash
 {
     /// <summary>
     /// Описание краша. Т.е. что за краш, где случился. Т.е. вся информация из лога ошибок
     /// </summary>
-    public class Entity
+    public class Entity:LogEntity
     {
 
         /// <summary>
@@ -52,26 +54,79 @@ namespace KUBC.DAYZ.GAME.LogFiles.Crash
             }
             return null;
         }
-
         /// <summary>
-        /// Проебразуем объект в строку с разметкой XML
+        /// В какой фазе находится процесс чтения
         /// </summary>
-        /// <returns>Представление краша в виде XML</returns>
-        public string GetXML()
+        private ParsePhase Phase = ParsePhase.NotInit;
+        /// <inheritdoc/>
+        public override bool Init(string Line, CancellationToken? cancellation = null)
         {
-            var sb = new StringWriter();
-            System.Xml.XmlWriter wrt = System.Xml.XmlWriter.Create(sb, new System.Xml.XmlWriterSettings()
+            base.Init(Line, cancellation);
+            if (Line == "------------------------------------\r\n")
             {
-                OmitXmlDeclaration = true,
-                Indent = true
-            });
-            var x = new XmlSerializer(typeof(Entity));
-            var xns = new XmlSerializerNamespaces();
-            xns.Add(string.Empty, string.Empty);
-            x.Serialize(wrt, this, xns);
-            wrt.Close();
-            return sb.ToString();
+                this.Phase = ParsePhase.Header;
+                Dispose();
+                return true;
+            }
+            Dispose();
+            return false;
         }
+        /// <inheritdoc/>
+        public override bool IsReadSucces()
+        {
+            return Phase == ParsePhase.EndRead;
+        }
+
+        /// <inheritdoc/>
+        public override bool AppendLine(string Line, CancellationToken? cancellation = null)
+        {
+            switch(Phase) 
+            {
+                case ParsePhase.Header:
+                    HeaderLine = Line;
+                    Phase++;
+                    break;
+                case ParsePhase.Message:
+                    if (Line.Contains("Stack trace"))
+                    {
+                        Phase++;
+                    }
+                    else
+                    {
+                        if (Line.Contains("Runtime mode"))
+                        {
+                            Phase = ParsePhase.CLIParams;
+                        }
+                        else
+                        {
+                            var mLine = Line.Trim();
+                            if (!string.IsNullOrEmpty(mLine))
+                                Messages.Add(mLine);
+                        }
+
+                    }
+                    break;
+                case ParsePhase.StackTrace:
+                    if (Line.Contains("Runtime mode"))
+                    {
+                        Phase++;
+                    }
+                    else
+                    {
+                        var sLine = Line.Trim();
+                        if (!string.IsNullOrEmpty(sLine))
+                            StackTrace.Add(sLine);
+                    }
+                    break;
+                case ParsePhase.CLIParams:
+                    CLIParams = Line.Trim();
+                    Phase = ParsePhase.EndRead;
+                    return true;
+            }
+            return Phase == ParsePhase.EndRead;
+        }
+
+
         /// <summary>
         /// Создать элемент данных краша из строки XML
         /// </summary>
@@ -79,23 +134,7 @@ namespace KUBC.DAYZ.GAME.LogFiles.Crash
         /// <returns>Элемент данных или NULL если прочитать не удалось</returns>
         public static Entity? FromXML(string xml)
         {
-            try
-            {
-                var x = new XmlSerializer(typeof(Entity));
-                var reader = new StringReader(xml);
-                var rObj = x.Deserialize(reader);
-                reader.Close();
-                if (rObj != null)
-                {
-                    var d = (Entity)rObj;
-                    return d;
-                }
-                return null;
-            }
-            catch
-            {
-                return null;
-            }
+            return ReadFromXML(xml, typeof(Entity)) as Entity;
         }
 
     }

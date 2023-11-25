@@ -49,41 +49,7 @@ namespace KUBC.DAYZ.GAME.MSTEST
             tLog.CloseFile();
         }
 
-        [TestMethod]
-        public void RPTLog()
-        {
-            var fLog = new FileInfo("TestFiles\\GameLogs\\LOG.RPT");
-            var tLog = new LogFiles.RPT.Log(fLog);
-            Console.WriteLine($"Из файла {fLog.Name} прочитано {tLog.Read()} строк");
-            if (tLog.Errors.Count > 0)
-            {
-                Console.WriteLine($"При чтении лога было {tLog.Errors} ошибок");
-                foreach (var e in tLog.Errors)
-                {
-                    Console.WriteLine("==========================================================");
-                    Console.WriteLine($"Исходная строчка [{e.SourceLine}]");
-                    Console.WriteLine($"Ошибка:{e.Exception?.Message}");
-                }
-            }
-            else
-            {
-                Console.WriteLine("При чтении не было ошибочек");
-            }
-            Console.WriteLine("Было найдено событий:");
-            Console.WriteLine($"FPS сервера {tLog.FPSHistory.Count} записей");
-            Console.WriteLine($"Память сервера {tLog.MemHistory.Count} записей");
-            Console.WriteLine($"Список игроков которые подключились {tLog.PlayersConect.Count} записей");
-            tLog.CloseFile();
-        }
-        /// <summary>
-        /// Тестируем загрузку старого XML
-        /// </summary>
-        [TestMethod]
-        public void TestOldLogRead()
-        {
-            string xml = "<PlayerList LogTime=\"2023-10-13T15:10:25\"><Players><PlayerPosition><NickName>Asmadeus</NickName><DAYZID>OUJOmr0yvQxDtYL1OkEH1oBG3LZMyqHtq0dhTReveGQ=</DAYZID><Position><float>3697.4</float><float>8238.1</float><float>304.2</float></Position></PlayerPosition></Players></PlayerList>";
-            var pList = GAME.LogFiles.ADM.PlayerList.FromXML(xml);
-
-        }
+        
+        
     }
 }
