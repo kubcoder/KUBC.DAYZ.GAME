@@ -1,0 +1,273 @@
+---------------------------------------------
+Log C:\DAYZ\Instances\100\mpmissions\kub.chernarusplus\profiles\crash_2023-11-24_15-15-07.log started at 24.11. 18:39:21
+
+
+
+------------------------------------
+XSERVER, 24.11 2023 18:39:21
+
+[wpnfsm] ValidateAndRepair Attempting to repair: SKS:018932 - ChamberRepair - SKS_OPN_BU0<ab594680> - state: 0 != weapon: 1
+Class:      'WeaponFSM'
+Function: 'Error'
+Stack trace:
+scripts/1_Core/proto\endebug.c:92
+scripts/4_World/entities\firearms\weaponfsm.c:529
+scripts/4_World/entities\firearms\weaponfsm.c:487
+scripts/4_World/entities\firearms\weaponfsm.c:439
+scripts/4_World/entities\firearms\weaponfsm.c:58
+scripts/3_Game/systems\hfsmbase.c:512
+scripts/4_World/entities\firearms\weaponfsm.c:273
+scripts/4_World/entities\firearms\weapon_base.c:288
+scripts/4_World/systems\inventory\dayzplayerinventory.c:361
+scripts/4_World/entities\dayzplayerimplement.c:856
+scripts/4_World/entities\dayzplayerimplement.c:2039
+scripts/4_World/entities\manbase\playerbase.c:2781
+
+Runtime mode
+CLI params: adminLog  doLogs  netLog  port 2302 profiles mpmissions\kub.chernarusplus\profiles freezeCheck  config serverDZ.cfg serverMod @EraAlcohol;@EraChat;@EraCmd;@EraItems;@EraSpawn; 
+
+
+------------------------------------
+XSERVER, 24.11 2023 18:39:25
+
+[wpnfsm] ValidateAndRepair Attempting to repair: SKS:018932 - ChamberRepair - SKS_OPN_BU0<ab594680> - state: 0 != weapon: 1
+Class:      'WeaponFSM'
+Function: 'Error'
+Stack trace:
+scripts/1_Core/proto\endebug.c:92
+scripts/4_World/entities\firearms\weaponfsm.c:529
+scripts/4_World/entities\firearms\weaponfsm.c:487
+scripts/4_World/entities\firearms\weaponfsm.c:439
+scripts/4_World/entities\firearms\weaponfsm.c:58
+scripts/3_Game/systems\hfsmbase.c:512
+scripts/4_World/entities\firearms\weaponfsm.c:273
+scripts/4_World/entities\firearms\weapon_base.c:288
+scripts/4_World/systems\inventory\dayzplayerinventory.c:361
+scripts/4_World/entities\dayzplayerimplement.c:856
+scripts/4_World/entities\dayzplayerimplement.c:2039
+scripts/4_World/entities\manbase\playerbase.c:2781
+
+Runtime mode
+CLI params: adminLog  doLogs  netLog  port 2302 profiles mpmissions\kub.chernarusplus\profiles freezeCheck  config serverDZ.cfg serverMod @EraAlcohol;@EraChat;@EraCmd;@EraItems;@EraSpawn; 
+
+
+------------------------------------
+XSERVER, 24.11 2023 18:39:28
+
+[wpnfsm] ValidateAndRepair Attempting to repair: SKS:018932 - ChamberRepair - SKS_OPN_BU0<ab594680> - state: 0 != weapon: 1
+Class:      'WeaponFSM'
+Function: 'Error'
+Stack trace:
+scripts/1_Core/proto\endebug.c:92
+scripts/4_World/entities\firearms\weaponfsm.c:529
+scripts/4_World/entities\firearms\weaponfsm.c:487
+scripts/4_World/entities\firearms\weaponfsm.c:439
+scripts/4_World/entities\firearms\weaponfsm.c:58
+scripts/3_Game/systems\hfsmbase.c:512
+scripts/4_World/entities\firearms\weaponfsm.c:273
+scripts/4_World/entities\firearms\weapon_base.c:288
+scripts/4_World/systems\inventory\dayzplayerinventory.c:361
+scripts/4_World/entities\dayzplayerimplement.c:856
+scripts/4_World/entities\dayzplayerimplement.c:2039
+scripts/4_World/entities\manbase\playerbase.c:2781
+
+Runtime mode
+CLI params: adminLog  doLogs  netLog  port 2302 profiles mpmissions\kub.chernarusplus\profiles freezeCheck  config serverDZ.cfg serverMod @EraAlcohol;@EraChat;@EraCmd;@EraItems;@EraSpawn; 
+
+
+------------------------------------
+XSERVER, 24.11 2023 18:39:31
+
+[wpnfsm] ValidateAndRepair Attempting to repair: SKS:018932 - ChamberRepair - SKS_OPN_BU0<ab594680> - state: 0 != weapon: 1
+Class:      'WeaponFSM'
+Function: 'Error'
+Stack trace:
+scripts/1_Core/proto\endebug.c:92
+scripts/4_World/entities\firearms\weaponfsm.c:529
+scripts/4_World/entities\firearms\weaponfsm.c:487
+scripts/4_World/entities\firearms\weaponfsm.c:439
+scripts/4_World/entities\firearms\weaponfsm.c:58
+scripts/3_Game/systems\hfsmbase.c:512
+scripts/4_World/entities\firearms\weaponfsm.c:273
+scripts/4_World/entities\firearms\weapon_base.c:288
+scripts/4_World/systems\inventory\dayzplayerinventory.c:361
+scripts/4_World/entities\dayzplayerimplement.c:856
+scripts/4_World/entities\dayzplayerimplement.c:2039
+scripts/4_World/entities\manbase\playerbase.c:2781
+
+Runtime mode
+CLI params: adminLog  doLogs  netLog  port 2302 profiles mpmissions\kub.chernarusplus\profiles freezeCheck  config serverDZ.cfg serverMod @EraAlcohol;@EraChat;@EraCmd;@EraItems;@EraSpawn; 
+
+
+------------------------------------
+XSERVER, 24.11 2023 18:39:35
+
+[wpnfsm] ValidateAndRepair Attempting to repair: SKS:018932 - ChamberRepair - SKS_OPN_BU0<ab594680> - state: 0 != weapon: 1
+Class:      'WeaponFSM'
+Function: 'Error'
+Stack trace:
+scripts/1_Core/proto\endebug.c:92
+scripts/4_World/entities\firearms\weaponfsm.c:529
+scripts/4_World/entities\firearms\weaponfsm.c:487
+scripts/4_World/entities\firearms\weaponfsm.c:439
+scripts/4_World/entities\firearms\weaponfsm.c:58
+scripts/3_Game/systems\hfsmbase.c:512
+scripts/4_World/entities\firearms\weaponfsm.c:273
+scripts/4_World/entities\firearms\weapon_base.c:288
+scripts/4_World/systems\inventory\dayzplayerinventory.c:361
+scripts/4_World/entities\dayzplayerimplement.c:856
+scripts/4_World/entities\dayzplayerimplement.c:2039
+scripts/4_World/entities\manbase\playerbase.c:2781
+
+Runtime mode
+CLI params: adminLog  doLogs  netLog  port 2302 profiles mpmissions\kub.chernarusplus\profiles freezeCheck  config serverDZ.cfg serverMod @EraAlcohol;@EraChat;@EraCmd;@EraItems;@EraSpawn; 
+
+
+------------------------------------
+XSERVER, 24.11 2023 21:31:49
+
+[wpnfsm] SurvivorM_Cyril:011 warning - pending event already posted, curr_event={ WpnEv id=SWAP_MAGAZINE pl=SurvivorM_Cyril:011 mag=Mag_AK74_30Rnd:026851 } new_event={ WpnEv id=DETACH_MAGAZINE pl=SurvivorM_Cyril:011 mag=Mag_AK74_30Rnd:07618 }
+Class:      'DayZPlayerInventory'
+Function: 'Error'
+Stack trace:
+scripts/1_Core/proto\endebug.c:92
+scripts/4_World/systems\inventory\dayzplayerinventory.c:292
+scripts/4_World/classes\weapons\weaponmanager.c:774
+scripts/4_World/classes\weapons\weaponmanager.c:889
+scripts/4_World/entities\manbase\playerbase.c:2835
+
+Runtime mode
+CLI params: adminLog  doLogs  netLog  port 2302 profiles mpmissions\kub.chernarusplus\profiles freezeCheck  config serverDZ.cfg serverMod @EraAlcohol;@EraChat;@EraCmd;@EraItems;@EraSpawn; 
+
+
+------------------------------------
+XSERVER, 24.11 2023 21:31:56
+
+[wpnfsm] SurvivorM_Cyril:011 warning - pending event already posted, curr_event={ WpnEv id=DETACH_MAGAZINE pl=SurvivorM_Cyril:011 mag=Mag_AK74_30Rnd:07618 } new_event={ WpnEv id=DETACH_MAGAZINE pl=SurvivorM_Cyril:011 mag=Mag_AK74_30Rnd:07618 }
+Class:      'DayZPlayerInventory'
+Function: 'Error'
+Stack trace:
+scripts/1_Core/proto\endebug.c:92
+scripts/4_World/systems\inventory\dayzplayerinventory.c:292
+scripts/4_World/classes\weapons\weaponmanager.c:774
+scripts/4_World/classes\weapons\weaponmanager.c:889
+scripts/4_World/entities\manbase\playerbase.c:2835
+
+Runtime mode
+CLI params: adminLog  doLogs  netLog  port 2302 profiles mpmissions\kub.chernarusplus\profiles freezeCheck  config serverDZ.cfg serverMod @EraAlcohol;@EraChat;@EraCmd;@EraItems;@EraSpawn; 
+
+
+------------------------------------
+XSERVER, 24.11 2023 21:32:01
+
+[wpnfsm] SurvivorM_Cyril:011 warning - pending event already posted, curr_event={ WpnEv id=DETACH_MAGAZINE pl=SurvivorM_Cyril:011 mag=Mag_AK74_30Rnd:07618 } new_event={ WpnEv id=DETACH_MAGAZINE pl=SurvivorM_Cyril:011 mag=Mag_AK74_30Rnd:07618 }
+Class:      'DayZPlayerInventory'
+Function: 'Error'
+Stack trace:
+scripts/1_Core/proto\endebug.c:92
+scripts/4_World/systems\inventory\dayzplayerinventory.c:292
+scripts/4_World/classes\weapons\weaponmanager.c:774
+scripts/4_World/classes\weapons\weaponmanager.c:889
+scripts/4_World/entities\manbase\playerbase.c:2835
+
+Runtime mode
+CLI params: adminLog  doLogs  netLog  port 2302 profiles mpmissions\kub.chernarusplus\profiles freezeCheck  config serverDZ.cfg serverMod @EraAlcohol;@EraChat;@EraCmd;@EraItems;@EraSpawn; 
+
+
+------------------------------------
+XSERVER, 24.11 2023 21:32:07
+
+[wpnfsm] SurvivorM_Cyril:011 warning - pending event already posted, curr_event={ WpnEv id=DETACH_MAGAZINE pl=SurvivorM_Cyril:011 mag=Mag_AK74_30Rnd:07618 } new_event={ WpnEv id=DETACH_MAGAZINE pl=SurvivorM_Cyril:011 mag=Mag_AK74_30Rnd:07618 }
+Class:      'DayZPlayerInventory'
+Function: 'Error'
+Stack trace:
+scripts/1_Core/proto\endebug.c:92
+scripts/4_World/systems\inventory\dayzplayerinventory.c:292
+scripts/4_World/classes\weapons\weaponmanager.c:774
+scripts/4_World/classes\weapons\weaponmanager.c:889
+scripts/4_World/entities\manbase\playerbase.c:2835
+
+Runtime mode
+CLI params: adminLog  doLogs  netLog  port 2302 profiles mpmissions\kub.chernarusplus\profiles freezeCheck  config serverDZ.cfg serverMod @EraAlcohol;@EraChat;@EraCmd;@EraItems;@EraSpawn; 
+
+
+------------------------------------
+XSERVER, 24.11 2023 21:32:09
+
+[wpnfsm] SurvivorM_Cyril:011 warning - pending event already posted, curr_event={ WpnEv id=DETACH_MAGAZINE pl=SurvivorM_Cyril:011 mag=Mag_AK74_30Rnd:07618 } new_event={ WpnEv id=DETACH_MAGAZINE pl=SurvivorM_Cyril:011 mag=Mag_AK74_30Rnd:07618 }
+Class:      'DayZPlayerInventory'
+Function: 'Error'
+Stack trace:
+scripts/1_Core/proto\endebug.c:92
+scripts/4_World/systems\inventory\dayzplayerinventory.c:292
+scripts/4_World/classes\weapons\weaponmanager.c:774
+scripts/4_World/classes\weapons\weaponmanager.c:889
+scripts/4_World/entities\manbase\playerbase.c:2835
+
+Runtime mode
+CLI params: adminLog  doLogs  netLog  port 2302 profiles mpmissions\kub.chernarusplus\profiles freezeCheck  config serverDZ.cfg serverMod @EraAlcohol;@EraChat;@EraCmd;@EraItems;@EraSpawn; 
+
+
+------------------------------------
+XSERVER, 24.11 2023 21:32:35
+
+[wpnfsm] SurvivorM_Cyril:011 warning - pending event already posted, curr_event={ WpnEv id=DETACH_MAGAZINE pl=SurvivorM_Cyril:011 mag=Mag_AK74_30Rnd:07618 } new_event={ WpnEv id=DETACH_MAGAZINE pl=SurvivorM_Cyril:011 mag=Mag_AK74_30Rnd:07618 }
+Class:      'DayZPlayerInventory'
+Function: 'Error'
+Stack trace:
+scripts/1_Core/proto\endebug.c:92
+scripts/4_World/systems\inventory\dayzplayerinventory.c:292
+scripts/4_World/classes\weapons\weaponmanager.c:774
+scripts/4_World/classes\weapons\weaponmanager.c:889
+scripts/4_World/entities\manbase\playerbase.c:2835
+
+Runtime mode
+CLI params: adminLog  doLogs  netLog  port 2302 profiles mpmissions\kub.chernarusplus\profiles freezeCheck  config serverDZ.cfg serverMod @EraAlcohol;@EraChat;@EraCmd;@EraItems;@EraSpawn; 
+
+
+------------------------------------
+XSERVER, 24.11 2023 21:41:31
+
+[wpnfsm] ValidateAndRepair Attempting to repair: SKS:010879 - ChamberRepair - SKS_OPN_BU0<a1d22b70> - state: 0 != weapon: 1
+Class:      'WeaponFSM'
+Function: 'Error'
+Stack trace:
+scripts/1_Core/proto\endebug.c:92
+scripts/4_World/entities\firearms\weaponfsm.c:529
+scripts/4_World/entities\firearms\weaponfsm.c:487
+scripts/4_World/entities\firearms\weaponfsm.c:439
+scripts/4_World/entities\firearms\weaponfsm.c:58
+scripts/3_Game/systems\hfsmbase.c:512
+scripts/4_World/entities\firearms\weaponfsm.c:273
+scripts/4_World/entities\firearms\weapon_base.c:288
+scripts/4_World/systems\inventory\dayzplayerinventory.c:361
+scripts/4_World/entities\dayzplayerimplement.c:856
+scripts/4_World/entities\dayzplayerimplement.c:2039
+scripts/4_World/entities\manbase\playerbase.c:2781
+
+Runtime mode
+CLI params: adminLog  doLogs  netLog  port 2302 profiles mpmissions\kub.chernarusplus\profiles freezeCheck  config serverDZ.cfg serverMod @EraAlcohol;@EraChat;@EraCmd;@EraItems;@EraSpawn; 
+
+
+------------------------------------
+XSERVER, 24.11 2023 21:41:35
+
+[wpnfsm] ValidateAndRepair Attempting to repair: SKS:010879 - ChamberRepair - SKS_OPN_BU0<a1d22b70> - state: 0 != weapon: 1
+Class:      'WeaponFSM'
+Function: 'Error'
+Stack trace:
+scripts/1_Core/proto\endebug.c:92
+scripts/4_World/entities\firearms\weaponfsm.c:529
+scripts/4_World/entities\firearms\weaponfsm.c:487
+scripts/4_World/entities\firearms\weaponfsm.c:439
+scripts/4_World/entities\firearms\weaponfsm.c:58
+scripts/3_Game/systems\hfsmbase.c:512
+scripts/4_World/entities\firearms\weaponfsm.c:273
+scripts/4_World/entities\firearms\weapon_base.c:288
+scripts/4_World/systems\inventory\dayzplayerinventory.c:361
+scripts/4_World/entities\dayzplayerimplement.c:856
+scripts/4_World/entities\dayzplayerimplement.c:2039
+scripts/4_World/entities\manbase\playerbase.c:2781
+
+Runtime mode
+CLI params: adminLog  doLogs  netLog  port 2302 profiles mpmissions\kub.chernarusplus\profiles freezeCheck  config serverDZ.cfg serverMod @EraAlcohol;@EraChat;@EraCmd;@EraItems;@EraSpawn; 
