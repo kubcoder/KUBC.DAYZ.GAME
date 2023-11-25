@@ -84,6 +84,73 @@
 
 
         /// <summary>
+        /// Символы прочитанные из файла
+        /// </summary>
+        private List<int> Chars = new();
+
+        /// <summary>
+        /// Получить текущую строчку лога
+        /// </summary>
+        /// <returns>Полная строчка лога</returns>
+        protected string GetLine()
+        {
+            string l = string.Empty;
+            foreach(char c in Chars) { l+= c; }
+            Chars.Clear();
+            return l;
+        }
+        /// <summary>
+        /// Дочитали до конца строки
+        /// </summary>
+        private bool IsEndLine
+        {
+            get
+            {
+                var end = Chars.TakeLast(2).ToArray();
+                if ((end!=null)&&(end.Length==2))
+                {
+                    if ((end[0] == '\r') && (end[1] == '\n'))
+                        return true;
+                }
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Читать строчку из потока
+        /// </summary>
+        /// <returns>Истина если строчка была дочитана до конца, иначе ложь</returns>
+        protected bool ReadFromFile(CancellationToken? cancellationToken = null)
+        {
+            if (fileReader == null)
+            {
+                if (IsCanRead)
+                {
+                    fileReader = new StreamReader(OpenFile.Open(FileMode.Open, FileAccess.Read, FileShare.ReadWrite));
+                    if (fileReader != null)
+                    {
+                        OnFileOpen();
+
+                    }
+                }
+            }
+            if (fileReader!=null)
+            {
+                while (!fileReader.EndOfStream)
+                {
+                    Chars.Add(fileReader.Read());
+                    if ((cancellationToken != null) && (cancellationToken.Value.IsCancellationRequested))
+                        return false;
+                    if (IsEndLine)
+                        return true;
+                        
+                }
+            }
+            return false;
+        }
+
+
+        /// <summary>
         /// Читаем файл
         /// </summary>
         /// <param name="SkipPreRead">
@@ -97,52 +164,25 @@
         public int Read(bool SkipPreRead = false, CancellationToken? cancellationToken = null)
         {
             int ReadLines = 0;
-            if (fileReader == null) 
+            Errors.Clear();
+            if (!SkipPreRead)
             {
-                if (IsCanRead)
+                OnPreRead();
+            }
+            while (ReadFromFile(cancellationToken))
+            {
+                ReadLines++;
+                var Line = GetLine();
+                try
                 {
-                    fileReader = new StreamReader(OpenFile.Open(FileMode.Open, FileAccess.Read, FileShare.ReadWrite));
-                    if (fileReader!=null)
-                    {
-                        OnFileOpen();
-                        
-                    }
+                    ParseLine(Line, cancellationToken);
+                }
+                catch (Exception ex)
+                {
+                    Errors.Add(new ParseError() { Exception = ex, SourceLine = Line });
                 }
             }
-            if (fileReader!=null)
-            {
-                Errors.Clear();
-                if (!SkipPreRead)
-                {
-                    OnPreRead();
-                }
-                if (fileReader != null)
-                {
-                    string? Line;
-                    while ((Line = fileReader.ReadLine()) != null)
-                    {
-                        ReadLines++;
-                        try
-                        {
-                            if (!string.IsNullOrEmpty(Line))
-                            {
-                                ParseLine(Line, cancellationToken);
-                            }
-                                
-                        }
-                        catch (Exception ex)
-                        {
-                            Errors.Add(new ParseError() { Exception = ex, SourceLine = Line });
-                        }
-                        if (cancellationToken!= null)
-                        {
-                            if (cancellationToken.Value.IsCancellationRequested)
-                                return ReadLines;
-                        }
-                    }
-                    OnPostRead();
-                }
-            }
+            OnPostRead();
             return ReadLines;
         }
         /// <summary>
@@ -185,7 +225,7 @@
         /// <summary>
         /// Событие вызываемое при необходимости чтения строчки лога
         /// </summary>
-        public event EventHandler<string>? ReadLine;
+        public event EventHandler<ExtendReadEventArgs>? ReadLine;
 
         /// <summary>
         /// Распознаем строку журнала
@@ -194,7 +234,7 @@
         /// <param name="cancellationToken">Токен отмены разбора строки</param>
         protected virtual void ParseLine(string Line, CancellationToken? cancellationToken)
         {
-            ReadLine?.Invoke(this, Line);
+            ReadLine?.Invoke(this, new ExtendReadEventArgs(Line, cancellationToken));
         }
         /// <summary>
         /// Получаем последний лог (ну в который писалось позже всего) по заданному шаблону поиска имени файла

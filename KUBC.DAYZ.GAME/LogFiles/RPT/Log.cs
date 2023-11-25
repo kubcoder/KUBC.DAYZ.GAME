@@ -62,16 +62,16 @@
                 }
                 else
                 {
-                    var aFPS = AverageFPS.FromLogLine(Line);
-                    if (aFPS != null)
+                    var aFPS = new AverageFPS(Line);
+                    if (aFPS.IsReadOk)
                     {
                         aFPS.MeasuredTime = CorrectTime(aFPS.MeasuredTime);
                         FPSHistory.Add(aFPS);
                     }
                     else
                     {
-                        var aMem = UsedMemory.FromLogLine(Line);
-                        if (aMem != null)
+                        var aMem = new UsedMemory(Line);
+                        if (aMem.IsReadOk)
                         {
                             aMem.MeasuredTime = CorrectTime(aMem.MeasuredTime);
                             MemHistory.Add(aMem);

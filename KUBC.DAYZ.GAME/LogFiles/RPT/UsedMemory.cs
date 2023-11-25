@@ -10,7 +10,7 @@ namespace KUBC.DAYZ.GAME.LogFiles.RPT
     /// <summary>
     /// Данные об используемой памяти
     /// </summary>
-    public class UsedMemory
+    public class UsedMemory(string Line, CancellationToken? cancellation = null) : LogEntity(Line, cancellation)
     {
         /// <summary>
         /// Время когда сохранены данные о памяти
@@ -21,89 +21,47 @@ namespace KUBC.DAYZ.GAME.LogFiles.RPT
         /// </summary>
         public long MemoryKB { get; set; } = 0;
 
-        /// <summary>
-        /// Читаем данные из строки лога
-        /// </summary>
-        /// <param name="Line">Строчка лога</param>
-        /// <returns>Данные о ФПС. Если вернули null значит строчка не подходящая</returns>
-        public static UsedMemory? FromLogLine(string Line)
+        /// <inheritdoc/>
+        protected override void Init(string Line, CancellationToken? cancellation = null)
         {
             if (Line.Contains("Used memory"))
             {
-                char rSym;
-                var res = new UsedMemory();
-                var reader = new StringReader(Line);
-                var TimeString = string.Empty;
-                bool EndStep = false;
-                while (!EndStep)
+                if (!SkipChar(' ', cancellation))
                 {
-                    rSym = (char)reader.Read();
-                    if (rSym != ' ')
-                    {
-                        TimeString += rSym;
-                    }
-                    else
-                    {
-                        EndStep = true;
-                    }
-                };
+                    return;
+                }
+                var TimeString = ReadToChar(' ', false, cancellation);
                 if (TimeSpan.TryParse(TimeString, out var pTime))
                 {
-                    res.MeasuredTime = DateTime.MinValue.Add(pTime);
+                    MeasuredTime = DateTime.MinValue.Add(pTime);
                 }
                 else
                 {
                     if (DateTime.TryParse(TimeString, out var pFTime))
                     {
-                        res.MeasuredTime = pFTime;
+                        MeasuredTime = pFTime;
                     }
                     else
                     {
-                        res.MeasuredTime = DateTime.Now;
+                        MeasuredTime = DateTime.Now;
                     }
                 }
-                rSym = (char)reader.Read();
-                while (rSym != ':')
+                if (!SkipToChar(':', cancellation))
                 {
-                    rSym = (char)reader.Read();
+                    return;
                 }
-                rSym = (char)reader.Read();
-                var MemoryString = string.Empty + rSym;
-                rSym = (char)reader.Read();
-                while (rSym != ' ')
-                {
-                    MemoryString += rSym;
-                    rSym = (char)reader.Read();
-                }
-                MemoryString = MemoryString.Trim();
+                var MemoryString = ReadToChar(' ', true, cancellation);
                 var Culture = System.Globalization.CultureInfo.InvariantCulture;
-                if (long.TryParse(MemoryString, System.Globalization.NumberStyles.Float, Culture.NumberFormat, out long kb))
+                if (long.TryParse(MemoryString, System.Globalization.NumberStyles.Float, Culture.NumberFormat, out long memoryKB))
                 {
-                    res.MemoryKB = kb;
-                    return res;
+                    MemoryKB = memoryKB;
+                    IsReadOk = true;
                 }
             }
-            return null;
         }
-        /// <summary>
-        /// Преобразуем объект в строку с разметкой XML
-        /// </summary>
-        /// <returns>Представление среднего ФПС в виде XML</returns>
-        public string GetXML()
-        {
-            var sb = new StringWriter();
-            System.Xml.XmlWriter wrt = System.Xml.XmlWriter.Create(sb, new System.Xml.XmlWriterSettings()
-            {
-                OmitXmlDeclaration = true,
-                Indent = true
-            });
-            var x = new XmlSerializer(typeof(UsedMemory));
-            var xns = new XmlSerializerNamespaces();
-            xns.Add(string.Empty, string.Empty);
-            x.Serialize(wrt, this, xns);
-            wrt.Close();
-            return sb.ToString();
-        }
+
+        
+        
         /// <summary>
         /// Создать элемент данных памяти из строки XML
         /// </summary>

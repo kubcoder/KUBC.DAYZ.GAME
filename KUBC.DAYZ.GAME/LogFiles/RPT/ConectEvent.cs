@@ -9,8 +9,12 @@ namespace KUBC.DAYZ.GAME.LogFiles.RPT
     /// Представление данных которое в логе записывается строчкой 
     /// <code>Player "Over" is connected (steamID=76561199141600564)</code>
     /// </remarks>
-    public class ConectEvent(string Line, CancellationToken? cancellation = null) : LogEntity(Line, cancellation)
+    public class ConectEvent : LogEntity
     {
+        /// <summary>
+        /// Конструктор с загрузкой из строки
+        /// </summary>
+        public ConectEvent(string Line, CancellationToken? cancellation = null):base(Line, cancellation) { }
         /// <summary>
         /// Steam идентификатор игрока
         /// </summary>
@@ -84,25 +88,7 @@ namespace KUBC.DAYZ.GAME.LogFiles.RPT
             }
         }
 
-        /// <summary>
-        /// Проебразуем объект в строку с разметкой XML
-        /// </summary>
-        /// <returns>Представление подключения игрока в виде XML</returns>
-        public string GetXML()
-        {
-            var sb = new StringWriter();
-            System.Xml.XmlWriter wrt = System.Xml.XmlWriter.Create(sb, new System.Xml.XmlWriterSettings()
-            {
-                OmitXmlDeclaration = true,
-                Indent = true
-            });
-            var x = new XmlSerializer(typeof(ConectEvent));
-            var xns = new XmlSerializerNamespaces();
-            xns.Add(string.Empty, string.Empty);
-            x.Serialize(wrt, this, xns);
-            wrt.Close();
-            return sb.ToString();
-        }
+        
         /// <summary>
         /// Создать элемент данных подключения игрока из строки XML
         /// </summary>

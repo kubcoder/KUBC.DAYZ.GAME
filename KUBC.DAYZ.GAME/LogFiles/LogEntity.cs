@@ -1,8 +1,10 @@
-﻿using System;
+﻿using KUBC.DAYZ.GAME.LogFiles.RPT;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace KUBC.DAYZ.GAME.LogFiles
 {
@@ -14,6 +16,7 @@ namespace KUBC.DAYZ.GAME.LogFiles
         /// <summary>
         /// Признак что в конструкторе класса строчка была разобрана успешно
         /// </summary>
+        [XmlIgnore]
         public bool IsReadOk = false;
         /// <summary>
         /// Поток чтения строчки лога
@@ -21,7 +24,7 @@ namespace KUBC.DAYZ.GAME.LogFiles
         /// <remarks>
         /// Инициализируется при создании строчки
         /// </remarks>
-        protected StringReader Reader;
+        protected StringReader? Reader;
         /// <summary>
         /// Инициализируем элемент лога
         /// </summary>
@@ -32,6 +35,14 @@ namespace KUBC.DAYZ.GAME.LogFiles
             Reader = new StringReader(Line);
             Init(Line, cancellation);
         }
+        /// <summary>
+        /// Инициализация пустого класса
+        /// </summary>
+        public LogEntity()
+        {
+
+        }
+
         /// <summary>
         /// Инициализируем объект
         /// </summary>
@@ -47,8 +58,9 @@ namespace KUBC.DAYZ.GAME.LogFiles
         /// </summary>
         public virtual void Dispose()
         {
-            Reader.Close();
-            Reader.Dispose();
+            
+            Reader?.Close();
+            Reader?.Dispose();
         }
         /// <summary>
         /// Символ последним прочитанный из потока
@@ -60,7 +72,10 @@ namespace KUBC.DAYZ.GAME.LogFiles
         /// </summary>
         protected void Read()
         {
-            LastSymbol = (char)Reader.Read();
+            if (Reader!=null)
+            {
+                LastSymbol = (char)Reader.Read();
+            }
         }
         /// <summary>
         /// Читать поток пока идут пробрассываемые символы
@@ -161,6 +176,25 @@ namespace KUBC.DAYZ.GAME.LogFiles
                     End = true;
             }
             return res;
+        }
+        /// <summary>
+        /// Получить событие в виде XML
+        /// </summary>
+        /// <returns>Элемент лога в представлении XML</returns>
+        public string GetXML()
+        {
+            var sb = new StringWriter();
+            System.Xml.XmlWriter wrt = System.Xml.XmlWriter.Create(sb, new System.Xml.XmlWriterSettings()
+            {
+                OmitXmlDeclaration = true,
+                Indent = true
+            });
+            var x = new XmlSerializer(this.GetType());
+            var xns = new XmlSerializerNamespaces();
+            xns.Add(string.Empty, string.Empty);
+            x.Serialize(wrt, this, xns);
+            wrt.Close();
+            return sb.ToString();
         }
     }
 }

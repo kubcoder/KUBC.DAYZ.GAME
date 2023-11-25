@@ -10,101 +10,61 @@ namespace KUBC.DAYZ.GAME.LogFiles.RPT
     /// <summary>
     /// Средний ФПС 
     /// </summary>
-    public class AverageFPS
+    public class AverageFPS(string Line, CancellationToken? cancellation = null) : LogEntity(Line, cancellation)
     {
         /// <summary>
         /// Время когда сохранены данные FPS
         /// </summary>
+        [XmlElement]
         public DateTime MeasuredTime { get; set; } = DateTime.Now;
         /// <summary>
         /// Измеренный ФПС
         /// </summary>
+        [XmlElement]
         public float FPS { get; set; } = 0;
 
-        /// <summary>
-        /// Читаем данные из строки лога
-        /// </summary>
-        /// <param name="Line">Строчка лога</param>
-        /// <returns>Данные о ФПС. Если вернули null значит строчка не подходящая</returns>
-        public static AverageFPS? FromLogLine(string Line)
+
+
+        /// <inheritdoc/>
+        protected override void Init(string Line, CancellationToken? cancellation = null)
         {
             if (Line.Contains("Average server FPS"))
             {
-                char rSym;
-                var res = new AverageFPS();
-                var reader = new StringReader(Line);
-                var TimeString = string.Empty;
-                bool EndStep = false;
-                while (!EndStep)
+                if(!SkipChar(' ', cancellation))
                 {
-                    rSym = (char)reader.Read();
-                    if (rSym != ' ')
-                    {
-                        TimeString += rSym;
-                    }
-                    else
-                    {
-                        EndStep = true;
-                    }
-                };
+                    return;
+                }
+                var TimeString = ReadToChar(' ', false, cancellation);
                 if (TimeSpan.TryParse(TimeString, out var pTime))
                 {
-                    res.MeasuredTime = DateTime.MinValue.Add(pTime);
+                    MeasuredTime = DateTime.MinValue.Add(pTime);
                 }
                 else
                 {
                     if (DateTime.TryParse(TimeString, out var pFTime))
                     {
-                        res.MeasuredTime = pFTime;
+                        MeasuredTime = pFTime;
                     }
                     else
                     {
-                        res.MeasuredTime = DateTime.Now;
+                        MeasuredTime = DateTime.Now;
                     }
                 }
-                rSym = (char)reader.Read();
-                while(rSym!=':')
+                if (!SkipToChar(':', cancellation))
                 {
-                    rSym = (char)reader.Read();
+                    return;
                 }
-                rSym = (char)reader.Read();
-                var FPSString = string.Empty + rSym;
-                rSym = (char)reader.Read();
-                while (rSym!=' ')
-                {
-                    FPSString += rSym;
-                    rSym = (char)reader.Read();
-                    
-                }
-                FPSString = FPSString.Trim();
+                var FPSString = ReadToChar(' ', true, cancellation);
                 var Culture = System.Globalization.CultureInfo.InvariantCulture;
                 if (float.TryParse(FPSString, System.Globalization.NumberStyles.Float, Culture.NumberFormat, out float fps))
                 {
-                    res.FPS = fps;
-                    return res;
+                    FPS = fps;
+                    IsReadOk = true;
                 }
             }
-            return null;
         }
-        /// <summary>
-        /// Преобразуем объект в строку с разметкой XML
-        /// </summary>
-        /// <returns>Представление среднего ФПС в виде XML</returns>
-        public string GetXML()
-        {
-            var sb = new StringWriter();
-            System.Xml.XmlWriter wrt = System.Xml.XmlWriter.Create(sb, new System.Xml.XmlWriterSettings()
-            {
-                OmitXmlDeclaration = true,
-                Indent = true
-            });
-            var x = new XmlSerializer(typeof(AverageFPS));
-            var xns = new XmlSerializerNamespaces();
-            xns.Add(string.Empty, string.Empty);
-            x.Serialize(wrt, this, xns);
-            wrt.Close();
-            return sb.ToString();
-        }
+
+        
         /// <summary>
         /// Создать элемент данных среднего фпс из строки XML
         /// </summary>
