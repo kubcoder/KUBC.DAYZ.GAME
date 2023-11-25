@@ -10,29 +10,30 @@ namespace KUBC.DAYZ.GAME.LogFiles.RPT
     /// <summary>
     /// Средний ФПС 
     /// </summary>
-    public class AverageFPS(string Line, CancellationToken? cancellation = null) : LogEntity(Line, cancellation)
+    public class AverageFPS : LogEntity
     {
         /// <summary>
         /// Время когда сохранены данные FPS
         /// </summary>
-        [XmlElement]
+        [XmlAttribute]
         public DateTime MeasuredTime { get; set; } = DateTime.Now;
         /// <summary>
         /// Измеренный ФПС
         /// </summary>
-        [XmlElement]
+        [XmlText]
         public float FPS { get; set; } = 0;
 
 
 
         /// <inheritdoc/>
-        protected override void Init(string Line, CancellationToken? cancellation = null)
+        public override bool Init(string Line, CancellationToken? cancellation = null)
         {
+            base.Init(Line, cancellation);
             if (Line.Contains("Average server FPS"))
             {
                 if(!SkipChar(' ', cancellation))
                 {
-                    return;
+                    return false;
                 }
                 var TimeString = ReadToChar(' ', false, cancellation);
                 if (TimeSpan.TryParse(TimeString, out var pTime))
@@ -52,16 +53,18 @@ namespace KUBC.DAYZ.GAME.LogFiles.RPT
                 }
                 if (!SkipToChar(':', cancellation))
                 {
-                    return;
+                    return false;
                 }
                 var FPSString = ReadToChar(' ', true, cancellation);
                 var Culture = System.Globalization.CultureInfo.InvariantCulture;
                 if (float.TryParse(FPSString, System.Globalization.NumberStyles.Float, Culture.NumberFormat, out float fps))
                 {
                     FPS = fps;
-                    IsReadOk = true;
+                    Dispose();
+                    return true;
                 }
             }
+            return false;
         }
 
         
@@ -72,23 +75,8 @@ namespace KUBC.DAYZ.GAME.LogFiles.RPT
         /// <returns>Элемент данных или NULL если прочитать не удалось</returns>
         public static AverageFPS? FromXML(string xml)
         {
-            try
-            {
-                var x = new XmlSerializer(typeof(AverageFPS));
-                var reader = new StringReader(xml);
-                var rObj = x.Deserialize(reader);
-                reader.Close();
-                if (rObj != null)
-                {
-                    var d = (AverageFPS)rObj;
-                    return d;
-                }
-                return null;
-            }
-            catch
-            {
-                return null;
-            }
+            return ReadFromXML(xml, typeof(AverageFPS)) as AverageFPS;
         }
     }
+    
 }

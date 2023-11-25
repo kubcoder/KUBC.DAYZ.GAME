@@ -54,24 +54,24 @@
             }
             else
             {
-                ConectEvent cE = new (Line, cancellationToken);
-                if (cE.IsReadOk)
+                ConectEvent cE = new ();
+                if (cE.Init(Line, cancellationToken))
                 {
                     cE.ConnectTime = CorrectTime(cE.ConnectTime);
                     PlayersConect.Add(cE);
                 }
                 else
                 {
-                    var aFPS = new AverageFPS(Line);
-                    if (aFPS.IsReadOk)
+                    var aFPS = new AverageFPS();
+                    if (aFPS.Init(Line, cancellationToken))
                     {
                         aFPS.MeasuredTime = CorrectTime(aFPS.MeasuredTime);
                         FPSHistory.Add(aFPS);
                     }
                     else
                     {
-                        var aMem = new UsedMemory(Line);
-                        if (aMem.IsReadOk)
+                        var aMem = new UsedMemory();
+                        if (aMem.Init(Line, cancellationToken))
                         {
                             aMem.MeasuredTime = CorrectTime(aMem.MeasuredTime);
                             MemHistory.Add(aMem);

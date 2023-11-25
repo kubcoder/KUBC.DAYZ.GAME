@@ -11,10 +11,7 @@ namespace KUBC.DAYZ.GAME.LogFiles.RPT
     /// </remarks>
     public class ConectEvent : LogEntity
     {
-        /// <summary>
-        /// Конструктор с загрузкой из строки
-        /// </summary>
-        public ConectEvent(string Line, CancellationToken? cancellation = null):base(Line, cancellation) { }
+        
         /// <summary>
         /// Steam идентификатор игрока
         /// </summary>
@@ -26,18 +23,20 @@ namespace KUBC.DAYZ.GAME.LogFiles.RPT
         /// <summary>
         /// Время когда игрок подключился
         /// </summary>
+        [XmlAttribute]
         public DateTime ConnectTime { get; set; } = DateTime.Now;
 
         /// <inheritdoc/>
-        protected override void Init(string Line, CancellationToken? cancellation = null)
+        public override bool Init(string Line, CancellationToken? cancellation = null)
         {
+            base.Init(Line, cancellation);
             if (Line.Contains("is connected"))
             {
                 if (Line.Contains("steamID"))
                 {
                     if (!SkipChar(' ', cancellation))
                     {
-                        return;
+                        return false;
                     }
                     var TimeString = ReadToChar(' ', false, cancellation);
                     if (TimeSpan.TryParse(TimeString, out var pTime))
@@ -57,12 +56,12 @@ namespace KUBC.DAYZ.GAME.LogFiles.RPT
                     }
                     if (!SkipToChar('"', cancellation))
                     { 
-                        return;
+                        return false;
                     }
                     var rNickName = ReadToChar('"', false, cancellation);
                     if (string.IsNullOrEmpty(rNickName))
                     {
-                        return;
+                        return false;
                     }
                     else
                     {
@@ -71,21 +70,22 @@ namespace KUBC.DAYZ.GAME.LogFiles.RPT
 
                     if (!SkipToChar('=', cancellation))
                     {
-                        return;
+                        return false;
                     }
                     var steamID = ReadToChar(')', true, cancellation);
                     if (steamID==null)
                     {
-                        return;
+                        return false;
                     }
                     if (long.TryParse(steamID, out var pSteamID))
                     {
                         SteamID = pSteamID;
-                        IsReadOk = true;
                         Dispose();//Прихлопываем поток чтения строки
+                        return true;
                     }
                 }
             }
+            return false;
         }
 
         
@@ -96,23 +96,7 @@ namespace KUBC.DAYZ.GAME.LogFiles.RPT
         /// <returns>Элемент данных или NULL если прочитать не удалось</returns>
         public static ConectEvent? FromXML(string xml)
         {
-            try
-            {
-                var x = new XmlSerializer(typeof(ConectEvent));
-                var reader = new StringReader(xml);
-                var rObj = x.Deserialize(reader);
-                reader.Close();
-                if (rObj != null)
-                {
-                    var d = (ConectEvent)rObj;
-                    return d;
-                }
-                return null;
-            }
-            catch
-            {
-                return null;
-            }
+            return ReadFromXML(xml, typeof(ConectEvent)) as ConectEvent;
         }
     }
 }

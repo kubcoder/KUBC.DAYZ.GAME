@@ -14,11 +14,6 @@ namespace KUBC.DAYZ.GAME.LogFiles
     public class LogEntity : IDisposable
     {
         /// <summary>
-        /// Признак что в конструкторе класса строчка была разобрана успешно
-        /// </summary>
-        [XmlIgnore]
-        public bool IsReadOk = false;
-        /// <summary>
         /// Поток чтения строчки лога
         /// </summary>
         /// <remarks>
@@ -28,29 +23,23 @@ namespace KUBC.DAYZ.GAME.LogFiles
         /// <summary>
         /// Инициализируем элемент лога
         /// </summary>
-        /// <param name="cancellation">Токен отмены разбора строчки</param>
-        /// <param name="Line">Первая строчка лога для разбора</param>
-        public LogEntity(string Line, CancellationToken? cancellation = null)
-        {
-            Reader = new StringReader(Line);
-            Init(Line, cancellation);
-        }
-        /// <summary>
-        /// Инициализация пустого класса
-        /// </summary>
         public LogEntity()
         {
-
+            
+            
         }
+        
+        
 
         /// <summary>
         /// Инициализируем объект
         /// </summary>
         /// <param name="Line">Строчка лога из которой выполняем инициализацию</param>
         /// <param name="cancellation">Токен отмены действия</param>
-        protected virtual void Init(string Line, CancellationToken? cancellation = null)
+        public virtual bool Init(string Line, CancellationToken? cancellation = null)
         {
-
+            Reader = new StringReader(Line);
+            return false;
         }
 
         /// <summary>
@@ -58,7 +47,6 @@ namespace KUBC.DAYZ.GAME.LogFiles
         /// </summary>
         public virtual void Dispose()
         {
-            
             Reader?.Close();
             Reader?.Dispose();
         }
@@ -195,6 +183,27 @@ namespace KUBC.DAYZ.GAME.LogFiles
             x.Serialize(wrt, this, xns);
             wrt.Close();
             return sb.ToString();
+        }
+        /// <summary>
+        /// Загрузить объект из XML
+        /// </summary>
+        /// <param name="xml">Строчка с разметкой XML</param>
+        /// <param name="type">Тип который нужно прочитать</param>
+        /// <returns>Прочитанный объект</returns>
+        protected static object? ReadFromXML(string xml, Type type)
+        {
+            try
+            {
+                var x = new XmlSerializer(type);
+                var reader = new StringReader(xml);
+                var rObj = x.Deserialize(reader);
+                reader.Close();
+                return rObj;
+            }
+            catch
+            {
+                return null;
+            }
         }
     }
 }

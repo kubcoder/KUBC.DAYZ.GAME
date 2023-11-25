@@ -10,25 +10,28 @@ namespace KUBC.DAYZ.GAME.LogFiles.RPT
     /// <summary>
     /// Данные об используемой памяти
     /// </summary>
-    public class UsedMemory(string Line, CancellationToken? cancellation = null) : LogEntity(Line, cancellation)
+    public class UsedMemory : LogEntity
     {
         /// <summary>
         /// Время когда сохранены данные о памяти
         /// </summary>
+        [XmlAttribute]
         public DateTime MeasuredTime { get; set; } = DateTime.Now;
         /// <summary>
         /// Используемая память в КБ
         /// </summary>
+        [XmlText]
         public long MemoryKB { get; set; } = 0;
 
         /// <inheritdoc/>
-        protected override void Init(string Line, CancellationToken? cancellation = null)
+        public override bool Init(string Line, CancellationToken? cancellation = null)
         {
+            base.Init(Line, cancellation);
             if (Line.Contains("Used memory"))
             {
                 if (!SkipChar(' ', cancellation))
                 {
-                    return;
+                    return false;
                 }
                 var TimeString = ReadToChar(' ', false, cancellation);
                 if (TimeSpan.TryParse(TimeString, out var pTime))
@@ -48,16 +51,18 @@ namespace KUBC.DAYZ.GAME.LogFiles.RPT
                 }
                 if (!SkipToChar(':', cancellation))
                 {
-                    return;
+                    return false;
                 }
                 var MemoryString = ReadToChar(' ', true, cancellation);
                 var Culture = System.Globalization.CultureInfo.InvariantCulture;
                 if (long.TryParse(MemoryString, System.Globalization.NumberStyles.Float, Culture.NumberFormat, out long memoryKB))
                 {
                     MemoryKB = memoryKB;
-                    IsReadOk = true;
+                    Dispose();
+                    return true;
                 }
             }
+            return false;
         }
 
         
@@ -69,23 +74,7 @@ namespace KUBC.DAYZ.GAME.LogFiles.RPT
         /// <returns>Элемент данных или NULL если прочитать не удалось</returns>
         public static UsedMemory? FromXML(string xml)
         {
-            try
-            {
-                var x = new XmlSerializer(typeof(UsedMemory));
-                var reader = new StringReader(xml);
-                var rObj = x.Deserialize(reader);
-                reader.Close();
-                if (rObj != null)
-                {
-                    var d = (UsedMemory)rObj;
-                    return d;
-                }
-                return null;
-            }
-            catch
-            {
-                return null;
-            }
+            return ReadFromXML(xml, typeof(UsedMemory)) as UsedMemory;
         }
 
     }
