@@ -8,7 +8,6 @@ namespace KUBC.DAYZ.GAME.MSTEST
 {
     /* Подъем/опускание флага
      
-    23:17:47 | Player "kot23rus" (id=B1idL_7H1auUS5DPBOEDcTFQ3EBBrzFLa8r1GGmv7GA= pos=<6965.6, 3506.5, 43.6>) has lowered Flag_LivoniaPolice on TerritoryFlag at <6965.393555, 42.649849, 3507.230225>
     23:18:09 | Player "kot23rus" (id=B1idL_7H1auUS5DPBOEDcTFQ3EBBrzFLa8r1GGmv7GA= pos=<6966.1, 3506.0, 42.9>) has raised Flag_LivoniaPolice on TerritoryFlag at<6965.393555, 42.649849, 3507.230225>
      */
     /* Установил/Снял набор для установки строжевой башни
@@ -31,6 +30,20 @@ namespace KUBC.DAYZ.GAME.MSTEST
     [TestClass]
     public class ADMLog
     {
+
+        [TestMethod]
+        public void Lowered()
+        {
+            string Line = "Player \"kot23rus\" (id=B1idL_7H1auUS5DPBOEDcTFQ3EBBrzFLa8r1GGmv7GA= pos=<6965.6, 3506.5, 43.6>) has lowered Flag_LivoniaPolice on TerritoryFlag at <6965.393555, 42.649849, 3507.230225>";
+            Console.WriteLine(Line);
+            GAME.LogFiles.ADM.Lowered e = new();
+            Assert.IsTrue(e.Init(Line), "Не смогли прочитать правильную строчку");
+            var xml = e.GetXML();
+            Console.WriteLine(xml);
+            var rE = GAME.LogFiles.ADM.Lowered.FromXML(xml);
+            Assert.IsNotNull(rE, "Не смогли прочитать данные из xml");
+        }
+
         [TestMethod]
         public void BledOut()
         {

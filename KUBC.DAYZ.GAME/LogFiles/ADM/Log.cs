@@ -90,63 +90,67 @@
         /// <summary>
         /// События подключения игроков
         /// </summary>
-        public List<PlayerConect> PlayerConnects = new();
+        public List<PlayerConect> PlayerConnects = [];
         /// <summary>
         /// Журналы игроков в сети
         /// </summary>
-        public List<PlayerList> LogPlayers = new();
+        public List<PlayerList> LogPlayers = [];
         /// <summary>
         /// События отключения игроков
         /// </summary>
-        public List<PlayerDisconect> PlayerDisconnects = new();
+        public List<PlayerDisconect> PlayerDisconnects = [];
         /// <summary>
         /// Игровой чат
         /// </summary>
-        public List<Chat> PlayerChat = new();
+        public List<Chat> PlayerChat = [];
         /// <summary>
         /// Жалобы игроков
         /// </summary>
-        public List<Report> PlayersReport = new();
+        public List<Report> PlayersReport = [];
         /// <summary>
         /// Потеря сознаний игроками
         /// </summary>
-        public List<Unconscious> PlayerUnconscious = new();
+        public List<Unconscious> PlayerUnconscious = [];
         /// <summary>
         /// События когда игроки приходят в себя
         /// </summary>
-        public List<Regained> PlayerRegained = new();
+        public List<Regained> PlayerRegained = [];
         /// <summary>
         /// События опиздюливания игроков
         /// </summary>
-        public List<PlayerDamage> PlayerDamages = new();
+        public List<PlayerDamage> PlayerDamages = [];
         /// <summary>
         /// События убийства игроков
         /// </summary>
-        public List<PlayerKilled> PlayerKilleds = new();
+        public List<PlayerKilled> PlayerKilleds = [];
         /// <summary>
         /// Смерти игроков
         /// </summary>
-        public List<PlayerDied> PlayerDieds = new();
+        public List<PlayerDied> PlayerDieds = [];
         /// <summary>
         /// Самоубийства игроков
         /// </summary>
-        public List<Suicide> Suicides = new();
+        public List<Suicide> Suicides = [];
         /// <summary>
         /// Смерти игроков от потери крови
         /// </summary>
-        public List<BledOut> BledOuts = new();
+        public List<BledOut> BledOuts = [];
         /// <summary>
         /// События размещения предметов
         /// </summary>
-        public List<Placed> Placeds = new();
+        public List<Placed> Placeds = [];
         /// <summary>
         /// События стройки
         /// </summary>
-        public List<Built> Builts = new();
+        public List<Built> Builts = [];
         /// <summary>
         /// События разрушения объектов
         /// </summary>
-        public List<Dismantled> Dismantleds = new();
+        public List<Dismantled> Dismantleds = [];
+        /// <summary>
+        /// События опускания тотема
+        /// </summary>
+        public List<Lowered> Lowereds = [];
 
         /// <summary>
         /// Готовимся к чтению лога
@@ -168,6 +172,7 @@
             Placeds.Clear();
             Builts.Clear();
             Dismantleds.Clear();
+            Lowereds.Clear();
         }
         /// <summary>
         /// Сколько всего событий найдено в момент последнего чтения лога
@@ -190,6 +195,7 @@
             res += Placeds.Count;
             res += Builts.Count;
             res += Dismantleds.Count;
+            res += Lowereds.Count;
             return res;
         }
 
@@ -229,6 +235,29 @@
                     currentPlayerList = null;
                 }
             }
+            var chat = new Chat() { Time = LineTime }; ;
+            if (chat.Init(Line, cancellationToken))
+            {
+                chat.Dispose();
+                PlayerChat.Add(chat);
+                return true;
+            }
+            else
+            {
+                chat.Dispose();
+            }
+            var playerDamage = new PlayerDamage() { Time = LineTime }; ;
+            if (playerDamage.Init(Line, cancellationToken))
+            {
+                playerDamage.Dispose();
+                PlayerDamages.Add(playerDamage);
+                return true;
+            }
+            else
+            {
+                playerDamage.Dispose();
+            }
+
             var bledOut = new BledOut() {Time = LineTime };
             if (bledOut.Init(Line, cancellationToken)) 
             {
@@ -251,17 +280,7 @@
             {
                 built.Dispose();
             }
-            var chat = new Chat() { Time = LineTime }; ;
-            if (chat.Init(Line, cancellationToken))
-            {
-                chat.Dispose();
-                PlayerChat.Add(chat);
-                return true;
-            }
-            else
-            {
-                chat.Dispose();
-            }
+            
             var dismantled = new Dismantled() { Time = LineTime }; ;
             if (dismantled.Init(Line, cancellationToken))
             {
@@ -295,17 +314,7 @@
             {
                 playerConect.Dispose();
             }
-            var playerDamage = new PlayerDamage() { Time = LineTime }; ;
-            if (playerDamage.Init(Line, cancellationToken))
-            {
-                playerDamage.Dispose();
-                PlayerDamages.Add(playerDamage);
-                return true;
-            }
-            else
-            {
-                playerDamage.Dispose();
-            }
+            
             var playerDied = new PlayerDied() { Time = LineTime }; ;
             if (playerDied.Init(Line, cancellationToken))
             {
@@ -383,6 +392,19 @@
             {
                 unconscious.Dispose();
             }
+            var lowered = new Lowered() { Time = LineTime }; ;
+            if (lowered.Init(Line, cancellationToken))
+            {
+                lowered.Dispose();
+                Lowereds.Add(lowered);
+                return true;
+            }
+            else
+            {
+                lowered.Dispose();
+            }
+
+
             return false;
         }
     }
