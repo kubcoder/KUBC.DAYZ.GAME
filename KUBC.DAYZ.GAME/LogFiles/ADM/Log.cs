@@ -151,6 +151,10 @@
         /// События опускания тотема
         /// </summary>
         public List<Lowered> Lowereds = [];
+        /// <summary>
+        /// События поднятия тотема
+        /// </summary>
+        public List<Raised> Raiseds = [];
 
         /// <summary>
         /// Готовимся к чтению лога
@@ -173,6 +177,7 @@
             Builts.Clear();
             Dismantleds.Clear();
             Lowereds.Clear();
+            Raiseds.Clear();
         }
         /// <summary>
         /// Сколько всего событий найдено в момент последнего чтения лога
@@ -196,6 +201,7 @@
             res += Builts.Count;
             res += Dismantleds.Count;
             res += Lowereds.Count;
+            res += Raiseds.Count;
             return res;
         }
 
@@ -403,7 +409,17 @@
             {
                 lowered.Dispose();
             }
-
+            var raised = new Raised() { Time = LineTime }; ;
+            if (raised.Init(Line, cancellationToken))
+            {
+                raised.Dispose();
+                Raiseds.Add(raised);
+                return true;
+            }
+            else
+            {
+                raised.Dispose();
+            }
 
             return false;
         }
