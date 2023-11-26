@@ -6,10 +6,6 @@ using System.Threading.Tasks;
 
 namespace KUBC.DAYZ.GAME.MSTEST
 {
-    /* Установил/Снял набор для установки строжевой башни
-       23:37:54 | Player "kot23rus" (id=B1idL_7H1auUS5DPBOEDcTFQ3EBBrzFLa8r1GGmv7GA= pos=<273.0, 802.0, 560.2>) placed Набор для установки сторожевой башни
-       23:38:37 | Player "kot23rus" (id=B1idL_7H1auUS5DPBOEDcTFQ3EBBrzFLa8r1GGmv7GA= pos=<274.5, 800.3, 560.2>) folded Сторожевая башня
-     */
     /* Устновил/собрал палатку
     23:40:16 | Player "kot23rus" (id=B1idL_7H1auUS5DPBOEDcTFQ3EBBrzFLa8r1GGmv7GA= pos=<273.3, 804.9, 560.7>) placed Автомобильная палатка
     23:40:29 | Player "kot23rus" (id=B1idL_7H1auUS5DPBOEDcTFQ3EBBrzFLa8r1GGmv7GA= pos=<279.7, 805.7, 560.7>) packed Автомобильная палатка with Hands 
@@ -26,6 +22,19 @@ namespace KUBC.DAYZ.GAME.MSTEST
     [TestClass]
     public class ADMLog
     {
+        [TestMethod]
+        public void Folded()
+        {
+            string Line = "Player \"kot23rus\" (id=B1idL_7H1auUS5DPBOEDcTFQ3EBBrzFLa8r1GGmv7GA= pos=<274.5, 800.3, 560.2>) folded Сторожевая башня";
+            Console.WriteLine(Line);
+            GAME.LogFiles.ADM.Folded e = new();
+            Assert.IsTrue(e.Init(Line), "Не смогли прочитать правильную строчку");
+            var xml = e.GetXML();
+            Console.WriteLine(xml);
+            var rE = GAME.LogFiles.ADM.Folded.FromXML(xml);
+            Assert.IsNotNull(rE, "Не смогли прочитать данные из xml");
+        }
+
         [TestMethod]
         public void Raised()
         {

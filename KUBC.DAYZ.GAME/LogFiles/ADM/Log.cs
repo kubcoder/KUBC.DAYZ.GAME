@@ -155,6 +155,10 @@
         /// События поднятия тотема
         /// </summary>
         public List<Raised> Raiseds = [];
+        /// <summary>
+        /// События сворачивания объекта
+        /// </summary>
+        public List<Folded> Foldeds = [];
 
         /// <summary>
         /// Готовимся к чтению лога
@@ -178,6 +182,7 @@
             Dismantleds.Clear();
             Lowereds.Clear();
             Raiseds.Clear();
+            Foldeds.Clear();
         }
         /// <summary>
         /// Сколько всего событий найдено в момент последнего чтения лога
@@ -202,6 +207,7 @@
             res += Dismantleds.Count;
             res += Lowereds.Count;
             res += Raiseds.Count;
+            res += Foldeds.Count;
             return res;
         }
 
@@ -419,6 +425,17 @@
             else
             {
                 raised.Dispose();
+            }
+            var folded = new Folded() { Time = LineTime }; ;
+            if (folded.Init(Line, cancellationToken))
+            {
+                folded.Dispose();
+                Foldeds.Add(folded);
+                return true;
+            }
+            else
+            {
+                folded.Dispose();
             }
 
             return false;
