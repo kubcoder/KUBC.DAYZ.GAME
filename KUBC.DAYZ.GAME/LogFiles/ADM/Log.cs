@@ -23,6 +23,8 @@
         /// <inheritdoc/>
         protected override void ParseLine(string Line, CancellationToken? cancellationToken)
         {
+            if (Line.Trim() == "**********************************EOF****************************************")
+                return;
             if (!LogStarted.HasValue)
             {
                 ParseStartTime(Line);
@@ -203,7 +205,6 @@
         /// <param name="Line">Текст журнала</param>
         private bool ParseADMLine(DateTime LineTime, string Line, CancellationToken? cancellationToken=null)
         {
-            
             if (currentPlayerList != null)
             {
                 if (currentPlayerList.AppendLine(Line, cancellationToken))

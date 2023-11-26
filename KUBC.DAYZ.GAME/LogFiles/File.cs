@@ -106,10 +106,10 @@
         {
             get
             {
-                var end = Chars.TakeLast(2).ToArray();
-                if ((end!=null)&&(end.Length==2))
+                var c = Chars.LastOrDefault();
+                if (c!=null)
                 {
-                    if ((end[0] == '\r') && (end[1] == '\n'))
+                    if (c == '\n')
                         return true;
                 }
                 return false;

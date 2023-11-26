@@ -42,7 +42,7 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
         /// <inheritdoc/>
         public override bool Init(string Line, CancellationToken? cancellation = null)
         {
-            if (Line.Contains("Built"))
+            if (Line.Contains("Built", StringComparison.OrdinalIgnoreCase))
             {
                 base.Init(Line, cancellation);
                 var p = ReadPlayer(' ', cancellation);
@@ -62,6 +62,10 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
                             Element += w;
                             Element += " ";
                             w = ReadToChar(' ', true, cancellation);
+                            if(string.IsNullOrEmpty(w))
+                            {
+                                w = "on";
+                            }
                         }
                         Element = Element.TrimEnd();
                         w = ReadToChar(' ', true, cancellation);
@@ -71,6 +75,10 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
                             Construction += w;
                             Construction += " ";
                             w = ReadToChar(' ', true, cancellation);
+                            if (string.IsNullOrEmpty(w))
+                            {
+                                w = "with";
+                            }
                         }
                         Construction = Construction.TrimEnd();
                         if (Reader != null)

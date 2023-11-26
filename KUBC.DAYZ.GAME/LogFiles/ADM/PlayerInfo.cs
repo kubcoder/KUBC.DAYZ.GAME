@@ -22,5 +22,33 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
         /// </summary>
         [XmlText]
         public string NickName {  get; set; } = string.Empty;
+        /// <summary>
+        /// Инициализация пустого класса
+        /// </summary>
+        public PlayerInfo()
+        {
+
+        }
+        /// <summary>
+        /// Инициализация класса с указанием ник нейма игрока
+        /// </summary>
+        /// <remarks>
+        /// При инициализации проверяем кавычки
+        /// </remarks>
+        /// <param name="nickName">Никнейм</param>
+        public PlayerInfo(string nickName)
+        {
+            var s = nickName.FirstOrDefault();
+            if ((s == '"')||(s == '\''))
+                NickName = nickName[1..];
+            else
+                NickName = nickName;
+            s = NickName.LastOrDefault();
+            if ((s == '"')||(s == '\''))
+            {
+                NickName = NickName.Substring(0, NickName.Length - 1);
+            }
+        }
+
     }
 }

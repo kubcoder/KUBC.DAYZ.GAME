@@ -36,7 +36,8 @@ namespace KUBC.DAYZ.GAME.MSTEST
         [TestMethod]
         public void Chat()
         {
-            string Line = "Chat(\"GayZ\"(id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE=)): для чего шкура волка нужна";
+            //string Line = "Chat(\"GayZ\"(id=ID34fdoIpGJdd236w9Oh_fu2dP1hDPVnX6NWxhN_gYE=)): для чего шкура волка нужна";
+            string Line = "Chat(\"(Admin) Berserk\"(id=JAknhO3dSKs7gQQLVfOwxu9dEubV4IciZcbP8VIFgD4=)): /goa on";
             Console.WriteLine(Line);
             GAME.LogFiles.ADM.Chat e = new();
             Assert.IsTrue(e.Init(Line), "Не смогли прочитать правильную строчку");
@@ -87,6 +88,7 @@ namespace KUBC.DAYZ.GAME.MSTEST
         {
             ///hit by
             string[] Lines = [
+                "Player Survivor of server (DEAD) (id=zJ3Zckx3cwQbg5MI-Pc-a1jrDQFTqRZzLGIjyZN6RGs= pos=<4537.2, 9689.8, 339.1>)[HP: 0] hit by explosion (LandFuelFeed_Ammo)",
                 "Player \"Survivor\" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<12064.7, 9063.0, 54.1>)[HP: 99.2775] hit by Зараженный into LeftArm(18) for 7.225 damage (MeleeInfectedLong)",
                 "Player \"cepgo\" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<11131, 12204.7, 199.5>)[HP: 96.2819] hit by Player \"kokz23\" (id=fmloKxXlBrQcLZ4WtVzqZGSC-tVRHc-yaa7NQ4r3h7o= pos=<11129.8, 12205.3, 199.7>) into LeftArm(18) for 18.7 damage (MeleeSharpLight_4) with Штык для M4-A1",
                 "Player \"Survivor\" (id=ewe0-V2hPYd5unczHZLaHKp9dnu6_DQf8QjkHxLj_vI= pos=<10224.2, 1617.6, 6.0>)[HP: 1.5526] hit by FallDamageHealth",
@@ -235,7 +237,8 @@ namespace KUBC.DAYZ.GAME.MSTEST
         [TestMethod]
         public void Suicide()
         {
-            string Line = "Player \"CrazyGrizzly\" (id=yhqXUrWQ7LlBEubvKY9KI9dpGSwU_sg8bb-2nTBTEdo= pos=<13150, 7142.3, 6.0>) committed suicide";
+            //string Line = "Player \"CrazyGrizzly\" (id=yhqXUrWQ7LlBEubvKY9KI9dpGSwU_sg8bb-2nTBTEdo= pos=<13150, 7142.3, 6.0>) committed suicide";
+            string Line = "Player 'vladislav zmiyuk' (id=y9VFAR4GM_QG9_m43m3u2jWD2A-k-hlXaGIWYc7k32w=) committed suicide.";
             Console.WriteLine(Line);
             GAME.LogFiles.ADM.Suicide e = new();
             Assert.IsTrue(e.Init(Line), "Не смогли прочитать правильную строчку");
@@ -302,9 +305,40 @@ namespace KUBC.DAYZ.GAME.MSTEST
             tLog.CloseFile();
         }
 
+        /// <summary>
+        /// Тотальный разбор файлов ADM с целью найти строчки которые
+        /// парсер не понимает.
+        /// </summary>
+        /// <remarks>
+        /// В папочке теста должна быть папочка ADM  с файлами, вот тест просто берет 
+        /// все файлы и читает их. Все строчки которые не распознаны выкидываются в 
+        /// стандартный вывод.
+        /// </remarks>
+        [TestMethod]
+        public void StressTest()
+        {
+            var path = new DirectoryInfo("ADM");
+            if (path.Exists )
+            {
+                var files = path.EnumerateFiles();
+                UnknowCount = 0;
+                foreach(var file in files)
+                {
+                    var tLog = new LogFiles.ADM.Log(file);
+                    tLog.ReadLine += TLog_ReadLine;
+                    tLog.Read();
+                    tLog.CloseFile();
+                }
+            }
+        }
+
+        protected static int UnknowCount = 0;
+
         private static void TLog_ReadLine(object? sender, LogFiles.ExtendReadEventArgs e)
         {
+            
             Console.WriteLine(e.Line);
+            UnknowCount++;
         }
     }
 }

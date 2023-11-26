@@ -24,21 +24,35 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
         /// </summary>
         /// <param name="EndChar">По какому символу ориентироваться о конце индентфикатора</param>
         /// <param name="cancellation">Токен отмены</param>
+        /// <param name="SkipTo">Пробросить до символа. Если этого не указано то выполняем чтение первого слова, и потом его проверяем</param>
         /// <returns>Информация о игроке, или null если прочитать не удалось</returns>
-        protected PlayerInfo? ReadPlayer(char EndChar = ')', CancellationToken? cancellation=null)
+        protected PlayerInfo? ReadPlayer(char EndChar = ')', CancellationToken? cancellation=null, char? SkipTo=null)
         {
-            if (!SkipToChar('"', cancellation))
-                return null;
-            var nikname = this.ReadToChar('"', true, cancellation);
-            if (nikname != null)
+            string? w;
+            if (SkipTo.HasValue)
             {
+                if (!SkipToChar('"', cancellation))
+                    return null;
+            }
+            else
+            {
+                w = ReadToChar(' ', true, cancellation);
+                if (w.Trim()!="Player")
+                    return null;
+            }
+            w = ReadToChar('(', true, cancellation);
+            if (w != null)
+            {
+                var pi = new PlayerInfo(w.Trim());
+
                 if (!SkipToChar('=', cancellation))
                     return null;
                 var dayzID = this.ReadToChar(EndChar, true, cancellation);
                 if (dayzID != null)
                 {
-                    
-                    return new PlayerInfo() { ID = dayzID, NickName = nikname};
+
+                    pi.ID = dayzID;
+                    return pi;
                 }
             }
             return null;

@@ -1,4 +1,5 @@
-﻿using System.Xml.Serialization;
+﻿using System.Net.Http.Headers;
+using System.Xml.Serialization;
 
 namespace KUBC.DAYZ.GAME.LogFiles.ADM
 {
@@ -32,7 +33,7 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
         {
             if (Line.Contains("committed suicide"))
             {
-                base.Init(Line, cancellation);
+                base.Init(Line, cancellation) ;
                 var p = ReadPlayer(' ', cancellation);
                 if (p != null)
                 {
@@ -41,9 +42,10 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
                     if (pos != null)
                     {
                         Position = pos;
-                        Dispose();
-                        return true;
+                        
                     }
+                    Dispose();
+                    return true;
                 }
             }
             return false;
