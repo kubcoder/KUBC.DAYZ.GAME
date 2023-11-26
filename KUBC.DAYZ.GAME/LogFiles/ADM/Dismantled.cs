@@ -62,6 +62,8 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
                             Element += w;
                             Element += " ";
                             w = ReadToChar(' ', true, cancellation);
+                            if (string.IsNullOrEmpty(w))
+                                w = "from";
                         }
                         Element = Element.TrimEnd();
                         w = ReadToChar(' ', true, cancellation);
@@ -71,6 +73,8 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
                             Construction += w;
                             Construction += " ";
                             w = ReadToChar(' ', true, cancellation);
+                            if (string.IsNullOrEmpty(w))
+                                w = "with";
                         }
                         Construction = Construction.TrimEnd();
                         if (Reader != null)
