@@ -6,12 +6,8 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
     /// <summary>
     /// Событие строительства
     /// </summary>
-    public class Built:LogEntity
+    public class Built : AdmEntity
     {
-        /// <summary>
-        /// Время строительства
-        /// </summary>
-        public DateTime Time { get; set; } = DateTime.Now;
         /// <summary>
         /// Игрок который строил
         /// </summary>
@@ -33,7 +29,7 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
         /// </summary>
         public string? Tool { get; set; }
 
-        
+
         /// <summary>
         /// Создать элемент данных из строки XML
         /// </summary>
@@ -49,38 +45,39 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
             if (Line.Contains("Built"))
             {
                 base.Init(Line, cancellation);
-                if (!SkipToChar('"'))
-                    return false;
-                var nikname = ReadToChar('"', true, cancellation);
-                if (nikname != null)
+                var p = ReadPlayer(' ', cancellation);
+                if (p != null)
                 {
-                    if (!SkipToChar('='))
-                        return false;
-                    var dayzID = ReadToChar(' ', true, cancellation);
-                    if (dayzID != null)
+                    Player = p;
+                    var pos = ReadPosition(')', cancellation);
+                    if (pos != null)
                     {
-                        if (!SkipToChar('='))
-                            return false;
-                        var posString = ReadToChar(')', true, cancellation);
-                        if (posString != null)
-                        {
-                            Position = Vector.FromLogString(posString);
-                            Player.NickName = nikname;
-                            Player.ID = dayzID;
-                            if (!SkipToChar(' '))
-                                return true;
-                            Element = ReadToChar(' ', true, cancellation);
-                            if (!SkipToChar(' '))
-                                return true;
-                            Construction = this.ReadToChar(' ', true, cancellation);
-                            if (!SkipToChar(' '))
-                                return true;
-                            if (Reader!=null)
-                            {
-                                Tool = Reader.ReadToEnd().Trim();
-                            }
+                        Position = pos;
+                        if (!SkipToChar(' ', cancellation))
                             return true;
+                        Element = string.Empty;
+                        var w = ReadToChar(' ', true, cancellation);
+                        while (w != "on")
+                        {
+                            Element += w;
+                            Element += " ";
+                            w = ReadToChar(' ', true, cancellation);
                         }
+                        Element = Element.TrimEnd();
+                        w = ReadToChar(' ', true, cancellation);
+                        Construction = string.Empty;
+                        while (w != "with")
+                        {
+                            Construction += w;
+                            Construction += " ";
+                            w = ReadToChar(' ', true, cancellation);
+                        }
+                        Construction = Construction.TrimEnd();
+                        if (Reader != null)
+                        {
+                            Tool = Reader.ReadToEnd().Trim();
+                        }
+                        return true;
                     }
                 }
             }

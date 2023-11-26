@@ -29,30 +29,33 @@
             }
             else
             {
-                var TimeString = Line[..8];
-                if (TimeSpan.TryParse(TimeString, out var Time))
+                if (Line.Length > 8)
                 {
-                    DateTime LineTime;
-                    if (LogStarted.HasValue)
+                    var TimeString = Line[..8];
+                    if (TimeSpan.TryParse(TimeString, out var Time))
                     {
-                        LineTime = LogStarted.Value.Date.Add(Time);
-                        if (LogStarted.Value.TimeOfDay > Time)
+                        DateTime LineTime;
+                        if (LogStarted.HasValue)
                         {
-                            LineTime = LineTime.AddDays(1);
+                            LineTime = LogStarted.Value.Date.Add(Time);
+                            if (LogStarted.Value.TimeOfDay > Time)
+                            {
+                                LineTime = LineTime.AddDays(1);
+                            }
+                        }
+                        else
+                        {
+                            LineTime = DateTime.Now.Add(Time);
+                        }
+                        if (!ParseADMLine(LineTime, Line[11..], cancellationToken))
+                        {
+                            base.ParseLine(Line, cancellationToken);
                         }
                     }
                     else
                     {
-                        LineTime = DateTime.Now.Add(Time);
-                    }
-                    if (!ParseADMLine(LineTime, Line[11..]))
-                    {
                         base.ParseLine(Line, cancellationToken);
                     }
-                }
-                else
-                {
-                    base.ParseLine(Line, cancellationToken);
                 }
             }
         }
@@ -196,15 +199,17 @@
         /// Распознаем строчку журнала ADM
         /// </summary>
         /// <param name="LineTime">Время записи строчки</param>
+        /// <param name="cancellationToken">Токен отмены</param>
         /// <param name="Line">Текст журнала</param>
-        private bool ParseADMLine(DateTime LineTime, string Line)
+        private bool ParseADMLine(DateTime LineTime, string Line, CancellationToken? cancellationToken=null)
         {
-            /*
+            
             if (currentPlayerList != null)
             {
-                if (!currentPlayerList.AddLine(Line))
+                if (currentPlayerList.AppendLine(Line, cancellationToken))
                 {
                     LogPlayers.Add(currentPlayerList);
+                    currentPlayerList.Dispose();
                     currentPlayerList = null;
                     return true;
                 }
@@ -212,96 +217,171 @@
             }
             else
             {
-                if (PlayerList.IsStartList(Line))
+                currentPlayerList = new() { Time = LineTime }; ;
+                if (currentPlayerList.Init(Line, cancellationToken))
                 {
-                    currentPlayerList = new PlayerList() { LogTime = LineTime };
                     return true;
                 }
+                else
+                {
+                    currentPlayerList.Dispose();
+                    currentPlayerList = null;
+                }
             }
-            var pConect = PlayerConect.FromLog(Line, LineTime);
-            if (pConect != null)
+            var bledOut = new BledOut() {Time = LineTime };
+            if (bledOut.Init(Line, cancellationToken)) 
             {
-                PlayerConnects.Add(pConect);
+                bledOut.Dispose();
+                BledOuts.Add(bledOut);
                 return true;
             }
-            var pDisconect = PlayerDisconect.FromLog(Line, LineTime);
-            if (pDisconect != null)
+            else
             {
-                PlayerDisconnects.Add(pDisconect);
+                bledOut.Dispose();
+            }
+            var built = new Built() { Time = LineTime }; ;
+            if (built.Init(Line, cancellationToken))
+            {
+                built.Dispose();
+                Builts.Add(built);
                 return true;
             }
-            var pChat = Chat.FromLog(Line, LineTime);
-            if (pChat != null)
+            else
             {
-                PlayerChat.Add(pChat);
+                built.Dispose();
+            }
+            var chat = new Chat() { Time = LineTime }; ;
+            if (chat.Init(Line, cancellationToken))
+            {
+                chat.Dispose();
+                PlayerChat.Add(chat);
                 return true;
             }
-            var pRep = Report.FromLog(Line, LineTime);
-            if (pRep != null)
+            else
             {
-                PlayersReport.Add(pRep);
+                chat.Dispose();
+            }
+            var dismantled = new Dismantled() { Time = LineTime }; ;
+            if (dismantled.Init(Line, cancellationToken))
+            {
+                dismantled.Dispose();
+                Dismantleds.Add(dismantled);
                 return true;
             }
-            var pUncon = Unconscious.FromLog(Line, LineTime);
-            if (pUncon != null)
+            else
             {
-                PlayerUnconscious.Add(pUncon);
+                dismantled.Dispose();
+            }
+            var placed = new Placed() { Time = LineTime }; ;
+            if (placed.Init(Line, cancellationToken))
+            {
+                placed.Dispose();
+                Placeds.Add(placed);
                 return true;
             }
-            var pReg = Regained.FromLog(Line, LineTime);
-            if (pReg != null)
+            else
             {
-                PlayerRegained.Add(pReg);
+                placed.Dispose();
+            }
+            var playerConect = new PlayerConect() { Time = LineTime }; ;
+            if (playerConect.Init(Line, cancellationToken))
+            {
+                playerConect.Dispose();
+                PlayerConnects.Add(playerConect);
                 return true;
             }
-            var pDmg = PlayerDamage.FromLog(Line, LineTime);
-            if (pDmg != null)
+            else
             {
-                PlayerDamages.Add(pDmg);
+                playerConect.Dispose();
+            }
+            var playerDamage = new PlayerDamage() { Time = LineTime }; ;
+            if (playerDamage.Init(Line, cancellationToken))
+            {
+                playerDamage.Dispose();
+                PlayerDamages.Add(playerDamage);
                 return true;
             }
-            var pKill = PlayerKilled.FromLog(Line, LineTime);
-            if (pKill != null)
+            else
             {
-                PlayerKilleds.Add(pKill);
+                playerDamage.Dispose();
+            }
+            var playerDied = new PlayerDied() { Time = LineTime }; ;
+            if (playerDied.Init(Line, cancellationToken))
+            {
+                playerDied.Dispose();
+                PlayerDieds.Add(playerDied);
                 return true;
             }
-            var pDie = PlayerDied.FromLog(Line, LineTime);
-            if (pDie != null)
+            else
             {
-                PlayerDieds.Add(pDie);
+                playerDied.Dispose();
+            }
+            var playerDisconect = new PlayerDisconect() { Time = LineTime }; ;
+            if (playerDisconect.Init(Line, cancellationToken))
+            {
+                playerDisconect.Dispose();
+                PlayerDisconnects.Add(playerDisconect);
                 return true;
             }
-            var pSuicide = Suicide.FromLog(Line, LineTime);
-            if (pSuicide != null)
+            else
             {
-                Suicides.Add(pSuicide);
+                playerDisconect.Dispose();
+            }
+            var playerKilled = new PlayerKilled() { Time = LineTime }; ;
+            if (playerKilled.Init(Line, cancellationToken))
+            {
+                playerKilled.Dispose();
+                PlayerKilleds.Add(playerKilled);
                 return true;
             }
-            var pBledOut = BledOut.FromLog(Line, LineTime);
-            if (pBledOut != null)
+            else
             {
-                BledOuts.Add(pBledOut);
+                playerKilled.Dispose();
+            }
+            var regained = new Regained() { Time = LineTime }; ;
+            if (regained.Init(Line, cancellationToken))
+            {
+                regained.Dispose();
+                PlayerRegained.Add(regained);
                 return true;
             }
-            var pPlaced = Placed.FromLog(Line, LineTime);
-            if (pPlaced != null)
+            else
             {
-                Placeds.Add(pPlaced);
+                regained.Dispose();
+            }
+            var report = new Report() { Time = LineTime }; ;
+            if (report.Init(Line, cancellationToken))
+            {
+                report.Dispose();
+                PlayersReport.Add(report);
                 return true;
             }
-            var pBuilt = Built.FromLog(Line, LineTime);
-            if (pBuilt != null)
+            else
             {
-                Builts.Add(pBuilt);
+                report.Dispose();
+            }
+            var suicide = new Suicide() { Time = LineTime }; ;
+            if (suicide.Init(Line, cancellationToken))
+            {
+                suicide.Dispose();
+                Suicides.Add(suicide);
                 return true;
             }
-            var pDismate = Dismantled.FromLog(Line, LineTime);
-            if (pDismate != null)
+            else
             {
-                Dismantleds.Add(pDismate);
+                suicide.Dispose();
+            }
+            var unconscious = new Unconscious() { Time = LineTime }; ;
+            if (unconscious.Init(Line, cancellationToken))
+            {
+                unconscious.Dispose();
+                PlayerUnconscious.Add(unconscious);
                 return true;
-            }*/
+            }
+            else
+            {
+                unconscious.Dispose();
+            }
             return false;
         }
     }

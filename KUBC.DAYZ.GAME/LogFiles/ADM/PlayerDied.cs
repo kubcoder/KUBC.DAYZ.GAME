@@ -5,20 +5,13 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
     /// <summary>
     /// Событие смерти игрока
     /// </summary>
-    public class PlayerDied
+    public class PlayerDied : AdmEntity
     {
+
         /// <summary>
-        /// Время когда игрок помер
+        /// Игрок который упокоился
         /// </summary>
-        public DateTime DieTime { get; set; } = DateTime.Now;
-        /// <summary>
-        /// С каким ником он подключился
-        /// </summary>
-        public string NickName { get; set; } = string.Empty;
-        /// <summary>
-        /// Идентификатор игрока в DAYZ
-        /// </summary>
-        public string DayzID { get; set; } = string.Empty;
+        public PlayerInfo Player { get; set; } = new();
         /// <summary>
         /// Вода в игроке
         /// </summary>
@@ -35,25 +28,7 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
         /// Место где игрок помер
         /// </summary>
         public Vector Position { get; set; } = new();
-        /// <summary>
-        /// Проебразуем объект в строку с разметкой XML
-        /// </summary>
-        /// <returns>Представление в виде XML</returns>
-        public string GetXML()
-        {
-            var sb = new StringWriter();
-            System.Xml.XmlWriter wrt = System.Xml.XmlWriter.Create(sb, new System.Xml.XmlWriterSettings()
-            {
-                OmitXmlDeclaration = true,
-                Indent = true
-            });
-            var x = new XmlSerializer(typeof(PlayerDied));
-            var xns = new XmlSerializerNamespaces();
-            xns.Add(string.Empty, string.Empty);
-            x.Serialize(wrt, this, xns);
-            wrt.Close();
-            return sb.ToString();
-        }
+        
         /// <summary>
         /// Создать элемент данных из строки XML
         /// </summary>
@@ -61,117 +36,56 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
         /// <returns>Элемент данных или NULL если прочитать не удалось</returns>
         public static PlayerDied? FromXML(string xml)
         {
-            try
-            {
-                var x = new XmlSerializer(typeof(PlayerDied));
-                var reader = new StringReader(xml);
-                var rObj = x.Deserialize(reader);
-                reader.Close();
-                if (rObj != null)
-                {
-                    var d = (PlayerDied)rObj;
-                    return d;
-                }
-                return null;
-            }
-            catch
-            {
-                return null;
-            }
+            return ReadFromXML(xml, typeof(PlayerDied)) as PlayerDied;
         }
 
-        /// <summary>
-        /// Получаем описание смерти игрока из строчки лога
-        /// </summary>
-        /// <param name="Line">Строчка лога</param>
-        /// <param name="Time">Время когда строчка была записана</param>
-        /// <returns>Смерть игрока если удалось прочитать</returns>
-        public static PlayerDied? FromLog(string Line, DateTime Time)
+        /// <inheritdoc/>
+        public override bool Init(string Line, CancellationToken? cancellation = null)
         {
             if (Line.Contains("died. Stats>"))
             {
-                var tData = Line[7..];
-                if (tData[0] == '"')
+                base.Init(Line, cancellation);
+
+                var p = ReadPlayer(' ', cancellation);
+                if (p != null)
                 {
-                    var Reader = new StringReader(tData);
-                    Reader.Read();
-                    var rSym = Reader.Read();
-                    var res = new PlayerDied() { DieTime = Time };
-                    while ((rSym > 0) && (rSym != '"'))
+                    Player = p;
+                    var pos = ReadPosition(')', cancellation);
+                    if (pos != null)
                     {
-                        res.NickName += (char)rSym;
-                        rSym = Reader.Read();
-                    }
-                    while ((rSym > 0) && (rSym != '=')) { rSym = Reader.Read(); }
-                    while ((rSym > 0) && (rSym != ' '))
-                    {
-                        rSym = Reader.Read();
-                        if ((rSym > 0) && (rSym != ' '))
-                            res.DayzID += (char)rSym;
-                    }
-                    while ((rSym > 0) && (rSym != '=')) { rSym = Reader.Read(); }
-                    var sPos = string.Empty;
-                    while ((rSym > 0) && (rSym != ')'))
-                    {
+                        Position = pos;
+                        if (SkipToChar(':', cancellation))
+                        {
+                            var style = System.Globalization.NumberStyles.Number;
+                            var culture = System.Globalization.CultureInfo.CreateSpecificCulture("en-GB");
+                            var w = ReadToChar(' ', true, cancellation);
+                            if (float.TryParse(w, style, culture, out var water))
+                            {
+                                Water = water;
+                            }
+                            if (SkipToChar(':', cancellation))
+                            {
+                                w = ReadToChar(' ', true, cancellation);
+                                if (float.TryParse(w, style, culture, out var energy))
+                                {
+                                    Energy = energy;
+                                }
+                                if (SkipToChar(':', cancellation))
+                                {
+                                    w = ReadToChar(' ', true, cancellation);
+                                    if (int.TryParse(w, out var bs))
+                                    {
+                                        Bleeding = bs;
+                                    }
+                                }
 
-                        rSym = Reader.Read();
-                        if ((rSym > 0) && (rSym != ')'))
-                            sPos += (char)rSym;
-
+                            }
+                        }
+                        return true;
                     }
-                    res.Position = Vector.FromLogString(sPos);
-
-                    var Culture = System.Globalization.CultureInfo.InvariantCulture;
-                    while ((rSym > 0) && (rSym != ':')) { rSym = Reader.Read(); }
-                    Reader.Read();
-                    rSym = 1;
-                    var sNum = string.Empty;
-                    while ((rSym > 0) && (rSym != ' '))
-                    {
-
-                        rSym = Reader.Read();
-                        if ((rSym > 0) && (rSym != ' '))
-                            sNum += (char)rSym;
-                    }
-                    if (float.TryParse(sNum, System.Globalization.NumberStyles.Float, Culture.NumberFormat, out var water))
-                    {
-                        res.Water = water;
-                    }
-                    while ((rSym > 0) && (rSym != ':')) { rSym = Reader.Read(); }
-                    sNum = string.Empty;
-                    Reader.Read();
-                    rSym = 1;
-                    while ((rSym > 0) && (rSym != ' '))
-                    {
-
-                        rSym = Reader.Read();
-                        if ((rSym > 0) && (rSym != ' '))
-                            sNum += (char)rSym;
-                    }
-                    if (float.TryParse(sNum, System.Globalization.NumberStyles.Float, Culture.NumberFormat, out var energy))
-                    {
-                        res.Energy = energy;
-                    }
-                    while ((rSym > 0) && (rSym != ':')) { rSym = Reader.Read(); }
-                    sNum = string.Empty;
-                    Reader.Read();
-                    rSym = 1;
-                    while ((rSym > 0) && (rSym != ' '))
-                    {
-
-                        rSym = Reader.Read();
-                        if ((rSym > 0) && (rSym != ' '))
-                            sNum += (char)rSym;
-                    }
-                    if (int.TryParse(sNum, System.Globalization.NumberStyles.Integer, Culture.NumberFormat, out var bleeding))
-                    {
-                        res.Bleeding = bleeding;
-                    }
-                    Reader.Close();
-                    return res;
                 }
             }
-            return null;
+            return false;
         }
     }
 }

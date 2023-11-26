@@ -1,16 +1,16 @@
-﻿using System.Xml.Serialization;
+﻿using KUBC.DAYZ.GAME.MissionFiles.CfgPlayerSpawnPoints;
+using System;
+using System.Numerics;
+using System.Xml.Serialization;
 
 namespace KUBC.DAYZ.GAME.LogFiles.ADM
 {
     /// <summary>
     /// Информация для администраторов от игрока
     /// </summary>
-    public class Report
+    public class Report:AdmEntity
     {
-        /// <summary>
-        /// Время когда игрок написал жалобу
-        /// </summary>
-        public DateTime ReportTime { get; set; } = DateTime.Now;
+        
 
         /// <summary>
         /// Идентификатор игрока в DAYZ
@@ -21,69 +21,56 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
         /// </summary>
         public string Text { get; set; } = string.Empty;
 
-        /// <summary>
-        /// Получить событие о жалобе из лога ADM
-        /// </summary>
-        /// <param name="Line">Строчка лога</param>
-        /// <param name="Time">Время строчки лога</param>
-        /// <returns>Если это нужная строчка то описание жалобы, иначе null</returns>
-        public static Report? FromLog(string Line, DateTime Time)
+        /// <inheritdoc/>
+        public override bool Init(string Line, CancellationToken? cancellation = null)
         {
             if (Line.Contains("PLAYER REPORT:"))
             {
-                if (Line.Length > 34)
+                base.Init(Line, cancellation);
+                if (!SkipToChar('<', cancellation))
                 {
-                    var tData = Line[34..];
-                    var Reader = new StringReader(tData);
-                    var rSym = Reader.Read();
-
-                    while ((rSym > 0) && (rSym != '<'))
-                    {
-                        rSym = Reader.Read();
-                    }
-                    var res = new Report() { ReportTime = Time };
-                    while ((rSym > 0) && (rSym != '>'))
-                    {
-                        rSym = Reader.Read();
-                        if ((rSym > 0) && (rSym != '>'))
-                            res.DayzID += (char)rSym;
-                    }
-                    if (res.DayzID.Length != 44)
-                        return null;
-                    while ((rSym > 0) && (rSym != ':')) { rSym = Reader.Read(); }
-                    rSym = Reader.Read();
-                    while (rSym > 0)
-                    {
-                        res.Text += (char)rSym;
-                        rSym = Reader.Read();
-                    }
-                    Reader.Close();
-                    return res;
+                    return false;
                 }
+                var DateString = ReadToChar('_', true, cancellation);
+                var TimeString = ReadToChar('>', true, cancellation);
+                if (TimeString!=null)
+                {
+                    var dtStr = $"{DateString} {TimeString.Replace('-', ':')}";
+                    if (DateTime.TryParse(dtStr, out var t))
+                    {
+                        Time = t;
+                    }
+                    if (!SkipToChar('<', cancellation))
+                    {
+                        return false;
+                    }
+                    var id = ReadToChar('>', true, cancellation);
+                    if (!string.IsNullOrEmpty(id))
+                    {
+                        DayzID = id;
+                        if (!SkipToChar(':', cancellation))
+                        {
+                            return false;
+                        }
+                        if (Reader!=null)
+                        {
+                            Text = Reader.ReadToEnd().Trim();
+                            Dispose();
+                            if (!string.IsNullOrEmpty(Text))
+                            {
+                                return true;
+                            }
+                            
+                        }
+                    }
+                }
+                
+
             }
-            return null;
+            return false;
         }
 
 
-        /// <summary>
-        /// Проебразуем объект в строку с разметкой XML
-        /// </summary>
-        /// <returns>Представление в виде XML</returns>
-        public string GetXML()
-        {
-            var sb = new StringWriter();
-            System.Xml.XmlWriter wrt = System.Xml.XmlWriter.Create(sb, new System.Xml.XmlWriterSettings()
-            {
-                OmitXmlDeclaration = true,
-                Indent = true
-            });
-            var x = new XmlSerializer(typeof(Report));
-            var xns = new XmlSerializerNamespaces();
-            xns.Add(string.Empty, string.Empty);
-            x.Serialize(wrt, this, xns);
-            wrt.Close();
-            return sb.ToString();
-        }
         /// <summary>
         /// Создать элемент данных из строки XML
         /// </summary>
@@ -91,23 +78,7 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
         /// <returns>Элемент данных или NULL если прочитать не удалось</returns>
         public static Report? FromXML(string xml)
         {
-            try
-            {
-                var x = new XmlSerializer(typeof(Report));
-                var reader = new StringReader(xml);
-                var rObj = x.Deserialize(reader);
-                reader.Close();
-                if (rObj != null)
-                {
-                    var d = (Report)rObj;
-                    return d;
-                }
-                return null;
-            }
-            catch
-            {
-                return null;
-            }
+            return ReadFromXML(xml, typeof(Report)) as Report;
         }
     }
 }

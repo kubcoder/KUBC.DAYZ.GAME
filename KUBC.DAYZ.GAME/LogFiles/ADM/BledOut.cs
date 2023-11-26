@@ -6,13 +6,8 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
     /// <summary>
     /// Событие игрок истек кровью
     /// </summary>
-    public class BledOut:LogEntity
+    public class BledOut:AdmEntity
     {
-        /// <summary>
-        /// Время когда игрок помер
-        /// </summary>
-        [XmlAttribute]
-        public DateTime Time { get; set; } = DateTime.Now;
         /// <summary>
         /// Игрок который вытек
         /// </summary>
@@ -39,28 +34,18 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
             if (Line.Contains("bled out"))
             {
                 base.Init(Line, cancellation);
-                if (!SkipToChar('"'))
-                    return false;
-                var nikname = this.ReadToChar('"', true, cancellation);
-                if (nikname!=null) 
+                
+                var p = ReadPlayer(' ', cancellation);
+                if (p!= null) 
                 {
-                    if (!SkipToChar('='))
-                        return false;
-                    var dayzID = this.ReadToChar(' ', true, cancellation);
-                    if (dayzID!=null)
+                    Player = p;
+                    var pos = ReadPosition(')', cancellation);
+                    if (pos!=null)
                     {
-                        if (!SkipToChar('='))
-                            return false;
-                        var posString = this.ReadToChar(')', true, cancellation);
-                        if (posString!=null) 
-                        {
-                            Position = Vector.FromLogString(posString);
-                            Player.NickName = nikname;
-                            Player.ID = dayzID;
-                            Dispose();
-                            return true;
-                        }
-                    }
+                        Position = pos;
+                        Dispose();
+                        return true;
+                    }    
                 }
             }
             return false;

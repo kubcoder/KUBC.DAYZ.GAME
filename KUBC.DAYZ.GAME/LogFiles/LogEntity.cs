@@ -142,7 +142,11 @@ namespace KUBC.DAYZ.GAME.LogFiles
         {
             Read();
             bool End = !LastSymbol.HasValue;
-            if (!End) { End = (LastSymbol == StopChar); }
+            if (!End) 
+            { 
+                if (LastSymbol == StopChar)
+                    return true;
+            }
             while (!End)
             {
                 if ((cancellation != null) && (cancellation.Value.IsCancellationRequested))

@@ -7,13 +7,8 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
     /// <summary>
     /// Игрок написал в чат
     /// </summary>
-    public class Chat : LogEntity
+    public class Chat : AdmEntity
     {
-        /// <summary>
-        /// Время когда игрок написал в чат
-        /// </summary>
-        [XmlAttribute]
-        public DateTime Time { get; set; } = DateTime.Now;
         /// <summary>
         /// Игрок который говорил
         /// </summary>
@@ -29,34 +24,25 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
             if (Line.Contains("Chat"))
             {
                 base.Init(Line, cancellation);
-                if (!SkipToChar('"'))
-                    return false;
-                var nikname = ReadToChar('"', true, cancellation);
-                if (nikname != null)
+                var p = ReadPlayer(')', cancellation);
+                if (p != null)
                 {
-                    if (!SkipToChar('='))
+                    Player = p;
+                    if (!SkipToChar(':', cancellation))
                         return false;
-                    var dayzID = ReadToChar(')', true, cancellation);
-                    if (dayzID != null)
+                    if (Reader != null)
                     {
-                        if (!SkipToChar(':'))
-                            return false;
-                        if (Reader!=null)
-                        {
-                            Text = Reader.ReadToEnd().Trim();
-                        }
-                        if (!string.IsNullOrEmpty(Text))
-                        {
-                            Player.NickName = nikname;
-                            Player.ID = dayzID;
-                            return true;
-                        }
+                        Text = Reader.ReadToEnd().Trim();
+                    }
+                    if (!string.IsNullOrEmpty(Text))
+                    {
+                        return true;
                     }
                 }
             }
             return false;
         }
-        
+
         /// <summary>
         /// Создать элемент данных чата из строки XML
         /// </summary>
