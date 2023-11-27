@@ -442,7 +442,7 @@ namespace KUBC.DAYZ.GAME.MSTEST
             }
         }
 
-        protected static int UnknowCount = 0;
+        private static int UnknowCount = 0;
 
         private static void TLog_ReadLine(object? sender, LogFiles.ExtendReadEventArgs e)
         {

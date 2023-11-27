@@ -6,12 +6,16 @@
     /// <remarks>
     /// Данный класс реализует базовые функции для работы с файлом лога. Классы которые работают с определенными типами логов наследуются от данного класса
     /// </remarks>
-    public class File
+    /// <remarks>
+    /// Создаем экземпляр чтения файла
+    /// </remarks>
+    /// <param name="openFile">Имя открываемого файла</param>
+    public class File(FileInfo openFile)
     {
         /// <summary>
         /// Текущий лог
         /// </summary>
-        private readonly FileInfo OpenFile;
+        private readonly FileInfo OpenFile = openFile;
         /// <summary>
         /// Список ошибок возникающих при парсинге
         /// </summary>
@@ -51,16 +55,7 @@
         {
             return OpenFile.FullName == NewFile.FullName;
         }
-        
 
-        /// <summary>
-        /// Создаем экземпляр чтения файла
-        /// </summary>
-        /// <param name="openFile">Имя открываемого файла</param>
-        public File(FileInfo openFile)
-        {
-            OpenFile = openFile;
-        }
         /// <summary>
         /// Признак что файл существует
         /// </summary>
@@ -95,7 +90,7 @@
         protected string GetLine()
         {
             string l = string.Empty;
-            foreach(char c in Chars) { l+= c; }
+            foreach(var c in Chars) { l+= (char)c; }
             Chars.Clear();
             return l;
         }
@@ -184,8 +179,7 @@
         /// </summary>
         public void CloseFile()
         {
-            if (fileReader!= null)
-                fileReader.Close();
+            fileReader?.Close();
         }
 
         /// <summary>
