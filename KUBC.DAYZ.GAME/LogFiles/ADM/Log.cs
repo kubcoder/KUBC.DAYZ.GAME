@@ -163,6 +163,14 @@
         /// События упаковки палаток
         /// </summary>
         public List<Packed> Packeds = [];
+        /// <summary>
+        /// События монтажа дополнительных элементов конструкций
+        /// </summary>
+        public List<Mounted> Mounteds = [];
+        /// <summary>
+        /// События демонтажа дополнительных элементов конструкций
+        /// </summary>
+        public List<Unmounted> Unmounteds = [];
 
         /// <summary>
         /// Готовимся к чтению лога
@@ -188,6 +196,8 @@
             Raiseds.Clear();
             Foldeds.Clear();
             Packeds.Clear();
+            Mounteds.Clear();
+            Unmounteds.Clear();
         }
         /// <summary>
         /// Сколько всего событий найдено в момент последнего чтения лога
@@ -214,6 +224,8 @@
             res += Raiseds.Count;
             res += Foldeds.Count;
             res += Packeds.Count;
+            res += Mounteds.Count;
+            res += Unmounteds.Count;
             return res;
         }
 
@@ -453,6 +465,28 @@
             else
             {
                 packed.Dispose();
+            }
+            var mounted = new Mounted() { Time = LineTime }; ;
+            if (mounted.Init(Line, cancellationToken))
+            {
+                mounted.Dispose();
+                Mounteds.Add(mounted);
+                return true;
+            }
+            else
+            {
+                mounted.Dispose();
+            }
+            var unmounted = new Unmounted() { Time = LineTime }; ;
+            if (unmounted.Init(Line, cancellationToken))
+            {
+                unmounted.Dispose();
+                Unmounteds.Add(unmounted);
+                return true;
+            }
+            else
+            {
+                unmounted.Dispose();
             }
             return false;
         }

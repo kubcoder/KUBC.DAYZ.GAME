@@ -6,10 +6,6 @@ using System.Threading.Tasks;
 
 namespace KUBC.DAYZ.GAME.MSTEST
 {
-    /* Монтаж/демонтаж колючей проволки
-     23:47:50 | Player "kot23rus" (id=B1idL_7H1auUS5DPBOEDcTFQ3EBBrzFLa8r1GGmv7GA= pos=<272.6, 801.8, 560.1>)Player SurvivorBase<5f3d7020> Mounted BarbedWire on Fence
-     23:48:31 | Player "kot23rus" (id=B1idL_7H1auUS5DPBOEDcTFQ3EBBrzFLa8r1GGmv7GA= pos=<276.1, 803.3, 560.4>)Player SurvivorBase<5f3d7020> Unmounted BarbedWire from Fence
-     */
     /*Закопал откопал морской сундук
         23:53:03 | Player "kot23rus" (id=B1idL_7H1auUS5DPBOEDcTFQ3EBBrzFLa8r1GGmv7GA= pos=<271.3, 798.5, 560.0>)Player SurvivorBase<5f3d7020> Dug in SeaChest<fd1db930> at position 0x000000006f8c82e0 {<270.87,559.957,797.327>}
         23:53:33 | Player "kot23rus" (id=B1idL_7H1auUS5DPBOEDcTFQ3EBBrzFLa8r1GGmv7GA= pos=<271.3, 798.5, 560.0>)Player SurvivorBase<5f3d7020> Dug out UndergroundStash<ff33bfe0> at position 0x000000006f8c82e0 {<270.87,560.177,797.327>}
@@ -17,6 +13,32 @@ namespace KUBC.DAYZ.GAME.MSTEST
     [TestClass]
     public class ADMLog
     {
+        [TestMethod]
+        public void Unmounted()
+        {
+            string Line = "Player \"kot23rus\" (id=B1idL_7H1auUS5DPBOEDcTFQ3EBBrzFLa8r1GGmv7GA= pos=<276.1, 803.3, 560.4>)Player SurvivorBase<5f3d7020> Unmounted BarbedWire from Fence";
+            Console.WriteLine(Line);
+            GAME.LogFiles.ADM.Unmounted e = new();
+            Assert.IsTrue(e.Init(Line), "Не смогли прочитать правильную строчку");
+            var xml = e.GetXML();
+            Console.WriteLine(xml);
+            var rE = GAME.LogFiles.ADM.Unmounted.FromXML(xml);
+            Assert.IsNotNull(rE, "Не смогли прочитать данные из xml");
+        }
+
+        [TestMethod]
+        public void Mounted()
+        {
+            string Line = "Player \"kot23rus\" (id=B1idL_7H1auUS5DPBOEDcTFQ3EBBrzFLa8r1GGmv7GA= pos=<272.6, 801.8, 560.1>)Player SurvivorBase<5f3d7020> Mounted BarbedWire on Fence";
+            Console.WriteLine(Line);
+            GAME.LogFiles.ADM.Mounted e = new();
+            Assert.IsTrue(e.Init(Line), "Не смогли прочитать правильную строчку");
+            var xml = e.GetXML();
+            Console.WriteLine(xml);
+            var rE = GAME.LogFiles.ADM.Mounted.FromXML(xml);
+            Assert.IsNotNull(rE, "Не смогли прочитать данные из xml");
+        }
+
         [TestMethod]
         public void Packed()
         {
