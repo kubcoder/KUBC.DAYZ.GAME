@@ -159,6 +159,10 @@
         /// События сворачивания объекта
         /// </summary>
         public List<Folded> Foldeds = [];
+        /// <summary>
+        /// События упаковки палаток
+        /// </summary>
+        public List<Packed> Packeds = [];
 
         /// <summary>
         /// Готовимся к чтению лога
@@ -183,6 +187,7 @@
             Lowereds.Clear();
             Raiseds.Clear();
             Foldeds.Clear();
+            Packeds.Clear();
         }
         /// <summary>
         /// Сколько всего событий найдено в момент последнего чтения лога
@@ -208,6 +213,7 @@
             res += Lowereds.Count;
             res += Raiseds.Count;
             res += Foldeds.Count;
+            res += Packeds.Count;
             return res;
         }
 
@@ -437,7 +443,17 @@
             {
                 folded.Dispose();
             }
-
+            var packed = new Packed() { Time = LineTime }; ;
+            if (packed.Init(Line, cancellationToken))
+            {
+                packed.Dispose();
+                Packeds.Add(packed);
+                return true;
+            }
+            else
+            {
+                packed.Dispose();
+            }
             return false;
         }
     }

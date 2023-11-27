@@ -6,11 +6,6 @@ using System.Threading.Tasks;
 
 namespace KUBC.DAYZ.GAME.MSTEST
 {
-    /* Устновил/собрал палатку
-    23:40:16 | Player "kot23rus" (id=B1idL_7H1auUS5DPBOEDcTFQ3EBBrzFLa8r1GGmv7GA= pos=<273.3, 804.9, 560.7>) placed Автомобильная палатка
-    23:40:29 | Player "kot23rus" (id=B1idL_7H1auUS5DPBOEDcTFQ3EBBrzFLa8r1GGmv7GA= pos=<279.7, 805.7, 560.7>) packed Автомобильная палатка with Hands 
-    */
-    /*Атач на палатку не пишется в журнал*/
     /* Монтаж/демонтаж колючей проволки
      23:47:50 | Player "kot23rus" (id=B1idL_7H1auUS5DPBOEDcTFQ3EBBrzFLa8r1GGmv7GA= pos=<272.6, 801.8, 560.1>)Player SurvivorBase<5f3d7020> Mounted BarbedWire on Fence
      23:48:31 | Player "kot23rus" (id=B1idL_7H1auUS5DPBOEDcTFQ3EBBrzFLa8r1GGmv7GA= pos=<276.1, 803.3, 560.4>)Player SurvivorBase<5f3d7020> Unmounted BarbedWire from Fence
@@ -22,6 +17,19 @@ namespace KUBC.DAYZ.GAME.MSTEST
     [TestClass]
     public class ADMLog
     {
+        [TestMethod]
+        public void Packed()
+        {
+            string Line = "Player \"kot23rus\" (id=B1idL_7H1auUS5DPBOEDcTFQ3EBBrzFLa8r1GGmv7GA= pos=<279.7, 805.7, 560.7>) packed Автомобильная палатка with Hands ";
+            Console.WriteLine(Line);
+            GAME.LogFiles.ADM.Packed e = new();
+            Assert.IsTrue(e.Init(Line), "Не смогли прочитать правильную строчку");
+            var xml = e.GetXML();
+            Console.WriteLine(xml);
+            var rE = GAME.LogFiles.ADM.Packed.FromXML(xml);
+            Assert.IsNotNull(rE, "Не смогли прочитать данные из xml");
+        }
+
         [TestMethod]
         public void Folded()
         {
@@ -377,10 +385,15 @@ namespace KUBC.DAYZ.GAME.MSTEST
                 foreach(var file in files)
                 {
                     var tLog = new LogFiles.ADM.Log(file);
+                    //TODO:     Вот тут изменить событие что бы не писалось сразу в кносоль, а тупо накапливалось.
+                    //          Т.е. набираем стату, и в консоль пишем чет вроде файл такойто, прочитали столько-то строк
+                    //          нераспознали столько то строк.
                     tLog.ReadLine += TLog_ReadLine;
                     tLog.Read();
                     tLog.CloseFile();
                 }
+                //TODO:         А вот тут пишем, что прочитали столько то файлов, в которых не поняли столько-то строк
+                //              и дальше полный список строк которые парсер не понял от слова совсем... 
             }
         }
 
