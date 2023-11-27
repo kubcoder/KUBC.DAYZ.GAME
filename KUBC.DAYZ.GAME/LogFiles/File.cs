@@ -106,13 +106,7 @@
         {
             get
             {
-                var c = Chars.LastOrDefault();
-                if (c!=null)
-                {
-                    if (c == '\n')
-                        return true;
-                }
-                return false;
+                return Chars.LastOrDefault() == '\n';
             }
         }
 

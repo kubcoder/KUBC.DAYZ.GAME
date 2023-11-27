@@ -171,6 +171,14 @@
         /// События демонтажа дополнительных элементов конструкций
         /// </summary>
         public List<Unmounted> Unmounteds = [];
+        /// <summary>
+        /// События закапывание схрона
+        /// </summary>
+        public List<DugIn> DugIns = [];
+        /// <summary>
+        /// События выкапывания схронов
+        /// </summary>
+        public List<DugOut> DugOuts = [];
 
         /// <summary>
         /// Готовимся к чтению лога
@@ -198,6 +206,8 @@
             Packeds.Clear();
             Mounteds.Clear();
             Unmounteds.Clear();
+            DugIns.Clear();
+            DugOuts.Clear();
         }
         /// <summary>
         /// Сколько всего событий найдено в момент последнего чтения лога
@@ -226,6 +236,8 @@
             res += Packeds.Count;
             res += Mounteds.Count;
             res += Unmounteds.Count;
+            res += DugIns.Count;
+            res += DugOuts.Count;
             return res;
         }
 
@@ -487,6 +499,28 @@
             else
             {
                 unmounted.Dispose();
+            }
+            var dugin = new DugIn() { Time = LineTime }; ;
+            if (dugin.Init(Line, cancellationToken))
+            {
+                dugin.Dispose();
+                DugIns.Add(dugin);
+                return true;
+            }
+            else
+            {
+                dugin.Dispose();
+            }
+            var dugout = new DugOut() { Time = LineTime }; ;
+            if (dugout.Init(Line, cancellationToken))
+            {
+                dugout.Dispose();
+                DugOuts.Add(dugout);
+                return true;
+            }
+            else
+            {
+                dugout.Dispose();
             }
             return false;
         }

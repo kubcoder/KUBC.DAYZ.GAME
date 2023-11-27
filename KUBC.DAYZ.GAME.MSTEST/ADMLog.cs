@@ -7,12 +7,35 @@ using System.Threading.Tasks;
 namespace KUBC.DAYZ.GAME.MSTEST
 {
     /*Закопал откопал морской сундук
-        23:53:03 | Player "kot23rus" (id=B1idL_7H1auUS5DPBOEDcTFQ3EBBrzFLa8r1GGmv7GA= pos=<271.3, 798.5, 560.0>)Player SurvivorBase<5f3d7020> Dug in SeaChest<fd1db930> at position 0x000000006f8c82e0 {<270.87,559.957,797.327>}
         23:53:33 | Player "kot23rus" (id=B1idL_7H1auUS5DPBOEDcTFQ3EBBrzFLa8r1GGmv7GA= pos=<271.3, 798.5, 560.0>)Player SurvivorBase<5f3d7020> Dug out UndergroundStash<ff33bfe0> at position 0x000000006f8c82e0 {<270.87,560.177,797.327>}
      */
     [TestClass]
     public class ADMLog
     {
+        [TestMethod]
+        public void DugOut()
+        {
+            string Line = "Player \"kot23rus\" (id=B1idL_7H1auUS5DPBOEDcTFQ3EBBrzFLa8r1GGmv7GA= pos=<271.3, 798.5, 560.0>)Player SurvivorBase<5f3d7020> Dug out UndergroundStash<ff33bfe0> at position 0x000000006f8c82e0 {<270.87,560.177,797.327>}";
+            Console.WriteLine(Line);
+            GAME.LogFiles.ADM.DugOut e = new();
+            Assert.IsTrue(e.Init(Line), "Не смогли прочитать правильную строчку");
+            var xml = e.GetXML();
+            Console.WriteLine(xml);
+            var rE = GAME.LogFiles.ADM.DugOut.FromXML(xml);
+            Assert.IsNotNull(rE, "Не смогли прочитать данные из xml");
+        }
+        [TestMethod]
+        public void DugIn()
+        {
+            string Line = "Player \"kot23rus\" (id=B1idL_7H1auUS5DPBOEDcTFQ3EBBrzFLa8r1GGmv7GA= pos=<271.3, 798.5, 560.0>)Player SurvivorBase<5f3d7020> Dug in SeaChest<fd1db930> at position 0x000000006f8c82e0 {<270.87,559.957,797.327>}";
+            Console.WriteLine(Line);
+            GAME.LogFiles.ADM.DugIn e = new();
+            Assert.IsTrue(e.Init(Line), "Не смогли прочитать правильную строчку");
+            var xml = e.GetXML();
+            Console.WriteLine(xml);
+            var rE = GAME.LogFiles.ADM.DugIn.FromXML(xml);
+            Assert.IsNotNull(rE, "Не смогли прочитать данные из xml");
+        }
         [TestMethod]
         public void Unmounted()
         {
