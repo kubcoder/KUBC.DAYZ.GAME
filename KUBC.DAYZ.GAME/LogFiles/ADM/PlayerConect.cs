@@ -20,11 +20,21 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
             if (Line.Contains("is connected"))
             {
                 base.Init(Line, cancellation);
-                var p = ReadPlayer(')', cancellation);
-                if (p!= null) 
+                string? w;
+                if (!SkipToChar('"', cancellation))
+                    return false;
+                w = ReadToChar('"', true, cancellation);
+                if (!string.IsNullOrEmpty(w))
                 {
-                    Player = p;
-                    return true;
+                    Player.NickName = w.Trim();
+                    if (!SkipToChar('=', cancellation))
+                        return false;
+                    var dayzID = this.ReadToChar(')', true, cancellation);
+                    if (dayzID != null)
+                    {
+                        Player.ID = dayzID;
+                        return true;
+                    }
                 }
             }
             return false;

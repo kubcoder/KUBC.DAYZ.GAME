@@ -37,7 +37,7 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
             else
             {
                 w = ReadToChar(' ', true, cancellation);
-                if (w.Trim()!="Player")
+                if (w?.Trim()!="Player")
                     return null;
             }
             w = ReadToChar('(', true, cancellation);
