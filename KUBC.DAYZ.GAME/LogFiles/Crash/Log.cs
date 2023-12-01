@@ -48,91 +48,31 @@
         {
             this.Crashes.Clear();
         }
-        /// <summary>
-        /// В какой фазе находится процесс чтения
-        /// </summary>
-        private ParsePhase Phase = ParsePhase.CLIParams;
+        
 
-        /// <summary>
-        /// Читаем строчку лога
-        /// </summary>
-        /// <param name="Line"></param>
-        protected override void ParseLine(string Line)
+        /// <inheritdoc/>
+        protected override void ParseLine(string Line, CancellationToken? cancellation = null)
         {
-            if (Line == "------------------------------------")
+            if (CurrentCrash!=null)
             {
-                if (CurrentCrash != null)
+                if (CurrentCrash.AppendLine(Line, cancellation))
                 {
                     Crashes.Add(CurrentCrash);
-                }
-                else
-                {
-                    CurrentCrash = new Entity();
-                    Phase = ParsePhase.Header;
+                    CurrentCrash.Dispose();
+                    CurrentCrash = null;
                 }
             }
             else
             {
-                if (CurrentCrash != null)
+                CurrentCrash = new Entity();
+                if(!CurrentCrash.Init(Line, cancellation))
                 {
-                    switch (Phase)
-                    {
-                        case ParsePhase.Header:
-                            CurrentCrash.HeaderLine = Line;
-                            Phase++;
-                            break;
-                        case ParsePhase.Message:
-                            if (Line.Contains("Stack trace"))
-                            {
-                                Phase++;
-                            }
-                            else
-                            {
-                                if (Line.Contains("Runtime mode"))
-                                {
-                                    Phase = ParsePhase.CLIParams;
-                                }
-                                else
-                                {
-                                    var mLine = Line.Trim();
-                                    if (!string.IsNullOrEmpty(mLine))
-                                        CurrentCrash.Messages.Add(mLine);
-                                }
-
-                            }
-                            break;
-                        case ParsePhase.StackTrace:
-                            if (Line.Contains("Runtime mode"))
-                            {
-                                Phase++;
-                            }
-                            else
-                            {
-                                var sLine = Line.Trim();
-                                if (!string.IsNullOrEmpty(sLine))
-                                    CurrentCrash.StackTrace.Add(sLine);
-                            }
-                            break;
-                        case ParsePhase.CLIParams:
-                            CurrentCrash.CLIParams = Line.Trim();
-                            Crashes.Add(CurrentCrash);
-                            CurrentCrash = null;
-                            break;
-                    }
+                    CurrentCrash.Dispose();
+                    CurrentCrash = null;
                 }
             }
         }
-        /// <summary>
-        /// Обрабатываем окончание чтение файла
-        /// </summary>
-        protected override void OnPostRead()
-        {
-            if (this.CurrentCrash != null)
-            {
-                Crashes.Add(CurrentCrash);
-                CurrentCrash = null;
-            }
-        }
+        
 
     }
 }

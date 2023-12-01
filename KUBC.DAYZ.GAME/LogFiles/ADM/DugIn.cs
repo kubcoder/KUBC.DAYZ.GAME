@@ -1,61 +1,71 @@
-﻿using System.Xml.Linq;
-using System.Xml.Serialization;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace KUBC.DAYZ.GAME.LogFiles.ADM
 {
     /// <summary>
-    /// Событие размещения итема игроком
+    /// Событие "закопали барахло"
     /// </summary>
-    public class Placed : AdmEntity
+    public class DugIn:AdmEntity
     {
-        
         /// <summary>
-        /// Игрок который размещал
+        /// Игрок который что-то закопал
         /// </summary>
         public PlayerInfo Player { get; set; } = new();
 
         /// <summary>
-        /// Место где размещено
+        /// Место где он это делал
         /// </summary>
         public Vector Position { get; set; } = new();
         /// <summary>
-        /// Что имено разместил игрок
+        /// Что имено закопал игрок
         /// </summary>
         public string ItemName { get; set; } = string.Empty;
-
         
+
         /// <summary>
         /// Создать элемент данных из строки XML
         /// </summary>
         /// <param name="xml">Строка данных с разметкой XML</param>
         /// <returns>Элемент данных или NULL если прочитать не удалось</returns>
-        public static Placed? FromXML(string xml)
+        public static DugIn? FromXML(string xml)
         {
-            return ReadFromXML(xml, typeof(Placed)) as Placed;
+            return ReadFromXML(xml, typeof(DugIn)) as DugIn;
         }
         /// <inheritdoc/>
         public override bool Init(string Line, CancellationToken? cancellation = null)
         {
-            if (Line.Contains("placed"))
+            if (Line.Contains("Dug in"))
             {
                 base.Init(Line, cancellation);
                 var p = ReadPlayer(' ', cancellation);
-                if (p != null) 
+                if (p != null)
                 {
                     Player = p;
                     var pos = ReadPosition(')', cancellation);
                     if (pos != null)
                     {
                         Position = pos;
-                        ReadToChar(' ', true, cancellation);
-                        if (Reader != null)
+                        var w = ReadToChar(' ', true, cancellation);
+                        w = ReadToChar(' ', true, cancellation);
+                        w = ReadToChar(' ', true, cancellation);
+                        w = ReadToChar(' ', true, cancellation);
+                        if (!string.IsNullOrEmpty(w))
                         {
-                            ItemName = Reader.ReadToEnd();
+                            w = ReadToChar('<', true, cancellation);
+                            if (!string.IsNullOrEmpty(w))
+                            {
+                                ItemName = w;
+                            }
+
                         }
                         return true;
                     }
                 }
-                
+
             }
             return false;
         }

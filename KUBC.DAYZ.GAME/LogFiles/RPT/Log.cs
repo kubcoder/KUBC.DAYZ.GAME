@@ -44,11 +44,9 @@
             FPSHistory.Clear();
             MemHistory.Clear();
         }
-        /// <summary>
-        /// Парсим строчки
-        /// </summary>
-        /// <param name="Line"></param>
-        protected override void ParseLine(string Line)
+        /// <inheritdoc/>
+        
+        protected override void ParseLine(string Line, CancellationToken? cancellationToken = null)
         {
             if (LogStarted == null)
             {
@@ -56,31 +54,34 @@
             }
             else
             {
-                var cE = ConectEvent.FromLogLine(Line);
-                if (cE != null)
+                ConectEvent cE = new ();
+                if (cE.Init(Line, cancellationToken))
                 {
                     cE.ConnectTime = CorrectTime(cE.ConnectTime);
                     PlayersConect.Add(cE);
                 }
                 else
                 {
-                    var aFPS = AverageFPS.FromLogLine(Line);
-                    if (aFPS != null)
+                    cE.Dispose();
+                    var aFPS = new AverageFPS();
+                    if (aFPS.Init(Line, cancellationToken))
                     {
                         aFPS.MeasuredTime = CorrectTime(aFPS.MeasuredTime);
                         FPSHistory.Add(aFPS);
                     }
                     else
                     {
-                        var aMem = UsedMemory.FromLogLine(Line);
-                        if (aMem != null)
+                        aFPS.Dispose();
+                        var aMem = new UsedMemory();
+                        if (aMem.Init(Line, cancellationToken))
                         {
                             aMem.MeasuredTime = CorrectTime(aMem.MeasuredTime);
                             MemHistory.Add(aMem);
                         }
                         else
                         {
-                            base.ParseLine(Line);
+                            aMem.Dispose();
+                            base.ParseLine(Line, cancellationToken);
                         }
                     }
                 }

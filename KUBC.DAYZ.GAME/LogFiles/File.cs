@@ -6,12 +6,16 @@
     /// <remarks>
     /// Данный класс реализует базовые функции для работы с файлом лога. Классы которые работают с определенными типами логов наследуются от данного класса
     /// </remarks>
-    public class File
+    /// <remarks>
+    /// Создаем экземпляр чтения файла
+    /// </remarks>
+    /// <param name="openFile">Имя открываемого файла</param>
+    public class File(FileInfo openFile)
     {
         /// <summary>
         /// Текущий лог
         /// </summary>
-        private readonly FileInfo OpenFile;
+        private readonly FileInfo OpenFile = openFile;
         /// <summary>
         /// Список ошибок возникающих при парсинге
         /// </summary>
@@ -51,16 +55,7 @@
         {
             return OpenFile.FullName == NewFile.FullName;
         }
-        
 
-        /// <summary>
-        /// Создаем экземпляр чтения файла
-        /// </summary>
-        /// <param name="openFile">Имя открываемого файла</param>
-        public File(FileInfo openFile)
-        {
-            OpenFile = openFile;
-        }
         /// <summary>
         /// Признак что файл существует
         /// </summary>
@@ -84,49 +79,99 @@
 
 
         /// <summary>
-        /// Читаем файл
+        /// Символы прочитанные из файла
         /// </summary>
-        /// <remarks>
-        /// Сколько строчек лога было прочитано
-        /// </remarks>
-        public int Read()
+        private List<int> Chars = new();
+
+        /// <summary>
+        /// Получить текущую строчку лога
+        /// </summary>
+        /// <returns>Полная строчка лога</returns>
+        protected string GetLine()
         {
-            int ReadLines = 0;
-            if (fileReader == null) 
+            string l = string.Empty;
+            foreach(var c in Chars) { l+= (char)c; }
+            Chars.Clear();
+            return l;
+        }
+        /// <summary>
+        /// Дочитали до конца строки
+        /// </summary>
+        private bool IsEndLine
+        {
+            get
+            {
+                return Chars.LastOrDefault() == '\n';
+            }
+        }
+
+        /// <summary>
+        /// Читать строчку из потока
+        /// </summary>
+        /// <returns>Истина если строчка была дочитана до конца, иначе ложь</returns>
+        protected bool ReadFromFile(CancellationToken? cancellationToken = null)
+        {
+            if (fileReader == null)
             {
                 if (IsCanRead)
                 {
                     fileReader = new StreamReader(OpenFile.Open(FileMode.Open, FileAccess.Read, FileShare.ReadWrite));
-                    if (fileReader!=null)
+                    if (fileReader != null)
                     {
                         OnFileOpen();
-                        
+
                     }
                 }
             }
             if (fileReader!=null)
             {
-                Errors.Clear();
-                OnPreRead();
-                if (fileReader != null)
+                while (!fileReader.EndOfStream)
                 {
-                    string? Line;
-                    while ((Line = fileReader.ReadLine()) != null)
-                    {
-                        ReadLines++;
-                        try
-                        {
-                            if (!string.IsNullOrEmpty(Line))
-                                ParseLine(Line);
-                        }
-                        catch (Exception ex)
-                        {
-                            Errors.Add(new ParseError() { Exception = ex, SourceLine = Line });
-                        }
-                    }
-                    OnPostRead();
+                    Chars.Add(fileReader.Read());
+                    if ((cancellationToken != null) && (cancellationToken.Value.IsCancellationRequested))
+                        return false;
+                    if (IsEndLine)
+                        return true;
+                        
                 }
             }
+            return false;
+        }
+
+
+        /// <summary>
+        /// Читаем файл
+        /// </summary>
+        /// <param name="SkipPreRead">
+        /// При чтении файла пропустить предварительные действия.
+        /// Используется для того что бы сохранить события в памяти когда при сохранении в БД
+        /// был сбой, и нужно попробывать чуть позже.
+        /// </param>
+        /// <param name="cancellationToken">Токен отмены. Нужен что бы принудительно
+        /// прервать выполнение чтения файла лога из вызывающй программы</param>
+        /// <returns>Сколько строчек лога было прочитано</returns>
+        public int Read(bool SkipPreRead = false, CancellationToken? cancellationToken = null)
+        {
+            int ReadLines = 0;
+            Errors.Clear();
+            if (!SkipPreRead)
+            {
+                OnPreRead();
+            }
+            while (ReadFromFile(cancellationToken))
+            {
+                ReadLines++;
+                var Line = GetLine();
+                try
+                {
+                    ParseLine(Line, cancellationToken);
+                }
+                catch (Exception ex)
+                {
+                    Errors.Add(new ParseError() { Exception = ex, SourceLine = Line });
+                }
+            }
+            OnPostRead();
             return ReadLines;
         }
         /// <summary>
@@ -134,8 +179,7 @@
         /// </summary>
         public void CloseFile()
         {
-            if (fileReader!= null)
-                fileReader.Close();
+            fileReader?.Close();
         }
 
         /// <summary>
@@ -169,15 +213,16 @@
         /// <summary>
         /// Событие вызываемое при необходимости чтения строчки лога
         /// </summary>
-        public event EventHandler<string>? ReadLine;
+        public event EventHandler<ExtendReadEventArgs>? ReadLine;
 
         /// <summary>
         /// Распознаем строку журнала
         /// </summary>
         /// <param name="Line">Строчка которую нужно распознать</param>
-        protected virtual void ParseLine(string Line)
+        /// <param name="cancellationToken">Токен отмены разбора строки</param>
+        protected virtual void ParseLine(string Line, CancellationToken? cancellationToken)
         {
-            ReadLine?.Invoke(this, Line);
+            ReadLine?.Invoke(this, new ExtendReadEventArgs(Line, cancellationToken));
         }
         /// <summary>
         /// Получаем последний лог (ну в который писалось позже всего) по заданному шаблону поиска имени файла

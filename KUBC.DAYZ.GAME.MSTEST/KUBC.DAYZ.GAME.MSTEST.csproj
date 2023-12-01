@@ -17,7 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="TestFiles\GameLogs\" />
     <Folder Include="TestFiles\MissionFiles\" />
   </ItemGroup>
 
@@ -26,6 +25,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="TestFiles\GameLogs\crash.log">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="TestFiles\GameLogs\DayZServer_x64_2023_08_30_215815690.ADM">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -40,6 +42,9 @@
     </None>
     <None Update="TestFiles\MissionFiles\cfggameplay.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\TextFile1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 

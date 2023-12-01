@@ -20,42 +20,44 @@
 
         }
 
-        /// <summary>
-        /// Разбираем строчку лога
-        /// </summary>
-        /// <param name="Line"></param>
-        protected override void ParseLine(string Line)
+        /// <inheritdoc/>
+        protected override void ParseLine(string Line, CancellationToken? cancellationToken)
         {
+            if (Line.Trim() == "**********************************EOF****************************************")
+                return;
             if (!LogStarted.HasValue)
             {
                 ParseStartTime(Line);
             }
             else
             {
-                var TimeString = Line[..8];
-                if (TimeSpan.TryParse(TimeString, out var Time))
+                if (Line.Length > 8)
                 {
-                    DateTime LineTime;
-                    if (LogStarted.HasValue)
+                    var TimeString = Line[..8];
+                    if (TimeSpan.TryParse(TimeString, out var Time))
                     {
-                        LineTime = LogStarted.Value.Date.Add(Time);
-                        if (LogStarted.Value.TimeOfDay > Time)
+                        DateTime LineTime;
+                        if (LogStarted.HasValue)
                         {
-                            LineTime = LineTime.AddDays(1);
+                            LineTime = LogStarted.Value.Date.Add(Time);
+                            if (LogStarted.Value.TimeOfDay > Time)
+                            {
+                                LineTime = LineTime.AddDays(1);
+                            }
+                        }
+                        else
+                        {
+                            LineTime = DateTime.Now.Add(Time);
+                        }
+                        if (!ParseADMLine(LineTime, Line[11..], cancellationToken))
+                        {
+                            base.ParseLine(Line, cancellationToken);
                         }
                     }
                     else
                     {
-                        LineTime = DateTime.Now.Add(Time);
+                        base.ParseLine(Line, cancellationToken);
                     }
-                    if (!ParseADMLine(LineTime, Line[11..]))
-                    {
-                        base.ParseLine(Line);
-                    }
-                }
-                else
-                {
-                    base.ParseLine(Line);
                 }
             }
         }
@@ -88,63 +90,95 @@
         /// <summary>
         /// События подключения игроков
         /// </summary>
-        public List<PlayerConect> PlayerConnects = new();
+        public List<PlayerConect> PlayerConnects = [];
         /// <summary>
         /// Журналы игроков в сети
         /// </summary>
-        public List<PlayerList> LogPlayers = new();
+        public List<PlayerList> LogPlayers = [];
         /// <summary>
         /// События отключения игроков
         /// </summary>
-        public List<PlayerDisconect> PlayerDisconnects = new();
+        public List<PlayerDisconect> PlayerDisconnects = [];
         /// <summary>
         /// Игровой чат
         /// </summary>
-        public List<Chat> PlayerChat = new();
+        public List<Chat> PlayerChat = [];
         /// <summary>
         /// Жалобы игроков
         /// </summary>
-        public List<Report> PlayersReport = new();
+        public List<Report> PlayersReport = [];
         /// <summary>
         /// Потеря сознаний игроками
         /// </summary>
-        public List<Unconscious> PlayerUnconscious = new();
+        public List<Unconscious> PlayerUnconscious = [];
         /// <summary>
         /// События когда игроки приходят в себя
         /// </summary>
-        public List<Regained> PlayerRegained = new();
+        public List<Regained> PlayerRegained = [];
         /// <summary>
         /// События опиздюливания игроков
         /// </summary>
-        public List<PlayerDamage> PlayerDamages = new();
+        public List<PlayerDamage> PlayerDamages = [];
         /// <summary>
         /// События убийства игроков
         /// </summary>
-        public List<PlayerKilled> PlayerKilleds = new();
+        public List<PlayerKilled> PlayerKilleds = [];
         /// <summary>
         /// Смерти игроков
         /// </summary>
-        public List<PlayerDied> PlayerDieds = new();
+        public List<PlayerDied> PlayerDieds = [];
         /// <summary>
         /// Самоубийства игроков
         /// </summary>
-        public List<Suicide> Suicides = new();
+        public List<Suicide> Suicides = [];
         /// <summary>
         /// Смерти игроков от потери крови
         /// </summary>
-        public List<BledOut> BledOuts = new();
+        public List<BledOut> BledOuts = [];
         /// <summary>
         /// События размещения предметов
         /// </summary>
-        public List<Placed> Placeds = new();
+        public List<Placed> Placeds = [];
         /// <summary>
         /// События стройки
         /// </summary>
-        public List<Built> Builts = new();
+        public List<Built> Builts = [];
         /// <summary>
         /// События разрушения объектов
         /// </summary>
-        public List<Dismantled> Dismantleds = new();
+        public List<Dismantled> Dismantleds = [];
+        /// <summary>
+        /// События опускания тотема
+        /// </summary>
+        public List<Lowered> Lowereds = [];
+        /// <summary>
+        /// События поднятия тотема
+        /// </summary>
+        public List<Raised> Raiseds = [];
+        /// <summary>
+        /// События сворачивания объекта
+        /// </summary>
+        public List<Folded> Foldeds = [];
+        /// <summary>
+        /// События упаковки палаток
+        /// </summary>
+        public List<Packed> Packeds = [];
+        /// <summary>
+        /// События монтажа дополнительных элементов конструкций
+        /// </summary>
+        public List<Mounted> Mounteds = [];
+        /// <summary>
+        /// События демонтажа дополнительных элементов конструкций
+        /// </summary>
+        public List<Unmounted> Unmounteds = [];
+        /// <summary>
+        /// События закапывание схрона
+        /// </summary>
+        public List<DugIn> DugIns = [];
+        /// <summary>
+        /// События выкапывания схронов
+        /// </summary>
+        public List<DugOut> DugOuts = [];
 
         /// <summary>
         /// Готовимся к чтению лога
@@ -166,6 +200,14 @@
             Placeds.Clear();
             Builts.Clear();
             Dismantleds.Clear();
+            Lowereds.Clear();
+            Raiseds.Clear();
+            Foldeds.Clear();
+            Packeds.Clear();
+            Mounteds.Clear();
+            Unmounteds.Clear();
+            DugIns.Clear();
+            DugOuts.Clear();
         }
         /// <summary>
         /// Сколько всего событий найдено в момент последнего чтения лога
@@ -188,6 +230,14 @@
             res += Placeds.Count;
             res += Builts.Count;
             res += Dismantleds.Count;
+            res += Lowereds.Count;
+            res += Raiseds.Count;
+            res += Foldeds.Count;
+            res += Packeds.Count;
+            res += Mounteds.Count;
+            res += Unmounteds.Count;
+            res += DugIns.Count;
+            res += DugOuts.Count;
             return res;
         }
 
@@ -199,14 +249,16 @@
         /// Распознаем строчку журнала ADM
         /// </summary>
         /// <param name="LineTime">Время записи строчки</param>
+        /// <param name="cancellationToken">Токен отмены</param>
         /// <param name="Line">Текст журнала</param>
-        private bool ParseADMLine(DateTime LineTime, string Line)
+        private bool ParseADMLine(DateTime LineTime, string Line, CancellationToken? cancellationToken=null)
         {
             if (currentPlayerList != null)
             {
-                if (!currentPlayerList.AddLine(Line))
+                if (currentPlayerList.AppendLine(Line, cancellationToken))
                 {
                     LogPlayers.Add(currentPlayerList);
+                    currentPlayerList.Dispose();
                     currentPlayerList = null;
                     return true;
                 }
@@ -214,95 +266,261 @@
             }
             else
             {
-                if (PlayerList.IsStartList(Line))
+                currentPlayerList = new() { Time = LineTime }; ;
+                if (currentPlayerList.Init(Line, cancellationToken))
                 {
-                    currentPlayerList = new PlayerList() { LogTime = LineTime };
                     return true;
                 }
+                else
+                {
+                    currentPlayerList.Dispose();
+                    currentPlayerList = null;
+                }
             }
-            var pConect = PlayerConect.FromLog(Line, LineTime);
-            if (pConect != null)
+            var chat = new Chat() { Time = LineTime }; ;
+            if (chat.Init(Line, cancellationToken))
             {
-                PlayerConnects.Add(pConect);
+                chat.Dispose();
+                PlayerChat.Add(chat);
                 return true;
             }
-            var pDisconect = PlayerDisconect.FromLog(Line, LineTime);
-            if (pDisconect != null)
+            else
             {
-                PlayerDisconnects.Add(pDisconect);
+                chat.Dispose();
+            }
+            var playerDamage = new PlayerDamage() { Time = LineTime }; ;
+            if (playerDamage.Init(Line, cancellationToken))
+            {
+                playerDamage.Dispose();
+                PlayerDamages.Add(playerDamage);
                 return true;
             }
-            var pChat = Chat.FromLog(Line, LineTime);
-            if (pChat != null)
+            else
             {
-                PlayerChat.Add(pChat);
+                playerDamage.Dispose();
+            }
+
+            var bledOut = new BledOut() {Time = LineTime };
+            if (bledOut.Init(Line, cancellationToken)) 
+            {
+                bledOut.Dispose();
+                BledOuts.Add(bledOut);
                 return true;
             }
-            var pRep = Report.FromLog(Line, LineTime);
-            if (pRep != null)
+            else
             {
-                PlayersReport.Add(pRep);
+                bledOut.Dispose();
+            }
+            var built = new Built() { Time = LineTime }; ;
+            if (built.Init(Line, cancellationToken))
+            {
+                built.Dispose();
+                Builts.Add(built);
                 return true;
             }
-            var pUncon = Unconscious.FromLog(Line, LineTime);
-            if (pUncon != null)
+            else
             {
-                PlayerUnconscious.Add(pUncon);
+                built.Dispose();
+            }
+            
+            var dismantled = new Dismantled() { Time = LineTime }; ;
+            if (dismantled.Init(Line, cancellationToken))
+            {
+                dismantled.Dispose();
+                Dismantleds.Add(dismantled);
                 return true;
             }
-            var pReg = Regained.FromLog(Line, LineTime);
-            if (pReg != null)
+            else
             {
-                PlayerRegained.Add(pReg);
+                dismantled.Dispose();
+            }
+            var placed = new Placed() { Time = LineTime }; ;
+            if (placed.Init(Line, cancellationToken))
+            {
+                placed.Dispose();
+                Placeds.Add(placed);
                 return true;
             }
-            var pDmg = PlayerDamage.FromLog(Line, LineTime);
-            if (pDmg != null)
+            else
             {
-                PlayerDamages.Add(pDmg);
+                placed.Dispose();
+            }
+            var playerConect = new PlayerConect() { Time = LineTime }; ;
+            if (playerConect.Init(Line, cancellationToken))
+            {
+                playerConect.Dispose();
+                PlayerConnects.Add(playerConect);
                 return true;
             }
-            var pKill = PlayerKilled.FromLog(Line, LineTime);
-            if (pKill != null)
+            else
             {
-                PlayerKilleds.Add(pKill);
+                playerConect.Dispose();
+            }
+            
+            var playerDied = new PlayerDied() { Time = LineTime }; ;
+            if (playerDied.Init(Line, cancellationToken))
+            {
+                playerDied.Dispose();
+                PlayerDieds.Add(playerDied);
                 return true;
             }
-            var pDie = PlayerDied.FromLog(Line, LineTime);
-            if (pDie != null)
+            else
             {
-                PlayerDieds.Add(pDie);
+                playerDied.Dispose();
+            }
+            var playerDisconect = new PlayerDisconect() { Time = LineTime }; ;
+            if (playerDisconect.Init(Line, cancellationToken))
+            {
+                playerDisconect.Dispose();
+                PlayerDisconnects.Add(playerDisconect);
                 return true;
             }
-            var pSuicide = Suicide.FromLog(Line, LineTime);
-            if (pSuicide != null)
+            else
             {
-                Suicides.Add(pSuicide);
+                playerDisconect.Dispose();
+            }
+            var playerKilled = new PlayerKilled() { Time = LineTime }; ;
+            if (playerKilled.Init(Line, cancellationToken))
+            {
+                playerKilled.Dispose();
+                PlayerKilleds.Add(playerKilled);
                 return true;
             }
-            var pBledOut = BledOut.FromLog(Line, LineTime);
-            if (pBledOut != null)
+            else
             {
-                BledOuts.Add(pBledOut);
+                playerKilled.Dispose();
+            }
+            var regained = new Regained() { Time = LineTime }; ;
+            if (regained.Init(Line, cancellationToken))
+            {
+                regained.Dispose();
+                PlayerRegained.Add(regained);
                 return true;
             }
-            var pPlaced = Placed.FromLog(Line, LineTime);
-            if (pPlaced != null)
+            else
             {
-                Placeds.Add(pPlaced);
+                regained.Dispose();
+            }
+            var report = new Report() { Time = LineTime }; ;
+            if (report.Init(Line, cancellationToken))
+            {
+                report.Dispose();
+                PlayersReport.Add(report);
                 return true;
             }
-            var pBuilt = Built.FromLog(Line, LineTime);
-            if (pBuilt != null)
+            else
             {
-                Builts.Add(pBuilt);
+                report.Dispose();
+            }
+            var suicide = new Suicide() { Time = LineTime }; ;
+            if (suicide.Init(Line, cancellationToken))
+            {
+                suicide.Dispose();
+                Suicides.Add(suicide);
                 return true;
             }
-            var pDismate = Dismantled.FromLog(Line, LineTime);
-            if (pDismate != null)
+            else
             {
-                Dismantleds.Add(pDismate);
+                suicide.Dispose();
+            }
+            var unconscious = new Unconscious() { Time = LineTime }; ;
+            if (unconscious.Init(Line, cancellationToken))
+            {
+                unconscious.Dispose();
+                PlayerUnconscious.Add(unconscious);
                 return true;
+            }
+            else
+            {
+                unconscious.Dispose();
+            }
+            var lowered = new Lowered() { Time = LineTime }; ;
+            if (lowered.Init(Line, cancellationToken))
+            {
+                lowered.Dispose();
+                Lowereds.Add(lowered);
+                return true;
+            }
+            else
+            {
+                lowered.Dispose();
+            }
+            var raised = new Raised() { Time = LineTime }; ;
+            if (raised.Init(Line, cancellationToken))
+            {
+                raised.Dispose();
+                Raiseds.Add(raised);
+                return true;
+            }
+            else
+            {
+                raised.Dispose();
+            }
+            var folded = new Folded() { Time = LineTime }; ;
+            if (folded.Init(Line, cancellationToken))
+            {
+                folded.Dispose();
+                Foldeds.Add(folded);
+                return true;
+            }
+            else
+            {
+                folded.Dispose();
+            }
+            var packed = new Packed() { Time = LineTime }; ;
+            if (packed.Init(Line, cancellationToken))
+            {
+                packed.Dispose();
+                Packeds.Add(packed);
+                return true;
+            }
+            else
+            {
+                packed.Dispose();
+            }
+            var mounted = new Mounted() { Time = LineTime }; ;
+            if (mounted.Init(Line, cancellationToken))
+            {
+                mounted.Dispose();
+                Mounteds.Add(mounted);
+                return true;
+            }
+            else
+            {
+                mounted.Dispose();
+            }
+            var unmounted = new Unmounted() { Time = LineTime }; ;
+            if (unmounted.Init(Line, cancellationToken))
+            {
+                unmounted.Dispose();
+                Unmounteds.Add(unmounted);
+                return true;
+            }
+            else
+            {
+                unmounted.Dispose();
+            }
+            var dugin = new DugIn() { Time = LineTime }; ;
+            if (dugin.Init(Line, cancellationToken))
+            {
+                dugin.Dispose();
+                DugIns.Add(dugin);
+                return true;
+            }
+            else
+            {
+                dugin.Dispose();
+            }
+            var dugout = new DugOut() { Time = LineTime }; ;
+            if (dugout.Init(Line, cancellationToken))
+            {
+                dugout.Dispose();
+                DugOuts.Add(dugout);
+                return true;
+            }
+            else
+            {
+                dugout.Dispose();
             }
             return false;
         }

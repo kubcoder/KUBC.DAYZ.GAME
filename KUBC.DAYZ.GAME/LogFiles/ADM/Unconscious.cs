@@ -5,91 +5,41 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
     /// <summary>
     /// Описание события когда игрок потерял сознание
     /// </summary>
-    public class Unconscious
+    public class Unconscious:AdmEntity
     {
         /// <summary>
-        /// Время когда потерял сознание
+        /// Игрок который потерял сознание
         /// </summary>
-        public DateTime UnconsciousTime { get; set; } = DateTime.Now;
-        /// <summary>
-        /// Ник игрока
-        /// </summary>
-        public string NickName { get; set; } = string.Empty;
-        /// <summary>
-        /// Идентификатор игрока в DAYZ
-        /// </summary>
-        public string DayzID { get; set; } = string.Empty;
+        public PlayerInfo Player { get; set; } = new();
         /// <summary>
         /// Где произошла потеря сознания
         /// </summary>
         public Vector Position { get; set; } = new();
 
-        /// <summary>
-        /// Получить событие о потери сознания игроком из лога ADM
-        /// </summary>
-        /// <param name="Line">Строчка лога</param>
-        /// <param name="Time">Время строчки лога</param>
-        /// <returns>Если это нужная строчка то описание события потери сознания, иначе null</returns>
-        public static Unconscious? FromLog(string Line, DateTime Time)
+        /// <inheritdoc/>
+        public override bool Init(string Line, CancellationToken? cancellation = null)
         {
             if (Line.Contains("is unconscious"))
             {
-                var tData = Line[7..];
-                if (tData[0] == '"')
+                base.Init(Line, cancellation);
+
+                var p = ReadPlayer(' ', cancellation);
+                if (p != null)
                 {
-                    var Reader = new StringReader(tData);
-                    Reader.Read();
-                    var rSym = Reader.Read();
-                    var res = new Unconscious() { UnconsciousTime = Time };
-                    while ((rSym > 0) && (rSym != '"'))
+                    Player = p;
+                    var pos = ReadPosition(')', cancellation);
+                    if (pos != null)
                     {
-                        res.NickName += (char)rSym;
-                        rSym = Reader.Read();
+                        Position = pos;
+                        Dispose();
+                        return true;
                     }
-                    while ((rSym > 0) && (rSym != '=')) { rSym = Reader.Read(); }
-                    while ((rSym > 0) && (rSym != ' '))
-                    {
-                        rSym = Reader.Read();
-                        if ((rSym > 0) && (rSym != ' '))
-                            res.DayzID += (char)rSym;
-                    }
-                    while ((rSym > 0) && (rSym != '=')) { rSym = Reader.Read(); }
-                    var sPos = string.Empty;
-                    while ((rSym > 0) && (rSym != ')'))
-                    {
-
-                        rSym = Reader.Read();
-                        if ((rSym > 0) && (rSym != ')'))
-                            sPos += (char)rSym;
-
-                    }
-                    res.Position = Vector.FromLogString(sPos);
-                    Reader.Close();
-                    return res;
                 }
             }
-            return null;
+            return false;
         }
 
-        /// <summary>
-        /// Проебразуем объект в строку с разметкой XML
-        /// </summary>
-        /// <returns>Представление в виде XML</returns>
-        public string GetXML()
-        {
-            var sb = new StringWriter();
-            System.Xml.XmlWriter wrt = System.Xml.XmlWriter.Create(sb, new System.Xml.XmlWriterSettings()
-            {
-                OmitXmlDeclaration = true,
-                Indent = true
-            });
-            var x = new XmlSerializer(typeof(Unconscious));
-            var xns = new XmlSerializerNamespaces();
-            xns.Add(string.Empty, string.Empty);
-            x.Serialize(wrt, this, xns);
-            wrt.Close();
-            return sb.ToString();
-        }
+
         /// <summary>
         /// Создать элемент данных подключения игрока из строки XML
         /// </summary>
@@ -97,23 +47,7 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
         /// <returns>Элемент данных или NULL если прочитать не удалось</returns>
         public static Unconscious? FromXML(string xml)
         {
-            try
-            {
-                var x = new XmlSerializer(typeof(Unconscious));
-                var reader = new StringReader(xml);
-                var rObj = x.Deserialize(reader);
-                reader.Close();
-                if (rObj != null)
-                {
-                    var d = (Unconscious)rObj;
-                    return d;
-                }
-                return null;
-            }
-            catch
-            {
-                return null;
-            }
+            return ReadFromXML(xml, typeof(Unconscious)) as Unconscious;
         }
     }
 }
