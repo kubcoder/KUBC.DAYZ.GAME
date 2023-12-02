@@ -6,17 +6,10 @@ using System.Threading.Tasks;
 
 namespace KUBC.DAYZ.GAME.MSTEST
 {
-    /*Закопал откопал морской сундук
-        23:53:33 | Player "kot23rus" (id=B1idL_7H1auUS5DPBOEDcTFQ3EBBrzFLa8r1GGmv7GA= pos=<271.3, 798.5, 560.0>)Player SurvivorBase<5f3d7020> Dug out UndergroundStash<ff33bfe0> at position 0x000000006f8c82e0 {<270.87,560.177,797.327>}
-     */
+    
     [TestClass]
     public class ADMLog
     {
-        [TestMethod]
-        public void TestLoadName()
-        {
-
-        }
         
         [TestMethod]
         public void DugOut()

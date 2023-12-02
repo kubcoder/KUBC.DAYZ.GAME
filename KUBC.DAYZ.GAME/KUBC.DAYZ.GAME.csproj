@@ -5,7 +5,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<Title>KUBC.DAYZ.GAME</Title>
-		<Version>8.1.2</Version>
+		<Version>8.1.3</Version>
 		<Authors>kot23rus</Authors>
 		<Company>KUBCODER</Company>
 		<Description>Инструменты для работы с серверными файлами DAYZ SA</Description>

@@ -29,7 +29,15 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
             if (Line.Contains("has been disconnected"))
             {
                 base.Init(Line, cancellation);
-                var p = ReadPlayer(cancellation);
+                PlayerInfo? p = null;
+                if (Line.Contains("(id=Unknown)"))
+                {
+                    p = ReadPlayerName(cancellation);
+                }
+                else
+                {
+                    p = ReadPlayer(cancellation);
+                }
                 if (p != null)
                 {
                     Player = p;
