@@ -57,7 +57,7 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
                 base.Init(Line, cancellation);
                 var style = System.Globalization.NumberStyles.Number;
                 var culture = System.Globalization.CultureInfo.CreateSpecificCulture("en-GB");
-                var p = ReadPlayer(' ', cancellation);
+                var p = ReadPlayer(cancellation);
                 if (p != null)
                 {
                     Player = p;
@@ -72,7 +72,7 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
                         {
                             if (w == "Player")
                             {
-                                var sp = ReadPlayer(' ', cancellation);
+                                var sp = ReadPlayer(cancellation);
                                 if (sp != null)
                                 {
                                     Source = sp;

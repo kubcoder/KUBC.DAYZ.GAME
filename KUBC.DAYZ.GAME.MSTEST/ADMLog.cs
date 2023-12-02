@@ -13,9 +13,15 @@ namespace KUBC.DAYZ.GAME.MSTEST
     public class ADMLog
     {
         [TestMethod]
+        public void TestLoadName()
+        {
+
+        }
+        
+        [TestMethod]
         public void DugOut()
         {
-            string Line = "Player \"kot23rus\" (id=B1idL_7H1auUS5DPBOEDcTFQ3EBBrzFLa8r1GGmv7GA= pos=<271.3, 798.5, 560.0>)Player SurvivorBase<5f3d7020> Dug out UndergroundStash<ff33bfe0> at position 0x000000006f8c82e0 {<270.87,560.177,797.327>}";
+            string Line = "Player \"(Admin) Berserk\" (id=B1idL_7H1auUS5DPBOEDcTFQ3EBBrzFLa8r1GGmv7GA= pos=<271.3, 798.5, 560.0>)Player SurvivorBase<5f3d7020> Dug out UndergroundStash<ff33bfe0> at position 0x000000006f8c82e0 {<270.87,560.177,797.327>}";
             Console.WriteLine(Line);
             GAME.LogFiles.ADM.DugOut e = new();
             Assert.IsTrue(e.Init(Line), "Не смогли прочитать правильную строчку");
@@ -117,7 +123,7 @@ namespace KUBC.DAYZ.GAME.MSTEST
         [TestMethod]
         public void BledOut()
         {
-            string Line = "  Player \"kot23rus\" (DEAD) (id=B1idL_7H1auUS5DPBOEDcTFQ3EBBrzFLa8r1GGmv7GA= pos=<12745.6, 9671.5, 6.0>) bled out";
+            string Line = "Player \"(Admin) kot23rus\" (DEAD) (id=B1idL_7H1auUS5DPBOEDcTFQ3EBBrzFLa8r1GGmv7GA= pos=<12745.6, 9671.5, 6.0>) bled out";
             Console.WriteLine(Line);
             GAME.LogFiles.ADM.BledOut e = new();
             Assert.IsTrue(e.Init(Line), "Не смогли прочитать правильную строчку");
@@ -271,6 +277,7 @@ namespace KUBC.DAYZ.GAME.MSTEST
             ///hit by
             string[] Lines = [
                 "##### PlayerList log: 4 players",
+                "Player \"(Admin) Berserk\" (id=JAknhO3dSKs7gQQLVfOwxu9dEubV4IciZcbP8VIFgD4= pos=<1235.0, 11851.4, 2.5>)",
                 "Player \"KIRYAESHKA\" (id=rC10G8v_XtecP_lavlTpkJRjRM3Gz1M9MAjTeMy66_c= pos=<4335.7, 13105.3, 178.4>)",
                 "Player \"Survivor\" (id=qOkKOr39TMj0MtUK0ECMa8Taro9GhUJ2NVPh2QP00Bo= pos=<12977.5, 7759.3, 17.1>)",
                 "Player \"cepgo\" (id=B7Baj5I93qjqUMHxknYNad8oVW_CCrQRn5k9nXTeCgs= pos=<13747.4, 14111, 28.7>)",

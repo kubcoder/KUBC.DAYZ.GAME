@@ -45,7 +45,7 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
             if (Line.Contains("Built", StringComparison.OrdinalIgnoreCase))
             {
                 base.Init(Line, cancellation);
-                var p = ReadPlayer(' ', cancellation);
+                var p = ReadPlayer(cancellation);
                 if (p != null)
                 {
                     Player = p;

@@ -23,11 +23,11 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
             {
                 base.Init(Line, cancellation);
 
-                var p = ReadPlayer(' ', cancellation);
+                var p = ReadPlayer( cancellation);
                 if (p != null)
                 {
                     Player = p;
-                    var pos = ReadPosition(')', cancellation);
+                    var pos = ReadPosition(')',cancellation);
                     if (pos != null)
                     {
                         Position = pos;

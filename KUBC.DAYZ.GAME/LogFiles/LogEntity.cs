@@ -28,7 +28,10 @@ namespace KUBC.DAYZ.GAME.LogFiles
             
             
         }
-        
+        /// <summary>
+        /// Строчка которую читаем
+        /// </summary>
+        protected string? CurrentLine;
         
 
         /// <summary>
@@ -40,6 +43,7 @@ namespace KUBC.DAYZ.GAME.LogFiles
         public virtual bool Init(string Line, CancellationToken? cancellation = null)
         {
             Reader = new StringReader(Line);
+            CurrentLine = Line;
             return false;
         }
         /// <summary>
@@ -203,6 +207,36 @@ namespace KUBC.DAYZ.GAME.LogFiles
             }
             return res;
         }
+        /// <summary>
+        /// Прочитать указанное кол-во буков
+        /// </summary>
+        /// <param name="count">Сколько буков прочитать</param>
+        /// <param name="cancellation">Токен отмены</param>
+        /// <returns>Строка с указаным числом буков, или null если прочитать не удалось</returns>
+        protected string? ReadChars(int count, CancellationToken? cancellation = null)
+        {
+            var res = string.Empty;
+            while (true)
+            {
+                if ((cancellation != null) && (cancellation.Value.IsCancellationRequested))
+                {
+                    return null;
+                }
+                Read();
+                if (LastSymbol.HasValue)
+                {
+                    res+= LastSymbol;
+                    if (res.Length >= count)
+                        return res;
+                }
+                else
+                {
+                    return null;
+                }
+                
+            }
+        }
+
         /// <summary>
         /// Получить событие в виде XML
         /// </summary>

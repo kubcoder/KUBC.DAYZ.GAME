@@ -29,6 +29,9 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
         {
 
         }
+
+        static string[] DW = { "Player", "(DEAD)", "Chat(" };
+
         /// <summary>
         /// Инициализация класса с указанием ник нейма игрока
         /// </summary>
@@ -38,11 +41,19 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
         /// <param name="nickName">Никнейм</param>
         public PlayerInfo(string nickName)
         {
-            var s = nickName.FirstOrDefault();
+            NickName = nickName;
+            foreach(var w in DW) 
+            {
+                var i = NickName.IndexOf(w);
+                if (i>-1)
+                {
+                    NickName = NickName.Remove(i, w.Length);
+                }
+            }
+            NickName = NickName.Trim();
+            var s = NickName.FirstOrDefault();
             if ((s == '"')||(s == '\''))
-                NickName = nickName[1..];
-            else
-                NickName = nickName;
+                NickName = NickName[1..];
             s = NickName.LastOrDefault();
             if ((s == '"')||(s == '\''))
             {

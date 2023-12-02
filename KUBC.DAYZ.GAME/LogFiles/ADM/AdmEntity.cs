@@ -22,41 +22,34 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
         /// <summary>
         /// Прочитать имя игрока и его идентфикатор
         /// </summary>
-        /// <param name="EndChar">По какому символу ориентироваться о конце индентфикатора</param>
         /// <param name="cancellation">Токен отмены</param>
-        /// <param name="SkipTo">Пробросить до символа. Если этого не указано то выполняем чтение первого слова, и потом его проверяем</param>
         /// <returns>Информация о игроке, или null если прочитать не удалось</returns>
-        protected PlayerInfo? ReadPlayer(char EndChar = ')', CancellationToken? cancellation=null, char? SkipTo=null)
+        protected PlayerInfo? ReadPlayer(CancellationToken? cancellation = null)
         {
-            string? w;
-            if (SkipTo.HasValue)
+            if (CurrentLine!=null)
             {
-                if (!SkipToChar('"', cancellation))
-                    return null;
-            }
-            else
-            {
-                w = ReadToChar(' ', true, cancellation);
-                if (w?.Trim()!="Player")
-                    return null;
-            }
-            w = ReadToChar('(', true, cancellation);
-            if (w != null)
-            {
-                var pi = new PlayerInfo(w.Trim());
-
-                if (!SkipToChar('=', cancellation))
-                    return null;
-                var dayzID = this.ReadToChar(EndChar, true, cancellation);
-                if (dayzID != null)
+                var idStart = CurrentLine.IndexOf("(id=");
+                if (idStart>-1)
                 {
-
-                    pi.ID = dayzID;
-                    return pi;
+                    var name = ReadChars(idStart, cancellation);
+                    if (!string.IsNullOrEmpty(name))
+                    {
+                        var pi = new PlayerInfo(name);
+                        ReadChars(4, cancellation);
+                        var id = ReadChars(44, cancellation);
+                        if (id!=null)
+                        {
+                            pi.ID = id;
+                            return pi;
+                        }    
+                    }
                 }
+
             }
             return null;
         }
+
+
         /// <summary>
         /// Прочитать позикию в которой произошло событие
         /// </summary>

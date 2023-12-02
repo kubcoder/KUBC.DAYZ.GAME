@@ -49,7 +49,7 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
             if (Line.Contains("packed"))
             {
                 base.Init(Line, cancellation);
-                var p = ReadPlayer(' ', cancellation);
+                var p = ReadPlayer(cancellation);
                 if (p != null)
                 {
                     Player = p;

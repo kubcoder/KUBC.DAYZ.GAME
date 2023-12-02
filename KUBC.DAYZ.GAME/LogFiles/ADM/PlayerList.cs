@@ -57,7 +57,7 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
                 return true;
             }
             base.Init(Line, cancellation);
-            var p = ReadPlayer(' ', cancellation);
+            var p = ReadPlayer(cancellation);
             var pos = ReadPosition(')', cancellation);
             var rp = new PlayerPosition();
             if (p != null)

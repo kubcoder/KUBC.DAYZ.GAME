@@ -41,7 +41,7 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
             if (Line.Contains("folded"))
             {
                 base.Init(Line, cancellation);
-                var p = ReadPlayer(' ', cancellation);
+                var p = ReadPlayer(cancellation);
                 if (p != null)
                 {
                     Player = p;
