@@ -30,7 +30,7 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
 
         }
 
-        static string[] DW = { "Player", "(DEAD)", "Chat(" };
+        static string[] DW = { "Player", "(DEAD)", "Chat(", "(id=" };
 
         /// <summary>
         /// Инициализация класса с указанием ник нейма игрока

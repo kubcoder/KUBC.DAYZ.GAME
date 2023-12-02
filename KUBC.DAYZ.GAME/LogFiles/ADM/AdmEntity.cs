@@ -19,6 +19,8 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
         /// </summary>
         [XmlAttribute]
         public DateTime Time { get; set; } = DateTime.MinValue;
+
+        private const string startID= "(id=";
         /// <summary>
         /// Прочитать имя игрока и его идентфикатор
         /// </summary>
@@ -26,25 +28,27 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
         /// <returns>Информация о игроке, или null если прочитать не удалось</returns>
         protected PlayerInfo? ReadPlayer(CancellationToken? cancellation = null)
         {
-            if (CurrentLine!=null)
+
+            var name = string.Empty;
+            Read();
+            while (LastSymbol.HasValue)
             {
-                var idStart = CurrentLine.IndexOf("(id=");
-                if (idStart>-1)
+                name += LastSymbol.Value;
+                if (name.Length>startID.Length)
                 {
-                    var name = ReadChars(idStart, cancellation);
-                    if (!string.IsNullOrEmpty(name))
+                    if (name.EndsWith(startID))
                     {
                         var pi = new PlayerInfo(name);
-                        ReadChars(4, cancellation);
                         var id = ReadChars(44, cancellation);
-                        if (id!=null)
+                        if (id != null)
                         {
                             pi.ID = id;
                             return pi;
-                        }    
+                        }
                     }
                 }
-
+                if ((cancellation!= null)&&(cancellation.Value.IsCancellationRequested)) { return null; }
+                Read();
             }
             return null;
         }
