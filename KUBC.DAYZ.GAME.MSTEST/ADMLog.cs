@@ -244,6 +244,7 @@ namespace KUBC.DAYZ.GAME.MSTEST
         {
             ///hit by
             string[] Lines = [
+                "Player \"ivankochetkov75\" (DEAD) (id=QkxSa7MlzwN6IBUPwZcyNHMwGpKKQyptjrb8bvqOlXg= pos=<2791.2, 12417.8, 222.5>) killed by  with Оск. граната ЕГД-5",
                 "Player \"[OD] Cicada\" (DEAD) (id=OPg1Eo-hQrQvNxiXQxg1weQGe-intKE26NpYmSkwZYI= pos=<12023.1, 9181.6, 54.2>) killed by ZmbF_ShortSkirt_stripes",
                 "Player \"Your mom is an elephant\" (DEAD) (id=lU_rJdHx4uAbT6WytcFZZB0zPzZLYskELJ2dVtCNQO4= pos=<11788.1, 4611.9, 189.5>) killed by Player \"vladislav zmiyuk\" (id=y9VFAR4GM_QG9_m43m3u2jWD2A-k-hlXaGIWYc7k32w= pos=<11786.5, 4610.8, 189.5>) with Sporter 22 from 2.01984 meters ",
                 "Player \"Your mom is an elephant\" (DEAD) (id=lU_rJdHx4uAbT6WytcFZZB0zPzZLYskELJ2dVtCNQO4= pos=<5999.0, 3277.9, 75.2>) killed by ZmbM_CitizenASkinny_Brown",
