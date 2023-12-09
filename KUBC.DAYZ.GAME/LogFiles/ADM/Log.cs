@@ -21,6 +21,13 @@
         }
 
         /// <inheritdoc/>
+        protected override void OnFileOpen()
+        {
+            base.OnFileOpen();
+            LogStarted = null;
+        }
+
+        /// <inheritdoc/>
         protected override void ParseLine(string Line, CancellationToken? cancellationToken)
         {
             if (Line.Trim() == "**********************************EOF****************************************")
