@@ -17,10 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="TestFiles\MissionFiles\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\KUBC.DAYZ.GAME\KUBC.DAYZ.GAME.csproj" />
   </ItemGroup>
 
@@ -42,6 +38,9 @@
     </None>
     <None Update="TestFiles\MissionFiles\cfggameplay.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\MissionFiles\types.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="TestFiles\TextFile1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
