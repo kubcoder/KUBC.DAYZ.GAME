@@ -24,13 +24,13 @@
         /// <inheritdoc/>
         protected override void ParseLine(string Line, CancellationToken? cancellationToken)
         {
+            if (string.IsNullOrEmpty(Line)) 
+                return;
             if (Line.Trim() == "**********************************EOF****************************************")
                 return;
-            if (LogStarted == null)
-            {
-                ParseStartTime(Line);
-            }
-            else
+            if (Line.Trim() == "******************************************************************************")
+                return;
+            if (!ParseStartTime(Line))
             {
                 if (Line.Length > 8)
                 {
@@ -76,7 +76,7 @@
         /// Находим стартовую дату в логе
         /// </summary>
         /// <param name="Line"></param>
-        private void ParseStartTime(string Line)
+        private bool ParseStartTime(string Line)
         {
 
             if (Line.Contains("AdminLog started on"))
@@ -90,7 +90,9 @@
                         LogStarted = lTime;
                     }
                 }
+                return true;
             }
+            return false;
         }
 
         /// <summary>
