@@ -3,22 +3,16 @@
     /// <summary>
     /// Журнал администраторов игры
     /// </summary>
-    public class Log : File
+    /// <remarks>
+    /// Открываем файл лога админов
+    /// </remarks>
+    /// <param name="openFile">файл который нужно открыть</param>
+    public class Log(FileInfo openFile) : File(openFile)
     {
         /// <summary>
         /// Паттерн поиска файла лога
         /// </summary>
         public const string FileSearch = "*.ADM";
-
-        /// <summary>
-        /// Открываем файл лога админов
-        /// </summary>
-        /// <param name="openFile">файл который нужно открыть</param>
-        public Log(FileInfo openFile) :
-            base(openFile)
-        {
-
-        }
 
         /// <inheritdoc/>
         protected override void OnFileOpen()
