@@ -32,7 +32,7 @@
         {
             if (Line.Trim() == "**********************************EOF****************************************")
                 return;
-            if (!LogStarted.HasValue)
+            if (LogStarted == null)
             {
                 ParseStartTime(Line);
             }
@@ -54,7 +54,7 @@
                         }
                         else
                         {
-                            LineTime = DateTime.Now.Add(Time);
+                            LineTime = DateTime.Today.Add(Time);
                         }
                         if (!ParseADMLine(LineTime, Line[11..], cancellationToken))
                         {
@@ -63,6 +63,11 @@
                     }
                     else
                     {
+                        Errors.Add(new ParseError()
+                        {
+                            Exception = new Exception("Не смогли прочитать строку времени в начале строчки"),
+                            SourceLine = Line
+                        });
                         base.ParseLine(Line, cancellationToken);
                     }
                 }
