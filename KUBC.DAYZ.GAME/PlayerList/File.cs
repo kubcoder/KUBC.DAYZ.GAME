@@ -22,6 +22,25 @@ namespace KUBC.DAYZ.GAME.PlayerList
     public class File(FileInfo fileInfo) : IDisposable
     {
         /// <summary>
+        /// Получить файл банов сервера
+        /// </summary>
+        /// <param name="serverPath">Папочка где валяется экземпляр сервера</param>
+        /// <returns>Описание файла банов</returns>
+        public static FileInfo GetBans(DirectoryInfo serverPath)
+        {
+            return new FileInfo($"{serverPath.FullName}\\ban.txt");
+        }
+        /// <summary>
+        /// Получить файл белого списка сервера
+        /// </summary>
+        /// <param name="serverPath">Папочка где валяется экземпляр сервера</param>
+        /// <returns>Описание файла белого списка</returns>
+        public static FileInfo GetWhiteList(DirectoryInfo serverPath)
+        {
+            return new FileInfo($"{serverPath.FullName}\\whitelist.txt");
+        }
+
+        /// <summary>
         /// Добавить игрока в список
         /// </summary>
         /// <param name="ID">Идентификатор игрока</param>

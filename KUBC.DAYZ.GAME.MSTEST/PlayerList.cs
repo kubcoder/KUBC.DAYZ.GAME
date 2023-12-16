@@ -14,6 +14,9 @@ namespace KUBC.DAYZ.GAME.MSTEST
     public class PlayerList
     {
         
+        /// <summary>
+        /// Тута мы трошки тестим как оно себя ведет когда нужно добавить гамера в списочек
+        /// </summary>
         [TestMethod]
         public void AddToFile()
         {
@@ -23,7 +26,9 @@ namespace KUBC.DAYZ.GAME.MSTEST
             ex = file.Add("2111111111112222222222222333333333XXXXXXAAAA", "заметка");
             Assert.IsNull(ex, ex?.Message);
         }
-
+        /// <summary>
+        /// Тута мы трошки тестим как оно себя ведет когда нужно удалить гамера из списочка
+        /// </summary>
         [TestMethod]
         public void RemoveFromFile()
         {
@@ -58,6 +63,18 @@ namespace KUBC.DAYZ.GAME.MSTEST
             }
             Console.WriteLine("==================== Опа файлик закончился то ===============");
             Assert.IsFalse(file.InList(targetID));
+        }
+        /// <summary>
+        /// Тута мы трошки тестим получается ли найти нужные файлики
+        /// </summary>
+        [TestMethod]
+        public void TestFoundFiles()
+        {
+            var path = new DirectoryInfo("C:\\Program Files (x86)\\Steam\\steamapps\\common\\DayZServer");
+            var bans = GAME.PlayerList.File.GetBans(path);
+            Assert.IsTrue(bans.Exists);
+            var white = GAME.PlayerList.File.GetWhiteList(path);
+            Assert.IsTrue(white.Exists);
         }
     }
 }
