@@ -16,10 +16,11 @@
         /// Текущий лог
         /// </summary>
         private readonly FileInfo OpenFile = openFile;
+
         /// <summary>
         /// Список ошибок возникающих при парсинге
         /// </summary>
-        public List<ParseError> Errors = new();
+        public List<ParseError> Errors = [];
         /// <summary>
         /// Поток для чтения файла
         /// </summary>
@@ -43,6 +44,42 @@
                 return null;
             }
         }
+        /// <summary>
+        /// Имя файла лога который читается
+        /// </summary>
+        public string FileName
+        {
+            get
+            {
+                return OpenFile.Name;
+            }
+        }
+        /// <summary>
+        /// Когда последний раз была запись в лог
+        /// </summary>
+        public DateTime LastModified
+        {
+            get
+            {
+                return OpenFile.LastWriteTime;
+            }
+        }
+        /// <summary>
+        /// Текущая позиция в файле. Если NULL то файл не открыт для чтения
+        /// </summary>
+        public long? PositionRead
+        {
+            get
+            {
+                if (fileReader!=null)
+                {
+                    return fileReader.BaseStream.Position;
+                }
+                return null;
+            }
+        }
+
+
         
 
         /// <summary>
@@ -81,7 +118,7 @@
         /// <summary>
         /// Символы прочитанные из файла
         /// </summary>
-        private List<int> Chars = new();
+        private readonly List<int> Chars = [];
 
         /// <summary>
         /// Получить текущую строчку лога
@@ -92,7 +129,7 @@
             string l = string.Empty;
             foreach(var c in Chars) { l+= (char)c; }
             Chars.Clear();
-            return l;
+            return l.Trim();
         }
         /// <summary>
         /// Дочитали до конца строки

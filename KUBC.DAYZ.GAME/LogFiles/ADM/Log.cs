@@ -3,33 +3,34 @@
     /// <summary>
     /// Журнал администраторов игры
     /// </summary>
-    public class Log : File
+    /// <remarks>
+    /// Открываем файл лога админов
+    /// </remarks>
+    /// <param name="openFile">файл который нужно открыть</param>
+    public class Log(FileInfo openFile) : File(openFile)
     {
         /// <summary>
         /// Паттерн поиска файла лога
         /// </summary>
         public const string FileSearch = "*.ADM";
 
-        /// <summary>
-        /// Открываем файл лога админов
-        /// </summary>
-        /// <param name="openFile">файл который нужно открыть</param>
-        public Log(FileInfo openFile) :
-            base(openFile)
+        /// <inheritdoc/>
+        protected override void OnFileOpen()
         {
-
+            base.OnFileOpen();
+            LogStarted = null;
         }
 
         /// <inheritdoc/>
         protected override void ParseLine(string Line, CancellationToken? cancellationToken)
         {
+            if (string.IsNullOrEmpty(Line)) 
+                return;
             if (Line.Trim() == "**********************************EOF****************************************")
                 return;
-            if (!LogStarted.HasValue)
-            {
-                ParseStartTime(Line);
-            }
-            else
+            if (Line.Trim() == "******************************************************************************")
+                return;
+            if (!ParseStartTime(Line))
             {
                 if (Line.Length > 8)
                 {
@@ -47,7 +48,7 @@
                         }
                         else
                         {
-                            LineTime = DateTime.Now.Add(Time);
+                            LineTime = DateTime.Today.Add(Time);
                         }
                         if (!ParseADMLine(LineTime, Line[11..], cancellationToken))
                         {
@@ -56,6 +57,11 @@
                     }
                     else
                     {
+                        Errors.Add(new ParseError()
+                        {
+                            Exception = new Exception("Не смогли прочитать строку времени в начале строчки"),
+                            SourceLine = Line
+                        });
                         base.ParseLine(Line, cancellationToken);
                     }
                 }
@@ -70,7 +76,7 @@
         /// Находим стартовую дату в логе
         /// </summary>
         /// <param name="Line"></param>
-        private void ParseStartTime(string Line)
+        private bool ParseStartTime(string Line)
         {
 
             if (Line.Contains("AdminLog started on"))
@@ -84,7 +90,9 @@
                         LogStarted = lTime;
                     }
                 }
+                return true;
             }
+            return false;
         }
 
         /// <summary>

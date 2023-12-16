@@ -85,7 +85,21 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
                             }
                             else
                             {
-                                Source.NickName = w;
+                                if (w== "with")
+                                {
+                                    w = ReadToChar(' ', true, cancellation);
+                                    while(!string.IsNullOrEmpty(w))
+                                    {
+                                        Source.NickName = $"{Source.NickName} {w.Trim()}";
+                                        w = ReadToChar(' ', true, cancellation);
+                                    }
+                                    return true;
+                                }
+                                else
+                                {
+                                    Source.NickName = w;
+                                }
+                                
                             }
                             w = ReadToChar(' ', true, cancellation);
                             if (w != null)

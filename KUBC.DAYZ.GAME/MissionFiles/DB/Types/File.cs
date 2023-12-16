@@ -1,4 +1,5 @@
-﻿using System.Xml.Serialization;
+﻿using System;
+using System.Xml.Serialization;
 
 namespace KUBC.DAYZ.GAME.MissionFiles.DB.Types
 {
@@ -21,6 +22,10 @@ namespace KUBC.DAYZ.GAME.MissionFiles.DB.Types
         /// Имя папки файла types.xml в папке миссии
         /// </summary>
         public const string PATHNAME = "db";
+        /// <summary>
+        /// Имя файла откуда была загрузка
+        /// </summary>
+        private string FileName = string.Empty;
 
         /// <summary>
         /// Получить имя файла
@@ -64,7 +69,9 @@ namespace KUBC.DAYZ.GAME.MissionFiles.DB.Types
                 if (file != null)
                 {
                     reader.Close();
-                    return (File)file;
+                    var r = (File)file;
+                    r.FileName = FullFileName;
+                    return r;
 
                 }
             }
@@ -83,6 +90,13 @@ namespace KUBC.DAYZ.GAME.MissionFiles.DB.Types
         public void Save(string FullFileName)
         {
             var writer = new StreamWriter(FullFileName);
+            Save(writer.BaseStream);
+            writer.Close();
+            this.FileName = FullFileName;
+        }
+
+        private void Save(System.IO.Stream writer)
+        {
             System.Xml.XmlWriter wrt = System.Xml.XmlWriter.Create(writer, new System.Xml.XmlWriterSettings()
             {
                 OmitXmlDeclaration = false,
@@ -93,9 +107,33 @@ namespace KUBC.DAYZ.GAME.MissionFiles.DB.Types
             XmlSerializer serializer = new(typeof(File));
             serializer.Serialize(wrt, this, xns);
             wrt.Flush();
-            writer.Close();
         }
 
+        /// <summary>
+        /// Получить представление коллекции в виде строки XML
+        /// </summary>
+        /// <returns></returns>
+        public string GetXML()
+        {
+            using var writer = new MemoryStream();
+            Save(writer);
+            var bytes = writer.ToArray();
+            writer.Close();
+            return System.Text.Encoding.Default.GetString(bytes);
+        }
+
+        /// <summary>
+        /// Сохранить изменения в файл
+        /// </summary>
+        /// <remarks>
+        /// Метод адекватно работает если класс был загружен из файла
+        /// Если файл не был загружен то метод не выполнит нифига
+        /// </remarks>
+        public void Save()
+        {
+            if (!string.IsNullOrEmpty(FileName))
+                Save(FileName);
+        }
 
 
     }
