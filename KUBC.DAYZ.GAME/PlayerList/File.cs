@@ -69,6 +69,8 @@ namespace KUBC.DAYZ.GAME.PlayerList
             }
         }
 
+        
+
         /// <summary>
         /// Уничтожить класс
         /// </summary>
@@ -101,6 +103,25 @@ namespace KUBC.DAYZ.GAME.PlayerList
                 }
             }
             return false;
+        }
+
+        /// <summary>
+        /// Получить список игроков в файле
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<PlayerLine> GetPlayers()
+        {
+            List<PlayerLine> r = [];
+            using (var rStream = fileInfo.OpenText())
+            {
+                var Line = rStream.ReadLine();
+                while (Line != null)
+                {
+                    r.Add(new(Line));
+                    Line = rStream.ReadLine();
+                }
+            }
+            return r;
         }
 
         /// <summary>
