@@ -20,4 +20,10 @@
     <ProjectReference Include="..\KUBC.DAYZ.GAME\KUBC.DAYZ.GAME.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="TestFiles\GameLogs\LOG.RPT">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
