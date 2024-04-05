@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 namespace KUBC.DAYZ.GAME.LogFiles.RPT
 {
     /// <summary>
-    /// Парсер FPS
+    /// Парсер используемой памяти
     /// </summary>
-    public class AverageFPSParser : RPTStringParser
+    public class UsedMemoryPaser : RPTStringParser
     {
-        private const string START = "Average server FPS";
+        private const string START = "Used memory";
 
         /// <inheritdoc/>
         public override ILogEntity? CreateEntity(string logLine, CancellationToken? cancellation = null)
@@ -24,16 +24,16 @@ namespace KUBC.DAYZ.GAME.LogFiles.RPT
                     {
                         return null;
                     }
-                    var FPSString = ReadToChar(' ', true, cancellation);
-                    if (!string.IsNullOrEmpty(FPSString)) 
+                    var MemoryString = ReadToChar(' ', true, cancellation);
+                    if (!string.IsNullOrEmpty(MemoryString))
                     {
                         var Culture = System.Globalization.CultureInfo.InvariantCulture;
-                        if (float.TryParse(FPSString, System.Globalization.NumberStyles.Float, Culture.NumberFormat, out float fps))
+                        if (long.TryParse(MemoryString, System.Globalization.NumberStyles.Float, Culture.NumberFormat, out long memoryKB))
                         {
                             Dispose();
-                            if (logTime!=null)
+                            if (logTime != null)
                             {
-                                return new AverageFPS() { FPS = fps, Time = logTime.Value };
+                                return new UsedMemory() { MemoryKB = memoryKB, Time = logTime.Value };
                             }
                         }
                     }

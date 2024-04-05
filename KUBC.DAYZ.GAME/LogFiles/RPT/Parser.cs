@@ -14,6 +14,8 @@ namespace KUBC.DAYZ.GAME.LogFiles.RPT
         public Parser() 
         {
             Creators.Add(new AverageFPSParser());
+            Creators.Add(new UsedMemoryPaser());
+            Creators.Add(new ConnectEventParser());
         }
     }
 }

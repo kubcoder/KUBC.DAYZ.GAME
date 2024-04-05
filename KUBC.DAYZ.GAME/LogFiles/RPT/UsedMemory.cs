@@ -8,15 +8,14 @@ using System.Xml.Serialization;
 namespace KUBC.DAYZ.GAME.LogFiles.RPT
 {
     /// <summary>
-    /// Среднее ФПС сервера
+    /// Данные об используемой памяти
     /// </summary>
-    public class AverageFPS : RPTEntity
+    public class UsedMemory : RPTEntity
     {
         /// <summary>
-        /// Измеренный ФПС
+        /// Используемая память в КБ
         /// </summary>
         [XmlText]
-        public float FPS { get; set; } = 0;
-
+        public long MemoryKB { get; set; } = 0;
     }
 }

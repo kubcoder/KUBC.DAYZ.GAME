@@ -42,10 +42,6 @@ namespace KUBC.DAYZ.GAME.LogFiles.RPT
                     return false;
                 }
             }
-            if (!SkipToChar(':', cancellation))
-            {
-                return false;
-            }
             return true;
         }
     }
