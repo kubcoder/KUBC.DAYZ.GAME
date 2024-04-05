@@ -12,6 +12,11 @@ namespace KUBC.DAYZ.GAME.LogFiles
     public interface ILogEntity
     {
         /// <summary>
+        /// Дата и время события из журнала
+        /// </summary>
+        public DateTime Time  {get;set;}
+        
+        /// <summary>
         /// Проверка на завершение чтение данных
         /// </summary>
         /// <returns>Если истина то событие полностью прочитано и событие можно использовать далее</returns>
@@ -22,5 +27,10 @@ namespace KUBC.DAYZ.GAME.LogFiles
         /// <param name="Line">Данные добавляемые в событие</param>
         /// <returns>Истина если чтение данных закончено, ложь если нужно добавить еще строчка</returns>
         public bool AppendLine(string Line);
+        /// <summary>
+        /// Получить представление события в виде XML
+        /// </summary>
+        /// <returns>Данные из лога в виде строки с разметкой XML</returns>
+        public string GetXML();
     }
 }

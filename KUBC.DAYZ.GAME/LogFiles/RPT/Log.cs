@@ -11,6 +11,18 @@ namespace KUBC.DAYZ.GAME.LogFiles.RPT
     /// </summary>
     public class Log : File
     {
+        /// <summary>
+        /// Парсер лога RPT
+        /// </summary>
+        private Parser parser;
+        /// <summary>
+        /// Создаем экземпляр RPT лога
+        /// </summary>
+        public Log()
+        {
+            parser = new Parser();
+        }
+        
         /// <inheritdoc/>
         protected override ILogEntity? ParseLine(string LogLine)
         {
@@ -20,9 +32,50 @@ namespace KUBC.DAYZ.GAME.LogFiles.RPT
             }
             else
             {
-
+                var entity = parser.CreateEntity(LogLine);
+                if (entity != null) 
+                {
+                    entity.Time = CorrectTime(entity.Time);
+                    return entity;
+                }
             }
             return null;
+        }
+
+
+        /// <summary>
+        /// Корректируем дату и время.
+        /// В частности если в лог пишется только время то добавляем дату
+        /// начала записи лога.
+        /// </summary>
+        /// <param name="sTime">Дата и время из события</param>
+        /// <returns>Правильное дата и время</returns>
+        private DateTime CorrectTime(DateTime sTime)
+        {
+            if (sTime.Year == 1)
+            {
+                if (LogStarted != null)
+                {
+                    if (sTime.TimeOfDay < LogStarted.Value.TimeOfDay)
+                    {
+                        sTime = LogStarted.Value.Date.Add(sTime.TimeOfDay);
+                        return sTime.AddDays(1);
+                    }
+                    else
+                    {
+                        return LogStarted.Value.Date.Add(sTime.TimeOfDay);
+                    }
+                }
+                else
+                {
+                    return DateTime.Today.Date.Add(sTime.TimeOfDay);
+                }
+            }
+            else
+            {
+                return sTime;
+            }
+
         }
 
         /// <inheritdoc/>
