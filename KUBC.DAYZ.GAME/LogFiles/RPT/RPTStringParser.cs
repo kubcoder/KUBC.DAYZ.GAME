@@ -10,7 +10,9 @@ namespace KUBC.DAYZ.GAME.LogFiles.RPT
     /// Парсер строчки лога RPT.
     /// </summary>
     /// <remarks>
-    /// При инициализации читаем время события
+    /// Добавлено что при инициализации выполняется чтение даты или времени 
+    /// когда была добавлена строчка если это не получилось, разбор 
+    /// парсером будет прерван.
     /// </remarks>
     public abstract class RPTStringParser:StringParser
     {
@@ -19,6 +21,7 @@ namespace KUBC.DAYZ.GAME.LogFiles.RPT
         /// </summary>
         protected DateTime? logTime;
 
+        /// <inheritdoc/>
         protected override bool Init(string Line, CancellationToken? cancellation = null)
         {
             base.Init(Line, cancellation);

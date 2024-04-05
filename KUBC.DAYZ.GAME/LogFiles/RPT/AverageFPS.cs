@@ -10,7 +10,7 @@ namespace KUBC.DAYZ.GAME.LogFiles.RPT
     /// <summary>
     /// Среднее ФПС сервера
     /// </summary>
-    public class AverageFPS : RPTEntity
+    public class AverageFPS : OneLineEntity
     {
         /// <summary>
         /// Измеренный ФПС

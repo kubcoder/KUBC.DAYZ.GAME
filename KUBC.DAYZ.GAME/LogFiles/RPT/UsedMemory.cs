@@ -10,7 +10,7 @@ namespace KUBC.DAYZ.GAME.LogFiles.RPT
     /// <summary>
     /// Данные об используемой памяти
     /// </summary>
-    public class UsedMemory : RPTEntity
+    public class UsedMemory : OneLineEntity
     {
         /// <summary>
         /// Используемая память в КБ

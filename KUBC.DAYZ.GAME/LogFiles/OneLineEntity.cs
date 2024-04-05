@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KUBC.DAYZ.GAME.LogFiles.RPT
+namespace KUBC.DAYZ.GAME.LogFiles
 {
     /// <summary>
-    /// Элемент журнала RPT
+    /// Данные лога которые формируются из одной строчки лога
     /// </summary>
-    public abstract class RPTEntity : LogEntity
+    public abstract class OneLineEntity: LogEntity
     {
         /// <inheritdoc/>
         public override bool AppendLine(string Line)

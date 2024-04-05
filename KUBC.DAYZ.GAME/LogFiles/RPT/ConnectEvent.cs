@@ -9,7 +9,7 @@ namespace KUBC.DAYZ.GAME.LogFiles.RPT
     /// <summary>
     /// Событие подключения игрока
     /// </summary>
-    public class ConnectEvent : RPTEntity
+    public class ConnectEvent : OneLineEntity
     {
         /// <summary>
         /// Steam идентификатор игрока
