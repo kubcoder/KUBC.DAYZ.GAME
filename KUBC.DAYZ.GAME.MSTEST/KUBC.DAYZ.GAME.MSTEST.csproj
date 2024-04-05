@@ -20,28 +20,4 @@
     <ProjectReference Include="..\KUBC.DAYZ.GAME\KUBC.DAYZ.GAME.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <None Update="TestFiles\GameLogs\crash.log">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="TestFiles\GameLogs\DayZServer_x64_2023_08_30_215815690.ADM">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="TestFiles\GameLogs\LOG.ADM">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="TestFiles\GameLogs\LOG.RPT">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="TestFiles\MissionFiles\cfgeffectarea.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="TestFiles\MissionFiles\cfggameplay.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="TestFiles\MissionFiles\types.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-
 </Project>
