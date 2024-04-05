@@ -22,6 +22,21 @@ namespace KUBC.DAYZ.GAME.LogFiles
         }
 
         /// <summary>
+        /// Текущая позиция в файле. Если NULL то файл не открыт для чтения
+        /// </summary>
+        public long? PositionRead
+        {
+            get
+            {
+                if (fileReader != null)
+                {
+                    return fileReader.BaseStream.Position;
+                }
+                return null;
+            }
+        }
+
+        /// <summary>
         /// Поток для чтения файла
         /// </summary>
         private StreamReader? fileReader;
