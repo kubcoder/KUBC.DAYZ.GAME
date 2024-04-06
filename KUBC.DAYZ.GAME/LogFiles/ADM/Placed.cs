@@ -18,30 +18,30 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
     /// </summary>
     public class PlacedParser : ADMPositionParser
     {
-        private const string START = "placed";
-
+        /// <inheritdoc/>
+        protected override string GetTAG()
+        {
+            return "placed";
+        }
         /// <inheritdoc/>
         public override ILogEntity? CreateEntity(string logLine, CancellationToken? cancellation = null)
         {
-            if (logLine.Contains(START))
+            if (Init(logLine, cancellation))
             {
-                if (Init(logLine, cancellation))
-                {
 #pragma warning disable CS8601 // Возможные null отсечены в родительском классе
-                    var res = new Placed()
-                    {
-                        Player = Player,
-                        Position = Position,
-                        Time = logTime.GetValueOrDefault()
-                    };
+                var res = new Placed()
+                {
+                    Player = Player,
+                    Position = Position,
+                    Time = logTime.GetValueOrDefault()
+                };
 #pragma warning restore CS8601
-                    ReadToChar(' ', true, cancellation);
-                    if (Reader != null)
-                    {
-                        res.ItemName = Reader.ReadToEnd();
-                    }
-                    return res;
+                ReadToChar(' ', true, cancellation);
+                if (Reader != null)
+                {
+                    res.ItemName = Reader.ReadToEnd();
                 }
+                return res;
             }
             return null;
         }

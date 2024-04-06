@@ -22,29 +22,29 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
     /// </summary>
     public class ChatParser : ADMPlayerParser
     {
-        private const string START = "Chat";
-
+        /// <inheritdoc/>
+        protected override string GetTAG()
+        {
+            return "Chat";
+        }
         /// <inheritdoc/>
         public override ILogEntity? CreateEntity(string logLine, CancellationToken? cancellation = null)
         {
-            if (logLine.Contains(START))
+            if (Init(logLine, cancellation))
             {
-                if (Init(logLine, cancellation))
-                {
-                    if (!SkipToChar(':', cancellation))
-                        return null;
+                if (!SkipToChar(':', cancellation))
+                    return null;
 
-                    if (Reader != null)
-                    {
+                if (Reader != null)
+                {
 #pragma warning disable CS8601 // Возможные null отсечены в родительском классе
-                        return new Chat()
-                        {
-                            Player = Player,
-                            Text = Reader.ReadToEnd().Trim(),
-                            Time = logTime.GetValueOrDefault()
-                        };
-#pragma warning restore CS8601 
-                    }
+                    return new Chat()
+                    {
+                        Player = Player,
+                        Text = Reader.ReadToEnd().Trim(),
+                        Time = logTime.GetValueOrDefault()
+                    };
+#pragma warning restore CS8601
                 }
             }
             return null;

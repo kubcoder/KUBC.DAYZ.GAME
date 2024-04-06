@@ -27,6 +27,11 @@ namespace KUBC.DAYZ.GAME.LogFiles
         /// </summary>
         protected string? CurrentLine;
 
+        /// <summary>
+        /// Получить ключевой тэг по которому ориентируемся нужно ли разбирать строку
+        /// </summary>
+        /// <returns></returns>
+        protected abstract string GetTAG();
 
         /// <summary>
         /// Инициализируем объект. Обычно это заканчивается
@@ -37,9 +42,13 @@ namespace KUBC.DAYZ.GAME.LogFiles
         /// <returns>Истина если инициализация прошла успешно</returns>
         protected virtual bool Init(string Line, CancellationToken? cancellation = null)
         {
-            Reader = new StringReader(Line);
-            CurrentLine = Line;
-            return true;
+            if(Line.Contains(GetTAG()))
+            {
+                Reader = new StringReader(Line);
+                CurrentLine = Line;
+                return true;
+            }
+            return false;
         }
 
         /// <summary>
@@ -263,8 +272,25 @@ namespace KUBC.DAYZ.GAME.LogFiles
         /// <returns>Результирующая строка</returns>
         protected float? ReadFloat(char StopChar, bool SkipLast = false, CancellationToken? cancellation = null)
         {
-            var numberString = ReadToChar(']', true, cancellation);
+            var numberString = ReadToChar(StopChar, SkipLast, cancellation);
             if (float.TryParse(numberString, style, culture, out var number))
+            {
+                return number;
+            }
+            return null;
+        }
+
+        /// <summary>
+        /// Прочитать строку до первого вхождения символа и распознать это как целое число
+        /// </summary>
+        /// <param name="StopChar">На каком символе остановится</param>
+        /// <param name="cancellation">Токен отмены действия</param>
+        /// <param name="SkipLast">Пробросить последний символ и принудительно перейти к следующему</param>
+        /// <returns>Результирующая строка</returns>
+        protected int? ReadInt(char StopChar, bool SkipLast = false, CancellationToken? cancellation = null)
+        {
+            var numberString = ReadToChar(StopChar, SkipLast, cancellation);
+            if (int.TryParse(numberString, style, culture, out var number))
             {
                 return number;
             }

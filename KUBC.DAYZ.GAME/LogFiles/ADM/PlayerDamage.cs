@@ -11,7 +11,7 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
     /// <summary>
     /// Информация о получении игроком дамажа
     /// </summary>
-    public class PlayerDamage:PositionLogEntity
+    public class PlayerDamage : PositionLogEntity
     {
         /// <summary>
         /// Здоровье игрока на момент получения урона
@@ -55,133 +55,134 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
     /// </summary>
     public class PlayerDamageParser : ADMPositionParser
     {
-        private const string START = "hit by";
+        /// <inheritdoc/>
+        protected override string GetTAG()
+        {
+            return "hit by";
+        }
 
         /// <inheritdoc/>
         public override ILogEntity? CreateEntity(string logLine, CancellationToken? cancellation = null)
         {
-            if (logLine.Contains(START))
+            if (Init(logLine, cancellation))
             {
-                if (Init(logLine, cancellation))
-                {
 #pragma warning disable CS8601 // Возможные null отсечены в родительском классе
-                    var res = new PlayerDamage()
-                    {
-                        Player = Player,
-                        Position = Position,
-                        Time = logTime.GetValueOrDefault()
-                    };
+                var res = new PlayerDamage()
+                {
+                    Player = Player,
+                    Position = Position,
+                    Time = logTime.GetValueOrDefault()
+                };
 #pragma warning restore CS8601
-                    if (!SkipToChar(':', cancellation))
-                        return null;
-                    var hp = ReadFloat(']', true, cancellation);
-                    if (hp.HasValue)
+                if (!SkipToChar(':', cancellation))
+                    return null;
+                var hp = ReadFloat(']', true, cancellation);
+                if (hp.HasValue)
+                {
+                    res.HP = hp.Value;
+                    ReadToChar(' ', true, cancellation);
+                    ReadToChar(' ', true, cancellation);
+                    var w = ReadToChar(' ', true, cancellation);
+                    if (w != null)
                     {
-                        res.HP = hp.Value;
-                        ReadToChar(' ', true, cancellation);
-                        ReadToChar(' ', true, cancellation);
-                        var w = ReadToChar(' ', true, cancellation);
-                        if (w!=null)
+                        if (w == "Player")
                         {
-                            if (w == "Player")
+                            var sp = ReadPlayer(cancellation);
+                            if (sp != null)
                             {
-                                var sp = ReadPlayer(cancellation);
-                                if (sp != null)
-                                {
-                                    res.Source = sp;
-                                }
-                                var spos = ReadPosition(')', cancellation);
-                                if (spos != null)
-                                {
-                                    res.SPosition = spos;
-                                }
+                                res.Source = sp;
                             }
-                            else
+                            var spos = ReadPosition(')', cancellation);
+                            if (spos != null)
                             {
-                                res.Source.NickName = w;
+                                res.SPosition = spos;
                             }
-                            w = ReadToChar(' ', true, cancellation);
-                            switch (w)
+                        }
+                        else
+                        {
+                            res.Source.NickName = w;
+                        }
+                        w = ReadToChar(' ', true, cancellation);
+                        switch (w)
+                        {
+                            case "into":
+                                w = ReadToChar(' ', true, cancellation);
+                                if (w != null)
+                                    res.Into = w;
+                                break;
+                            case "with":
+                                w = ReadToChar(' ', true, cancellation);
+                                if (w != null)
+                                    res.Weapon = w;
+                                break;
+                        }
+                        w = ReadToChar(' ', true, cancellation);
+                        if (w != null)
+                        {
+                            if (w == "for")
                             {
-                                case "into":
-                                    w = ReadToChar(' ', true, cancellation);
-                                    if (w != null)
-                                        res.Into = w;
-                                    break;
-                                case "with":
-                                    w = ReadToChar(' ', true, cancellation);
-                                    if (w != null)
-                                        res.Weapon = w;
-                                    break;
+                                w = ReadToChar(' ', true, cancellation);
+                                if (float.TryParse(w, style, culture, out var f))
+                                {
+                                    res.Damage = f;
+                                }
                             }
                             w = ReadToChar(' ', true, cancellation);
                             if (w != null)
                             {
-                                if (w == "for")
+                                if (w == "damage")
                                 {
                                     w = ReadToChar(' ', true, cancellation);
-                                    if (float.TryParse(w, style, culture, out var f))
+                                    if (w != null)
                                     {
-                                        res.Damage = f;
+                                        res.Ammo = w;
                                     }
                                 }
                                 w = ReadToChar(' ', true, cancellation);
                                 if (w != null)
                                 {
-                                    if (w == "damage")
+                                    if (w == "with")
                                     {
+                                        bool eWeapon = false;
                                         w = ReadToChar(' ', true, cancellation);
                                         if (w != null)
                                         {
-                                            res.Ammo = w;
-                                        }
-                                    }
-                                    w = ReadToChar(' ', true, cancellation);
-                                    if (w != null)
-                                    {
-                                        if (w == "with")
-                                        {
-                                            bool eWeapon = false;
-                                            w = ReadToChar(' ', true, cancellation);
-                                            if (w != null)
+                                            res.Weapon = w;
+                                            while (!eWeapon)
                                             {
-                                                res.Weapon = w;
-                                                while (!eWeapon)
+                                                w = ReadToChar(' ', true, cancellation);
+                                                if (!string.IsNullOrEmpty(w))
                                                 {
-                                                    w = ReadToChar(' ', true, cancellation);
-                                                    if (!string.IsNullOrEmpty(w))
+                                                    if (w != "from")
                                                     {
-                                                        if (w != "from")
-                                                        {
-                                                            res.Weapon += " ";
-                                                            res.Weapon += w;
-                                                        }
-                                                        else
-                                                        {
-                                                            eWeapon = true;
-                                                        }
+                                                        res.Weapon += " ";
+                                                        res.Weapon += w;
                                                     }
                                                     else
                                                     {
                                                         eWeapon = true;
                                                     }
                                                 }
-                                                if ((w != null) && (w == "from"))
+                                                else
                                                 {
-                                                    var d = ReadFloat(' ', true, cancellation);
-                                                    if (d.HasValue)
-                                                    {
-                                                        res.Distance = d.Value;
-                                                    }
+                                                    eWeapon = true;
                                                 }
                                             }
-
+                                            if ((w != null) && (w == "from"))
+                                            {
+                                                var d = ReadFloat(' ', true, cancellation);
+                                                if (d.HasValue)
+                                                {
+                                                    res.Distance = d.Value;
+                                                }
+                                            }
                                         }
+
                                     }
                                 }
                             }
-                            return res;
                         }
+                        return res;
                     }
                 }
             }

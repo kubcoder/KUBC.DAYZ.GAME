@@ -19,37 +19,34 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
     /// </summary>
     public class DugOutParser : ADMPositionParser
     {
-        private const string START = "Dug out";
-
+        /// <inheritdoc/>
+        protected override string GetTAG()
+        {
+            return "Dug out";
+        }
         /// <inheritdoc/>
         public override ILogEntity? CreateEntity(string logLine, CancellationToken? cancellation = null)
         {
-            if (logLine.Contains(START))
+            if (Init(logLine, cancellation))
             {
-                if (Init(logLine, cancellation))
-                {
 #pragma warning disable CS8601 // Возможные null отсечены в родительском классе
-                    var res = new DugOut()
-                    {
-                        Player = Player,
-                        Position = Position,
-                        Time = logTime.GetValueOrDefault()
-                    };
+                var res = new DugOut()
+                {
+                    Player = Player,
+                    Position = Position,
+                    Time = logTime.GetValueOrDefault()
+                };
 #pragma warning restore CS8601
-                    var w = ReadToChar(' ', true, cancellation);
-                    w = ReadToChar(' ', true, cancellation);
-                    w = ReadToChar(' ', true, cancellation);
-                    w = ReadToChar(' ', true, cancellation);
+                var w = ReadToChar(' ', true, cancellation);
+                if (!string.IsNullOrEmpty(w))
+                {
+                    w = ReadToChar('<', true, cancellation);
                     if (!string.IsNullOrEmpty(w))
                     {
-                        w = ReadToChar('<', true, cancellation);
-                        if (!string.IsNullOrEmpty(w))
-                        {
-                            res.ItemName = w;
-                        }
+                        res.ItemName = w;
                     }
-                    return res;
                 }
+                return res;
             }
             return null;
         }

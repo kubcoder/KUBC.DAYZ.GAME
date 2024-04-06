@@ -29,6 +29,8 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
             InserParser(new PlacedParser());
             InserParser(new PlayerConnectParser());
             InserParser(new PlayerDisconnectParser());
+            InserParser(new PlayerDiedParser());
+            InserParser(new PlayerKilledParser());
         }
     }
 }

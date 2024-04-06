@@ -18,27 +18,27 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
     /// </summary>
     public class BledOutParser : ADMPositionParser
     {
-        private const string START = "bled out";
-
         /// <inheritdoc/>
         public override ILogEntity? CreateEntity(string logLine, CancellationToken? cancellation = null)
         {
-            if (logLine.Contains(START))
+            if (Init(logLine, cancellation))
             {
-                if (Init(logLine, cancellation))
-                {
-                    Dispose();
+                Dispose();
 #pragma warning disable CS8601 // Возможные null отсечены в родительском классе
-                    return new BledOut()
-                    {
-                        Player = Player,
-                        Position = Position,
-                        Time = logTime.GetValueOrDefault()
-                    };
+                return new BledOut()
+                {
+                    Player = Player,
+                    Position = Position,
+                    Time = logTime.GetValueOrDefault()
+                };
 #pragma warning restore CS8601
-                }
             }
             return null;
+        }
+        /// <inheritdoc/>
+        protected override string GetTAG()
+        {
+            return "bled out";
         }
     }
 }

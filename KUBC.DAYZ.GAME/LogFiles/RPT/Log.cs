@@ -15,7 +15,7 @@ namespace KUBC.DAYZ.GAME.LogFiles.RPT
         /// <summary>
         /// Парсер лога RPT
         /// </summary>
-        private RPTParser parser = new RPTParser();
+        private readonly RPTParser parser = new();
         /// <inheritdoc/>
         protected override ILogEntityFabric LogParser => parser;
 
@@ -41,7 +41,7 @@ namespace KUBC.DAYZ.GAME.LogFiles.RPT
             }
             if (Line.Contains(KEYFINDSTARTTIME))
             {
-                var textTime = Line.Substring(KEYFINDSTARTTIME.Length + 1).Trim();
+                var textTime = Line[(KEYFINDSTARTTIME.Length + 1)..].Trim();
                 if (DateTime.TryParse(textTime, out var sTime))
                 {
                     LogStarted = sTime;

@@ -11,30 +11,30 @@ namespace KUBC.DAYZ.GAME.LogFiles.RPT
     /// </summary>
     public class AverageFPSParser : RPTStringParser
     {
-        private const string START = "Average server FPS";
-
+        /// <inheritdoc/>
+        protected override string GetTAG()
+        {
+            return "Average server FPS";
+        }
         /// <inheritdoc/>
         public override ILogEntity? CreateEntity(string logLine, CancellationToken? cancellation = null)
         {
-            if (logLine.Contains(START))
+            if (Init(logLine, cancellation))
             {
-                if (Init(logLine, cancellation))
+                if (!SkipToChar(':', cancellation))
                 {
-                    if (!SkipToChar(':', cancellation))
+                    return null;
+                }
+                var FPSString = ReadToChar(' ', true, cancellation);
+                if (!string.IsNullOrEmpty(FPSString))
+                {
+                    var Culture = System.Globalization.CultureInfo.InvariantCulture;
+                    if (float.TryParse(FPSString, System.Globalization.NumberStyles.Float, Culture.NumberFormat, out float fps))
                     {
-                        return null;
-                    }
-                    var FPSString = ReadToChar(' ', true, cancellation);
-                    if (!string.IsNullOrEmpty(FPSString)) 
-                    {
-                        var Culture = System.Globalization.CultureInfo.InvariantCulture;
-                        if (float.TryParse(FPSString, System.Globalization.NumberStyles.Float, Culture.NumberFormat, out float fps))
+                        Dispose();
+                        if (logTime != null)
                         {
-                            Dispose();
-                            if (logTime!=null)
-                            {
-                                return new AverageFPS() { FPS = fps, Time = logTime.Value };
-                            }
+                            return new AverageFPS() { FPS = fps, Time = logTime.Value };
                         }
                     }
                 }

@@ -17,24 +17,25 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
     /// </summary>
     public class PlayerConnectParser : ADMPlayerParser
     {
-        private const string START = "is connected";
 
+        /// <inheritdoc/>
+        protected override string GetTAG()
+        {
+            return "is connected";
+        }
         /// <inheritdoc/>
         public override ILogEntity? CreateEntity(string logLine, CancellationToken? cancellation = null)
         {
-            if (logLine.Contains(START))
+            if (Init(logLine, cancellation))
             {
-                if (Init(logLine, cancellation))
-                {
 #pragma warning disable CS8601 // Возможные null отсечены в родительском классе
-                    var res = new PlayerConnect()
-                    {
-                        Player = Player,
-                        Time = logTime.GetValueOrDefault()
-                    };
+                var res = new PlayerConnect()
+                {
+                    Player = Player,
+                    Time = logTime.GetValueOrDefault()
+                };
 #pragma warning restore CS8601
-                    return res;
-                }
+                return res;
             }
             return null;
         }

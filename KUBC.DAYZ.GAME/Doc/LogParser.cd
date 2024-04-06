@@ -3,7 +3,7 @@
   <Class Name="KUBC.DAYZ.GAME.LogFiles.MultiEntityFabric">
     <Position X="1" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAgAAAAAAAAIAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAAAAAAAAAIAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
       <FileName>LogFiles\MultiEntityFabric.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.1" />
@@ -11,7 +11,7 @@
   <Class Name="KUBC.DAYZ.GAME.LogFiles.StringParser">
     <Position X="5" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAAAACAAAAAAAgAAQAAQAAABACQCCABAA=</HashCode>
+      <HashCode>AAAAAAAAACAAAAAIAAARAAAgAAQEAQAAABACwCCABAA=</HashCode>
       <FileName>LogFiles\StringParser.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -40,7 +40,7 @@
   <Class Name="KUBC.DAYZ.GAME.LogFiles.ADM.ADMStringParser">
     <Position X="11.75" Y="8" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAgAIAIIAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>LogFiles\ADM\ADMStringParser.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -52,7 +52,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="KUBC.DAYZ.GAME.LogFiles.LineWithTimeParser">
-    <Position X="5" Y="5" Width="1.5" />
+    <Position X="7" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAACAAACAAAAAAA=</HashCode>
       <FileName>LogFiles\LineWithTimeParser.cs</FileName>
@@ -117,14 +117,14 @@
   <Class Name="KUBC.DAYZ.GAME.LogFiles.ADM.ADMPlayerParser">
     <Position X="11.75" Y="11" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAQAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAIIAAAAACAQAAAAA=</HashCode>
       <FileName>LogFiles\ADM\ADMPlayerParser.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="KUBC.DAYZ.GAME.LogFiles.ADM.ADMPositionParser">
     <Position X="14" Y="13.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAgAAAAAAAAAACAAAAAAA=</HashCode>
       <FileName>LogFiles\ADM\ADMPositionParser.cs</FileName>
     </TypeIdentifier>
   </Class>

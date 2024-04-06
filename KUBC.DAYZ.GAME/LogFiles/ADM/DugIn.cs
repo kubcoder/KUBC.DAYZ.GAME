@@ -19,37 +19,39 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
     /// </summary>
     public class DugInParser : ADMPositionParser
     {
-        private const string START = "Dug in";
+        
 
+        /// <inheritdoc/>
+        protected override string GetTAG()
+        {
+            return "Dug in";
+        }
         /// <inheritdoc/>
         public override ILogEntity? CreateEntity(string logLine, CancellationToken? cancellation = null)
         {
-            if (logLine.Contains(START))
+            if (Init(logLine, cancellation))
             {
-                if (Init(logLine, cancellation))
-                {
 #pragma warning disable CS8601 // Возможные null отсечены в родительском классе
-                    var res = new DugIn()
-                    {
-                        Player = Player,
-                        Position = Position,
-                        Time = logTime.GetValueOrDefault()
-                    };
+                var res = new DugIn()
+                {
+                    Player = Player,
+                    Position = Position,
+                    Time = logTime.GetValueOrDefault()
+                };
 #pragma warning restore CS8601
-                    var w = ReadToChar(' ', true, cancellation);
-                    w = ReadToChar(' ', true, cancellation);
-                    w = ReadToChar(' ', true, cancellation);
-                    w = ReadToChar(' ', true, cancellation);
+                ReadToChar(' ', true, cancellation);
+                ReadToChar(' ', true, cancellation);
+                ReadToChar(' ', true, cancellation);
+                var w = ReadToChar(' ', true, cancellation);
+                if (!string.IsNullOrEmpty(w))
+                {
+                    w = ReadToChar('<', true, cancellation);
                     if (!string.IsNullOrEmpty(w))
                     {
-                        w = ReadToChar('<', true, cancellation);
-                        if (!string.IsNullOrEmpty(w))
-                        {
-                            res.ItemName = w;
-                        }
+                        res.ItemName = w;
                     }
-                    return res;
                 }
+                return res;
             }
             return null;
         }

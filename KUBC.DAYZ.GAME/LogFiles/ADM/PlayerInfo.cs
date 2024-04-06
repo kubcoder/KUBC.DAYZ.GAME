@@ -74,6 +74,6 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
         /// <summary>
         /// Элементы которые могут попасть в имя, и их нужно подрезать
         /// </summary>
-        static string[] DW = { "Player", "(DEAD)", "Chat(", "(id=", "is connected" };
+        static readonly string[] DW = ["Player", "(DEAD)", "Chat(", "(id=", "is connected"];
     }
 }

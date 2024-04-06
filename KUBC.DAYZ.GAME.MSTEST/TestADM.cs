@@ -14,67 +14,71 @@ namespace KUBC.DAYZ.GAME.MSTEST
     /// </summary>
     internal class ADMCounters
     {
-        int BledOut = 0;
-        int Built = 0;
-        int Chat = 0;
-        int Dismantled = 0;
-        int DugIn = 0;
-        int DugOut = 0;
-        int Folded = 0;
-        int Lowered = 0;
-        int Raised = 0;
-        int Unmounted = 0;
-        int Mounted = 0;
-        int Packed = 0;
-        int Placed = 0;
-        int PlayerConnect = 0 ;
-        int PlayerDisconnect = 0 ;
-        int PlayerDamage = 0;
+        private readonly int BledOut = 0;
+        private readonly int Built = 0;
+        private readonly int Chat = 0;
+        private readonly int Dismantled = 0;
+        private readonly int DugIn = 0;
+        private readonly int DugOut = 0;
+        private readonly int Folded = 0;
+        private readonly int Lowered = 0;
+        private readonly int Raised = 0;
+        private readonly int Unmounted = 0;
+        private readonly int Mounted = 0;
+        private readonly int Packed = 0;
+        private readonly int Placed = 0;
+        private readonly int PlayerConnect = 0;
+        private readonly int PlayerDisconnect = 0;
+        private readonly int PlayerDamage = 0;
+        private readonly int PlayerDied = 0;
+        private readonly int PlayerKilled = 0;
 
         public int LinesInFile = 0;
 
         public ADMCounters(FileInfo testFile)
         {
-            using (StreamReader fileReader = new StreamReader(testFile.Open(FileMode.Open, FileAccess.Read, FileShare.ReadWrite)))
+            using StreamReader fileReader = new (testFile.Open(FileMode.Open, FileAccess.Read, FileShare.ReadWrite));
+            var line = fileReader.ReadLine();
+            while (line != null)
             {
-                var line = fileReader.ReadLine();
-                while (line != null)
-                {
-                    LinesInFile++;
-                    if (line.Contains("bled out", StringComparison.OrdinalIgnoreCase))
-                        BledOut++;
-                    if (line.Contains("Built", StringComparison.OrdinalIgnoreCase))
-                        Built++;
-                    if (line.Contains("Chat", StringComparison.OrdinalIgnoreCase))
-                        Chat++;
-                    if (line.Contains("Dismantled", StringComparison.OrdinalIgnoreCase))
-                        Dismantled++;
-                    if (line.Contains("Dug in", StringComparison.OrdinalIgnoreCase))
-                        DugIn++;
-                    if (line.Contains("Dug out", StringComparison.OrdinalIgnoreCase))
-                        DugOut++;
-                    if (line.Contains("folded", StringComparison.OrdinalIgnoreCase))
-                        Folded++;
-                    if (line.Contains("has lowered", StringComparison.OrdinalIgnoreCase))
-                        Lowered++;
-                    if (line.Contains("has raised", StringComparison.OrdinalIgnoreCase))
-                        Raised++;
-                    if (line.Contains("Mounted", StringComparison.OrdinalIgnoreCase))
-                        Mounted++;
-                    if (line.Contains("Unmounted", StringComparison.OrdinalIgnoreCase))
-                        Unmounted++;
-                    if (line.Contains("packed", StringComparison.OrdinalIgnoreCase))
-                        Packed++;
-                    if (line.Contains("placed", StringComparison.OrdinalIgnoreCase))
-                        Placed++;
-                    if (line.Contains("is connected", StringComparison.OrdinalIgnoreCase))
-                        PlayerConnect++;
-                    if (line.Contains("has been disconnected", StringComparison.OrdinalIgnoreCase))
-                        PlayerDisconnect++;
-                    if (line.Contains("hit by", StringComparison.OrdinalIgnoreCase))
-                        PlayerDamage++;
-                    line = fileReader.ReadLine();
-                }
+                LinesInFile++;
+                if (line.Contains("bled out", StringComparison.OrdinalIgnoreCase))
+                    BledOut++;
+                if (line.Contains("Built", StringComparison.OrdinalIgnoreCase))
+                    Built++;
+                if (line.Contains("Chat", StringComparison.OrdinalIgnoreCase))
+                    Chat++;
+                if (line.Contains("Dismantled", StringComparison.OrdinalIgnoreCase))
+                    Dismantled++;
+                if (line.Contains("Dug in", StringComparison.OrdinalIgnoreCase))
+                    DugIn++;
+                if (line.Contains("Dug out", StringComparison.OrdinalIgnoreCase))
+                    DugOut++;
+                if (line.Contains("folded", StringComparison.OrdinalIgnoreCase))
+                    Folded++;
+                if (line.Contains("has lowered", StringComparison.OrdinalIgnoreCase))
+                    Lowered++;
+                if (line.Contains("has raised", StringComparison.OrdinalIgnoreCase))
+                    Raised++;
+                if (line.Contains("Mounted", StringComparison.OrdinalIgnoreCase))
+                    Mounted++;
+                if (line.Contains("Unmounted", StringComparison.OrdinalIgnoreCase))
+                    Unmounted++;
+                if (line.Contains("packed", StringComparison.OrdinalIgnoreCase))
+                    Packed++;
+                if (line.Contains("placed", StringComparison.OrdinalIgnoreCase))
+                    Placed++;
+                if (line.Contains("is connected", StringComparison.OrdinalIgnoreCase))
+                    PlayerConnect++;
+                if (line.Contains("has been disconnected", StringComparison.OrdinalIgnoreCase))
+                    PlayerDisconnect++;
+                if (line.Contains("hit by", StringComparison.OrdinalIgnoreCase))
+                    PlayerDamage++;
+                if (line.Contains("died. Stats>", StringComparison.OrdinalIgnoreCase))
+                    PlayerDied++;
+                if (line.Contains("killed by", StringComparison.OrdinalIgnoreCase))
+                    PlayerKilled++;
+                line = fileReader.ReadLine();
             }
         }
 
@@ -169,7 +173,16 @@ namespace KUBC.DAYZ.GAME.MSTEST
                     PlayerDamage++;
                     continue;
                 }
-
+                if (entity.GetType() == typeof(GAME.LogFiles.ADM.PlayerDied))
+                {
+                    PlayerDied++;
+                    continue;
+                }
+                if (entity.GetType() == typeof(GAME.LogFiles.ADM.PlayerKilled))
+                {
+                    PlayerKilled++;
+                    continue;
+                }
             }
         }
         /// <summary>
@@ -210,6 +223,10 @@ namespace KUBC.DAYZ.GAME.MSTEST
             Assert.AreEqual(PlayerDisconnect, readed.PlayerDisconnect);
             Console.WriteLine($"Данных о PlayerDamage в логе {PlayerDamage} загружено как данных {readed.PlayerDamage}");
             Assert.AreEqual(PlayerDamage, readed.PlayerDamage);
+            Console.WriteLine($"Данных о PlayerDied в логе {PlayerDied} загружено как данных {readed.PlayerDied}");
+            Assert.AreEqual(PlayerDied, readed.PlayerDied);
+            Console.WriteLine($"Данных о PlayerKilled в логе {PlayerKilled} загружено как данных {readed.PlayerKilled}");
+            Assert.AreEqual(PlayerKilled, readed.PlayerKilled);
         }
     }
 
@@ -217,9 +234,9 @@ namespace KUBC.DAYZ.GAME.MSTEST
     [TestClass]
     public class TestADM
     {
-        static FileInfo GetTestFile() => new FileInfo("TestFiles\\GameLogs\\LOG.ADM");
+        static FileInfo GetTestFile() => new("TestFiles\\GameLogs\\LOG.ADM");
 
-        List<string> UnknowLines = new List<string>();
+        readonly List<string> UnknowLines = [];
 
         /// <summary>
         /// Тест чтения законченого лога ADM
@@ -415,24 +432,21 @@ namespace KUBC.DAYZ.GAME.MSTEST
         public void Placed()
         {
             var parser = new GAME.LogFiles.ADM.PlacedParser();
-            using (StreamReader fileReader = new StreamReader(GetTestFile().Open(FileMode.Open, FileAccess.Read, FileShare.ReadWrite)))
+            using StreamReader fileReader = new (GetTestFile().Open(FileMode.Open, FileAccess.Read, FileShare.ReadWrite));
+            var line = fileReader.ReadLine();
+            while (line != null)
             {
-                var line = fileReader.ReadLine();
-                while(line!=null)
+                if (line.Contains("Placed", StringComparison.OrdinalIgnoreCase))
                 {
-                    if (line.Contains("Placed", StringComparison.OrdinalIgnoreCase))
-                    {
-                        Console.WriteLine(line);
-                        var entity = parser.CreateEntity(line);
-                        Assert.IsNotNull(entity);
-                        Console.WriteLine(entity.GetXML());
-                        Console.WriteLine();
-                    }
-                    line = fileReader.ReadLine();
+                    Console.WriteLine(line);
+                    var entity = parser.CreateEntity(line);
+                    Assert.IsNotNull(entity);
+                    Console.WriteLine(entity.GetXML());
+                    Console.WriteLine();
                 }
-                
+                line = fileReader.ReadLine();
             }
-            
+
         }
         /// <summary>
         /// Тестируем событие чтения Packed
@@ -455,22 +469,19 @@ namespace KUBC.DAYZ.GAME.MSTEST
         public void Disconect()
         {
             var parser = new GAME.LogFiles.ADM.PlayerDisconnectParser();
-            using (StreamReader fileReader = new StreamReader(GetTestFile().Open(FileMode.Open, FileAccess.Read, FileShare.ReadWrite)))
+            using StreamReader fileReader = new(GetTestFile().Open(FileMode.Open, FileAccess.Read, FileShare.ReadWrite));
+            var line = fileReader.ReadLine();
+            while (line != null)
             {
-                var line = fileReader.ReadLine();
-                while (line != null)
+                if (line.Contains("has been disconnected", StringComparison.OrdinalIgnoreCase))
                 {
-                    if (line.Contains("has been disconnected", StringComparison.OrdinalIgnoreCase))
-                    {
-                        Console.WriteLine(line);
-                        var entity = parser.CreateEntity(line);
-                        Assert.IsNotNull(entity);
-                        Console.WriteLine(entity.GetXML());
-                        Console.WriteLine();
-                    }
-                    line = fileReader.ReadLine();
+                    Console.WriteLine(line);
+                    var entity = parser.CreateEntity(line);
+                    Assert.IsNotNull(entity);
+                    Console.WriteLine(entity.GetXML());
+                    Console.WriteLine();
                 }
-
+                line = fileReader.ReadLine();
             }
         }
         /// <summary>
@@ -480,24 +491,64 @@ namespace KUBC.DAYZ.GAME.MSTEST
         public void Damage()
         {
             var parser = new GAME.LogFiles.ADM.PlayerDamageParser();
-            using (StreamReader fileReader = new StreamReader(GetTestFile().Open(FileMode.Open, FileAccess.Read, FileShare.ReadWrite)))
+            using StreamReader fileReader = new (GetTestFile().Open(FileMode.Open, FileAccess.Read, FileShare.ReadWrite));
+            var line = fileReader.ReadLine();
+            while (line != null)
             {
-                var line = fileReader.ReadLine();
-                while (line != null)
+                if (line.Contains("hit by", StringComparison.OrdinalIgnoreCase))
                 {
-                    if (line.Contains("hit by", StringComparison.OrdinalIgnoreCase))
-                    {
-                        Console.WriteLine(line);
-                        var entity = parser.CreateEntity(line);
-                        Assert.IsNotNull(entity);
-                        Console.WriteLine(entity.GetXML());
-                        Console.WriteLine();
-                    }
-                    line = fileReader.ReadLine();
+                    Console.WriteLine(line);
+                    var entity = parser.CreateEntity(line);
+                    Assert.IsNotNull(entity);
+                    Console.WriteLine(entity.GetXML());
+                    Console.WriteLine();
                 }
-
+                line = fileReader.ReadLine();
             }
-
+        }
+        /// <summary>
+        /// Тестируем событие чтения Damage
+        /// </summary>
+        [TestMethod]
+        public void PlayerDied()
+        {
+            var parser = new GAME.LogFiles.ADM.PlayerDiedParser();
+            using StreamReader fileReader = new(GetTestFile().Open(FileMode.Open, FileAccess.Read, FileShare.ReadWrite));
+            var line = fileReader.ReadLine();
+            while (line != null)
+            {
+                if (line.Contains("died. Stats>", StringComparison.OrdinalIgnoreCase))
+                {
+                    Console.WriteLine(line);
+                    var entity = parser.CreateEntity(line);
+                    Assert.IsNotNull(entity);
+                    Console.WriteLine(entity.GetXML());
+                    Console.WriteLine();
+                }
+                line = fileReader.ReadLine();
+            }
+        }
+        /// <summary>
+        /// Тестируем событие чтения Damage
+        /// </summary>
+        [TestMethod]
+        public void PlayerKilled()
+        {
+            var parser = new GAME.LogFiles.ADM.PlayerKilledParser();
+            using StreamReader fileReader = new(GetTestFile().Open(FileMode.Open, FileAccess.Read, FileShare.ReadWrite));
+            var line = fileReader.ReadLine();
+            while (line != null)
+            {
+                if (line.Contains("killed by>", StringComparison.OrdinalIgnoreCase))
+                {
+                    Console.WriteLine(line);
+                    var entity = parser.CreateEntity(line);
+                    Assert.IsNotNull(entity);
+                    Console.WriteLine(entity.GetXML());
+                    Console.WriteLine();
+                }
+                line = fileReader.ReadLine();
+            }
         }
 
     }

@@ -9,7 +9,7 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
     /// <summary>
     /// Упаковка объекта для переноски
     /// </summary>
-    public class Packed:ItemLogEntity
+    public class Packed : ItemLogEntity
     {
         /// <summary>
         /// Инструмент которым пользовался игрок
@@ -27,60 +27,61 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
     /// </summary>
     public class PackedParser : ADMPositionParser
     {
-        private const string START = "packed";
-
+        /// <inheritdoc/>
+        protected override string GetTAG()
+        {
+            return "packed";
+        }
         /// <inheritdoc/>
         public override ILogEntity? CreateEntity(string logLine, CancellationToken? cancellation = null)
         {
-            if (logLine.Contains(START))
+
+            if (Init(logLine, cancellation))
             {
-                if (Init(logLine, cancellation))
-                {
 #pragma warning disable CS8601 // Возможные null отсечены в родительском классе
-                    var res = new Packed()
-                    {
-                        Player = Player,
-                        Position = Position,
-                        Time = logTime.GetValueOrDefault()
-                    };
+                var res = new Packed()
+                {
+                    Player = Player,
+                    Position = Position,
+                    Time = logTime.GetValueOrDefault()
+                };
 #pragma warning restore CS8601
-                    var w = ReadToChar(' ', true, cancellation);
+                ReadToChar(' ', true, cancellation);
+                var w = ReadToChar(' ', true, cancellation);
+                var sB = new StringBuilder();
+                if (!string.IsNullOrEmpty(w))
+                {
+                    sB.Append(w.Trim());
+                }
+                while (!string.IsNullOrEmpty(w))
+                {
                     w = ReadToChar(' ', true, cancellation);
-                    var sB = new StringBuilder();
-                    if (!string.IsNullOrEmpty(w))
+                    if (w == "with")
                     {
-                        sB.Append(w.Trim());
+                        w = null;
                     }
-                    while (!string.IsNullOrEmpty(w))
+                    else
                     {
-                        w = ReadToChar(' ', true, cancellation);
-                        if (w == "with")
-                        {
-                            w = null;
-                        }
-                        else
-                        {
-                            sB.Append(' ');
-                            sB.Append(w);
-                            
-                        }
-                    }
-                    res.ItemName = sB.ToString();
-                    sB.Clear();
-                    w = ReadToChar(' ', true, cancellation);
-                    if (!string.IsNullOrEmpty(w))
-                    {
-                        sB.Append(w.Trim());
-                    }
-                    while (!string.IsNullOrEmpty(w))
-                    {
-                        w = ReadToChar(' ', true, cancellation);
                         sB.Append(' ');
                         sB.Append(w);
+
                     }
-                    res.Tool = sB.ToString().TrimEnd();
-                    return res;
                 }
+                res.ItemName = sB.ToString();
+                sB.Clear();
+                w = ReadToChar(' ', true, cancellation);
+                if (!string.IsNullOrEmpty(w))
+                {
+                    sB.Append(w.Trim());
+                }
+                while (!string.IsNullOrEmpty(w))
+                {
+                    w = ReadToChar(' ', true, cancellation);
+                    sB.Append(' ');
+                    sB.Append(w);
+                }
+                res.Tool = sB.ToString().TrimEnd();
+                return res;
             }
             return null;
         }

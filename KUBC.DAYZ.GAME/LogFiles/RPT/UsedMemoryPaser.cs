@@ -11,30 +11,30 @@ namespace KUBC.DAYZ.GAME.LogFiles.RPT
     /// </summary>
     public class UsedMemoryPaser : RPTStringParser
     {
-        private const string START = "Used memory";
-
+        /// <inheritdoc/>
+        protected override string GetTAG()
+        {
+            return "Used memory";
+        }
         /// <inheritdoc/>
         public override ILogEntity? CreateEntity(string logLine, CancellationToken? cancellation = null)
         {
-            if (logLine.Contains(START))
+            if (Init(logLine, cancellation))
             {
-                if (Init(logLine, cancellation))
+                if (!SkipToChar(':', cancellation))
                 {
-                    if (!SkipToChar(':', cancellation))
+                    return null;
+                }
+                var MemoryString = ReadToChar(' ', true, cancellation);
+                if (!string.IsNullOrEmpty(MemoryString))
+                {
+                    var Culture = System.Globalization.CultureInfo.InvariantCulture;
+                    if (long.TryParse(MemoryString, System.Globalization.NumberStyles.Float, Culture.NumberFormat, out long memoryKB))
                     {
-                        return null;
-                    }
-                    var MemoryString = ReadToChar(' ', true, cancellation);
-                    if (!string.IsNullOrEmpty(MemoryString))
-                    {
-                        var Culture = System.Globalization.CultureInfo.InvariantCulture;
-                        if (long.TryParse(MemoryString, System.Globalization.NumberStyles.Float, Culture.NumberFormat, out long memoryKB))
+                        Dispose();
+                        if (logTime != null)
                         {
-                            Dispose();
-                            if (logTime != null)
-                            {
-                                return new UsedMemory() { MemoryKB = memoryKB, Time = logTime.Value };
-                            }
+                            return new UsedMemory() { MemoryKB = memoryKB, Time = logTime.Value };
                         }
                     }
                 }

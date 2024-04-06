@@ -27,41 +27,41 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
     /// </summary>
     public class MountedParser : ADMPositionParser
     {
-        private const string START = "Mounted";
-
+        /// <inheritdoc/>
+        protected override string GetTAG()
+        {
+            return "Mounted";
+        }
         /// <inheritdoc/>
         public override ILogEntity? CreateEntity(string logLine, CancellationToken? cancellation = null)
         {
-            if (logLine.Contains(START))
+            if (Init(logLine, cancellation))
             {
-                if (Init(logLine, cancellation))
-                {
 #pragma warning disable CS8601 // Возможные null отсечены в родительском классе
-                    var res = new Mounted()
-                    {
-                        Player = Player,
-                        Position = Position,
-                        Time = logTime.GetValueOrDefault()
-                    };
+                var res = new Mounted()
+                {
+                    Player = Player,
+                    Position = Position,
+                    Time = logTime.GetValueOrDefault()
+                };
 #pragma warning restore CS8601
-                    var w = ReadToChar(' ', true, cancellation);
+                ReadToChar(' ', true, cancellation);
+                ReadToChar(' ', true, cancellation);
+                ReadToChar(' ', true, cancellation);
+                var w = ReadToChar(' ', true, cancellation);
+                if (!string.IsNullOrEmpty(w))
+                {
+                    res.ItemName = w.Trim();
                     w = ReadToChar(' ', true, cancellation);
-                    w = ReadToChar(' ', true, cancellation);
-                    w = ReadToChar(' ', true, cancellation);
-                    if (!string.IsNullOrEmpty(w))
+                    if (w == "on")
                     {
-                        res.ItemName = w.Trim();
                         w = ReadToChar(' ', true, cancellation);
-                        if (w == "on")
+                        if (!string.IsNullOrEmpty(w))
                         {
-                            w = ReadToChar(' ', true, cancellation);
-                            if (!string.IsNullOrEmpty(w))
-                            {
-                                res.Construction = w.Trim();
-                            }
+                            res.Construction = w.Trim();
                         }
-                        return res;
                     }
+                    return res;
                 }
             }
             return null;
