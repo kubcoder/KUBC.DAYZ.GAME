@@ -26,7 +26,7 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
         /// </summary>
         private bool EndRead = false;
 
-        private PlayerListItemParser PlayerParser = new();
+        private readonly PlayerListItemParser PlayerParser = new();
 
         /// <inheritdoc/>
         public override bool AppendLine(string Line)
@@ -36,8 +36,7 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
                 EndRead = true;
                 return true;
             }
-            var entity = PlayerParser.CreateEntity(Line) as PositionLogEntity;
-            if (entity != null) 
+            if (PlayerParser.CreateEntity(Line) is PositionLogEntity entity)
             {
                 Players.Add(entity);
             }

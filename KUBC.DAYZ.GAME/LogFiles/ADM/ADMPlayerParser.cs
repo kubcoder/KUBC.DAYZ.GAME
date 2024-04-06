@@ -37,8 +37,7 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
             var pi = ReadPlayerName(cancellation);
             if (pi != null)
             {
-                string id;
-                if (ReadChars(44, out id, cancellation))
+                if (ReadChars(44, out string id, cancellation))
                 {
                     pi.ID = id;
                     return pi;
