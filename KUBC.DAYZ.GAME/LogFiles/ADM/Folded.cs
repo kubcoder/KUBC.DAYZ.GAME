@@ -7,18 +7,17 @@ using System.Threading.Tasks;
 namespace KUBC.DAYZ.GAME.LogFiles.ADM
 {
     /// <summary>
-    /// Событие игрок истек кровью
+    /// Событие свертывания некого объекта, например установленной разметки забора
     /// </summary>
-    public class BledOut:PositionLogEntity
+    public class Folded : ItemLogEntity
     {
     }
-
     /// <summary>
-    /// Парсер события истекания кровью
+    /// Парсер события <see cref="Folded"/>
     /// </summary>
-    public class BledOutParser : ADMPositionParser
+    public class FoldedParser : ADMPositionParser
     {
-        private const string START = "bled out";
+        private const string START = "folded";
 
         /// <inheritdoc/>
         public override ILogEntity? CreateEntity(string logLine, CancellationToken? cancellation = null)
@@ -27,15 +26,20 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
             {
                 if (Init(logLine, cancellation))
                 {
-                    Dispose();
 #pragma warning disable CS8601 // Возможные null отсечены в родительском классе
-                    return new BledOut()
+                    var res = new Folded()
                     {
                         Player = Player,
                         Position = Position,
                         Time = logTime.GetValueOrDefault()
                     };
 #pragma warning restore CS8601
+                    ReadToChar(' ', true, cancellation);
+                    if (Reader != null)
+                    {
+                        res.ItemName = Reader.ReadToEnd();
+                    }
+                    return res;
                 }
             }
             return null;

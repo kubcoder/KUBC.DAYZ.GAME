@@ -150,7 +150,7 @@ namespace KUBC.DAYZ.GAME.LogFiles
         /// <returns>Результирующая строка</returns>
         protected string? ReadToChar(char StopChar, bool SkipLast = false, CancellationToken? cancellation = null)
         {
-            string res = string.Empty;
+            var res = new StringBuilder();
             if (SkipLast)
             {
                 Read();
@@ -158,7 +158,7 @@ namespace KUBC.DAYZ.GAME.LogFiles
             if (LastSymbol.HasValue)
             {
                 if (LastSymbol.Value != StopChar)
-                    res += LastSymbol;
+                    res.Append(LastSymbol);
             }
             bool End = false;
             while (!End)
@@ -171,14 +171,14 @@ namespace KUBC.DAYZ.GAME.LogFiles
                 if (LastSymbol.HasValue)
                 {
                     if (LastSymbol.Value != StopChar)
-                        res += LastSymbol;
+                        res.Append(LastSymbol);
                     else
                         End = true;
                 }
                 else
                     End = true;
             }
-            return res;
+            return res.ToString();
         }
         /// <summary>
         /// Прочитать указанное кол-во буков
@@ -188,7 +188,7 @@ namespace KUBC.DAYZ.GAME.LogFiles
         /// <returns>Строка с указаным числом буков, или null если прочитать не удалось</returns>
         protected string? ReadChars(int count, CancellationToken? cancellation = null)
         {
-            var res = string.Empty;
+            var res = new StringBuilder();
             while (true)
             {
                 if ((cancellation != null) && (cancellation.Value.IsCancellationRequested))
@@ -198,9 +198,9 @@ namespace KUBC.DAYZ.GAME.LogFiles
                 Read();
                 if (LastSymbol.HasValue)
                 {
-                    res += LastSymbol;
+                    res.Append(LastSymbol);
                     if (res.Length >= count)
-                        return res;
+                        return res.ToString();
                 }
                 else
                 {

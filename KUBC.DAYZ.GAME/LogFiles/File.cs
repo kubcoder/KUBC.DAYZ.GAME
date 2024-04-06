@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -103,13 +104,83 @@ namespace KUBC.DAYZ.GAME.LogFiles
             ReadEntity = ParseLine(logLine);
         }
 
+
+
         /// <summary>
         /// Разобрать строчку лога
         /// </summary>
         /// <param name="LogLine">Строчку лога которую нужно разобрать</param>
         protected abstract ILogEntity? ParseLine(string LogLine);
 
-        
+        /// <summary>
+        /// Отправить сообщение о неизвестной строчке лога
+        /// </summary>
+        /// <param name="LogLine"></param>
+        protected void SendUnknowLine(string LogLine)
+        {
+            if (UnknowString!=null)
+            {
+                if (!IsNotRead(LogLine))
+                {
+                    UnknowString(this, LogLine);
+                }
+            }
+        }
+        /// <summary>
+        /// Строчки которые не нужно читать
+        /// </summary>
+        protected List<string>? LinesNotRead;
+        /// <summary>
+        /// Проверить является ли строчка не нужной
+        /// </summary>
+        /// <param name="LogLine">Проверяемая строка</param>
+        /// <returns>
+        /// Истина, если строчка известна, но её абсолютно не нужно 
+        /// распознавать.
+        /// </returns>
+        protected virtual bool IsNotRead(string LogLine)
+        {
+            if (LinesNotRead!=null)
+            {
+                return LinesNotRead.Contains(LogLine);
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// Событие вызваемое когда строка лога не была распознана
+        /// </summary>
+        public event EventHandler<string>? UnknowString;
+
+        /// <summary>
+        /// Проверить распознанный элемент данных на предмет адекватности
+        /// </summary>
+        /// <param name="entity">Элемент данных</param>
+        /// <param name="LogLine">Из какой строчки он получен</param>
+        /// <returns>Истина если есть подозрение что данные не адекватны</returns>
+        protected virtual bool IsWarning(ILogEntity entity, string LogLine)
+        {
+            return false;
+        }
+        /// <summary>
+        /// Проверить полученные данные на адекватность
+        /// </summary>
+        /// <param name="entity">Полученные данные</param>
+        /// <param name="LogLine">Строчка лога</param>
+        protected virtual void CheckLogEntity(ILogEntity entity, string LogLine)
+        {
+            if (WarningString!=null) 
+            {
+                if (IsWarning(entity, LogLine))
+                    WarningString(this, new WarningDataEventArgs(entity, LogLine));
+            }
+        }
+
+        /// <summary>
+        /// Событие вызваемое когда строка лога была прочитана, но возможно данные не адекватно распознаны
+        /// </summary>
+        public event EventHandler<WarningDataEventArgs>? WarningString;
+
         /// <inheritdoc/>
         private string? ReadLine(CancellationToken? cancellationToken)
         {

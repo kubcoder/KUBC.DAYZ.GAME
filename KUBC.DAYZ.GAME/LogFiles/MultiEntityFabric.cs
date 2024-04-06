@@ -33,5 +33,13 @@ namespace KUBC.DAYZ.GAME.LogFiles
             }
             return null;
         }
+        /// <summary>
+        /// Добавить новый парсер
+        /// </summary>
+        /// <param name="eParser">добавляемый парсер</param>
+        public void AddExtParser(ILogEntityFabric eParser)
+        {
+            Creators.Add(eParser);
+        }
     }
 }

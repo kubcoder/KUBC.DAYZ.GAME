@@ -7,18 +7,19 @@ using System.Threading.Tasks;
 namespace KUBC.DAYZ.GAME.LogFiles.ADM
 {
     /// <summary>
-    /// Событие игрок истек кровью
+    /// Событие "закопали барахло"
     /// </summary>
-    public class BledOut:PositionLogEntity
+    public class DugOut : ItemLogEntity
     {
+        
     }
 
     /// <summary>
-    /// Парсер события истекания кровью
+    /// Парсер события <see cref="DugOut"/>
     /// </summary>
-    public class BledOutParser : ADMPositionParser
+    public class DugOutParser : ADMPositionParser
     {
-        private const string START = "bled out";
+        private const string START = "Dug out";
 
         /// <inheritdoc/>
         public override ILogEntity? CreateEntity(string logLine, CancellationToken? cancellation = null)
@@ -27,15 +28,27 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
             {
                 if (Init(logLine, cancellation))
                 {
-                    Dispose();
 #pragma warning disable CS8601 // Возможные null отсечены в родительском классе
-                    return new BledOut()
+                    var res = new DugOut()
                     {
                         Player = Player,
                         Position = Position,
                         Time = logTime.GetValueOrDefault()
                     };
 #pragma warning restore CS8601
+                    var w = ReadToChar(' ', true, cancellation);
+                    w = ReadToChar(' ', true, cancellation);
+                    w = ReadToChar(' ', true, cancellation);
+                    w = ReadToChar(' ', true, cancellation);
+                    if (!string.IsNullOrEmpty(w))
+                    {
+                        w = ReadToChar('<', true, cancellation);
+                        if (!string.IsNullOrEmpty(w))
+                        {
+                            res.ItemName = w;
+                        }
+                    }
+                    return res;
                 }
             }
             return null;

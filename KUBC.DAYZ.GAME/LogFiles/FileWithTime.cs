@@ -81,11 +81,17 @@ namespace KUBC.DAYZ.GAME.LogFiles
                     if (entity != null)
                     {
                         entity.Time = CorrectTime(entity.Time);
+                        CheckLogEntity(entity, LogLine);
                         return entity;
+                    }
+                    else
+                    {
+                        SendUnknowLine(LogLine);
                     }
                 }
             }
             return null;
         }
+        
     }
 }

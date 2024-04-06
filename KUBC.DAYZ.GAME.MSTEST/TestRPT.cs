@@ -31,7 +31,7 @@ namespace KUBC.DAYZ.GAME.MSTEST
             averageFps = 0;
             usedMemory = 0;
             connectEvent = 0;
-            using (var fileReader = new StreamReader(testFile.Open(FileMode.Open, FileAccess.Read, FileShare.ReadWrite)))
+            using (StreamReader fileReader = new StreamReader(testFile.Open(FileMode.Open, FileAccess.Read, FileShare.ReadWrite)))
             {
                 var line = fileReader.ReadLine();
                 while (line != null)
@@ -77,7 +77,10 @@ namespace KUBC.DAYZ.GAME.MSTEST
             CalculateEvents(testFile);
             var rpt = new GAME.LogFiles.RPT.Log();
             rpt.OpenFile(testFile);
+            var sTime = DateTime.Now;
             var Events = rpt.ReadToEnd();
+            var eTime = DateTime.Now;
+            Console.WriteLine($"Время чтения лога{eTime.Subtract(sTime)}");
             Assert.IsNotNull(Events);
             CalculateLoadEvents(Events);
             CheckResult();

@@ -17,11 +17,39 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
         private ADMParser parser = new ADMParser();
         /// <inheritdoc/>
         protected override ILogEntityFabric LogParser => parser;
-        
+
+        /// <summary>
+        /// Гребанная инициализация
+        /// </summary>
+        public Log()
+        {
+            this.LinesNotRead = [
+                "**********************************EOF****************************************",
+                "******************************************************************************"
+                ];
+        }
+
+        /// <summary>
+        /// Шаблон поиска строчки с указанием текущего времени
+        /// </summary>
+        private const string KEYFINDSTARTTIME = "AdminLog started on";
         /// <inheritdoc/>
         protected override bool FindStartTime(string Line)
         {
-            throw new NotImplementedException();
+            if (Line.Contains(KEYFINDSTARTTIME))
+            {
+                var tokens = Line.Split(' ');
+                if (tokens.Length > 5)
+                {
+                    var sTime = $"{tokens[3]} {tokens[5]}";
+                    if (DateTime.TryParse(sTime, out DateTime lTime))
+                    {
+                        LogStarted = lTime;
+                    }
+                }
+                return true;
+            }
+            return false;
         }
         
     }
