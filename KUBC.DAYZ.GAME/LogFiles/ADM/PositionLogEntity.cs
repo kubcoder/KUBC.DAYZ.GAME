@@ -9,7 +9,7 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
     /// <summary>
     /// Событие в котором кроме игрока еще есть позиция происходящего
     /// </summary>
-    public abstract class PositionLogEntity:PlayerLogEntity
+    public class PositionLogEntity:PlayerLogEntity
     {
         /// <summary>
         /// Где данное событие произошло

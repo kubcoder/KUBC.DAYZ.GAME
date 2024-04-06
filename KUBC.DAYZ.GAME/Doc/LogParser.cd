@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="KUBC.DAYZ.GAME.LogFiles.MultiEntityFabric">
-    <Position X="1" Y="2.25" Width="1.5" />
+    <Position X="1" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAAAIAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
       <FileName>LogFiles\MultiEntityFabric.cs</FileName>
@@ -9,9 +9,9 @@
     <Lollipop Position="0.1" />
   </Class>
   <Class Name="KUBC.DAYZ.GAME.LogFiles.StringParser">
-    <Position X="5" Y="1" Width="1.5" />
+    <Position X="7" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAAAAIAAARAAAgAAQEAQAAABACwCCABAA=</HashCode>
+      <HashCode>AAAAAAAAACAAAAAKAAARAAAgAAQEAQAAABACwCCABAA=</HashCode>
       <FileName>LogFiles\StringParser.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -19,12 +19,12 @@
   <Class Name="KUBC.DAYZ.GAME.LogFiles.RPT.AverageFPSParser">
     <Position X="6.75" Y="11.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAgAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
       <FileName>LogFiles\RPT\AverageFPSParser.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="KUBC.DAYZ.GAME.LogFiles.RPT.RPTStringParser">
-    <Position X="5" Y="8" Width="1.5" />
+    <Position X="5.25" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>LogFiles\RPT\RPTStringParser.cs</FileName>
@@ -33,12 +33,12 @@
   <Class Name="KUBC.DAYZ.GAME.LogFiles.RPT.UsedMemoryPaser">
     <Position X="9" Y="11.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAgAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
       <FileName>LogFiles\RPT\UsedMemoryPaser.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="KUBC.DAYZ.GAME.LogFiles.ADM.ADMStringParser">
-    <Position X="11.75" Y="8" Width="1.5" />
+    <Position X="11.75" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>LogFiles\ADM\ADMStringParser.cs</FileName>
@@ -47,7 +47,7 @@
   <Class Name="KUBC.DAYZ.GAME.LogFiles.RPT.ConnectEventParser">
     <Position X="4.5" Y="11.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAAQAAAAAAAAgAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAIAAAAAAQAAAAAAAAAAAAA=</HashCode>
       <FileName>LogFiles\RPT\ConnectEventParser.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -73,103 +73,145 @@
     </TypeIdentifier>
   </Class>
   <Class Name="KUBC.DAYZ.GAME.LogFiles.ADM.BledOutParser" Collapsed="true">
-    <Position X="13" Y="16" Width="1.5" />
+    <Position X="30.5" Y="16.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAgAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
       <FileName>LogFiles\ADM\BledOut.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="KUBC.DAYZ.GAME.LogFiles.ADM.BuiltParser" Collapsed="true">
-    <Position X="10.75" Y="16" Width="1.5" />
+    <Position X="28.25" Y="16.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAgAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
       <FileName>LogFiles\ADM\Built.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="KUBC.DAYZ.GAME.LogFiles.ADM.ChatParser">
-    <Position X="11.75" Y="13.5" Width="1.5" />
+    <Position X="11.75" Y="14" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAgAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
       <FileName>LogFiles\ADM\Chat.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="KUBC.DAYZ.GAME.LogFiles.ADM.DismantledParser" Collapsed="true">
-    <Position X="15.25" Y="16" Width="1.5" />
+    <Position X="32.75" Y="16.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAgAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
       <FileName>LogFiles\ADM\Dismantled.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="KUBC.DAYZ.GAME.LogFiles.ADM.DugInParser" Collapsed="true">
-    <Position X="17.5" Y="16" Width="1.5" />
+    <Position X="35" Y="16.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAgAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
       <FileName>LogFiles\ADM\DugIn.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="KUBC.DAYZ.GAME.LogFiles.ADM.FoldedParser" Collapsed="true">
-    <Position X="19.75" Y="16" Width="1.5" />
+    <Position X="37.25" Y="16.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAgAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
       <FileName>LogFiles\ADM\Folded.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="KUBC.DAYZ.GAME.LogFiles.ADM.ADMPlayerParser">
-    <Position X="11.75" Y="11" Width="1.5" />
+    <Position X="11.75" Y="10.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAIIAAAAACAQAAAAA=</HashCode>
       <FileName>LogFiles\ADM\ADMPlayerParser.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="KUBC.DAYZ.GAME.LogFiles.ADM.ADMPositionParser">
-    <Position X="14" Y="13.5" Width="1.5" />
+    <Position X="14" Y="13.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAgAAAAAAAAAACAAAAAAA=</HashCode>
       <FileName>LogFiles\ADM\ADMPositionParser.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="KUBC.DAYZ.GAME.LogFiles.ADM.DugOutParser" Collapsed="true">
-    <Position X="8.5" Y="16" Width="1.5" />
+    <Position X="26" Y="16.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAgAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
       <FileName>LogFiles\ADM\DugOut.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="KUBC.DAYZ.GAME.LogFiles.ADM.LoweredParser" Collapsed="true">
-    <Position X="6.25" Y="16" Width="1.5" />
+    <Position X="23.75" Y="16.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAgAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
       <FileName>LogFiles\ADM\Lowered.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="KUBC.DAYZ.GAME.LogFiles.ADM.RaisedParser" Collapsed="true">
-    <Position X="22" Y="16" Width="1.5" />
+    <Position X="39.5" Y="16.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAgAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
       <FileName>LogFiles\ADM\Raised.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="KUBC.DAYZ.GAME.LogFiles.ADM.PackedParser" Collapsed="true">
-    <Position X="4" Y="16" Width="1.5" />
+    <Position X="21.5" Y="16.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAgAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
       <FileName>LogFiles\ADM\Packed.cs</FileName>
       <NewMemberFileName>LogFiles\ADM\Mounted.cs</NewMemberFileName>
     </TypeIdentifier>
   </Class>
   <Class Name="KUBC.DAYZ.GAME.LogFiles.ADM.UnmountedParser" Collapsed="true">
-    <Position X="24.25" Y="16" Width="1.5" />
+    <Position X="41.75" Y="16.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAgAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
       <FileName>LogFiles\ADM\Unmounted.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Interface Name="KUBC.DAYZ.GAME.LogFiles.ILogEntityFabric">
-    <Position X="0.5" Y="0.5" Width="1.5" />
+  <Class Name="KUBC.DAYZ.GAME.LogFiles.ADM.MountedParser" Collapsed="true">
+    <Position X="19.25" Y="16.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
-      <FileName>LogFiles\ILogEntityFabric.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>LogFiles\ADM\Mounted.cs</FileName>
     </TypeIdentifier>
-  </Interface>
+  </Class>
+  <Class Name="KUBC.DAYZ.GAME.LogFiles.ADM.PlacedParser" Collapsed="true">
+    <Position X="44" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>LogFiles\ADM\Placed.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KUBC.DAYZ.GAME.LogFiles.ADM.PlayerDamageParser" Collapsed="true">
+    <Position X="46.25" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>LogFiles\ADM\PlayerDamage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KUBC.DAYZ.GAME.LogFiles.ADM.PlayerDiedParser" Collapsed="true">
+    <Position X="48.5" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>LogFiles\ADM\PlayerDied.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KUBC.DAYZ.GAME.LogFiles.ADM.PlayerKilledParser" Collapsed="true">
+    <Position X="50.75" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>LogFiles\ADM\PlayerKilled.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KUBC.DAYZ.GAME.LogFiles.ADM.PlayerListParser">
+    <Position X="14" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>LogFiles\ADM\PlayerList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KUBC.DAYZ.GAME.LogFiles.ADM.PlayerListItemParser" Collapsed="true">
+    <Position X="17" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>LogFiles\ADM\PlayerList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

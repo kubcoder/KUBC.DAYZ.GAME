@@ -14,6 +14,7 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
         public ADMParser() 
         {
             InserParser(new PlayerDamageParser());
+            InserParser(new PlayerListParser());
             InserParser(new BledOutParser());
             InserParser(new BuiltParser());
             InserParser(new ChatParser());

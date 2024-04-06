@@ -32,6 +32,7 @@ namespace KUBC.DAYZ.GAME.MSTEST
         private readonly int PlayerDamage = 0;
         private readonly int PlayerDied = 0;
         private readonly int PlayerKilled = 0;
+        private readonly int PlayerList = 0;
 
         public int LinesInFile = 0;
 
@@ -78,6 +79,8 @@ namespace KUBC.DAYZ.GAME.MSTEST
                     PlayerDied++;
                 if (line.Contains("killed by", StringComparison.OrdinalIgnoreCase))
                     PlayerKilled++;
+                if (line.Contains("PlayerList log", StringComparison.OrdinalIgnoreCase))
+                    PlayerList++;
                 line = fileReader.ReadLine();
             }
         }
@@ -183,6 +186,11 @@ namespace KUBC.DAYZ.GAME.MSTEST
                     PlayerKilled++;
                     continue;
                 }
+                if (entity.GetType() == typeof(GAME.LogFiles.ADM.PlayerList))
+                {
+                    PlayerList++;
+                    continue;
+                }
             }
         }
         /// <summary>
@@ -227,6 +235,8 @@ namespace KUBC.DAYZ.GAME.MSTEST
             Assert.AreEqual(PlayerDied, readed.PlayerDied);
             Console.WriteLine($"Данных о PlayerKilled в логе {PlayerKilled} загружено как данных {readed.PlayerKilled}");
             Assert.AreEqual(PlayerKilled, readed.PlayerKilled);
+            Console.WriteLine($"Данных о PlayerList в логе {PlayerList} загружено как данных {readed.PlayerList}");
+            Assert.AreEqual(PlayerList, readed.PlayerList);
         }
     }
 
@@ -507,7 +517,7 @@ namespace KUBC.DAYZ.GAME.MSTEST
             }
         }
         /// <summary>
-        /// Тестируем событие чтения Damage
+        /// Тестируем событие чтения PlayerDied
         /// </summary>
         [TestMethod]
         public void PlayerDied()
@@ -529,7 +539,7 @@ namespace KUBC.DAYZ.GAME.MSTEST
             }
         }
         /// <summary>
-        /// Тестируем событие чтения Damage
+        /// Тестируем событие чтения PlayerKilled
         /// </summary>
         [TestMethod]
         public void PlayerKilled()
@@ -546,6 +556,60 @@ namespace KUBC.DAYZ.GAME.MSTEST
                     Assert.IsNotNull(entity);
                     Console.WriteLine(entity.GetXML());
                     Console.WriteLine();
+                }
+                line = fileReader.ReadLine();
+            }
+        }
+        /// <summary>
+        /// Тестируем событие чтения PlayerKilled
+        /// </summary>
+        [TestMethod]
+        public void PlayerKList()
+        {
+            var parser = new GAME.LogFiles.ADM.PlayerListParser();
+            using StreamReader fileReader = new(GetTestFile().Open(FileMode.Open, FileAccess.Read, FileShare.ReadWrite));
+            var line = fileReader.ReadLine();
+            var Report = new List<string>();
+            bool ReadReport = false;
+            while (line != null)
+            {
+                if (ReadReport)
+                {
+                    Report.Add(line);
+                    if (line.Contains("#####"))
+                    {
+                        ILogEntity? entity = null;
+                        foreach (var l in Report)
+                        {
+                            Console.WriteLine(l);
+                            if (entity == null)
+                            {
+                                entity = parser.CreateEntity(l);
+                            }
+                            else
+                            {
+                                if (!entity.IsEndRead())
+                                {
+                                    entity.AppendLine(l);
+                                }
+                            }
+                        }
+                        Console.WriteLine("----------------");
+                        Assert.IsNotNull(entity);
+                        Assert.IsTrue(entity.IsEndRead());
+                        Console.WriteLine(entity.GetXML());
+                        Console.WriteLine();
+                        Console.WriteLine("_______________________________");
+                    }
+                }
+                else
+                {
+                    if (line.Contains("PlayerList log", StringComparison.OrdinalIgnoreCase))
+                    {
+                        Report.Clear();
+                        ReadReport = true;
+                        Report.Add(line);
+                    }
                 }
                 line = fileReader.ReadLine();
             }
