@@ -20,6 +20,15 @@ namespace KUBC.DAYZ.GAME.LogFiles.RPT
         protected override ILogEntityFabric LogParser => parser;
 
         /// <summary>
+        /// Добавить парсер в коллекцию
+        /// </summary>
+        /// <param name="parser">Добавляемый парсер</param>
+        public override void SetParser(ILogEntityFabric parser)
+        {
+            this.parser.AddExtParser(parser);
+        }
+
+        /// <summary>
         /// Шаблон поиска строчки с указанием текущего времени
         /// </summary>
         private const string KEYFINDSTARTTIME = "Current time:";

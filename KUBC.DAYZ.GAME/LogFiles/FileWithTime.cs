@@ -22,6 +22,11 @@ namespace KUBC.DAYZ.GAME.LogFiles
         /// Парсер лога
         /// </summary>
         protected abstract ILogEntityFabric LogParser { get; }
+        /// <summary>
+        /// Установить парсер лога
+        /// </summary>
+        /// <param name="parser">Какой парсер использовать</param>
+        public abstract void SetParser(ILogEntityFabric parser);
 
         /// <summary>
         /// Корректируем дату и время.

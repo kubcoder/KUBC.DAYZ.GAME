@@ -3,7 +3,7 @@
   <Class Name="KUBC.DAYZ.GAME.LogFiles.File">
     <Position X="2.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>wAlAAAAAACQAAGAEAAsgAQACAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <HashCode>wAlAAAAAACQAAGAEAAsgAQACAAACAEAAAAAQAAAAAAA=</HashCode>
       <FileName>LogFiles\File.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -11,7 +11,7 @@
   <Class Name="KUBC.DAYZ.GAME.LogFiles.FileWithTime">
     <Position X="5.25" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAACAEAAAAAAAAAAAACAFAAAAAIAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAACAEAAAAAAACAAAACAFAAAAAIAAAAAA=</HashCode>
       <FileName>LogFiles\FileWithTime.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -22,13 +22,13 @@
     <Position X="9.5" Y="5.25" Width="1.5" />
     <AssociationLine Name="parser" Type="KUBC.DAYZ.GAME.LogFiles.RPT.RPTParser" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="10.25" Y="7.386" />
+        <Point X="10.25" Y="7.578" />
         <Point X="10.25" Y="8.438" />
         <Point X="11.25" Y="8.438" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAACAEAAAAAAAAAIAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAIAACAEAAAAAAAAAIAA=</HashCode>
       <FileName>LogFiles\RPT\Log.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -69,7 +69,7 @@
   <Class Name="KUBC.DAYZ.GAME.LogFiles.MultiEntityFabric">
     <Position X="8.25" Y="10.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAgAAAAAAAAIAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
       <FileName>LogFiles\MultiEntityFabric.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />

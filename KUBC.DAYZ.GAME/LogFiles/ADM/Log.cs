@@ -19,6 +19,15 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
         protected override ILogEntityFabric LogParser => parser;
 
         /// <summary>
+        /// Добавить парсер в коллекцию
+        /// </summary>
+        /// <param name="parser">Добавляемый парсер</param>
+        public override void SetParser(ILogEntityFabric parser)
+        {
+            this.parser.AddExtParser(parser);
+        }
+
+        /// <summary>
         /// Гребанная инициализация
         /// </summary>
         public Log()
