@@ -209,5 +209,67 @@ namespace KUBC.DAYZ.GAME.LogFiles
 
             }
         }
+        /// <summary>
+        /// Прочитать указанное кол-во буков
+        /// </summary>
+        /// <param name="count">Сколько буков прочитать</param>
+        /// <param name="readString">Прочитаная строка</param>
+        /// <param name="cancellation">Токен отмены</param>
+        /// <returns>Удалось ли прочитать требуемое число буков</returns>
+        protected bool ReadChars(int count, out string readString, CancellationToken? cancellation = null)
+        {
+            var res = new StringBuilder();
+            while (true)
+            {
+                if ((cancellation != null) && (cancellation.Value.IsCancellationRequested))
+                {
+                    readString = res.ToString();
+                    return readString.Length == count;
+                }
+                Read();
+                if (LastSymbol.HasValue)
+                {
+                    res.Append(LastSymbol);
+                    if (res.Length >= count)
+                    {
+                        readString = res.ToString();
+                        return true;
+                    }
+                        
+                }
+                else
+                {
+                    readString = res.ToString();
+                    return readString.Length == count;
+                }
+
+            }
+        }
+        /// <summary>
+        /// Стиль чисел
+        /// </summary>
+        protected System.Globalization.NumberStyles style = System.Globalization.NumberStyles.Number;
+        /// <summary>
+        /// Культура записи чисел
+        /// </summary>
+        protected System.Globalization.CultureInfo culture = System.Globalization.CultureInfo.CreateSpecificCulture("en-GB");
+
+        /// <summary>
+        /// Прочитать строку до первого вхождения символа и распознать это как число с плавающей запятой
+        /// </summary>
+        /// <param name="StopChar">На каком символе остановится</param>
+        /// <param name="cancellation">Токен отмены действия</param>
+        /// <param name="SkipLast">Пробросить последний символ и принудительно перейти к следующему</param>
+        /// <returns>Результирующая строка</returns>
+        protected float? ReadFloat(char StopChar, bool SkipLast = false, CancellationToken? cancellation = null)
+        {
+            var numberString = ReadToChar(']', true, cancellation);
+            if (float.TryParse(numberString, style, culture, out var number))
+            {
+                return number;
+            }
+            return null;
+        }
+
     }
 }

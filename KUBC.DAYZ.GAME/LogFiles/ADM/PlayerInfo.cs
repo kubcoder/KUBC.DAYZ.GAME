@@ -34,10 +34,7 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
         /// </summary>
         public PlayerInfo() { }
 
-        /// <summary>
-        /// Элементы которые могут попасть в имя, и их нужно подрезать
-        /// </summary>
-        static string[] DW = { "Player", "(DEAD)", "Chat(", "(id=" };
+        
 
         /// <summary>
         /// Инициализация с "грязным" именем
@@ -50,6 +47,19 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
         {
             if (nickName.Contains("(DEAD)"))
                 this.IsDead = true;
+            
+            if (nickName.Contains('"'))
+            {
+                var startName = nickName.IndexOf('"');
+                startName++;
+                var endName = nickName.LastIndexOf('"');
+                var len = endName - startName;
+                if (len>0)
+                {
+                    NickName = nickName.Substring(startName, len);
+                    return;
+                }
+            }
             NickName = nickName;
             foreach (var w in DW)
             {
@@ -60,14 +70,10 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
                 }
             }
             NickName = NickName.Trim();
-            var s = NickName.FirstOrDefault();
-            if ((s == '"') || (s == '\''))
-                NickName = NickName[1..];
-            s = NickName.LastOrDefault();
-            if ((s == '"') || (s == '\''))
-            {
-                NickName = NickName.Substring(0, NickName.Length - 1);
-            }
         }
+        /// <summary>
+        /// Элементы которые могут попасть в имя, и их нужно подрезать
+        /// </summary>
+        static string[] DW = { "Player", "(DEAD)", "Chat(", "(id=", "is connected" };
     }
 }

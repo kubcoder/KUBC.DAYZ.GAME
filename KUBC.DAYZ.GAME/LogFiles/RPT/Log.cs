@@ -25,7 +25,7 @@ namespace KUBC.DAYZ.GAME.LogFiles.RPT
         /// <param name="parser">Добавляемый парсер</param>
         public override void SetParser(ILogEntityFabric parser)
         {
-            this.parser.AddExtParser(parser);
+            this.parser.InserParser(parser);
         }
 
         /// <summary>

@@ -37,7 +37,7 @@ namespace KUBC.DAYZ.GAME.LogFiles
         /// Добавить новый парсер
         /// </summary>
         /// <param name="eParser">добавляемый парсер</param>
-        public void AddExtParser(ILogEntityFabric eParser)
+        public void InserParser(ILogEntityFabric eParser)
         {
             Creators.Add(eParser);
         }

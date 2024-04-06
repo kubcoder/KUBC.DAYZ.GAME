@@ -26,6 +26,10 @@ namespace KUBC.DAYZ.GAME.MSTEST
         int Unmounted = 0;
         int Mounted = 0;
         int Packed = 0;
+        int Placed = 0;
+        int PlayerConnect = 0 ;
+        int PlayerDisconnect = 0 ;
+        int PlayerDamage = 0;
 
         public int LinesInFile = 0;
 
@@ -61,6 +65,14 @@ namespace KUBC.DAYZ.GAME.MSTEST
                         Unmounted++;
                     if (line.Contains("packed", StringComparison.OrdinalIgnoreCase))
                         Packed++;
+                    if (line.Contains("placed", StringComparison.OrdinalIgnoreCase))
+                        Placed++;
+                    if (line.Contains("is connected", StringComparison.OrdinalIgnoreCase))
+                        PlayerConnect++;
+                    if (line.Contains("has been disconnected", StringComparison.OrdinalIgnoreCase))
+                        PlayerDisconnect++;
+                    if (line.Contains("hit by", StringComparison.OrdinalIgnoreCase))
+                        PlayerDamage++;
                     line = fileReader.ReadLine();
                 }
             }
@@ -72,69 +84,89 @@ namespace KUBC.DAYZ.GAME.MSTEST
             {
 
 
-                if (entity is GAME.LogFiles.ADM.BledOut)
+                if (entity.GetType() == typeof(GAME.LogFiles.ADM.BledOut))
                 {
                     BledOut++;
                     continue;
                 }
-                if (entity is GAME.LogFiles.ADM.Dismantled)
+                if (entity.GetType() == typeof(GAME.LogFiles.ADM.Dismantled))
                 {
                     Dismantled++;
                     continue;
                 }
-                if (entity is GAME.LogFiles.ADM.Built)
+                if (entity.GetType() == typeof(GAME.LogFiles.ADM.Built))
                 {
                     Built++;
                     continue;
                 }
-                if (entity is GAME.LogFiles.ADM.Chat)
+                if (entity.GetType() == typeof(GAME.LogFiles.ADM.Chat))
                 {
                     Chat++;
                     continue;
                 }
-                if (entity is GAME.LogFiles.ADM.Chat)
+                if (entity.GetType() == typeof(GAME.LogFiles.ADM.Chat))
                 {
                     Chat++;
                     continue;
                 }
-                if (entity is GAME.LogFiles.ADM.DugIn)
+                if (entity.GetType() == typeof(GAME.LogFiles.ADM.DugIn))
                 {
                     DugIn++;
                     continue;
                 }
-                if (entity is GAME.LogFiles.ADM.DugOut)
+                if (entity.GetType() == typeof(GAME.LogFiles.ADM.DugOut))
                 {
                     DugOut++;
                     continue;
                 }
-                if (entity is GAME.LogFiles.ADM.Folded)
+                if (entity.GetType() == typeof(GAME.LogFiles.ADM.Folded))
                 {
                     Folded++;
                     continue;
                 }
-                if (entity is GAME.LogFiles.ADM.Raised)
+                if (entity.GetType() == typeof(GAME.LogFiles.ADM.Raised))
                 {
                     Raised++;
                     continue;
                 }
-                if (entity is GAME.LogFiles.ADM.Lowered)
+                if (entity.GetType() == typeof(GAME.LogFiles.ADM.Lowered))
                 {
                     Lowered++;
                     continue;
                 }
-                if (entity is GAME.LogFiles.ADM.Unmounted)
+                if (entity.GetType() == typeof(GAME.LogFiles.ADM.Unmounted))
                 {
                     Unmounted++;
                     continue;
                 }
-                if (entity is GAME.LogFiles.ADM.Mounted)
+                if (entity.GetType() == typeof(GAME.LogFiles.ADM.Mounted))
                 {
                     Mounted++;
                     continue;
                 }
-                if (entity is GAME.LogFiles.ADM.Packed)
+                if (entity.GetType() == typeof(GAME.LogFiles.ADM.Packed))
                 {
                     Packed++;
+                    continue;
+                }
+                if (entity.GetType() == typeof(GAME.LogFiles.ADM.Placed))
+                {
+                    Placed++;
+                    continue;
+                }
+                if (entity.GetType() == typeof(GAME.LogFiles.ADM.PlayerConnect))
+                {
+                    PlayerConnect++;
+                    continue;
+                }
+                if (entity.GetType() == typeof(GAME.LogFiles.ADM.PlayerDisconnect))
+                {
+                    PlayerDisconnect++;
+                    continue;
+                }
+                if (entity.GetType() == typeof(GAME.LogFiles.ADM.PlayerDamage))
+                {
+                    PlayerDamage++;
                     continue;
                 }
 
@@ -170,6 +202,14 @@ namespace KUBC.DAYZ.GAME.MSTEST
             Assert.AreEqual(Unmounted, readed.Unmounted);
             Console.WriteLine($"Данных о Packed в логе {Packed} загружено как данных {readed.Packed}");
             Assert.AreEqual(Packed, readed.Packed);
+            Console.WriteLine($"Данных о Placed в логе {Placed} загружено как данных {readed.Placed}");
+            Assert.AreEqual(Placed, readed.Placed);
+            Console.WriteLine($"Данных о PlayerConnect в логе {PlayerConnect} загружено как данных {readed.PlayerConnect}");
+            Assert.AreEqual(PlayerConnect, readed.PlayerConnect);
+            Console.WriteLine($"Данных о PlayerDisconnect в логе {PlayerDisconnect} загружено как данных {readed.PlayerDisconnect}");
+            Assert.AreEqual(PlayerDisconnect, readed.PlayerDisconnect);
+            Console.WriteLine($"Данных о PlayerDamage в логе {PlayerDamage} загружено как данных {readed.PlayerDamage}");
+            Assert.AreEqual(PlayerDamage, readed.PlayerDamage);
         }
     }
 
@@ -367,6 +407,97 @@ namespace KUBC.DAYZ.GAME.MSTEST
             var entity = parser.CreateEntity(Line);
             Assert.IsNotNull(entity);
             Console.WriteLine(entity.GetXML());
+        }
+        /// <summary>
+        /// Тестируем событие чтения Placed
+        /// </summary>
+        [TestMethod]
+        public void Placed()
+        {
+            var parser = new GAME.LogFiles.ADM.PlacedParser();
+            using (StreamReader fileReader = new StreamReader(GetTestFile().Open(FileMode.Open, FileAccess.Read, FileShare.ReadWrite)))
+            {
+                var line = fileReader.ReadLine();
+                while(line!=null)
+                {
+                    if (line.Contains("Placed", StringComparison.OrdinalIgnoreCase))
+                    {
+                        Console.WriteLine(line);
+                        var entity = parser.CreateEntity(line);
+                        Assert.IsNotNull(entity);
+                        Console.WriteLine(entity.GetXML());
+                        Console.WriteLine();
+                    }
+                    line = fileReader.ReadLine();
+                }
+                
+            }
+            
+        }
+        /// <summary>
+        /// Тестируем событие чтения Packed
+        /// </summary>
+        [TestMethod]
+        public void PlayerConnect()
+        {
+            string Line = "19:55:57 | Player \"snutik\" is connected (id=Lnb_j2h9D7rznkixOOc3H59XRXlFQM5uu-F_ge9_cms=)";
+            Console.WriteLine(Line);
+            var parser = new GAME.LogFiles.ADM.PlayerConnectParser();
+            var entity = parser.CreateEntity(Line);
+            Assert.IsNotNull(entity);
+            Console.WriteLine(entity.GetXML());
+        }
+
+        /// <summary>
+        /// Тестируем событие чтения Disconnect
+        /// </summary>
+        [TestMethod]
+        public void Disconect()
+        {
+            var parser = new GAME.LogFiles.ADM.PlayerDisconnectParser();
+            using (StreamReader fileReader = new StreamReader(GetTestFile().Open(FileMode.Open, FileAccess.Read, FileShare.ReadWrite)))
+            {
+                var line = fileReader.ReadLine();
+                while (line != null)
+                {
+                    if (line.Contains("has been disconnected", StringComparison.OrdinalIgnoreCase))
+                    {
+                        Console.WriteLine(line);
+                        var entity = parser.CreateEntity(line);
+                        Assert.IsNotNull(entity);
+                        Console.WriteLine(entity.GetXML());
+                        Console.WriteLine();
+                    }
+                    line = fileReader.ReadLine();
+                }
+
+            }
+        }
+        /// <summary>
+        /// Тестируем событие чтения Damage
+        /// </summary>
+        [TestMethod]
+        public void Damage()
+        {
+            var parser = new GAME.LogFiles.ADM.PlayerDamageParser();
+            using (StreamReader fileReader = new StreamReader(GetTestFile().Open(FileMode.Open, FileAccess.Read, FileShare.ReadWrite)))
+            {
+                var line = fileReader.ReadLine();
+                while (line != null)
+                {
+                    if (line.Contains("hit by", StringComparison.OrdinalIgnoreCase))
+                    {
+                        Console.WriteLine(line);
+                        var entity = parser.CreateEntity(line);
+                        Assert.IsNotNull(entity);
+                        Console.WriteLine(entity.GetXML());
+                        Console.WriteLine();
+                    }
+                    line = fileReader.ReadLine();
+                }
+
+            }
+
         }
 
     }

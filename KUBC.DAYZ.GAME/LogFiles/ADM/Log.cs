@@ -24,7 +24,7 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
         /// <param name="parser">Добавляемый парсер</param>
         public override void SetParser(ILogEntityFabric parser)
         {
-            this.parser.AddExtParser(parser);
+            this.parser.InserParser(parser);
         }
 
         /// <summary>

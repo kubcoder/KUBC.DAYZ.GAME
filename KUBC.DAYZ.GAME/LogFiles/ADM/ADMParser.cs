@@ -13,18 +13,22 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
     {
         public ADMParser() 
         {
-            AddExtParser(new BledOutParser());
-            AddExtParser(new BuiltParser());
-            AddExtParser(new ChatParser());
-            AddExtParser(new DismantledParser());
-            AddExtParser(new DugInParser());
-            AddExtParser(new DugOutParser());
-            AddExtParser(new FoldedParser());
-            AddExtParser(new LoweredParser());
-            AddExtParser(new RaisedParser());
-            AddExtParser(new UnmountedParser());
-            AddExtParser(new MountedParser());
-            AddExtParser(new PackedParser());
+            InserParser(new PlayerDamageParser());
+            InserParser(new BledOutParser());
+            InserParser(new BuiltParser());
+            InserParser(new ChatParser());
+            InserParser(new DismantledParser());
+            InserParser(new DugInParser());
+            InserParser(new DugOutParser());
+            InserParser(new FoldedParser());
+            InserParser(new LoweredParser());
+            InserParser(new RaisedParser());
+            InserParser(new UnmountedParser());
+            InserParser(new MountedParser());
+            InserParser(new PackedParser());
+            InserParser(new PlacedParser());
+            InserParser(new PlayerConnectParser());
+            InserParser(new PlayerDisconnectParser());
         }
     }
 }
