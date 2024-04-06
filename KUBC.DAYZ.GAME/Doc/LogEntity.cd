@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="KUBC.DAYZ.GAME.LogFiles.LogEntity">
+    <Position X="1.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAQAAAAACAAAAAAAAAACAAAQA=</HashCode>
+      <FileName>LogFiles\LogEntity.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Left" Position="0.1" />
+  </Class>
+  <Class Name="KUBC.DAYZ.GAME.LogFiles.OneLineEntity">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LogFiles\OneLineEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KUBC.DAYZ.GAME.LogFiles.RPT.AverageFPS">
+    <Position X="11.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LogFiles\RPT\AverageFPS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KUBC.DAYZ.GAME.LogFiles.RPT.ConnectEvent">
+    <Position X="9.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>LogFiles\RPT\ConnectEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KUBC.DAYZ.GAME.LogFiles.RPT.UsedMemory">
+    <Position X="7" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LogFiles\RPT\UsedMemory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KUBC.DAYZ.GAME.LogFiles.ADM.PlayerLogEntity">
+    <Position X="13.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>LogFiles\ADM\PlayerLogEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KUBC.DAYZ.GAME.LogFiles.ADM.PositionLogEntity">
+    <Position X="13.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LogFiles\ADM\PositionLogEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KUBC.DAYZ.GAME.LogFiles.ADM.BledOut">
+    <Position X="13.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LogFiles\ADM\BledOut.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

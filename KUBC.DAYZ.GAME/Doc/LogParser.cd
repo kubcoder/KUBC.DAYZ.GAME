@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="KUBC.DAYZ.GAME.LogFiles.MultiEntityFabric">
+    <Position X="1" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>LogFiles\MultiEntityFabric.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="KUBC.DAYZ.GAME.LogFiles.StringParser">
+    <Position X="5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAACAAAAAAAgAAQAAQAAABACQCCABAA=</HashCode>
+      <FileName>LogFiles\StringParser.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="KUBC.DAYZ.GAME.LogFiles.RPT.AverageFPSParser">
+    <Position X="6.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAgAAAA=</HashCode>
+      <FileName>LogFiles\RPT\AverageFPSParser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KUBC.DAYZ.GAME.LogFiles.RPT.RPTStringParser">
+    <Position X="5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LogFiles\RPT\RPTStringParser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KUBC.DAYZ.GAME.LogFiles.RPT.UsedMemoryPaser">
+    <Position X="9" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAgAAAA=</HashCode>
+      <FileName>LogFiles\RPT\UsedMemoryPaser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KUBC.DAYZ.GAME.LogFiles.ADM.ADMStringParser">
+    <Position X="11.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LogFiles\ADM\ADMStringParser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KUBC.DAYZ.GAME.LogFiles.RPT.ConnectEventParser">
+    <Position X="4.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAAQAAAAAAAAgAAAA=</HashCode>
+      <FileName>LogFiles\RPT\ConnectEventParser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KUBC.DAYZ.GAME.LogFiles.LineWithTimeParser">
+    <Position X="5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAACAAACAAAAAAA=</HashCode>
+      <FileName>LogFiles\LineWithTimeParser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KUBC.DAYZ.GAME.LogFiles.ADM.ADMParser">
+    <Position X="0.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LogFiles\ADM\ADMParser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KUBC.DAYZ.GAME.LogFiles.RPT.RPTParser">
+    <Position X="2.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LogFiles\RPT\RPTParser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="KUBC.DAYZ.GAME.LogFiles.ILogEntityFabric">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>LogFiles\ILogEntityFabric.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

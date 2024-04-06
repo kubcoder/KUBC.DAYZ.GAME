@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace KUBC.DAYZ.GAME.LogFiles.RPT
 {
-    internal class Parser : MultiEntityFabric
+    internal class RPTParser : MultiEntityFabric
     {
         /// <summary>
         /// Креативим новый парсер
         /// </summary>
-        public Parser() 
+        public RPTParser() 
         {
             Creators.Add(new AverageFPSParser());
             Creators.Add(new UsedMemoryPaser());

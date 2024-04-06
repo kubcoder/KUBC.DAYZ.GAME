@@ -4,17 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KUBC.DAYZ.GAME.LogFiles.RPT
+namespace KUBC.DAYZ.GAME.LogFiles.ADM
 {
     /// <summary>
-    /// Парсер строчки лога RPT.
+    /// Парсер строчки лога ADM.
     /// </summary>
     /// <remarks>
     /// Добавлено что при инициализации выполняется чтение даты или времени 
     /// когда была добавлена строчка если это не получилось, разбор 
     /// парсером будет прерван.
     /// </remarks>
-    public abstract class RPTStringParser:LineWithTimeParser
+    public abstract class ADMStringParser : LineWithTimeParser
     {
         /// <inheritdoc/>
         protected override bool ReadTime(CancellationToken? cancellation = null)
@@ -30,17 +30,16 @@ namespace KUBC.DAYZ.GAME.LogFiles.RPT
             }
             else
             {
-                if (DateTime.TryParse(TimeString, out var pFTime))
-                {
-                    logTime = pFTime;
-                }
-                else
-                {
-                    return false;
-                }
+                return false;
+            }
+            if (!SkipChar('|', cancellation))
+            {
+                return false;
             }
             return true;
         }
 
+        
+       
     }
 }
