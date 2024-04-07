@@ -21,6 +21,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="TestFiles\GameLogs\Crash.Log">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="TestFiles\GameLogs\LOG.ADM">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
