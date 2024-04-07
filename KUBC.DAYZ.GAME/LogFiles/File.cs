@@ -17,7 +17,7 @@ namespace KUBC.DAYZ.GAME.LogFiles
         /// </summary>
         protected FileInfo? logFile;
         /// <inheritdoc/>
-        public void OpenFile(FileInfo file)
+        public virtual void OpenFile(FileInfo file)
         {
             this.logFile = file;
             Dispose();
