@@ -16,7 +16,7 @@ namespace KUBC.DAYZ.GAME.MSTEST
         /// Папочка где лежит куча тестовых файликов
         /// </summary>
         /// <returns></returns>
-        protected DirectoryInfo GetTestPath() => new DirectoryInfo("F:\\DAYZ.80\\300\\Profiles");
+        protected DirectoryInfo GetTestPath() => new ("F:\\DAYZ.80\\300\\Profiles");
 
 
         /// <summary>
