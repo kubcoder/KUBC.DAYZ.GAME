@@ -47,8 +47,10 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
                     {
                         res.Totem = w.Trim();
                     }
+                    Dispose();
                     return res;
                 }
+                Dispose();
                 return res;
             }
             return null;

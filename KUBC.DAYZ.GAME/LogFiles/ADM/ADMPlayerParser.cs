@@ -19,6 +19,7 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
         /// <inheritdoc/>
         protected override bool Init(string Line, CancellationToken? cancellation = null)
         {
+            Player = null;
             if (base.Init(Line, cancellation))
             {
                 Player = ReadPlayer(cancellation);
@@ -78,7 +79,7 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
             }
             return null;
         }
-
         
+
     }
 }

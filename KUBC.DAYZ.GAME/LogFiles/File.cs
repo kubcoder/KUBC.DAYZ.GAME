@@ -77,10 +77,13 @@ namespace KUBC.DAYZ.GAME.LogFiles
             var logLine = ReadLine(cancellationToken);
             while(logLine!=null)
             {
-                AddLine(logLine);
-                if ((ReadEntity!=null)&&(ReadEntity.IsEndRead()))
+                if (!string.IsNullOrEmpty(logLine))
                 {
-                    entities.Add(ReadEntity);
+                    AddLine(logLine);
+                    if ((ReadEntity != null) && (ReadEntity.IsEndRead()))
+                    {
+                        entities.Add(ReadEntity);
+                    }
                 }
                 logLine = ReadLine(cancellationToken);
             }

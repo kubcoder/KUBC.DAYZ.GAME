@@ -51,6 +51,7 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
                             res.Construction = w.Trim();
                         }
                     }
+                    Dispose();
                     return res;
                 }
             }

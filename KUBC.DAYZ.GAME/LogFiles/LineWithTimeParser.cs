@@ -19,6 +19,8 @@ namespace KUBC.DAYZ.GAME.LogFiles
         /// <inheritdoc/>
         protected override bool Init(string Line, CancellationToken? cancellation = null)
         {
+            Dispose();
+            logTime = null;
             if (base.Init(Line, cancellation))
                 return ReadTime();
             return false;
@@ -28,5 +30,6 @@ namespace KUBC.DAYZ.GAME.LogFiles
         /// </summary>
         /// <returns></returns>
         protected abstract bool ReadTime(CancellationToken? cancellation = null);
+        
     }
 }

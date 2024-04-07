@@ -33,6 +33,10 @@ namespace KUBC.DAYZ.GAME.MSTEST
         private readonly int PlayerDied = 0;
         private readonly int PlayerKilled = 0;
         private readonly int PlayerList = 0;
+        private readonly int Regained = 0;
+        private readonly int Report = 0;
+        private readonly int Suicide = 0;
+        private readonly int Unconscious = 0;
 
         public int LinesInFile = 0;
 
@@ -81,6 +85,14 @@ namespace KUBC.DAYZ.GAME.MSTEST
                     PlayerKilled++;
                 if (line.Contains("PlayerList log", StringComparison.OrdinalIgnoreCase))
                     PlayerList++;
+                if (line.Contains("regained consciousness", StringComparison.OrdinalIgnoreCase))
+                    Regained++;
+                if (line.Contains("PLAYER REPORT:", StringComparison.OrdinalIgnoreCase))
+                    Report++;
+                if (line.Contains("committed suicide", StringComparison.OrdinalIgnoreCase))
+                    Suicide++;
+                if (line.Contains("is unconscious", StringComparison.OrdinalIgnoreCase))
+                    Unconscious++;
                 line = fileReader.ReadLine();
             }
         }
@@ -191,6 +203,27 @@ namespace KUBC.DAYZ.GAME.MSTEST
                     PlayerList++;
                     continue;
                 }
+                if (entity.GetType() == typeof(GAME.LogFiles.ADM.Regained))
+                {
+                    Regained++;
+                    continue;
+                }
+                if (entity.GetType() == typeof(GAME.LogFiles.ADM.Report))
+                {
+                    Report++;
+                    continue;
+                }
+                
+                if (entity.GetType() == typeof(GAME.LogFiles.ADM.Unconscious))
+                {
+                    Unconscious++;
+                    continue;
+                }
+                if (entity.GetType() == typeof(GAME.LogFiles.ADM.Suicide))
+                {
+                    Suicide++;
+                    continue;
+                }
             }
         }
         /// <summary>
@@ -237,6 +270,14 @@ namespace KUBC.DAYZ.GAME.MSTEST
             Assert.AreEqual(PlayerKilled, readed.PlayerKilled);
             Console.WriteLine($"Данных о PlayerList в логе {PlayerList} загружено как данных {readed.PlayerList}");
             Assert.AreEqual(PlayerList, readed.PlayerList);
+            Console.WriteLine($"Данных о Regained в логе {Regained} загружено как данных {readed.Regained}");
+            Assert.AreEqual(Regained, readed.Regained);
+            Console.WriteLine($"Данных о Report в логе {Report} загружено как данных {readed.Report}");
+            Assert.AreEqual(Report, readed.Report);
+            Console.WriteLine($"Данных о Suicide в логе {Suicide} загружено как данных {readed.Suicide}");
+            Assert.AreEqual(Suicide, readed.Suicide);
+            Console.WriteLine($"Данных о Unconscious в логе {Unconscious} загружено как данных {readed.Unconscious}");
+            Assert.AreEqual(Unconscious, readed.Unconscious);
         }
     }
 
@@ -273,6 +314,7 @@ namespace KUBC.DAYZ.GAME.MSTEST
 
         private void Adm_UnknowString(object? sender, string e)
         {
+            Console.WriteLine(e);
             UnknowLines.Add(e);
         }
 
@@ -610,6 +652,29 @@ namespace KUBC.DAYZ.GAME.MSTEST
                         ReadReport = true;
                         Report.Add(line);
                     }
+                }
+                line = fileReader.ReadLine();
+            }
+        }
+
+        /// <summary>
+        /// Тестируем событие чтения PlayerKilled
+        /// </summary>
+        [TestMethod]
+        public void Suicide()
+        {
+            var parser = new GAME.LogFiles.ADM.SuicideParser();
+            using StreamReader fileReader = new(GetTestFile().Open(FileMode.Open, FileAccess.Read, FileShare.ReadWrite));
+            var line = fileReader.ReadLine();
+            while (line != null)
+            {
+                if (line.Contains("committed suicide", StringComparison.OrdinalIgnoreCase))
+                {
+                    Console.WriteLine(line);
+                    var entity = parser.CreateEntity(line);
+                    Assert.IsNotNull(entity);
+                    Console.WriteLine(entity.GetXML());
+                    Console.WriteLine();
                 }
                 line = fileReader.ReadLine();
             }

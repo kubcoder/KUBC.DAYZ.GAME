@@ -16,28 +16,28 @@
     </TypeIdentifier>
   </Class>
   <Class Name="KUBC.DAYZ.GAME.LogFiles.RPT.AverageFPS">
-    <Position X="9.75" Y="8.5" Width="1.5" />
+    <Position X="7.5" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>LogFiles\RPT\AverageFPS.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="KUBC.DAYZ.GAME.LogFiles.RPT.ConnectEvent">
-    <Position X="7.5" Y="8.5" Width="1.5" />
+    <Position X="5.25" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAAAEAAAAAAAAAAAA=</HashCode>
       <FileName>LogFiles\RPT\ConnectEvent.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="KUBC.DAYZ.GAME.LogFiles.RPT.UsedMemory">
-    <Position X="5.25" Y="8.5" Width="1.5" />
+    <Position X="1.75" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>LogFiles\RPT\UsedMemory.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="KUBC.DAYZ.GAME.LogFiles.ADM.PlayerLogEntity">
-    <Position X="14.25" Y="8.5" Width="1.5" />
+    <Position X="9.75" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
       <FileName>LogFiles\ADM\PlayerLogEntity.cs</FileName>
@@ -171,10 +171,17 @@
     </TypeIdentifier>
   </Class>
   <Class Name="KUBC.DAYZ.GAME.LogFiles.ADM.PlayerList">
-    <Position X="1.5" Y="10.5" Width="1.5" />
+    <Position X="0.5" Y="9.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAABAAAAAAAAAAQAAAAQAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAABAACAAAAAAAQAAAAQAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
       <FileName>LogFiles\ADM\PlayerList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KUBC.DAYZ.GAME.LogFiles.ADM.Report">
+    <Position X="3.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>LogFiles\ADM\Report.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

@@ -19,6 +19,7 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
         /// <inheritdoc/>
         protected override bool Init(string Line, CancellationToken? cancellation = null)
         {
+            Position = null;
             if (base.Init(Line, cancellation))
             {
                 Position = ReadPosition(')', cancellation); 

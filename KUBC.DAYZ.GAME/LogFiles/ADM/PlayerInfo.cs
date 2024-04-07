@@ -60,6 +60,18 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
                     return;
                 }
             }
+            if (nickName.Contains('\''))
+            {
+                var startName = nickName.IndexOf('\'');
+                startName++;
+                var endName = nickName.LastIndexOf('\'');
+                var len = endName - startName;
+                if (len > 0)
+                {
+                    NickName = nickName.Substring(startName, len);
+                    return;
+                }
+            }
             NickName = nickName;
             foreach (var w in DW)
             {
