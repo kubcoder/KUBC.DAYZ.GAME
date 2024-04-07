@@ -3,6 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Intrinsics.Arm;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -91,12 +92,24 @@ namespace KUBC.DAYZ.GAME.MSTEST
         public void TestLoadADM()
         {
             var admLogs = new GAME.LogFiles.ADM.ADMLogs(GetTestPath());
+            ADM.UnknowString += ADM_UnknowString;
             var fileLogs = admLogs.GetAll();
             foreach (var log in fileLogs)
             {
                 ParseADMLog(log);
             }
+            Console.WriteLine("================================================");
+            Console.WriteLine($"Кол-во нераспознаных строк{ADMUnknowString.Count}");
+            Console.WriteLine("================================================");
+            foreach (var ul in ADMUnknowString)
+                Console.WriteLine(ul);
         }
 
+        private List<string> ADMUnknowString = [];
+
+        private void ADM_UnknowString(object? sender, string e)
+        {
+            ADMUnknowString.Add(e);
+        }
     }
 }
