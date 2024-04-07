@@ -20,6 +20,7 @@ namespace KUBC.DAYZ.GAME.LogFiles
         public void OpenFile(FileInfo file)
         {
             this.logFile = file;
+            Dispose();
         }
 
         /// <summary>
@@ -65,7 +66,8 @@ namespace KUBC.DAYZ.GAME.LogFiles
             {
                 fileReader.Dispose();
                 fileReader = null;
-            }    
+            }
+            Chars.Clear();
         }
 
         private ILogEntity? ReadEntity;
@@ -216,7 +218,6 @@ namespace KUBC.DAYZ.GAME.LogFiles
                     }
                     if (IsEndLine)
                         return GetLine();
-
                 }
             }
             return null;
@@ -228,10 +229,10 @@ namespace KUBC.DAYZ.GAME.LogFiles
         /// <returns>Полная строчка лога</returns>
         protected string GetLine()
         {
-            string l = string.Empty;
-            foreach (var c in Chars) { l += (char)c; }
+            var sB = new StringBuilder();
+            foreach (var c in Chars) { sB.Append((char)c);}
             Chars.Clear();
-            return l.Trim();
+            return sB.ToString().Trim();
         }
 
         /// <summary>

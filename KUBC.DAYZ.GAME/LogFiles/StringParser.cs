@@ -42,13 +42,22 @@ namespace KUBC.DAYZ.GAME.LogFiles
         /// <returns>Истина если инициализация прошла успешно</returns>
         protected virtual bool Init(string Line, CancellationToken? cancellation = null)
         {
-            if(Line.Contains(GetTAG()))
+            if(ContainsTag(Line))
             {
                 Reader = new StringReader(Line);
                 CurrentLine = Line;
                 return true;
             }
             return false;
+        }
+        /// <summary>
+        /// Проверить есть ли искомый тэг строки
+        /// </summary>
+        /// <param name="Line">Строка</param>
+        /// <returns>Истина если строка содержит тэг</returns>
+        protected virtual bool ContainsTag(string Line)
+        {
+            return Line.Contains(GetTAG());
         }
 
         /// <summary>

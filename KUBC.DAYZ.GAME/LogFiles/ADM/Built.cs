@@ -36,6 +36,11 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
             return "Built";
         }
         /// <inheritdoc/>
+        protected override bool ContainsTag(string Line)
+        {
+            return Line.Contains(GetTAG(), StringComparison.OrdinalIgnoreCase);
+        }
+        /// <inheritdoc/>
         public override ILogEntity? CreateEntity(string logLine, CancellationToken? cancellation = null)
         {
             if (Init(logLine, cancellation))

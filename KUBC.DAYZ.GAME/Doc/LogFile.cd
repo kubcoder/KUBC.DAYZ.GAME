@@ -37,15 +37,8 @@
   </Class>
   <Class Name="KUBC.DAYZ.GAME.LogFiles.ADM.Log">
     <Position X="6.25" Y="5.25" Width="1.5" />
-    <AssociationLine Name="parser" Type="KUBC.DAYZ.GAME.LogFiles.ADM.ADMParser" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="7" Y="7.578" />
-        <Point X="7" Y="8.616" />
-        <Point X="6" Y="8.616" />
-      </Path>
-    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAACAEAAAAAAAAAIAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAIAACAEAAAAAAAAAIAA=</HashCode>
       <FileName>LogFiles\ADM\Log.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -69,10 +62,39 @@
   <Class Name="KUBC.DAYZ.GAME.LogFiles.MultiEntityFabric">
     <Position X="8.25" Y="10.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAgAAAAAAAAIAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAAAAAAAAAIAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
       <FileName>LogFiles\MultiEntityFabric.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="KUBC.DAYZ.GAME.LogFiles.LogFabric">
+    <Position X="14" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAAAAAAAA=</HashCode>
+      <FileName>LogFiles\LogFabric.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="KUBC.DAYZ.GAME.LogFiles.GameLogs">
+    <Position X="14" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>LogFiles\GameLogs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KUBC.DAYZ.GAME.LogFiles.RPT.RPTLogs">
+    <Position X="14" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LogFiles\RPT\RPTLogs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KUBC.DAYZ.GAME.LogFiles.ADM.ADMLogs">
+    <Position X="16.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LogFiles\ADM\ADMLogs.cs</FileName>
+    </TypeIdentifier>
   </Class>
   <Interface Name="KUBC.DAYZ.GAME.LogFiles.ILogEntityFabric">
     <Position X="8.75" Y="2" Width="1.5" />

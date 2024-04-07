@@ -35,6 +35,8 @@ namespace KUBC.DAYZ.GAME.LogFiles.ADM
         /// <inheritdoc/>
         public override ILogEntity? CreateEntity(string logLine, CancellationToken? cancellation = null)
         {
+            if (logLine.Contains("Unmounted"))
+                return null;
             if (Init(logLine, cancellation))
             {
 #pragma warning disable CS8601 // Возможные null отсечены в родительском классе

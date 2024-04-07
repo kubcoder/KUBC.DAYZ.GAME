@@ -65,7 +65,7 @@ namespace KUBC.DAYZ.GAME.MSTEST
                     Lowered++;
                 if (line.Contains("has raised", StringComparison.OrdinalIgnoreCase))
                     Raised++;
-                if (line.Contains("Mounted", StringComparison.OrdinalIgnoreCase))
+                if (line.Contains("Mounted"))
                     Mounted++;
                 if (line.Contains("Unmounted", StringComparison.OrdinalIgnoreCase))
                     Unmounted++;
@@ -116,11 +116,6 @@ namespace KUBC.DAYZ.GAME.MSTEST
                 if (entity.GetType() == typeof(GAME.LogFiles.ADM.Built))
                 {
                     Built++;
-                    continue;
-                }
-                if (entity.GetType() == typeof(GAME.LogFiles.ADM.Chat))
-                {
-                    Chat++;
                     continue;
                 }
                 if (entity.GetType() == typeof(GAME.LogFiles.ADM.Chat))
@@ -251,7 +246,7 @@ namespace KUBC.DAYZ.GAME.MSTEST
             Console.WriteLine($"Данных о Raised в логе {Raised} загружено как данных {readed.Raised}");
             Assert.AreEqual(Raised, readed.Raised);
             Console.WriteLine($"Данных о Mounted в логе {Mounted} загружено как данных {readed.Mounted}");
-            Assert.AreEqual(Mounted, readed.Raised);
+            Assert.AreEqual(Mounted, readed.Mounted);
             Console.WriteLine($"Данных о Unmounted в логе {Unmounted} загружено как данных {readed.Unmounted}");
             Assert.AreEqual(Unmounted, readed.Unmounted);
             Console.WriteLine($"Данных о Packed в логе {Packed} загружено как данных {readed.Packed}");
@@ -337,12 +332,22 @@ namespace KUBC.DAYZ.GAME.MSTEST
         [TestMethod]
         public void Built()
         {
-            string Line = "20:11:08 | Player \"Zorro\" (id=OxjFoUFrQmU2hecaqJd6RRxgtqhaTMg_jZY_lHiGh8s= pos=<3442.6, 12323.8, 239.4>)Built wall_base_down on Забор with Топорик";
-            Console.WriteLine(Line);
             var parser = new GAME.LogFiles.ADM.BuiltParser();
-            var entity = parser.CreateEntity(Line);
-            Assert.IsNotNull(entity);
-            Console.WriteLine(entity.GetXML());
+            using StreamReader fileReader = new(GetTestFile().Open(FileMode.Open, FileAccess.Read, FileShare.ReadWrite));
+            var line = fileReader.ReadLine();
+            while (line != null)
+            {
+                if (line.Contains("Built"))
+                {
+                    Console.WriteLine(line);
+                    var entity = parser.CreateEntity(line);
+                    Assert.IsNotNull(entity);
+                    Console.WriteLine(entity.GetXML());
+                    Console.WriteLine();
+
+                }
+                line = fileReader.ReadLine();
+            }
         }
         /// <summary>
         /// Тестируем событие чтения Chat
@@ -456,12 +461,22 @@ namespace KUBC.DAYZ.GAME.MSTEST
         [TestMethod]
         public void Mounted()
         {
-            string Line = "19:55:57 | Player \"kot23rus\" (id=B1idL_7H1auUS5DPBOEDcTFQ3EBBrzFLa8r1GGmv7GA= pos=<272.6, 801.8, 560.1>)Player SurvivorBase<5f3d7020> Mounted BarbedWire on Fence";
-            Console.WriteLine(Line);
             var parser = new GAME.LogFiles.ADM.MountedParser();
-            var entity = parser.CreateEntity(Line);
-            Assert.IsNotNull(entity);
-            Console.WriteLine(entity.GetXML());
+            using StreamReader fileReader = new(GetTestFile().Open(FileMode.Open, FileAccess.Read, FileShare.ReadWrite));
+            var line = fileReader.ReadLine();
+            while (line != null)
+            {
+                if (line.Contains("Mounted"))
+                {
+                    Console.WriteLine(line);
+                    var entity = parser.CreateEntity(line);
+                    Assert.IsNotNull(entity);
+                    Console.WriteLine(entity.GetXML());
+                    Console.WriteLine();
+
+                }
+                line = fileReader.ReadLine();
+            }
         }
 
         /// <summary>

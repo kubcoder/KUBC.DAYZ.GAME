@@ -1,4 +1,5 @@
 ﻿using KUBC.DAYZ.GAME.LogFiles;
+using KUBC.DAYZ.GAME.LogFiles.RPT;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
@@ -8,25 +9,19 @@ using System.Threading.Tasks;
 
 namespace KUBC.DAYZ.GAME.MSTEST
 {
-    /// <summary>
-    /// Тестируем логи
-    /// </summary>
-    [TestClass]
-    public class TestRPT
+    
+    internal class RPTCounters
     {
         private int averageFps = 0;
         private int usedMemory = 0;
         private int connectEvent = 0;
+        public const string TAG_AVERAGEFPS = "Average server FPS";
 
-        private static FileInfo GetTestFile() => new FileInfo("TestFiles\\GameLogs\\LOG.RPT");
+        public const string TAG_USEDMEMORY = "Used memory";
 
-        private const string TAG_AVERAGEFPS = "Average server FPS";
+        public const string TAG_STEAMID = "steamID";
 
-        private const string TAG_USEDMEMORY = "Used memory";
-
-        private const string TAG_STEAMID = "steamID";
-
-        private void CalculateEvents(FileInfo testFile)
+        public RPTCounters(FileInfo testFile)
         {
             averageFps = 0;
             usedMemory = 0;
@@ -46,26 +41,41 @@ namespace KUBC.DAYZ.GAME.MSTEST
                 }
             }
         }
-
-        int lAverageFps = 0;
-        int lUsedMemory = 0;
-        int lConnectEvent = 0;
-
-        private void CalculateLoadEvents(IEnumerable<ILogEntity> Events)
+        public RPTCounters(IEnumerable<ILogEntity> Events)
         {
-            lAverageFps = 0;
-            lUsedMemory = 0;
-            lConnectEvent = 0;
+            
             foreach (var entity in Events)
             {
                 if (entity is GAME.LogFiles.RPT.AverageFPS)
-                    lAverageFps++;
+                    averageFps++;
                 if (entity is GAME.LogFiles.RPT.UsedMemory)
-                    lUsedMemory++;
+                    usedMemory++;
                 if (entity is GAME.LogFiles.RPT.ConnectEvent)
-                    lConnectEvent++;
+                    connectEvent++;
             }
         }
+
+        /// <summary>
+        /// Тупо сравниваем что в файле и что мы смогли прочитать
+        /// </summary>
+        public void CheckResult(RPTCounters loaded)
+        {
+            Console.WriteLine($"Данных о ФПС в логе {averageFps} загружено как данных {loaded.averageFps}");
+            Assert.AreEqual(averageFps, loaded.averageFps);
+            Console.WriteLine($"Данных о памяти в логе {usedMemory} загружено как данных {loaded.usedMemory}");
+            Assert.AreEqual(usedMemory, loaded.usedMemory);
+            Console.WriteLine($"Данных о подключениях игроков в логе {connectEvent} загружено как данных {loaded.connectEvent}");
+            Assert.AreEqual(connectEvent, loaded.connectEvent);
+        }
+    }
+    
+    /// <summary>
+    /// Тестируем логи
+    /// </summary>
+    [TestClass]
+    public class TestRPT
+    {
+        private static FileInfo GetTestFile() => new FileInfo("TestFiles\\GameLogs\\LOG.RPT");
 
         /// <summary>
         /// Проверка чтения RPT лога
@@ -74,7 +84,7 @@ namespace KUBC.DAYZ.GAME.MSTEST
         public void ReadRPT()
         {
             var testFile = GetTestFile();
-            CalculateEvents(testFile);
+            var fileInfo = new RPTCounters(testFile);
             var rpt = new GAME.LogFiles.RPT.Log();
             rpt.OpenFile(testFile);
             var sTime = DateTime.Now;
@@ -82,21 +92,10 @@ namespace KUBC.DAYZ.GAME.MSTEST
             var eTime = DateTime.Now;
             Console.WriteLine($"Время чтения лога{eTime.Subtract(sTime)}");
             Assert.IsNotNull(Events);
-            CalculateLoadEvents(Events);
-            CheckResult();
+            var loadedInfo = new RPTCounters(Events);
+            fileInfo.CheckResult(loadedInfo);
         }
-        /// <summary>
-        /// Тупо сравниваем что в файле и что мы смогли прочитать
-        /// </summary>
-        private void CheckResult()
-        {
-            Console.WriteLine($"Данных о ФПС в логе {averageFps} загружено как данных {lAverageFps}");
-            Assert.AreEqual(averageFps, lAverageFps);
-            Console.WriteLine($"Данных о памяти в логе {usedMemory} загружено как данных {lUsedMemory}");
-            Assert.AreEqual(usedMemory, lUsedMemory);
-            Console.WriteLine($"Данных о подключениях игроков в логе {connectEvent} загружено как данных {lConnectEvent}");
-            Assert.AreEqual(connectEvent, lConnectEvent);
-        }
+        
 
         /// <summary>
         /// Проверка чтения RPT лога который еще пишется
@@ -156,9 +155,9 @@ namespace KUBC.DAYZ.GAME.MSTEST
             var endRead = rpt.ReadToEnd();
             if (endRead != null)
                 Events.AddRange(endRead);
-            CalculateEvents(testFile);
-            CalculateLoadEvents(Events);
-            CheckResult();
+            var fileInfo = new RPTCounters(testFile);
+            var loadedInfo = new RPTCounters(Events);
+            fileInfo.CheckResult(loadedInfo);
         }
         /// <summary>
         /// Проверяем есть ли в строчке интересующие нас данные
@@ -167,11 +166,11 @@ namespace KUBC.DAYZ.GAME.MSTEST
         /// <returns></returns>
         private bool HasTestTag(string line)
         {
-            if (line.Contains(TAG_STEAMID))
+            if (line.Contains(RPTCounters.TAG_STEAMID))
                 return true;
-            if (line.Contains(TAG_USEDMEMORY))
+            if (line.Contains(RPTCounters.TAG_USEDMEMORY))
                 return true;
-            if (line.Contains(TAG_AVERAGEFPS))
+            if (line.Contains(RPTCounters.TAG_AVERAGEFPS))
                 return true;
             return false;
         }
