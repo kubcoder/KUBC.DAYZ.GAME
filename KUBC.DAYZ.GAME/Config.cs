@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
@@ -28,10 +29,10 @@ namespace KUBC.DAYZ.GAME
         /// </summary>
         protected string _sectName = string.Empty;
 
-        /// <summary>
-        /// Событие обновления данных
-        /// </summary>
+        /// <inheritdoc/>
         public event PropertyChangedEventHandler? PropertyChanged;
+        /// <inheritdoc/>
+        public event NotifyCollectionChangedEventHandler? CollectionChanged;
 
 
         /// <inheritdoc/>
@@ -72,7 +73,8 @@ namespace KUBC.DAYZ.GAME
         /// </remarks>
         /// <param name="key">Имя параметра</param>
         /// <param name="value">Значение параметра</param>
-        protected void SetValue(string key, bool? value)
+        /// <param name="AttrName">Имя явно указанного аттрибута в коллекции</param>
+        protected void SetValue(string key, bool? value, string? AttrName = null)
         {
             if (value.HasValue)
             {
@@ -101,22 +103,38 @@ namespace KUBC.DAYZ.GAME
 
 
         /// <inheritdoc/>
-        public void SetValue(string key, object? value)
+        public void SetValue(string key, object? value, string? AttrName = null)
         {
             if (Params.ContainsKey(key))
             {
                 if (Params[key] != value)
                 {
                     Params[key] = value;
-                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(key));
+                    SendNotify(key, AttrName);
                 }
             }
             else
             {
                 Params.Add(key, value);
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(key));
+                if (!string.IsNullOrEmpty(AttrName))
+                    SendNotify(key, AttrName);
+                CollectionChanged?.Invoke(this, new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Add));
             }
         }
+        /// <summary>
+        /// Послать уведомление о изменении элемента
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="AttrName"></param>
+        protected void SendNotify(string key, string? AttrName = null)
+        {
+            if (string.IsNullOrEmpty(AttrName))
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(key));
+            else
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(AttrName));
+        }
+
+
         /// <inheritdoc/>
         IEnumerator IEnumerable.GetEnumerator()
         {

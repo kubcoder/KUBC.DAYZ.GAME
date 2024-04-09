@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,7 @@ namespace KUBC.DAYZ.GAME
     /// <summary>
     /// Секция конфигурации
     /// </summary>
-    public interface IConfig : INotifyPropertyChanged, IEnumerable<KeyValuePair<string, object?>>
+    public interface IConfig : INotifyPropertyChanged, INotifyCollectionChanged, IEnumerable<KeyValuePair<string, object?>>
     {
         /// <summary>
         /// Имя секции
@@ -27,7 +28,8 @@ namespace KUBC.DAYZ.GAME
         /// </summary>
         /// <param name="key">Ключ параметра</param>
         /// <param name="value">Значение параметра</param>
-        public void SetValue(string key, object? value);
+        /// <param name="AttrName">Имя явно указанного аттрибута в коллекции</param>
+        public void SetValue(string key, object? value, string? AttrName = null);
 
         /// <summary>
         /// Получить список имен параметров коллекции

@@ -9,7 +9,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="KUBC.DAYZ.GAME.MissionFiles.Mission">
-    <Position X="2.75" Y="4.75" Width="1.5" />
+    <Position X="0.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAABA=</HashCode>
       <FileName>MissionFiles\Mission.cs</FileName>
@@ -26,14 +26,21 @@
     </TypeIdentifier>
   </Class>
   <Class Name="KUBC.DAYZ.GAME.SubPathConfig">
-    <Position X="10.25" Y="6.5" Width="1.5" />
+    <Position X="2.75" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAIAAAAAAAAAAAgAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>SubPathConfig.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="KUBC.DAYZ.GAME.MissionFiles.DB.DBFiles">
-    <Position X="4.75" Y="6" Width="1.5" />
+    <Position X="4.75" Y="7.25" Width="1.5" />
+    <InheritanceLine Type="KUBC.DAYZ.GAME.SubPathConfig" FixedToPoint="true">
+      <Path>
+        <Point X="3.5" Y="6.819" />
+        <Point X="3.5" Y="7.562" />
+        <Point X="4.75" Y="7.562" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAgAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAEAgAAAA=</HashCode>
       <FileName>MissionFiles\DB\DBFiles.cs</FileName>
@@ -43,7 +50,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="KUBC.DAYZ.GAME.MissionFiles.DB.Economy.EconomyFile">
-    <Position X="8.25" Y="6" Width="1.5" />
+    <Position X="8.25" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
       <FileName>MissionFiles\DB\Economy\EconomyFile.cs</FileName>
