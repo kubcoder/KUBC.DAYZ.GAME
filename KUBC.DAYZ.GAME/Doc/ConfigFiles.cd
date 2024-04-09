@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="KUBC.DAYZ.GAME.FileConfig">
+    <Position X="2.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAoAAAABACAAIAAAAAAAAAAAAAAEAAAAAEAAgAAAA=</HashCode>
+      <FileName>FileConfig.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="KUBC.DAYZ.GAME.MissionFiles.Mission">
+    <Position X="2.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAABA=</HashCode>
+      <FileName>MissionFiles\Mission.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="DB" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="KUBC.DAYZ.GAME.FileXMLConfig">
+    <Position X="8.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FileXMLConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KUBC.DAYZ.GAME.SubPathConfig">
+    <Position X="10.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAgAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SubPathConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KUBC.DAYZ.GAME.MissionFiles.DB.DBFiles">
+    <Position X="4.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAEAgAAAA=</HashCode>
+      <FileName>MissionFiles\DB\DBFiles.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="Economy" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="KUBC.DAYZ.GAME.MissionFiles.DB.Economy.EconomyFile">
+    <Position X="8.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>MissionFiles\DB\Economy\EconomyFile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="KUBC.DAYZ.GAME.IFileConfig">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>IFileConfig.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
