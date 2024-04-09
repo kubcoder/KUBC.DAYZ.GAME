@@ -10,7 +10,6 @@ namespace KUBC.DAYZ.GAME.MissionFiles.DB.Economy
     /// <summary>
     /// Элемент конфигурации экономики
     /// </summary>
-    [XmlRoot("event")]
     public class EconomyEntity:AXMLConfig
     {
    

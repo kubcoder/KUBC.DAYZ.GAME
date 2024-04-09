@@ -110,6 +110,7 @@ namespace KUBC.DAYZ.GAME
                 if (Params[key] != value)
                 {
                     Params[key] = value;
+                    CollectionChanged?.Invoke(this, new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Replace, Params[key]));
                     SendNotify(key, AttrName);
                 }
             }
@@ -133,6 +134,7 @@ namespace KUBC.DAYZ.GAME
             else
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(AttrName));
         }
+
 
 
         /// <inheritdoc/>

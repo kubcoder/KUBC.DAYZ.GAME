@@ -13,7 +13,7 @@ namespace KUBC.DAYZ.GAME
     /// <summary>
     /// Класс сереализирует все данные в виде аттрибутов
     /// </summary>
-    public abstract class AXMLConfig : Config, IXmlSerializable
+    public abstract class AXMLConfig : XMLConfig
     {
         
         /// <inheritdoc/>
@@ -22,7 +22,7 @@ namespace KUBC.DAYZ.GAME
             return null;
         }
         /// <inheritdoc/>
-        public void ReadXml(XmlReader reader)
+        public override void ReadXml(XmlReader reader)
         {
             Params.Clear();
             if (reader.MoveToFirstAttribute())
@@ -34,29 +34,8 @@ namespace KUBC.DAYZ.GAME
                 }
             }
         }
-
-        private void AddParametr(string key, string? value)
-        {
-            if (string.IsNullOrEmpty(value))
-            {
-                Params.Add(key, null);
-                return;
-            }
-            if (int.TryParse(value, out var intValue))
-            {
-                Params.Add(key, intValue);
-                return;
-            }
-            if (decimal.TryParse(value, out var decimalValue))
-            {
-                Params.Add(key, decimalValue);
-                return;
-            }
-            Params.Add(key, value);
-        }
-
         /// <inheritdoc/>
-        public void WriteXml(XmlWriter writer)
+        public override void WriteXml(XmlWriter writer)
         {
             
             foreach (var e in this.Params)
@@ -64,9 +43,5 @@ namespace KUBC.DAYZ.GAME
                 writer.WriteAttributeString(e.Key, e.Value?.ToString());
             }
         }
-
-        
-
-
     }
 }

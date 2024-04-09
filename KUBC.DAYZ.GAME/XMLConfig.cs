@@ -22,7 +22,7 @@ namespace KUBC.DAYZ.GAME
         /// <inheritdoc/>
         public abstract void ReadXml(XmlReader reader);
         /// <inheritdoc/>
-        public void WriteXml(XmlWriter writer)
+        public virtual void WriteXml(XmlWriter writer)
         {
             foreach (var e in this.Params)
             {
@@ -41,8 +41,31 @@ namespace KUBC.DAYZ.GAME
                     }
                     writer.WriteEndElement();
                 }
-                
             }
+        }
+        /// <summary>
+        /// Добавить параметр в коллекцию
+        /// </summary>
+        /// <param name="key">Ключ параметра</param>
+        /// <param name="value">Значение параметра</param>
+        protected void AddParametr(string key, string? value)
+        {
+            if (string.IsNullOrEmpty(value))
+            {
+                Params.Add(key, null);
+                return;
+            }
+            if (int.TryParse(value, out var intValue))
+            {
+                Params.Add(key, intValue);
+                return;
+            }
+            if (decimal.TryParse(value, out var decimalValue))
+            {
+                Params.Add(key, decimalValue);
+                return;
+            }
+            Params.Add(key, value);
         }
     }
 }

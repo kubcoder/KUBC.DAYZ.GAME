@@ -40,7 +40,13 @@ namespace KUBC.DAYZ.GAME.MSTEST
                     Console.WriteLine($"{ed.Key}:{ed.Value}");
                 }
             }
-            
+        }
+
+        [TestMethod]
+        public void TestTypes()
+        {
+            var mission = GetMission();
+            var types = mission.DB.Types.Load() as GAME.MissionFiles.DB.Types.ItemTypes;
         }
     }
 }

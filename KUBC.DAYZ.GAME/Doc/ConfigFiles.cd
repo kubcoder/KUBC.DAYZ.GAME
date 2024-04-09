@@ -19,7 +19,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="KUBC.DAYZ.GAME.FileXMLConfig">
-    <Position X="8.25" Y="4.75" Width="1.5" />
+    <Position X="10.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>FileXMLConfig.cs</FileName>
@@ -37,23 +37,45 @@
     <InheritanceLine Type="KUBC.DAYZ.GAME.SubPathConfig" FixedToPoint="true">
       <Path>
         <Point X="3.5" Y="6.819" />
-        <Point X="3.5" Y="7.562" />
-        <Point X="4.75" Y="7.562" />
+        <Point X="3.5" Y="7.5" />
+        <Point X="4.75" Y="7.5" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAAAgAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAEAgAAAA=</HashCode>
+      <HashCode>AgAAgAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAEAgAAAA=</HashCode>
       <FileName>MissionFiles\DB\DBFiles.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="Economy" />
+      <Field Name="Types" />
     </ShowAsAssociation>
   </Class>
   <Class Name="KUBC.DAYZ.GAME.MissionFiles.DB.Economy.EconomyFile">
-    <Position X="8.25" Y="7.5" Width="1.5" />
+    <Position X="8.25" Y="6.5" Width="1.5" />
+    <InheritanceLine Type="KUBC.DAYZ.GAME.FileXMLConfig" FixedToPoint="true">
+      <Path>
+        <Point X="11.25" Y="5.747" />
+        <Point X="11.25" Y="7.438" />
+        <Point X="9.75" Y="7.438" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
       <FileName>MissionFiles\DB\Economy\EconomyFile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KUBC.DAYZ.GAME.MissionFiles.DB.Types.TypesFile">
+    <Position X="8.25" Y="8.25" Width="1.5" />
+    <InheritanceLine Type="KUBC.DAYZ.GAME.FileXMLConfig" FixedToPoint="true">
+      <Path>
+        <Point X="11.25" Y="5.747" />
+        <Point X="11.25" Y="9.023" />
+        <Point X="9.75" Y="9.023" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>MissionFiles\DB\Types\TypesFile.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="KUBC.DAYZ.GAME.IFileConfig">
