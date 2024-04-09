@@ -105,6 +105,7 @@ namespace KUBC.DAYZ.GAME.MissionFiles.DB.Types
                 writer.WriteAttributeString(ATTRNAME, tag);
                 writer.WriteEndElement();
             }
+            writer.WriteEndElement();
         }
         /// <inheritdoc/>
         public override void ReadXml(XmlReader reader)
@@ -174,5 +175,9 @@ namespace KUBC.DAYZ.GAME.MissionFiles.DB.Types
                     reader.Read();
             }
         }
+
+        #region Поля для обратной совместимости
+        //TODO: добавить поля для обратной совместимости
+        #endregion
     }
 }

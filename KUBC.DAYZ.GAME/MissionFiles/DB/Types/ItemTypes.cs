@@ -45,7 +45,6 @@ namespace KUBC.DAYZ.GAME.MissionFiles.DB.Types
                     writer.WriteEndElement();
                 }
             }
-            writer.WriteEndElement();
         }
     }
 }

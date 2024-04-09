@@ -40,6 +40,7 @@ namespace KUBC.DAYZ.GAME.MSTEST
                     Console.WriteLine($"{ed.Key}:{ed.Value}");
                 }
             }
+            economy.Save(new FileInfo("economy.xml"));
         }
 
         [TestMethod]
@@ -47,6 +48,9 @@ namespace KUBC.DAYZ.GAME.MSTEST
         {
             var mission = GetMission();
             var types = mission.DB.Types.Load() as GAME.MissionFiles.DB.Types.ItemTypes;
+            Assert.IsNotNull(types);
+            Assert.AreNotEqual(types.Count(), 0);
+            types.Save(new FileInfo("ttt.xml"));
         }
     }
 }

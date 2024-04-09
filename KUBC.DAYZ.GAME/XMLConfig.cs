@@ -36,8 +36,7 @@ namespace KUBC.DAYZ.GAME
                     }
                     else
                     {
-                        XmlSerializer s = new XmlSerializer(e.Value.GetType());
-                        s.Serialize(writer, e.Value);
+                        writer.WriteValue(e.Value);
                     }
                     writer.WriteEndElement();
                 }
@@ -66,6 +65,34 @@ namespace KUBC.DAYZ.GAME
                 return;
             }
             Params.Add(key, value);
+        }
+        
+        /// <summary>
+        /// Сохранить данные в файл
+        /// </summary>
+        /// <param name="file"></param>
+        public void Save(FileInfo file)
+        {
+            XmlSerializer s = new XmlSerializer(this.GetType());
+            using(StreamWriter stream = new StreamWriter(file.FullName))
+            {
+                using(XmlWriter writer = XmlWriter.Create(stream, GetSettings()))
+                {
+                    s.Serialize(writer, this);
+                }
+            }
+        }
+        /// <summary>
+        /// Получить настройки записи в XML
+        /// </summary>
+        /// <returns></returns>
+        protected virtual XmlWriterSettings GetSettings()
+        {
+            return new()
+            {
+                OmitXmlDeclaration = false,
+                Indent = true
+            };
         }
     }
 }
