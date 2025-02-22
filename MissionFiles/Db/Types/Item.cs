@@ -32,7 +32,7 @@ public class Item : IXmlSerializable
 
     public const string NODE_USAGE = "usage";
 
-    public const string NOTE_VALUE = "value";
+    public const string NODE_VALUE = "value";
 
     public const string NODE_TAG = "tag";
 
@@ -106,6 +106,9 @@ public class Item : IXmlSerializable
                     case NODE_LIFETIME:
                         LifeTime = reader.ReadElementContentAsInt();
                         break;
+                    case NODE_RESTOK:
+                        Restock = reader.ReadElementContentAsInt();
+                        break;
                     case NODE_MIN:
                         Min = reader.ReadElementContentAsInt();
                         break;
@@ -127,7 +130,7 @@ public class Item : IXmlSerializable
                     case NODE_USAGE:
                         ReadAttrName(reader, Usages);
                         break;
-                    case NOTE_VALUE:
+                    case NODE_VALUE:
                         ReadAttrName(reader, Values);
                         break;
                     case NODE_TAG:
@@ -151,6 +154,39 @@ public class Item : IXmlSerializable
     /// <inheritdoc/>
     public void WriteXml(XmlWriter writer)
     {
-        throw new NotImplementedException();
+        writer.WriteStartElement(ROOT_NODE_NAME);
+        writer.WriteAttributeString(ATTR_NAME, Name);
+        WriteElement(writer, NODE_NOMINAL, Nominal);
+        WriteElement(writer, NODE_LIFETIME, LifeTime);
+        WriteElement(writer, NODE_RESTOK, Restock);
+        WriteElement(writer, NODE_MIN, Min);
+        WriteElement(writer, NODE_QUANT_MIN, QuantMin);
+        WriteElement(writer, NODE_QUANT_MAX, QuantMax);
+        WriteElement(writer, NODE_COST, Cost);
+        Flags.WriteXml(writer);
+        foreach(var cat in Categories)
+        {
+            writer.WriteElementString(NODE_CATEGORY, cat);
+        }
+        foreach(var tag in Tags)
+        {
+            writer.WriteElementString(NODE_TAG, tag);
+        }
+        foreach (var usage in Usages)
+        {
+            writer.WriteElementString(NODE_USAGE, usage);
+        }
+        foreach (var value in Values)
+        {
+            writer.WriteElementString(NODE_VALUE, value);
+        }
+        writer.WriteEndElement();
+    }
+
+    private void WriteElement(XmlWriter writer, string nodeName, int value)
+    {
+        writer.WriteStartElement(nodeName);
+        writer.WriteValue(value);
+        writer.WriteEndElement();
     }
 }

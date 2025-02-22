@@ -55,6 +55,11 @@ public class File : List<Item>, IXmlSerializable
     /// <inheritdoc/>
     public void WriteXml(XmlWriter writer)
     {
-        throw new NotImplementedException();
+        writer.WriteStartElement(ROOT_NODE_NAME);
+        foreach(var item in this)
+        {
+            item.WriteXml(writer);
+        }
+        writer.WriteEndElement();
     }
 }
