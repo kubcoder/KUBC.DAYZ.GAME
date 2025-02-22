@@ -19,6 +19,9 @@ public class TypesFile
             using(var reader = XmlReader.Create(file))
             {
                 types.ReadXml(reader);
+                Assert.Equal(4, types.Count);
+                var asval = types.Where(x => x.Name == "ASVAL").FirstOrDefault();
+                Assert.NotNull(asval);
             }
         }
         
