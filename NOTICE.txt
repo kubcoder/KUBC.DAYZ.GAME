@@ -1,5 +1,5 @@
-KUBC.DAYZ.GAME
-Copyright © 2023 KUBCODER
+KUBC.DAYZ.GAME.CORE
+Copyright © 2025 KUBCODER
 
 All code herein is licensed under the Apache 2.0 License (see the LICENSE file).
 

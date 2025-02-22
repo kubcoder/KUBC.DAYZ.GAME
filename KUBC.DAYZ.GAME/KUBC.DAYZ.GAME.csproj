@@ -9,9 +9,9 @@
 		<Authors>kot23rus</Authors>
 		<Company>KUBCODER</Company>
 		<Description>Инструменты для работы с серверными файлами DAYZ SA</Description>
-		<Copyright>KUBC.DAYZ.GAME Copyright (C) 2024 KUBCODER</Copyright>
+		<Copyright>KUBC.DAYZ.GAME.CORE Copyright (C) 2025 KUBCODER</Copyright>
 		<RepositoryUrl>https://github.com/kubcoder/KUBC.DAYZ.GAME</RepositoryUrl>
-		<PackageReleaseNotes>Добавили возможность получения информации из файла банов и белых списков</PackageReleaseNotes>
+		<PackageReleaseNotes>Переход на версию .NET 9</PackageReleaseNotes>
 		<NeutralLanguage>ru</NeutralLanguage>
 		<GenerateDocumentationFile>True</GenerateDocumentationFile>
 		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
@@ -20,6 +20,7 @@
 		<PackageReadmeFile>Readme.md</PackageReadmeFile>
 		<PackageIcon>DayzIcon128.png</PackageIcon>
 		<PackageTags>DAYZ SA; .NET</PackageTags>
+		<PackageId>KUBC.DAYZ.GAME.CORE</PackageId>
 		<PackageProjectUrl>https://kubcoder.ru/dayzgame/about</PackageProjectUrl>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -46,5 +47,8 @@
 	</ItemGroup>
 	<ItemGroup>
 	  <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.0" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="MissionFiles\Db\Types\" />
 	</ItemGroup>
 </Project>
