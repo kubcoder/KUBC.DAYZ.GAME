@@ -18,22 +18,50 @@ namespace KUBC.DAYZ.GAME.MissionFiles.Db.Types;
 /// </remarks>
 public class CEFlags : IXmlSerializable
 {
-
-    public const string ATTR_COUNT_IN_CARGO = "count_in_cargo";
-    public const string ATTR_COUNT_IN_HOARDER = "count_in_hoarder";
-    public const string ATTR_COUNT_IN_MAP = "count_in_map";
-    public const string ATTR_COUNT_IN_PLAYER = "count_in_player";
-    public const string ATTR_COUNT_CRAFTED = "crafted";
-    public const string ATTR_COUNT_DELOOT = "deloot";
-    public const string ATTR_VALUE_TRUE = "1";
-    public const string ATTR_VALUE_FALSE = "0";
+    /// <summary>
+    /// Имя элемента XML
+    /// </summary>
     public const string ROOT_NODE_NAME = "flags";
 
+    private const string ATTR_COUNT_IN_CARGO = "count_in_cargo";
+    private const string ATTR_COUNT_IN_HOARDER = "count_in_hoarder";
+    private const string ATTR_COUNT_IN_MAP = "count_in_map";
+    private const string ATTR_COUNT_IN_PLAYER = "count_in_player";
+    private const string ATTR_COUNT_CRAFTED = "crafted";
+    private const string ATTR_COUNT_DELOOT = "deloot";
+    private const string ATTR_VALUE_TRUE = "1";
+    private const string ATTR_VALUE_FALSE = "0";
+
+    /// <summary>
+    /// Учитывать игровые предметы в контейнерах (ящиках, рюкзаках, багажниках)
+    /// </summary>
     public bool InCargo = true;
+
+    /// <summary>
+    /// Учитывать игровые предметы в накопителях (бочки, палатки, схроны)
+    /// </summary>
     public bool InHoarder = true;
+    
+    /// <summary>
+    /// Учитывать игровые предметы в мире, в общем все что просто 
+    /// валяется в домах, на земле и т.д.
+    /// </summary>
     public bool InMap = true;
+
+    /// <summary>
+    /// Учитывать игровые предметы у игроков.
+    /// </summary>
     public bool InPlayer = false;
+
+    /// <summary>
+    /// Учитывать созданные предметы
+    /// </summary>
     public bool Crafted = false;
+
+    /// <summary>
+    /// Разрешить удаление предметов для
+    /// пересоздания в другом месте
+    /// </summary>
     public bool Deloot = false;
 
     /// <inheritdoc/>
@@ -53,18 +81,15 @@ public class CEFlags : IXmlSerializable
         Deloot = ReadAttribute(reader, ATTR_COUNT_DELOOT);
     }
 
-    private bool ReadAttribute(XmlReader reader, string attrName, bool defValue = false)
+    private static bool ReadAttribute(XmlReader reader, string attrName, bool defValue = false)
     {
         var aStr = reader.GetAttribute(attrName);
-        switch(aStr)
+        return aStr switch
         {
-            case ATTR_VALUE_FALSE:
-                return false;
-            case ATTR_VALUE_TRUE:
-                return true;
-            default:
-                return defValue;
-        }
+            ATTR_VALUE_FALSE => false,
+            ATTR_VALUE_TRUE => true,
+            _ => defValue,
+        };
     }
 
     /// <inheritdoc/>
@@ -80,7 +105,7 @@ public class CEFlags : IXmlSerializable
         writer.WriteEndElement();
     }
 
-    private void WriteAttribute(XmlWriter writer, string attrName, bool attrValue)
+    private static void WriteAttribute(XmlWriter writer, string attrName, bool attrValue)
     {
         if (attrValue)
         {

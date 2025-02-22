@@ -10,56 +10,111 @@ namespace KUBC.DAYZ.GAME.MissionFiles.Db.Types;
 /// </summary>
 public class Item : IXmlSerializable
 {
+    /// <summary>
+    /// имя тэга XML элемента
+    /// </summary>
     public const string ROOT_NODE_NAME = "type";
 
-    public const string ATTR_NAME = "name";
+    private const string ATTR_NAME = "name";
 
-    public const string NODE_NOMINAL = "nominal";
+    private const string NODE_NOMINAL = "nominal";
 
-    public const string NODE_LIFETIME = "lifetime";
+    private const string NODE_LIFETIME = "lifetime";
 
-    public const string NODE_RESTOK = "restock";
+    private const string NODE_RESTOK = "restock";
 
-    public const string NODE_MIN = "min";
+    private const string NODE_MIN = "min";
 
-    public const string NODE_QUANT_MIN = "quantmin";
+    private const string NODE_QUANT_MIN = "quantmin";
 
-    public const string NODE_QUANT_MAX = "quantmax";
+    private const string NODE_QUANT_MAX = "quantmax";
 
-    public const string NODE_COST = "cost";
+    private const string NODE_COST = "cost";
 
-    public const string NODE_CATEGORY = "category";
+    private const string NODE_CATEGORY = "category";
 
-    public const string NODE_USAGE = "usage";
+    private const string NODE_USAGE = "usage";
 
-    public const string NOTE_VALUE = "value";
+    private const string NODE_VALUE = "value";
 
-    public const string NODE_TAG = "tag";
+    private const string NODE_TAG = "tag";
 
+    /// <summary>
+    /// Имя класса игрового предмета
+    /// </summary>
     public string Name = string.Empty;
 
+    /// <summary>
+    /// Номинальное количество предмета 
+    /// в игровом мире
+    /// </summary>
     public int Nominal = 0;
 
+    /// <summary>
+    /// Время жизни игрового предмета
+    /// в мире в секундах
+    /// </summary>
     public int LifeTime = 0;
 
+    /// <summary>
+    /// Через сколько секунд разрешено
+    /// удаление предмета из игрового мира
+    /// для пересоздания
+    /// </summary>
     public int Restock = 0;
 
+    /// <summary>
+    /// Минимальное количество экземпляров
+    /// по достижению которого начинается
+    /// создание новых предметов в мире
+    /// </summary>
     public int Min = 0;
 
+    /// <summary>
+    /// Минимальное наполнение предмета
+    /// при создании предмета в игровом мире
+    /// </summary>
     public int QuantMin = 0;
 
+    /// <summary>
+    /// Минимальное наполнение предмета
+    /// при создании предмета в игровом мире
+    /// </summary>
     public int QuantMax = 0;
 
+    /// <summary>
+    /// Важность... тут вопросы
+    /// </summary>
     public int Cost = 0;
 
+    /// <summary>
+    /// Флаги настройки учета количества
+    /// игровых предметов в мире
+    /// </summary>
     public CEFlags Flags = new();
 
+    /// <summary>
+    /// Категории игровых предметов
+    /// </summary>
     public List<string> Categories = [];
 
+    /// <summary>
+    /// Функциональное назначение предмета.
+    /// Используется для тематического размещения
+    /// игровых предметов
+    /// </summary>
     public List<string> Usages = [];
 
+    /// <summary>
+    /// Имена зон ограничивающие создание
+    /// предметов
+    /// </summary>
     public List<string> Values = [];
 
+
+    /// <summary>
+    /// ТЭГи размещения и использования предмета
+    /// </summary>
     public List<string> Tags = [];
 
     
@@ -92,6 +147,10 @@ public class Item : IXmlSerializable
         }
     }
 
+    /// <summary>
+    /// Читаем настройки игрового предмета
+    /// </summary>
+    /// <param name="reader"></param>
     private void Read(XmlReader reader)
     {
         while(reader.Read())
@@ -105,6 +164,9 @@ public class Item : IXmlSerializable
                         break;
                     case NODE_LIFETIME:
                         LifeTime = reader.ReadElementContentAsInt();
+                        break;
+                    case NODE_RESTOK:
+                        Restock = reader.ReadElementContentAsInt();
                         break;
                     case NODE_MIN:
                         Min = reader.ReadElementContentAsInt();
@@ -127,7 +189,7 @@ public class Item : IXmlSerializable
                     case NODE_USAGE:
                         ReadAttrName(reader, Usages);
                         break;
-                    case NOTE_VALUE:
+                    case NODE_VALUE:
                         ReadAttrName(reader, Values);
                         break;
                     case NODE_TAG:
@@ -139,7 +201,12 @@ public class Item : IXmlSerializable
         }
     }
 
-    private void ReadAttrName(XmlReader reader, List<string> target)
+    /// <summary>
+    /// Прочитать атрибут с именем
+    /// </summary>
+    /// <param name="reader">Контекст чтения данных</param>
+    /// <param name="target">В какую коллекцию добавить имя</param>
+    private static void ReadAttrName(XmlReader reader, List<string> target)
     {
         var name = reader.GetAttribute(ATTR_NAME);
         if (!string.IsNullOrEmpty(name))
@@ -151,6 +218,45 @@ public class Item : IXmlSerializable
     /// <inheritdoc/>
     public void WriteXml(XmlWriter writer)
     {
-        throw new NotImplementedException();
+        writer.WriteStartElement(ROOT_NODE_NAME);
+        writer.WriteAttributeString(ATTR_NAME, Name);
+        WriteElement(writer, NODE_NOMINAL, Nominal);
+        WriteElement(writer, NODE_LIFETIME, LifeTime);
+        WriteElement(writer, NODE_RESTOK, Restock);
+        WriteElement(writer, NODE_MIN, Min);
+        WriteElement(writer, NODE_QUANT_MIN, QuantMin);
+        WriteElement(writer, NODE_QUANT_MAX, QuantMax);
+        WriteElement(writer, NODE_COST, Cost);
+        Flags.WriteXml(writer);
+        foreach(var cat in Categories)
+        {
+            writer.WriteElementString(NODE_CATEGORY, cat);
+        }
+        foreach(var tag in Tags)
+        {
+            writer.WriteElementString(NODE_TAG, tag);
+        }
+        foreach (var usage in Usages)
+        {
+            writer.WriteElementString(NODE_USAGE, usage);
+        }
+        foreach (var value in Values)
+        {
+            writer.WriteElementString(NODE_VALUE, value);
+        }
+        writer.WriteEndElement();
+    }
+
+    /// <summary>
+    /// Запись в файл элемент с целочисленным значением
+    /// </summary>
+    /// <param name="writer">контекст записи данных</param>
+    /// <param name="nodeName">Имя узла</param>
+    /// <param name="value">Значение</param>
+    private static void WriteElement(XmlWriter writer, string nodeName, int value)
+    {
+        writer.WriteStartElement(nodeName);
+        writer.WriteValue(value);
+        writer.WriteEndElement();
     }
 }
