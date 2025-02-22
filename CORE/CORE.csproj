@@ -1,0 +1,56 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net9.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<Title>KUBC.DAYZ.GAME</Title>
+		<RootNamespace>KUBC.DAYZ.GAME</RootNamespace>
+		<Version>9.0.0-pw1</Version>
+		<Authors>kot23rus</Authors>
+		<Company>KUBCODER</Company>
+		<Description>Инструменты для работы с серверными файлами DAYZ SA</Description>
+		<Copyright>KUBC.DAYZ.GAME.CORE Copyright (C) 2025 KUBCODER</Copyright>
+		<RepositoryUrl>https://github.com/kubcoder/KUBC.DAYZ.GAME</RepositoryUrl>
+		<PackageReleaseNotes>Переход на версию .NET 9</PackageReleaseNotes>
+		<NeutralLanguage>ru</NeutralLanguage>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<PackageReadmeFile>Readme.md</PackageReadmeFile>
+		<PackageIcon>DayzIcon128.png</PackageIcon>
+		<PackageTags>DAYZ SA; .NET</PackageTags>
+		<AssemblyName>KUBC.DAYZ.GAME.CORE</AssemblyName>
+		<PackageId>KUBC.DAYZ.GAME.CORE</PackageId>
+		<PackageProjectUrl>https://kubcoder.ru/dayzgame/about</PackageProjectUrl>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<DebugType>full</DebugType>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<DebugType>none</DebugType>
+	</PropertyGroup>
+	<ItemGroup>
+	  <None Include="..\LICENSE.txt">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	</ItemGroup>
+	<ItemGroup>
+		<None Include="NOTICE.txt">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+	<ItemGroup>
+		<None Include="..\DayzIcon128.png">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="Readme.md">
+		  <Pack>True</Pack>
+		  <PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+</Project>

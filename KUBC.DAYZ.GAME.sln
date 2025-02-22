@@ -3,15 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34018.315
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KUBC.DAYZ.GAME", "KUBC.DAYZ.GAME\KUBC.DAYZ.GAME.csproj", "{7A9B5E5D-F652-496B-96B6-FBEC147F3985}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CORE", "CORE\CORE.csproj", "{7A9B5E5D-F652-496B-96B6-FBEC147F3985}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решения", "Элементы решения", "{754FC069-D67B-A9D7-50A1-8D1CA196D8F1}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
 		LICENSE.txt = LICENSE.txt
-		NOTICE.txt = NOTICE.txt
 		Readme.md = Readme.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TEST", "TEST\TEST.csproj", "{4EB88AB1-06C5-46B3-B6DB-67E58B3F4E94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MissionFiles", "MissionFiles\MissionFiles.csproj", "{EBBC46CC-3CD4-4E4E-887B-E4B978CE4C51}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +26,14 @@ Global
 		{7A9B5E5D-F652-496B-96B6-FBEC147F3985}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A9B5E5D-F652-496B-96B6-FBEC147F3985}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A9B5E5D-F652-496B-96B6-FBEC147F3985}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EB88AB1-06C5-46B3-B6DB-67E58B3F4E94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EB88AB1-06C5-46B3-B6DB-67E58B3F4E94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EB88AB1-06C5-46B3-B6DB-67E58B3F4E94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EB88AB1-06C5-46B3-B6DB-67E58B3F4E94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBBC46CC-3CD4-4E4E-887B-E4B978CE4C51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBBC46CC-3CD4-4E4E-887B-E4B978CE4C51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBBC46CC-3CD4-4E4E-887B-E4B978CE4C51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBBC46CC-3CD4-4E4E-887B-E4B978CE4C51}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
