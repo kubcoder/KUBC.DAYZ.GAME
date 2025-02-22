@@ -10,10 +10,15 @@ using System.Xml.Serialization;
 namespace KUBC.DAYZ.GAME.MissionFiles.Db.Types;
 
 /// <summary>
-/// Файл types.xml
+/// Файл с описанием настроек
+/// игровых предметов для центральной
+/// экономики сервера
 /// </summary>
 public class File : List<Item>, IXmlSerializable
 {
+    /// <summary>
+    /// корневой XML тэг коллекции
+    /// </summary>
     public const string ROOT_NODE_NAME = "types";
     /// <inheritdoc/>
     public XmlSchema? GetSchema()
@@ -35,7 +40,10 @@ public class File : List<Item>, IXmlSerializable
             }
         }
     }
-
+    /// <summary>
+    /// Читаем коллекцию настроек
+    /// </summary>
+    /// <param name="reader">Ветки дерева файла types</param>
     private void ReadTypes(XmlReader reader)
     {
         while(reader.Read())
