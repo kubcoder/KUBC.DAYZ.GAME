@@ -11,7 +11,7 @@ namespace KUBC.DAYZ.GAME.MissionFiles.Config.Economy.Core;
 /// Загрузчик файла
 /// конфигурации экономики
 /// </summary>
-public class EconomyCoreLoader(ServerConfigFiles serverFiles) : XMLFileLoader<CfgEconomyCore>
+public class EconomyCoreLoader(ServerConfigFiles serverFiles) : XMLFileTool<CfgEconomyCore>
 {
     /// <inheritdoc/>
     protected override FileInfo GetFile() => serverFiles.CfgEconomyCore;

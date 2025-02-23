@@ -13,8 +13,7 @@ namespace KUBC.DAYZ.GAME.MissionFiles;
 /// Универсальный загрузчик файла XML
 /// </summary>
 /// <typeparam name="T">Тип данных файла</typeparam>
-/// <param name="file">Имя файла</param>
-public abstract class XMLFileLoader<T> where T : IXmlSerializable
+public abstract class XMLFileTool<T> where T : IXmlSerializable
 {
     /// <summary>
     /// Получить информацию о файле для загрузки
@@ -36,5 +35,20 @@ public abstract class XMLFileLoader<T> where T : IXmlSerializable
             }
         }
         return result;
+    }
+
+    /// <summary>
+    /// Сохранить данные в файл
+    /// </summary>
+    /// <param name="fileData">данные файла</param>
+    public void Save(T fileData)
+    {
+        using (var file = GetFile().Create())
+        {
+            using (var writer = XmlWriter.Create(file))
+            {
+                fileData.WriteXml(writer);
+            }
+        }
     }
 }
