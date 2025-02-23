@@ -53,5 +53,8 @@
 			<PackagePath>\</PackagePath>
 		</None>
 	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Config\RandomPresets\" />
+	</ItemGroup>
 
 </Project>
