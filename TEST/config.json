@@ -1,0 +1,47 @@
+{
+  "Path": "DayZ\\dayzOffline.chernarusplus",
+  "RemoveFood": {
+    "Enable": true,
+    "ItemNames": [
+      "BakedBeansCan",
+      "PowderedMilk",
+      "SpaghettiCan",
+      "BrisketSpread",
+      "Candycane_Green",
+      "Lunchmeat",
+      "Crackers",
+      "PorkCan",
+      "PorkCan_Opened",
+      "BakedBeansCan_Opened",
+      "Pajka_Opened",
+      "Candycane_Red",
+      "ZagorkyPeanuts",
+      "Zagorky",
+      "SaltySticks",
+      "SardinesCan",
+      "Marmalade",
+      "Lunchmeat_Opened",
+      "Pate_Opened",
+      "BrisketSpread_Opened",
+      "Honey",
+      "Candycane_Yellow",
+      "TunaCan",
+      "Pajka",
+      "Chips",
+      "TacticalBaconCan_Opened",
+      "DogFoodCan_Opened",
+      "TunaCan_Opened",
+      "SpaghettiCan_Opened",
+      "Candycane_RedGreen",
+      "Pate",
+      "BoxCerealCrunchin",
+      "CrabCan",
+      "ZagorkyChocolate",
+      "SardinesCan_Opened",
+      "TacticalBaconCan",
+      "CrabCan_Opened",
+      "Rice"
+    ]
+  }
+
+}

@@ -32,7 +32,6 @@ public abstract class AbstractTest
         {
             options.AddConsole();
             options.SetMinimumLevel(LogLevel.Trace);
-        }
-        );
+        });
     }
 }
