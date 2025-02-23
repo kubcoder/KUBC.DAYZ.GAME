@@ -14,7 +14,7 @@ namespace KUBC.DAYZ.GAME.MissionFiles.Config.Economy.Core;
 /// Класс работы с файлом
 /// cfgeconomycore.xml
 /// </summary>
-public class File : IXmlSerializable
+public class CfgEconomyCore : IXmlSerializable
 {
     /// <summary>
     /// имя тэга XML элемента
