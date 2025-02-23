@@ -49,29 +49,26 @@ public class RootClass : IXmlSerializable
     /// <inheritdoc/>
     public void ReadXml(XmlReader reader)
     {
-        while (reader.Read())
+        if (reader.Name == ROOT_NODE_NAME)
         {
-            if (reader.Name == ROOT_NODE_NAME)
+            var name = reader.GetAttribute(ATTR_NAME);
+            if (name != null)
             {
-                var name = reader.GetAttribute(ATTR_NAME);
-                if (name!=null)
-                {
-                    Name = name;
-                }
-                Act = reader.GetAttribute(ATTR_ACT);
-                var report = reader.GetAttribute(ATTR_REPORT_MEM_LOD);
-                switch(report)
-                {
-                    case REPORT_MEM_LOD_FALSE:
-                        ReportMemLod = false;
-                        break;
-                    case REPORT_MEM_LOD_TRUE:
-                        ReportMemLod = true;
-                        break;
-                    default:
-                        ReportMemLod = null;
-                        break;
-                }
+                Name = name;
+            }
+            Act = reader.GetAttribute(ATTR_ACT);
+            var report = reader.GetAttribute(ATTR_REPORT_MEM_LOD);
+            switch (report)
+            {
+                case REPORT_MEM_LOD_FALSE:
+                    ReportMemLod = false;
+                    break;
+                case REPORT_MEM_LOD_TRUE:
+                    ReportMemLod = true;
+                    break;
+                default:
+                    ReportMemLod = null;
+                    break;
             }
         }
     }
