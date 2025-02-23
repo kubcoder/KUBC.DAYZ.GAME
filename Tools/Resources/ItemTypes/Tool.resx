@@ -117,7 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="FoundItems" xml:space="preserve">
-    <value>Удалено {0} настроек для {1}</value>
+  <data name="SaveFile" xml:space="preserve">
+    <value>Сохраняем изменения в файл {0}</value>
+  </data>
+  <data name="StartCheckFile" xml:space="preserve">
+    <value>Начинаем проверку файла {0}</value>
   </data>
 </root>

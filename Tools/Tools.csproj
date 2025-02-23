@@ -57,16 +57,34 @@
 	  <ProjectReference Include="..\MissionFiles\MissionFiles.csproj" />
 	</ItemGroup>
 	<ItemGroup>
+	  <Compile Update="Resources\ItemTypes\LifeTime\LifeTimeTool.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>LifeTimeTool.resx</DependentUpon>
+	  </Compile>
 	  <Compile Update="Resources\ItemTypes\Remover\RemoveTool.Designer.cs">
 	    <DesignTime>True</DesignTime>
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>RemoveTool.resx</DependentUpon>
 	  </Compile>
+	  <Compile Update="Resources\ItemTypes\Tool.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Tool.resx</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 	<ItemGroup>
+	  <EmbeddedResource Update="Resources\ItemTypes\LifeTime\LifeTimeTool.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>LifeTimeTool.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
 	  <EmbeddedResource Update="Resources\ItemTypes\Remover\RemoveTool.resx">
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>RemoveTool.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\ItemTypes\Tool.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Tool.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
 	</ItemGroup>
 </Project>

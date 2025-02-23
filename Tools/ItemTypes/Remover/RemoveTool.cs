@@ -14,50 +14,22 @@ namespace KUBC.DAYZ.GAME.Tools.ItemTypes.Remover;
 /// игровых предметов из спавна 
 /// центральной экономики
 /// </summary>
-public class RemoveTool(ILogger logger, Config options, MissionFiles.ServerConfigFiles configFiles)
+/// <param name="logger">Инструмент протоколирования действий</param>
+/// <param name="options">Настройки выполнения действий</param>
+/// <param name="configFiles">Инструмент доступа к конфигурации</param>
+public class RemoveTool(ILogger logger, Config options, MissionFiles.ServerConfigFiles configFiles):Tool(logger, options, configFiles)
 {
 
     /// <summary>
     /// Отчет о выполнении операции
     /// </summary>
     public Dictionary<string, int> Report = [];
-    
-    /// <summary>
-    /// Выполнить процедуру очистки 
-    /// игровых предметов
-    /// </summary>
-    public void Remove()
+
+
+    /// <inheritdoc/>
+    protected override void PreAction()
     {
         Report.Clear();
-        foreach(var fileInfo in configFiles.TypesFiles)
-        {
-            RemoveFromFile(fileInfo);
-        }
-    }
-
-    private void RemoveFromFile(FileInfo fileInfo)
-    {
-        logger.LogInformation(RM.StartCheckFile, fileInfo.Name);
-        var fileTool = new MissionFiles.Db.Types.TypeFileLoader(fileInfo);
-        var types = fileTool.Load();
-        RemoveItems(types);
-        if (options.Enable)
-        {
-            logger.LogInformation(RM.SaveFile, fileInfo.Name);
-            fileTool.Save(types);
-        }
-    }
-
-    
-
-    private void RemoveItems(MissionFiles.Db.Types.File types)
-    {
-        foreach(var itemName in options.ItemNames)
-        {
-            var count = types.RemoveAll(x => x.Name == itemName);
-            logger.LogInformation(RM.FoundItems, count, itemName);
-            AddToReport(itemName, count);
-        }
     }
 
     private void AddToReport(string name, int count)
@@ -66,5 +38,16 @@ public class RemoveTool(ILogger logger, Config options, MissionFiles.ServerConfi
             Report[name] += count;
         else
             Report.Add(name, count);
+    }
+
+    /// <inheritdoc/>
+    public override void Apply(MissionFiles.Db.Types.File types)
+    {
+        foreach (var itemName in Options.ItemNames)
+        {
+            var count = types.RemoveAll(x => x.Name == itemName);
+            Logger.LogInformation(RM.FoundItems, count, itemName);
+            AddToReport(itemName, count);
+        }
     }
 }

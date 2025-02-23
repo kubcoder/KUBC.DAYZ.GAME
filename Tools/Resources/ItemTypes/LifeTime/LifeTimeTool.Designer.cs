@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace KUBC.DAYZ.GAME.Tools.Resources.ItemTypes.Remover {
+namespace KUBC.DAYZ.GAME.Tools.Resources.ItemTypes.LifeTime {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace KUBC.DAYZ.GAME.Tools.Resources.ItemTypes.Remover {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class RemoveTool {
+    internal class LifeTimeTool {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal RemoveTool() {
+        internal LifeTimeTool() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace KUBC.DAYZ.GAME.Tools.Resources.ItemTypes.Remover {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("KUBC.DAYZ.GAME.Tools.Resources.ItemTypes.Remover.RemoveTool", typeof(RemoveTool).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("KUBC.DAYZ.GAME.Tools.Resources.ItemTypes.LifeTime.LifeTimeTool", typeof(LifeTimeTool).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,11 +61,11 @@ namespace KUBC.DAYZ.GAME.Tools.Resources.ItemTypes.Remover {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Удалено {0} настроек для {1}.
+        ///   Ищет локализованную строку, похожую на Время жизни {0} изменено с {1} на {2}.
         /// </summary>
-        internal static string FoundItems {
+        internal static string ChangeLifeTime {
             get {
-                return ResourceManager.GetString("FoundItems", resourceCulture);
+                return ResourceManager.GetString("ChangeLifeTime", resourceCulture);
             }
         }
     }

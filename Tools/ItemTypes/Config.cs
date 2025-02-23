@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KUBC.DAYZ.GAME.Tools.ItemTypes.Remover;
+namespace KUBC.DAYZ.GAME.Tools.ItemTypes;
 
 /// <summary>
 /// Конфигурация очистки игровых предметов
