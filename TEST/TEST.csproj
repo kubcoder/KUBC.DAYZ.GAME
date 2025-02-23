@@ -38,9 +38,16 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Update="Config\Economy\Core\cfgeconomycore.xml">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
 	  <None Update="MissionFiles\Db\Types\types.xml">
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </None>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Config\Economy\Core\" />
 	</ItemGroup>
 
 </Project>
