@@ -41,6 +41,9 @@
 	  <None Update="MissionFiles\Config\Economy\Core\cfgeconomycore.xml">
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </None>
+	  <None Update="MissionFiles\Config\Limits\Definition\cfglimitsdefinition.xml">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
 	  <None Update="MissionFiles\Db\Types\types.xml">
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </None>

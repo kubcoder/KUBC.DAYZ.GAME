@@ -5,16 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 
-namespace KUBC.DAYZ.GAME.MissionFiles.Config.Economy.Core;
+namespace KUBC.DAYZ.GAME.MissionFiles.Config.Limits.Definition;
 
-public class ConfigFile
+public class LimitFile
 {
     [Fact]
     public void ReadWriteFile()
     {
-        var fileInfo = new FileInfo("MissionFiles\\Config\\Economy\\Core\\cfgeconomycore.xml");
+        var fileInfo = new FileInfo("MissionFiles\\Config\\Limits\\Definition\\cfglimitsdefinition.xml");
         Assert.True(fileInfo.Exists);
-        var cfg = new CfgEconomyCore();
+        var cfg = new CfgLimitsDefinition();
         using (var file = fileInfo.OpenRead())
         {
             using (var reader = XmlReader.Create(file))
@@ -22,7 +22,7 @@ public class ConfigFile
                 cfg.ReadXml(reader);
             }
         }
-        var extFile = new FileInfo("cfgeconomycore.xml");
+        var extFile = new FileInfo("cfglimitsdefinition.xml");
         using (var file = extFile.Create())
         {
             using (var writer = XmlWriter.Create(file, new() { Indent = true }))
