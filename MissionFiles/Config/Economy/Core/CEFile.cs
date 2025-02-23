@@ -24,7 +24,11 @@ public class CEFile : IXmlSerializable
 
     private const string ATTR_TYPE = "type";
 
-    private const string VALUE_TYPE_TYPES = "types";
+    /// <summary>
+    /// Имя типа файла для обозначения 
+    /// файлов конфигурации игровых передметов
+    /// </summary>
+    public const string VALUE_TYPE_TYPES = "types";
 
     /// <summary>
     /// Имя файла

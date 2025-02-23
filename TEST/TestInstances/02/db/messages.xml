@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<messages>
+    
+	<message>
+        <delay>0</delay>
+        <repeat>0</repeat>
+        <onconnect>1</onconnect>
+        <text>Добро пожаловать к КУБАНОИДАМ!!!</text>
+    </message>
+    <message>
+        <delay>0</delay>
+        <repeat>30</repeat>
+        <onconnect>1</onconnect>
+        <text>Новости и объявления https://kubanoids.ru</text>
+    </message>
+    <message>
+        <delay>10</delay>
+        <repeat>30</repeat>
+        <onconnect>1</onconnect>
+        <text>Телеграм: https://t.me/kubanoidsdayz</text>
+    </message>
+    <message>
+        <delay>0</delay>
+        <repeat>60</repeat>
+        <onconnect>1</onconnect>
+        <text>Сервер PVE, за необоснованные убйства - БАН.</text>
+    </message>
+    <message>
+		<delay>0</delay>
+		<repeat>0</repeat>
+		<deadline>600</deadline>
+		<onConnect>0</onConnect>
+		<shutdown>1</shutdown>
+		<text>Рестарт планируется через #tmin минут.</text>
+	</message>
+
+</messages>
