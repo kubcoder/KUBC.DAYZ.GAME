@@ -10,18 +10,8 @@ namespace KUBC.DAYZ.GAME.Tools;
 /// <summary>
 /// Тесты базовых инструментов
 /// </summary>
-public class Base
+public class Base : AbstractTest
 {
-    /// <summary>
-    /// Получаем папку тестового
-    /// экземпляра файлов сервера
-    /// </summary>
-    /// <param name="number">Номер экземпляра</param>
-    /// <returns></returns>
-    private DirectoryInfo GetInstance(int number)
-    {
-        return new DirectoryInfo($"TestInstances\\{number.ToString("D2")}");
-    }
 
     /// <summary>
     /// Проверяем правильность работы
