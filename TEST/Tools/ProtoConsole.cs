@@ -68,4 +68,40 @@ public class ProtoConsole
         }
     }
 
+    [Fact]
+    public void TransportLifeTime()
+    {
+        var lifeTimeSection = config.GetSection("TransportLifeTime");
+        Assert.NotNull(lifeTimeSection);
+        LongLife(lifeTimeSection);
+    }
+
+    [Fact]
+    public void BaseItemsLifeTime()
+    {
+        var lifeTimeSection = config.GetSection("BaseItemsLifeTime");
+        Assert.NotNull(lifeTimeSection);
+        LongLife(lifeTimeSection);
+    }
+
+    [Fact]
+    public void ExplosiveLifeTime()
+    {
+        var lifeTimeSection = config.GetSection("ExplosiveLifeTime");
+        Assert.NotNull(lifeTimeSection);
+        LongLife(lifeTimeSection);
+    }
+
+    private void LongLife(IConfigurationSection section)
+    {
+        var toolConfig = new Tools.ItemTypes.LifeTime.Config();
+        section.Bind(toolConfig);
+        var tool = new Tools.ItemTypes.LifeTime.LifeTimeTool(LoggerFactory.CreateLogger("LT"), toolConfig, serverFiles);
+        tool.Apply();
+        foreach (var line in tool.Report)
+        {
+            TestOutput.WriteLine("{0}:{1}=>{2}", line.ItemName, line.OldLifeTime, line.NewLifeTime);
+        }
+    }
+
 }
