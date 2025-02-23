@@ -38,6 +38,14 @@ public abstract class XMLFileTool<T> where T : IXmlSerializable
     }
 
     /// <summary>
+    /// Настройки сохранения в файл
+    /// </summary>
+    public XmlWriterSettings WriteSettings = new()
+    {
+        Indent = true
+    };
+
+    /// <summary>
     /// Сохранить данные в файл
     /// </summary>
     /// <param name="fileData">данные файла</param>
@@ -45,7 +53,7 @@ public abstract class XMLFileTool<T> where T : IXmlSerializable
     {
         using (var file = GetFile().Create())
         {
-            using (var writer = XmlWriter.Create(file))
+            using (var writer = XmlWriter.Create(file, WriteSettings))
             {
                 fileData.WriteXml(writer);
             }
