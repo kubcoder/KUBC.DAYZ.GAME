@@ -40,7 +40,9 @@
       "SardinesCan_Opened",
       "TacticalBaconCan",
       "CrabCan_Opened",
-      "Rice"
+      "Rice",
+      "CombinationLock",
+      "CombinationLock4"
     ]
   },
   "TransportLifeTime": {
