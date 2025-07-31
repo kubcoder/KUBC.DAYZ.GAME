@@ -1,3 +1,4 @@
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using System.Text;
 
@@ -8,6 +9,16 @@ namespace KUBC.DAYZ.GAME.Tools;
 /// </summary>
 public abstract class AbstractTest
 {
+
+    /// <summary>
+    /// Имя файла конфигурации
+    /// </summary>
+    private const string configFile = "config.json";
+
+    /// <summary>
+    /// Конфигурация автоматической обработки
+    /// </summary>
+    public readonly IConfiguration Config;
     /// <summary>
     /// Получаем папку тестового
     /// экземпляра файлов сервера
@@ -29,5 +40,8 @@ public abstract class AbstractTest
             options.AddConsole();
             options.SetMinimumLevel(LogLevel.Trace);
         });
+        var configBuilder = new ConfigurationBuilder();
+        configBuilder.AddJsonFile(configFile);
+        Config = configBuilder.Build();
     }
 }
