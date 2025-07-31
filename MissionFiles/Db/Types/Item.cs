@@ -117,7 +117,7 @@ public class Item : IXmlSerializable
     /// </summary>
     public List<string> Tags = [];
 
-    
+
 
     /// <inheritdoc/>
     public XmlSchema? GetSchema()
@@ -153,11 +153,11 @@ public class Item : IXmlSerializable
     /// <param name="reader"></param>
     private void Read(XmlReader reader)
     {
-        while(reader.Read())
+        while (reader.Read())
         {
             if (reader.IsStartElement())
             {
-                switch(reader.Name)
+                switch (reader.Name)
                 {
                     case NODE_NOMINAL:
                         Nominal = reader.ReadElementContentAsInt();
@@ -228,11 +228,11 @@ public class Item : IXmlSerializable
         WriteElement(writer, NODE_QUANT_MAX, QuantMax);
         WriteElement(writer, NODE_COST, Cost);
         Flags.WriteXml(writer);
-        foreach(var cat in Categories)
+        foreach (var cat in Categories)
         {
             writer.WriteElementString(NODE_CATEGORY, cat);
         }
-        foreach(var tag in Tags)
+        foreach (var tag in Tags)
         {
             writer.WriteElementString(NODE_TAG, tag);
         }

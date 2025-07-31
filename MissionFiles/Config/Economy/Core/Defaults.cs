@@ -1,8 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Schema;
 using System.Xml.Serialization;
@@ -39,7 +34,7 @@ public class Defaults : Dictionary<string, string?>, IXmlSerializable
         this.Clear();
         while (reader.Read())
         {
-            if ((reader.IsStartElement())&&(reader.Name==NODE_NAME))
+            if ((reader.IsStartElement()) && (reader.Name == NODE_NAME))
             {
                 AddElement(reader);
             }
@@ -59,10 +54,10 @@ public class Defaults : Dictionary<string, string?>, IXmlSerializable
     public void WriteXml(XmlWriter writer)
     {
         writer.WriteStartElement(ROOT_NODE_NAME);
-        foreach(var item in this)
+        foreach (var item in this)
         {
             writer.WriteStartElement(NODE_NAME);
-            writer.WriteAttributeString(ATTR_NAME,item.Key);
+            writer.WriteAttributeString(ATTR_NAME, item.Key);
             writer.WriteAttributeString(ATTR_VALUE, item.Value);
             writer.WriteEndElement();
         }

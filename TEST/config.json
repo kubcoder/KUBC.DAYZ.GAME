@@ -1,5 +1,5 @@
 {
-  "Path": "DayZ\\dayzOffline.chernarusplus",
+  "Path": "DayZ\\kub.enoch",
   "RemoveFood": {
     "Enable": true,
     "ItemNames": [
@@ -40,7 +40,12 @@
       "SardinesCan_Opened",
       "TacticalBaconCan",
       "CrabCan_Opened",
-      "Rice"
+      "Rice",
+      "SodaCan_Cola",
+      "SodaCan_Fronta",
+      "SodaCan_Kvass",
+      "SodaCan_Pipsi",
+      "SodaCan_Spite"
     ]
   },
   "TransportLifeTime": {

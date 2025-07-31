@@ -1,9 +1,3 @@
-using Microsoft.VisualBasic.FileIO;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Schema;
 using System.Xml.Serialization;
@@ -46,11 +40,11 @@ public class CfgEconomyCore : IXmlSerializable
     /// <inheritdoc/>
     public void ReadXml(XmlReader reader)
     {
-        while(reader.Read())
+        while (reader.Read())
         {
             if (reader.IsStartElement())
             {
-                switch(reader.Name)
+                switch (reader.Name)
                 {
                     case RootClassCollection.ROOT_NODE_NAME:
                         Classes.ReadXml(reader.ReadSubtree());

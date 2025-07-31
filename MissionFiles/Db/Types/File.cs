@@ -1,8 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Schema;
 using System.Xml.Serialization;
@@ -29,7 +24,7 @@ public class File : List<Item>, IXmlSerializable
     public void ReadXml(XmlReader reader)
     {
         this.Clear();
-        while(reader.Read())
+        while (reader.Read())
         {
             if (reader.IsStartElement())
             {
@@ -46,7 +41,7 @@ public class File : List<Item>, IXmlSerializable
     /// <param name="reader">Ветки дерева файла types</param>
     private void ReadTypes(XmlReader reader)
     {
-        while(reader.Read())
+        while (reader.Read())
         {
             if (reader.IsStartElement())
             {
@@ -64,7 +59,7 @@ public class File : List<Item>, IXmlSerializable
     public void WriteXml(XmlWriter writer)
     {
         writer.WriteStartElement(ROOT_NODE_NAME);
-        foreach(var item in this)
+        foreach (var item in this)
         {
             item.WriteXml(writer);
         }

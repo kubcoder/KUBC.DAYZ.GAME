@@ -1,8 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Schema;
 using System.Xml.Serialization;
@@ -23,7 +18,7 @@ public class CEConfig : List<CEFile>, IXmlSerializable
     private const string ATTR_FOLDER = "folder";
 
     private const string DEFAIULT_FOLDER = "db";
-    
+
     /// <summary>
     /// Имя директории 
     /// с файлами конфигурации
@@ -40,7 +35,7 @@ public class CEConfig : List<CEFile>, IXmlSerializable
     public void ReadXml(XmlReader reader)
     {
         this.Clear();
-        while(reader.Read())
+        while (reader.Read())
         {
             if (reader.IsStartElement())
             {

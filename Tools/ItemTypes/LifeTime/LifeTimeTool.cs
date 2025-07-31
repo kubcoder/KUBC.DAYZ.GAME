@@ -1,10 +1,5 @@
 using KUBC.DAYZ.GAME.MissionFiles;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using RM = KUBC.DAYZ.GAME.Tools.Resources.ItemTypes.LifeTime.LifeTimeTool;
 namespace KUBC.DAYZ.GAME.Tools.ItemTypes.LifeTime;
 
@@ -32,10 +27,10 @@ public class LifeTimeTool(ILogger logger, Config options, ServerConfigFiles conf
     /// <inheritdoc/>
     public override void Apply(MissionFiles.Db.Types.File types)
     {
-        foreach(var itemName in options.ItemNames)
+        foreach (var itemName in options.ItemNames)
         {
             var item = types.Where(x => x.Name == itemName).FirstOrDefault();
-            if (item!=null)
+            if (item != null)
             {
                 Report.Add(new()
                 {

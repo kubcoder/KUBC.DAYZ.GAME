@@ -1,8 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Schema;
 using System.Xml.Serialization;
@@ -13,7 +8,7 @@ namespace KUBC.DAYZ.GAME.MissionFiles.Config.Economy.Core;
 /// Коллекция настроек
 /// корневых классов
 /// </summary>
-public class RootClassCollection: List<RootClass>, IXmlSerializable
+public class RootClassCollection : List<RootClass>, IXmlSerializable
 {
     /// <summary>
     /// имя тэга XML элемента

@@ -1,8 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Schema;
 using System.Xml.Serialization;
@@ -41,7 +36,7 @@ public class CEFlags : IXmlSerializable
     /// Учитывать игровые предметы в накопителях (бочки, палатки, схроны)
     /// </summary>
     public bool InHoarder = true;
-    
+
     /// <summary>
     /// Учитывать игровые предметы в мире, в общем все что просто 
     /// валяется в домах, на земле и т.д.
@@ -96,7 +91,7 @@ public class CEFlags : IXmlSerializable
     public void WriteXml(XmlWriter writer)
     {
         writer.WriteStartElement(ROOT_NODE_NAME);
-        WriteAttribute(writer,ATTR_COUNT_IN_CARGO, InCargo);
+        WriteAttribute(writer, ATTR_COUNT_IN_CARGO, InCargo);
         WriteAttribute(writer, ATTR_COUNT_IN_HOARDER, InHoarder);
         WriteAttribute(writer, ATTR_COUNT_IN_MAP, InMap);
         WriteAttribute(writer, ATTR_COUNT_IN_PLAYER, InPlayer);
@@ -115,8 +110,8 @@ public class CEFlags : IXmlSerializable
         {
             writer.WriteAttributeString(attrName, ATTR_VALUE_FALSE);
         }
-        
+
     }
 
-    
+
 }

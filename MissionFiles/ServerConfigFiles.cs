@@ -1,9 +1,4 @@
 using KUBC.DAYZ.GAME.MissionFiles.Db.Types;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace KUBC.DAYZ.GAME.MissionFiles;
 
@@ -21,10 +16,16 @@ public class ServerConfigFiles(DirectoryInfo path)
     public DirectoryInfo RootPath => path;
 
     /// <summary>
-    /// Файл конфигруации
+    /// Файл конфигурации
     /// центральной экономики
     /// </summary>
     public FileInfo CfgEconomyCore => new FileInfo($"{path.FullName}\\cfgeconomycore.xml");
+
+    /// <summary>
+    /// Файл конфигурации случайных наборов
+    /// итемов
+    /// </summary>
+    public FileInfo CfgRandomPresets => new FileInfo($"{path.FullName}\\cfgrandompresets.xml");
 
     /// <summary>
     /// Получить список файлов 
@@ -39,7 +40,7 @@ public class ServerConfigFiles(DirectoryInfo path)
             return factory.Files;
         }
     }
-    
 
-   
+
+
 }

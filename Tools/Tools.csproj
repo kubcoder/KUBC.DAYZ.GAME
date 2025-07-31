@@ -1,12 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net9.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 	  <Title>KUBC.DAYZ.GAME.Tools</Title>
 	  <RootNamespace>KUBC.DAYZ.GAME.Tools</RootNamespace>
-	  <Version>9.0.0</Version>
+	  <Version>10.0.0-pw1</Version>
 	  <Authors>kot23rus</Authors>
 	  <Company>KUBCODER</Company>
 	  <Description>Инструменты для автоматической обработки файлов конфигурации</Description>

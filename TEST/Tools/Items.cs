@@ -1,9 +1,3 @@
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xunit.Abstractions;
 
 namespace KUBC.DAYZ.GAME.Tools;
@@ -12,7 +6,7 @@ namespace KUBC.DAYZ.GAME.Tools;
 /// Тестируем инструменты 
 /// настроек игровых предметов
 /// </summary>
-public class Items(ITestOutputHelper output):AbstractTest
+public class Items(ITestOutputHelper output) : AbstractTest
 {
 
 
@@ -31,15 +25,15 @@ public class Items(ITestOutputHelper output):AbstractTest
         };
         var remover = new ItemTypes.Remover.RemoveTool(LoggerFactory.CreateLogger("R"), configRemover, configServer);
         remover.Apply();
-        foreach(var line in remover.Report)
+        foreach (var line in remover.Report)
         {
             output.WriteLine("{0}:{1}", line.Key, line.Value);
         }
-        foreach(var fileName in configServer.TypesFiles)
+        foreach (var fileName in configServer.TypesFiles)
         {
             var loader = new MissionFiles.Db.Types.TypeFileLoader(fileName);
             var fileData = loader.Load();
-            foreach(var itemName in configRemover.ItemNames)
+            foreach (var itemName in configRemover.ItemNames)
             {
                 Assert.Null(fileData.Where(x => x.Name == itemName).FirstOrDefault());
             }
@@ -71,7 +65,7 @@ public class Items(ITestOutputHelper output):AbstractTest
             foreach (var itemName in configTool.ItemNames)
             {
                 var item = fileData.Where(x => x.Name == itemName).FirstOrDefault();
-                if (item!=null)
+                if (item != null)
                 {
                     Assert.Equal(configTool.LifeTime, item.LifeTime);
                 }

@@ -1,10 +1,6 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using Xunit.Abstractions;
 
 namespace KUBC.DAYZ.GAME.Tools;
@@ -62,7 +58,7 @@ public class ProtoConsole
         removeSection.Bind(toolConfig);
         var tool = new Tools.ItemTypes.Remover.RemoveTool(LoggerFactory.CreateLogger("R"), toolConfig, serverFiles);
         tool.Apply();
-        foreach(var line in tool.Report)
+        foreach (var line in tool.Report)
         {
             TestOutput.WriteLine("{0}:{1}", line.Key, line.Value);
         }
