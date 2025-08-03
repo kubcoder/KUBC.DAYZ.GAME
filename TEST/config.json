@@ -45,7 +45,9 @@
       "SodaCan_Fronta",
       "SodaCan_Kvass",
       "SodaCan_Pipsi",
-      "SodaCan_Spite"
+      "SodaCan_Spite",
+      "PeachesCan",
+      "Apple"
     ]
   },
   "TransportLifeTime": {
