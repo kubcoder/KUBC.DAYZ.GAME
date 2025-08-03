@@ -230,20 +230,27 @@ public class Item : IXmlSerializable
         Flags.WriteXml(writer);
         foreach (var cat in Categories)
         {
-            writer.WriteElementString(NODE_CATEGORY, cat);
+            WriteElementAttrName(writer, NODE_CATEGORY, cat);
         }
         foreach (var tag in Tags)
         {
-            writer.WriteElementString(NODE_TAG, tag);
+            WriteElementAttrName(writer, NODE_TAG, tag);
         }
         foreach (var usage in Usages)
         {
-            writer.WriteElementString(NODE_USAGE, usage);
+            WriteElementAttrName(writer, NODE_USAGE, usage);
         }
         foreach (var value in Values)
         {
-            writer.WriteElementString(NODE_VALUE, value);
+            WriteElementAttrName(writer, NODE_VALUE, value);
         }
+        writer.WriteEndElement();
+    }
+
+    private static void WriteElementAttrName(XmlWriter writer, string nodeName, string name)
+    {
+        writer.WriteStartElement(nodeName);
+        writer.WriteAttributeString(ATTR_NAME, name);
         writer.WriteEndElement();
     }
 

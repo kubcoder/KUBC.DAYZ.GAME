@@ -17,11 +17,8 @@ public class TypesFile
         Assert.Equal(4, types.Count);
         var asval = types.Where(x => x.Name == "ASVAL").FirstOrDefault();
         Assert.NotNull(asval);
-
-
         var extFile = new FileInfo("types.xml");
         loader = new TypeFileLoader(extFile);
         loader.Save(types);
-
     }
 }
